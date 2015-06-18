@@ -1,3 +1,4 @@
+<title>{{ page.title }}</title>
 <link href="/css/bootstrap.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
 <script src="/js/jquery-1.11.3.min.js"></script>
@@ -8,7 +9,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <img src="/img/{{page.img}}" id="bg-img">
+    <img src="/img/{{page.img}}" id="bg-img" alt="{{page.img-alt}}">
     <div class="container">
         <div class="row" id="menu">
             <div class="table_this" id="tableRow">
@@ -20,6 +21,7 @@
         <div class="row" id="image"> </div>
         <div class="row" id="content">
             <div class="col-sm-3" id="recent">
+                <h3>RECENT POSTS</h3>
                 <ul>
                     {% for post in site.posts %}
                     <li>
@@ -29,7 +31,10 @@
                 </ul>
             </div>
             <div class="col-sm-7">
-                <div class="row" id="data">
+                <div class="row text-justify" id="data">
+                    <br />
+                    <h2>{{page.title}}</h2>
+                    <hr />
                     {{content}}
                 </div>
             </div>
