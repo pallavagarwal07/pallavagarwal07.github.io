@@ -1,11 +1,9 @@
 (function() {
-  var parallax;
-
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(f) {
     return setTimeout(f, 1000 / 60);
   };
 
-  parallax = function() {
+  this.parallax = function() {
     var banH, divH, img, imgH, imgW, scrollTop;
     img = $('#bg-img');
     imgH = parseInt(img.css('height'));
@@ -23,6 +21,6 @@
     return requestAnimationFrame(parallax);
   }), false);
 
-  parallax();
+  $(this.parallax);
 
 }).call(this);

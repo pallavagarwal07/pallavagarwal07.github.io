@@ -1,0 +1,27 @@
+---
+---
+
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+div {
+    border: solid red 1px;
+}
+
+#menu {
+    height: 50px;
+    background-color: green;
+}
+
+#image {
+    height: 500px;
+}
+
+#bg-img {
+    position: absolute;
+    width: 100%;
+    z-index: -1000;
+}
