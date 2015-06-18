@@ -1,14 +1,30 @@
-div {
-  border: solid red 1px; }
-
 #menu {
-  height: 50px;
-  background-color: green; }
+  height: 85px;
+  background-color: White; }
 
 #image {
   height: 500px; }
+
+#content {
+  padding-top: 15px;
+  background-color: white; }
+
+.vcenter {
+  display: table-cell;
+  vertical-align: middle;
+  float: none; }
+
+.table_this {
+  display: table;
+  height: 100%;
+  width: 100%; }
 
 #bg-img {
   position: absolute;
   width: 100%;
   z-index: -1000; }
+
+#data {
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: Georgia,Times,"Times New Roman",serif; }
