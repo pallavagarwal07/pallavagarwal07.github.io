@@ -29,3 +29,13 @@ this.parallax = () ->
 window.addEventListener('scroll', (-> requestAnimationFrame(parallax)), false)
 window.addEventListener('resize', (-> requestAnimationFrame(parallax)), false)
 $(this.parallax)
+
+#$( ->
+    #$.srSmoothscroll({
+    #step: 55,
+    #speed: 400,
+    #ease: 'swing',
+    #target: $('body'),
+    #container: $('html')
+    #})
+#)
