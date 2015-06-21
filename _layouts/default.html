@@ -1,7 +1,11 @@
 <title>{{ page.title }} - VARSTACK</title>
+
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 <link href="/css/bootstrap.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
+
 <script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
 
@@ -14,32 +18,60 @@
     <div class="container">
         <div class="row" id="menu">
             <div class="table_this" id="tableRow">
-                <div class="col-sm-3 vcenter">VARSTACK</div>
-                <div class="col-sm-6 vcenter">MENU</div>
+                <div class="col-sm-3 vcenter" id="site_title">VARSTACK</div>
+                <div class="col-sm-6 vcenter">
+                    <div class="row" id="top_menu">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="col-sm-3 vcenter">SEARCH</div>
             </div>
         </div>
         <div class="row" id="image"> </div>
         <div class="row" id="content">
             <div class="col-sm-3" id="recent">
-                <h3>RECENT POSTS</h3>
-                <ul>
+                <h4>RECENT POSTS</h4>
+                <ul class="nav nav-pills nav-stacked">
                     {% for post in site.posts %}
                     <li>
-                        <a href="{{ post.url }}">{{ post.title }}</a>
+                        <a href="{{ post.url }}" class="color_change">{{ post.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="col-sm-7">
-                <div class="row text-justify" id="data">
+                <div class="row" id="data">
                     <br />
-                    <h2>{{page.title}}</h2>
+                    <h3>{{page.title}}</h3>
                     <hr />
-                    {{content}}
+                    <div class="row text-justify">
+                        {{content}}
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Image Preview
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="imagepreview" style="max-height: 100%; max-width: 100%;">
+                </div>
             </div>
         </div>
     </div>

@@ -26,16 +26,18 @@ this.parallax = () ->
     img.css('top', top + 'px')
     img.css('clip', 'rect('+(-top+banH)+'px, auto, '+(-top+banH+divH)+'px, auto)')
 
+this.imgSet = () ->
+    arr = $('.img-responsive')
+    for i in [0..arr.length-1]
+        im2 = $(arr[i])
+        console.log(im2)
+        im2.on("click", ->
+            console.log(this)
+            $('#imagepreview').attr('src', $(this).attr('src'))
+            $('#imagemodal').modal('show')
+        )
+
 window.addEventListener('scroll', (-> requestAnimationFrame(parallax)), false)
 window.addEventListener('resize', (-> requestAnimationFrame(parallax)), false)
 $(this.parallax)
-
-#$( ->
-    #$.srSmoothscroll({
-    #step: 55,
-    #speed: 400,
-    #ease: 'swing',
-    #target: $('body'),
-    #container: $('html')
-    #})
-#)
+$(this.imgSet)

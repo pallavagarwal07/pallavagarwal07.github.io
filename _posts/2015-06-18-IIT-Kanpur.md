@@ -25,8 +25,10 @@ IITK has a magnificent Airstrip and hangar. As a freshman, I rode in a motorised
 
 The campus is very clean and is probably the only place in all of Kanpur from where you can see each and every star. This is a blessing because it makes for loads of memorable midnight walks.
 
+<br />
 
 Wait.. Midnight? What about hostel rules? Curfew?
+
 There are none! IIT Kanpur is very liberal with such rules and there are absolutely no hostel timings. You can spend all night roaming with your friends, or studying in the library (During the mid/end-sems) if you want or playing DOTA in your dorms. Girls and Boys are allowed in each other's hostels.
 Unlike most IITs, there is NO LAN ban and no Download limits. Total amount of downloads in my first year would easily exceed 100 GB per month (According to my linux logs) and why wouldn't they? You get a whooping speed of 20 MBps (That's about 2 minutes for an HD movie download) on online downloads and about twice that on local network (DC++, LAN).
 

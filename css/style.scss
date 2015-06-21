@@ -20,6 +20,34 @@
     background-color: white;
 }
 
+#bg-img {
+    position: absolute;
+    width: 100%;
+    z-index: -1000;
+}
+
+#data {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    font-family: Georgia,Times,"Times New Roman",serif;
+}
+
+#site_title {
+    font-family: 'Courgette', cursive;
+    font-size: 25px;
+}
+
+#recent {
+    h4 {
+        color: #959595;
+    }
+}
+
+.color_change {
+    color: #777;
+}
+
 .vcenter {
     display:table-cell;
     vertical-align:middle;
@@ -32,14 +60,9 @@
     width: 100%;
 }
 
-#bg-img {
-    position: absolute;
-    width: 100%;
-    z-index: -1000;
-}
-
-#data {
-    font-size: 15px;
-    line-height: 1.4;
-    font-family: Georgia,Times,"Times New Roman",serif;
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right,
+                            rgba(192, 63, 63, 0), rgba(192, 63, 63, 0.75), rgba(0, 0, 0, 0));
 }
