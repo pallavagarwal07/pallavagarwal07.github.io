@@ -25,6 +25,10 @@ this.parallax = () ->
     top = -(imgH - banH - divH) + scrollTop * (1+(imgH-banH-divH)/(banH+divH))
     img.css('top', top + 'px')
     img.css('clip', 'rect('+(-top+banH)+'px, auto, '+(-top+banH+divH)+'px, auto)')
+    if -top+banH+divH < 0 && img.css('display') != 'none'
+        img.hide()
+    else if -top+banH+divH >0 && img.css('display') == 'none'
+        img.show()
 
 this.imgSet = () ->
     arr = $('.img-responsive')

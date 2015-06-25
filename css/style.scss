@@ -62,6 +62,16 @@
 
 .modal-dialog {
     width: auto;
+    max-width: 97%;
+    display: inline-block;
+}
+
+.modal {
+    text-align: center;
+
+    .modal-header {
+        text-align: left;
+    }
 }
 
 hr {
