@@ -32,7 +32,7 @@ Wait.. Midnight? What about hostel rules? Curfew?
 There are none! IIT Kanpur is very liberal with such rules and there are absolutely no hostel timings. You can spend all night roaming with your friends, or studying in the library (During the mid/end-sems) if you want or playing DOTA in your dorms. Girls and Boys are allowed in each other's hostels.
 Unlike most IITs, there is NO LAN ban and no Download limits. Total amount of downloads in my first year would easily exceed 100 GB per month (According to my linux logs) and why wouldn't they? You get a whooping speed of 20 MBps (That's about 2 minutes for an HD movie download) on online downloads and about twice that on local network (DC++, LAN).
 
-<img src="/img/Speedshot.png" alt="SkyView of IIT Kanpur Campus" class="img-responsive">
+<img src="/img/Speedshot.png" alt="Screenshot of LAN speed at IITK" class="img-responsive">
 <br><br>
 
 
@@ -48,7 +48,7 @@ But what makes IITK special is that even first years are part of the team. In ro
 
 You have a family at IIT Kanpur, both figuratively and literally. At IITK, a group of 5/6 students is assigned a Student Guide (SG) who would be your 'baapu'. That might look like a small detail to you, but that usually means that the other 5 students are your 'bhai' and I think you can figure out who your 'chachu', 'dada', 'amma' would be. To the newcomers this might seem like a weird concept, but the bond you will make with your family will be unique and last forever. I still call my SG baapu, and I don't think I will ever call him by any other name. I'm used to that, and you will be too. That will also ensure that you know exactly who to ask for help when you have a problem, having trouble studying, need guidance about absolutely anything in campus. Remember that he would've lived in campus for one whole year, he'd have gone through almost everything you would.
 
-<img src="/img/FamilyTree.png" alt="SkyView of IIT Kanpur Campus" class="img-responsive">
+<img src="/img/FamilyTree.png" alt="Three Generations of my IITK Family Tree" class="img-responsive">
 <br><br>
 
 
