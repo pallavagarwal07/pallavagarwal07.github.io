@@ -52,16 +52,15 @@ installed by LinuxBrew. To achieve that, add the following to your
 
 <br />
 
-```bash
+{% highlight bash %}
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-```
+{% endhighlight %}
 
-```c_cpp
-#include <stdio.h>
+{% highlight c++ %}
 int main()
 {
     printf("%d", 23);
 }
-```
+{% endhighlight %}
