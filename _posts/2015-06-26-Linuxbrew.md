@@ -58,7 +58,7 @@ export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 ```
 
-```cpp
+```ruby
 #include <stdio.h>
 int main()
 {
