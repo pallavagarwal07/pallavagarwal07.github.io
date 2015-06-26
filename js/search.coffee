@@ -17,7 +17,7 @@ searchInit = () ->
     obj = ({item, score: 0} for item in posts)
 
     # get search text from url, decode it, and break it into words.
-    [..., searchText] = window.location.href.split('#')
+    [..., searchText] = window.location.href.split('?')
     searchText = decodeURIComponent(searchText).split(/[^\w]/)
 
     for pairs in obj
@@ -26,7 +26,15 @@ searchInit = () ->
         for word in searchText
             if word.length > 0
                 pairs.score += 2*title.count(word)+1*txt.count(word)
-    obj.sort((a, b) -> a.score-b.score)
+    obj = (k for k in obj when k.score != 0)
+    obj.sort((a, b) -> b.score-a.score)
+
+    $('#content-holder').html('')
+    for div in obj
+        $('#content-holder').append(div.item)
+    if obj.length == 0
+        $('#content-holder').append('Sorry, no search results found.')
+
     console.log(obj)
 
 
