@@ -33,9 +33,10 @@ home directory of the user and thus doesn't need root access.
 
 First paste the following in a terminal:
 
-```
+{% highlight bash %}
 git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
-```
+{% endhighlight %}
+
 <br />
 
 _If the system doesn't have git installed, you can either try
@@ -57,10 +58,34 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 {% endhighlight %}
+For the changes to take place, either run `source .bashrc` (after replacing
+.bashrc with the appropriate filename) or log-out and log-in.
 
-{% highlight c++ %}
-int main()
-{
-    printf("%d", 23);
-}
-{% endhighlight %}
+
+<br />
+
+Congrats! LinuxBrew is now installed.
+
+You can run `brew update` and `brew doctor` to see if everything has been setup
+properly.
+
+<br />
+
+You can now run `brew install` to install packages as shown:
+
+```bash
+brew install git
+brew install python
+brew install curl
+```
+
+<br />
+
+You can also head over to [Braumeister](http://braumeister.org) to check
+which packages are supported. Since this is a fork of MacOS's homebrew,
+not all linux are supported (yet) but this is a very actively developed
+project and chances are, by the time you are reading this, it would
+be as perfect as other linux package managers.
+
+<br />
+
