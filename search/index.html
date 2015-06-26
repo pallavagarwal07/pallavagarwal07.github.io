@@ -1,3 +1,6 @@
+---
+title: Search
+---
 <title>{{ page.title }} - VARSTACK</title>
 <meta charset="utf-8"/>
 
@@ -9,6 +12,7 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
+<script src="/js/search.js"></script>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -48,7 +52,13 @@
                     <h3>{{page.title}}</h3>
                     <hr />
                     <div class="row text-justify">
-                        {{content}}
+                        <div class="post">
+                            {% for post in site.posts %}
+                            <a href="{{post.url}}" class='shead'>{{post.title | strip_html}}</a>
+                                <br />
+                                {{post.content | strip_html | truncatewords:50}}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
