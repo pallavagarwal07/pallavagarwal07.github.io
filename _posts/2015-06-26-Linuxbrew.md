@@ -64,12 +64,10 @@ For the changes to take place, either run `source .bashrc` (after replacing
 
 <br />
 
-Congrats! LinuxBrew is now installed.
+####Congrats! LinuxBrew is now installed.
 
 You can run `brew update` and `brew doctor` to see if everything has been setup
 properly.
-
-<br />
 
 You can now run `brew install` to install packages as shown:
 

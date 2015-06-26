@@ -30,7 +30,6 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 1.4;
-    font-family: Georgia,Times,"Times New Roman",serif;
 }
 
 #site_title {
@@ -79,4 +78,8 @@ hr {
     height: 2px;
     background-image: linear-gradient(to right,
                             rgba(192, 63, 63, 0), rgba(192, 63, 63, 0.75), rgba(0, 0, 0, 0));
+}
+
+body {
+    font-family: 'Lato', sans-serif;
 }
