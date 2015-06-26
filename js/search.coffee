@@ -17,7 +17,7 @@ searchInit = () ->
     obj = ({item, score: 0} for item in posts)
 
     # get search text from url, decode it, and break it into words.
-    [..., searchText] = window.location.href.split('?')
+    [..., searchText] = window.location.href.split('?query=')
     searchText = decodeURIComponent(searchText).split(/[^\w]/)
 
     for pairs in obj

@@ -9,22 +9,24 @@ window.requestAnimationFrame = window.requestAnimationFrame ||
 
 this.parallax = () ->
     img = $('#bg-img')
-    imgH = parseInt( img.css('height') )
-    imgW = parseInt( img.css('width') )
-    banH = parseInt( $('#menu').css('height') )
-    divH = parseInt( $('#image').css('height') )
-    if (banH+divH) >= imgH
-        $('#image').css('height', (imgH-banH)+'px')
-    else if (imgH-banH) > 500
-        $('#image').css('height', '500px')
-    else
-        $('#image').css('height', (imgH-banH)+'px')
+    imgH = img.height()
+    imgW = img.height()
+    banH = $('#menu').height()
+    divH = $('#image').height()
+    if img.css('display') != 'none'
+        if (banH+divH) >= imgH
+            $('#image').css('height', (imgH-banH)+'px')
+        else if (imgH-banH) > 500
+            $('#image').css('height', '500px')
+        else
+            $('#image').css('height', (imgH-banH)+'px')
 
-    divH = parseInt( $('#image').css('height') )
+    divH = $('#image').height()
     scrollTop = window.pageYOffset
     top = -(imgH - banH - divH) + scrollTop * (1+(imgH-banH-divH)/(banH+divH))
-    img.css('top', top + 'px')
-    img.css('clip', 'rect('+(-top+banH)+'px, auto, '+(-top+banH+divH)+'px, auto)')
+    if img.css('display') != 'none'
+        img.css('top', top + 'px')
+        img.css('clip', 'rect('+(-top+banH)+'px, auto, '+(-top+banH+divH)+'px, auto)')
     if -top+banH+divH < 0 && img.css('display') != 'none'
         img.hide()
     else if -top+banH+divH >0 && img.css('display') == 'none'

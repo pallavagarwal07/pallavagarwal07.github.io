@@ -37,7 +37,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3 vcenter">SEARCH</div>
+                <div class="col-sm-3 vcenter">
+                    <form action="/search/" id='search-form'>
+                        <input type="text" name="query" placeholder="&#x2315;">
+                    </form>
+                </div>
             </div>
         </div>
         {% if page.img %}
