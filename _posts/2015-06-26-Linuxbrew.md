@@ -85,4 +85,4 @@ not all linux are supported (yet) but this is a very actively developed
 project and chances are, by the time you are reading this, it would
 be as perfect as other linux package managers.
 
-<br /><br />
+<br /><br /><br />
