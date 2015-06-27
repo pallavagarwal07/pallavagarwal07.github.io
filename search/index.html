@@ -10,14 +10,13 @@ styles: search.css
         {{post.title | strip_html}}
     </a>
     <br />
-    {{post.content | strip_html | truncatewords:50}}
+    <div class="excerpt">
+        {{post.content | strip_html | truncatewords:25}}{{post.content | strip_html | truncatelastwords:25}}
+    </div>
     <br />
 
     <div class='tags'>
         {{post.content | strip_html | tokenize}}
     </div>
-
-    <br /><br />
 </div>
 {% endfor %}
-

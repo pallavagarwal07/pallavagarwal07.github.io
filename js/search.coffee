@@ -22,10 +22,15 @@ searchInit = () ->
 
     for pairs in obj
         title = $(pairs.item).children('.shead').text()
-        txt = $(pairs.item).text()
+        txt = $(pairs.item).children('.excerpt').text()
+        tags = ([k.split(':')[0].trim(), +k.split(':')[1]] for k in \
+            $(pairs.item).children('.tags').text().split(',') when k.indexOf(':')>-1)
         for word in searchText
             if word.length > 0
                 pairs.score += 2*title.count(word)+1*txt.count(word)
+                for tag in tags
+                    pairs.score += tag[1]*tag[0].count(word)
+
     obj = (k for k in obj when k.score != 0)
     obj.sort((a, b) -> b.score-a.score)
 
@@ -34,8 +39,5 @@ searchInit = () ->
         $('#content-holder').append(div.item)
     if obj.length == 0
         $('#content-holder').append('Sorry, no search results found.')
-
-    console.log(obj)
-
 
 $(searchInit)

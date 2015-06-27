@@ -6,6 +6,9 @@ module Jekyll
             `rm _temp`
             result
         end
+        def truncatelastwords(input, num)
+            input = "...."+input.split[-num, num].join(' ')
+        end
     end
 end
 

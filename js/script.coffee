@@ -36,9 +36,7 @@ this.imgSet = () ->
     arr = $('.img-responsive')
     for i in [0..arr.length-1]
         im2 = $(arr[i])
-        console.log(im2)
         im2.on("click", ->
-            console.log(this)
             $('#imagepreview').attr('src', $(this).attr('src'))
             $('#imagemodal').modal('show')
         )
