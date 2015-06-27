@@ -39,9 +39,7 @@
     results = [];
     for (i = j = 0, ref = arr.length - 1; 0 <= ref ? j <= ref : j >= ref; i = 0 <= ref ? ++j : --j) {
       im2 = $(arr[i]);
-      console.log(im2);
       results.push(im2.on("click", function() {
-        console.log(this);
         $('#imagepreview').attr('src', $(this).attr('src'));
         return $('#imagemodal').modal('show');
       }));
