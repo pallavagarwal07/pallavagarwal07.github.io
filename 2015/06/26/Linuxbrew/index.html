@@ -1,0 +1,169 @@
+<title>Package Management without root access - An intro to LinuxBrew - VARSTACK</title>
+<meta charset="utf-8"/>
+
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/highlighting.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+
+
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/SmoothScroll.js"></script>
+<script src="/js/script.js"></script>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+    <div class="container">
+        <div class="row" id="menu">
+            <div class="table_this" id="tableRow">
+                <div class="col-sm-3 vcenter" id="site_title">VARSTACK</div>
+                <div class="col-sm-6 vcenter">
+                    <div class="row" id="top_menu">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 vcenter">
+                    <div class="row">
+                        <form action="/search/" id='search-form'>
+                            <input id="search-box" type="text" name="query" placeholder="Search..">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" id="content">
+            <div class="col-sm-3" id="recent">
+                <h4>RECENT POSTS</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="/2015/06/26/Linuxbrew/" class="color_change">Package Management without root access -...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2015/06/18/IIT-Kanpur/" class="color_change">IIT Kanpur: The First Year</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col-sm-7">
+                <div class="row" id="data">
+                    <br />
+                    <h3>Package Management without root access - An intro to LinuxBrew</h3>
+                    <hr />
+                    <div class="row text-justify" id="content-holder">
+                        <p>First a little background. At my college, we are given login accounts for
+accessing PC's at the Computer Labs. I usually use them for setting up
+my work environment for easy access through SSH. Though that makes it very easy
+for me to resume my work, from any computer or laptop on the network, the preinstalled
+packages are too old for my taste.</p>
+
+<p>Have a look:</p>
+
+<p><img src="/img/oldVersions.png" alt="Versions before LinuxBrew update" class='img-responsive'></p>
+
+<p>This is what we want to end up with:</p>
+
+<p><img src="/img/newVersions.png" alt="Versions after LinuxBrew update" class='img-responsive'>
+<br /></p>
+
+<p>Of course, this can be achieved by compiling the packages after setting the prefix to
+a directory with write permissions. But still, you can't deny the advantages of a
+package manager over such an approach.</p>
+
+<p>LinuxBrew is a Linux-fork of the popular Mac OS X HomeBrew package manager. One of its
+foremost advantages is the fact that, by default, it installs packages in a folder in
+home directory of the user and thus doesn't need root access.</p>
+
+<h3>So, Let's get started!</h3>
+
+<p>First paste the following in a terminal:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew</code></pre></div>
+
+
+<p><br /></p>
+
+<p><em>If the system doesn't have git installed, you can either try
+the methods on the installation page ( <a href="http://brew.sh/linuxbrew/">here</a> )
+or download the files using a browser to a new <code>.linuxbrew</code> folder in
+your home directory. (in case of ssh, download to a local computer
+and scp them over).</em></p>
+
+<p><br /></p>
+
+<p>Now we need to tell linux where to look for executables for the packages
+installed by LinuxBrew. To achieve that, add the following to your
+<code>.bashrc</code> or <code>.zshrc</code> or <code>.profile</code> (Usually in your home directory)</p>
+
+<p><br /></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$HOME/.linuxbrew/bin:$PATH&quot;</span>
+<span class="nb">export </span><span class="nv">MANPATH</span><span class="o">=</span><span class="s2">&quot;$HOME/.linuxbrew/share/man:$MANPATH&quot;</span>
+<span class="nb">export </span><span class="nv">INFOPATH</span><span class="o">=</span><span class="s2">&quot;$HOME/.linuxbrew/share/info:$INFOPATH&quot;</span></code></pre></div>
+
+
+<p>For the changes to take place, either run <code>source .bashrc</code> (after replacing
+.bashrc with the appropriate filename) or log-out and log-in.</p>
+
+<p><br /></p>
+
+<h4>Congrats! LinuxBrew is now installed.</h4>
+
+<p>You can run <code>brew update</code> and <code>brew doctor</code> to see if everything has been setup
+properly.</p>
+
+<p>You can now run <code>brew install</code> to install packages as shown:</p>
+
+<pre><code class="bash">brew install git
+brew install python
+brew install curl
+</code></pre>
+
+<p><br /></p>
+
+<p>You can also head over to <a href="http://braumeister.org">Braumeister</a> to check
+which packages are supported. Since this is a fork of MacOS's homebrew,
+not all linux are supported (yet) but this is a very actively developed
+project and chances are, by the time you are reading this, it would
+be as perfect as other linux package managers.</p>
+
+<p><br /><br /></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Image Preview
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="imagepreview" style="max-height: 100%; max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>

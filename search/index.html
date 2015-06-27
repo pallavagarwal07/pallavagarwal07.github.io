@@ -1,0 +1,114 @@
+<title>Search - VARSTACK</title>
+<meta charset="utf-8"/>
+
+<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/highlighting.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+
+
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/SmoothScroll.js"></script>
+<script src="/js/script.js"></script>
+
+<script src="/js/search.js" ></script>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+    <div class="container">
+        <div class="row" id="menu">
+            <div class="table_this" id="tableRow">
+                <div class="col-sm-3 vcenter" id="site_title">VARSTACK</div>
+                <div class="col-sm-6 vcenter">
+                    <div class="row" id="top_menu">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 vcenter">
+                    <div class="row">
+                        <form action="/search/" id='search-form'>
+                            <input id="search-box" type="text" name="query" placeholder="Search..">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" id="content">
+            <div class="col-sm-3" id="recent">
+                <h4>RECENT POSTS</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="/2015/06/26/Linuxbrew/" class="color_change">Package Management without root access -...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2015/06/18/IIT-Kanpur/" class="color_change">IIT Kanpur: The First Year</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col-sm-7">
+                <div class="row" id="data">
+                    <br />
+                    <h3>Search</h3>
+                    <hr />
+                    <div class="row text-justify" id="content-holder">
+                        
+<div class="post">
+    <a href="/2015/06/26/Linuxbrew/" class='shead'>
+        Package Management without root access - An intro to LinuxBrew
+    </a>
+    <br />
+    First a little background. At my college, we are given login accounts for accessing PC's at the Computer Labs. I usually use them for setting up my work environment for easy access through SSH. Though that makes it very easy for me to resume my work, from any computer or...
+    <br /><br />
+</div>
+
+<div class="post">
+    <a href="/2015/06/18/IIT-Kanpur/" class='shead'>
+        IIT Kanpur: The First Year
+    </a>
+    <br />
+    First of all, I think congratulations are in order. If you are reading this, you have probably cracked one of the toughest exams in the world. After two years of hard work and challenges, you have finally succeeded! You have made it to one of the world's finest engineering colleges,...
+    <br /><br />
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Image Preview
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="imagepreview" style="max-height: 100%; max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
