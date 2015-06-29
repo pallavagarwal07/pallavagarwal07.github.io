@@ -25,11 +25,13 @@
     <div class="container">
         <div class="row" id="menu">
             <div class="table_this" id="tableRow">
-                <div class="col-sm-3 vcenter" id="site_title">VARSTACK</div>
+                <div class="col-sm-3 vcenter" id="site_title"><a href="/" style="color:black;">VARSTACK</a></div>
                 <div class="col-sm-6 vcenter">
                     <div class="row" id="top_menu">
                         <ul class="nav nav-pills">
-                            <li class="active" id="blog"><a class="color_change" href="#">Blog</a></li>
+                            <li class="active" id="blog"><a class="color_change" href="/">Blog</a></li>
+                            <li id="tips"><a class="color_change" href="/tips/">Tips</a></li>
+                            <li id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
                             <li id="about"><a class="color_change" href="/about_me/">About Me</a></li>
                         </ul>
                     </div>
@@ -76,6 +78,20 @@
 
                     </div>
                 </div>
+                <hr />
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+/* * * CONFIGURATION VARIABLES * * */
+var disqus_shortname = 'varstack';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
             </div>
             <div class="col-sm-2">
             </div>

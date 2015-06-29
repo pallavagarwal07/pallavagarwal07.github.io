@@ -1,4 +1,4 @@
-<title>Package Management without root access - An intro to LinuxBrew - VARSTACK</title>
+<title>Behind the Scenes - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -62,86 +62,111 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>Package Management without root access - An intro to LinuxBrew</h3>
+                    <h3>Behind the Scenes</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <p>First a little background. At my college, we are given login accounts for
-accessing PC's at the Computer Labs. I usually use them for setting up
-my work environment for easy access through SSH. Though that makes it very easy
-for me to resume my work, from any computer or laptop on the network, the preinstalled
-packages are too old for my taste.</p>
+                        <p>When I decided to make a blog, I wasn't sure how I
+was going to make it. I had a variety of options,
+whether to use <a href="http://getbootstrap.com">bootstrap</a> or not.
+Where to host my website? Whether I would need databases
+or not. Or if I should just go ahead and install
+<a href="http://wordpress.org">Wordpress</a>.</p>
 
-<p>Have a look:</p>
+<p>It was then that I heard of <a href="http://jekyllrb.com">Jekyll</a>.</p>
 
-<p><img src="/img/oldVersions.png" alt="Versions before LinuxBrew update" class='img-responsive'></p>
+<blockquote><p>Jekyll is a simple, blog-aware, static site
+generator. It takes a template directory containing
+raw text files in various formats, runs it through
+a converter (like Markdown) and our Liquid renderer,
+and spits out a complete, ready-to-publish static
+website suitable for serving with your favorite web
+server.</p>
 
-<p>This is what we want to end up with:</p>
+<p>Jekyll also happens to be the engine behind
+GitHub Pages, which means you can use Jekyll to
+host your project’s page, blog, or website from
+GitHub’s servers for free.</p></blockquote>
 
-<p><img src="/img/newVersions.png" alt="Versions after LinuxBrew update" class='img-responsive'>
-<br /></p>
+<p><strong>Jekyll had quite a few advantages that I was looking for:</strong></p>
 
-<p>Of course, this can be achieved by compiling the packages after setting the prefix to
-a directory with write permissions. But still, you can't deny the advantages of a
-package manager over such an approach.</p>
-
-<p>LinuxBrew is a Linux-fork of the popular Mac OS X HomeBrew package manager. One of its
-foremost advantages is the fact that, by default, it installs packages in a folder in
-home directory of the user and thus doesn't need root access.</p>
-
-<h3>So, Let's get started!</h3>
-
-<p>First paste the following in a terminal:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew</code></pre></div>
+<ul>
+<li>I could write posts directly in markup (markdown or liquid)</li>
+<li>I could host it directly on github, and thus get a reliable
+hosting for free.</li>
+<li>Jekyll would take care of preprocessing and I could code
+in CoffeeScript, Sass without running their separate compilers.</li>
+<li>Since there was no server side (Jekyll creates a static
+website), the pages would load up faster and unlike Wordpress,
+my blog wouldn't succumb on loads of requests.</li>
+<li>Git support meant I would have complete version control
+over the website.</li>
+</ul>
 
 
 <p><br /></p>
 
-<p><em>If the system doesn't have git installed, you can either try
-the methods on the installation page ( <a href="http://brew.sh/linuxbrew/">here</a> )
-or download the files using a browser to a new <code>.linuxbrew</code> folder in
-your home directory. (in case of ssh, download to a local computer
-and scp them over).</em></p>
+<p><strong>Unfortunately, there were also some disadvantages:</strong></p>
+
+<ul>
+<li>No server side!!! How would I implement search?</li>
+<li>No server side!!! How would I implement comments?</li>
+<li>No server side!!! You get the idea...</li>
+</ul>
+
+
+<p>If you notice on the top, my site <strong>does</strong> have a search.
+Go ahead.. Try it out. It works.</p>
+
+<p>But I didn't use google custom search, or any implementations
+available on the internet. I tried almost all of them, but
+none of them seemed to work that well. The primary problem with
+those implementations was that they could be atmost of two
+types:</p>
+
+<ol>
+<li><p>Like google search. Redirect to another domain for
+the search. This would probably give the most accurate
+search results, but I don't want the search results
+to be displayed on a different domain.</p></li>
+<li><p>Based on Javascript - They would either search only
+in the titles of everypage or download ALL the posts to the
+user's computer to search through it all. Not a good idea
+either.</p></li>
+</ol>
+
 
 <p><br /></p>
 
-<p>Now we need to tell linux where to look for executables for the packages
-installed by LinuxBrew. To achieve that, add the following to your
-<code>.bashrc</code> or <code>.zshrc</code> or <code>.profile</code> (Usually in your home directory)</p>
+<p><strong>So how did I implement the search?</strong></p>
 
-<p><br /></p>
+<p>Well.. Programming is one thing I'm good at. I needed a
+way so that I could search through atleast the important words
+of the content - Tags. But adding tags manually for each post
+is definitely <strong>not</strong> the way to go. I would be wasting too
+much time writing tags. So I decided to use a python library
+based on NLP (Natural Language Processing) to detect and extract
+important words and phrases from the text. Once I did that, I had
+to find a way to integrate those tags with the search functionality.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$HOME/.linuxbrew/bin:$PATH&quot;</span>
-<span class="nb">export </span><span class="nv">MANPATH</span><span class="o">=</span><span class="s2">&quot;$HOME/.linuxbrew/share/man:$MANPATH&quot;</span>
-<span class="nb">export </span><span class="nv">INFOPATH</span><span class="o">=</span><span class="s2">&quot;$HOME/.linuxbrew/share/info:$INFOPATH&quot;</span></code></pre></div>
+<p>If you have ever used Jekyll (or Liquid), a lot of content is
+manipulated using filters. These filters are basically snippets
+of ruby code acting on the text/numbers/arrays. All I had to do
+is to integrate my python program with ruby to create a filter to
+extract tags from passed content. And voila, I had a page with all
+posts' titles, and tags.</p>
 
+<p>Now I wrote some javascript to search for the passed content in the
+post data, and hide the ones with a low enough score (Each tag has
+a weight score) and sort the rest.</p>
 
-<p>For the changes to take place, either run <code>source .bashrc</code> (after replacing
-.bashrc with the appropriate filename) or log-out and log-in.</p>
+<p>If you navigate to the search results page, you can actually see
+the tags that were generated, in your browser's developer tools.
+If you want to implement something like this on your own blog,
+or website, you can do so (the source code for everything is public on
+github). Although it would be nice if you gave me credit.</p>
 
-<p><br /></p>
-
-<h4>Congrats! LinuxBrew is now installed.</h4>
-
-<p>You can run <code>brew update</code> and <code>brew doctor</code> to see if everything has been setup
-properly.</p>
-
-<p>You can now run <code>brew install</code> to install packages as shown:</p>
-
-<pre><code class="bash">brew install git
-brew install python
-brew install curl
-</code></pre>
-
-<p><br /></p>
-
-<p>You can also head over to <a href="http://braumeister.org">Braumeister</a> to check
-which packages are supported. Since this is a fork of MacOS's homebrew,
-not all linux are supported (yet) but this is a very actively developed
-project and chances are, by the time you are reading this, it would
-be as perfect as other linux package managers.</p>
-
-<p><br /><br /></p>
+<p><br /><br />
+<br /><br /></p>
 
                     </div>
                 </div>
