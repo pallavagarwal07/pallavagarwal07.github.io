@@ -1,4 +1,4 @@
-<title>Homepage - VARSTACK</title>
+<title>Using Mouse with VIM in the terminal - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -23,8 +23,6 @@
     <![endif]-->
 
     
-    <img src="/img/homepage.jpg" id="bg-img" alt="Programmers Wallpaper banner">
-    
     <div class="container">
         <div class="row" id="menu">
             <div class="table_this" id="tableRow">
@@ -48,8 +46,6 @@
                 </div>
             </div>
         </div>
-        
-        <div class="row" id="image"> </div>
         
         <div class="row" id="content">
             <div class="col-sm-3" id="recent">
@@ -77,15 +73,35 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>Homepage</h3>
+                    <h3>Using Mouse with VIM in the terminal</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <div class="col-sm-4" id="tile_posts">
-</div>
-<div class="col-sm-4" id="tile_minute">
-</div>
-<div class="col-sm-4" id="tile_about">
-</div>
+                        <p>Just when you thought vim couldn't surprise you
+anymore, vim strikes again.
+As it turns out, vim supports mouse integration even
+in the terminal. Not only that, the support is mind
+blowingly simple and amazing. You can move your cursor,
+select text and even resize your panes in a split screen.</p>
+
+<p>Most websites just say to use
+<code>set mouse=a</code> in your <code>.vimrc</code> to add mouse support to
+your vim. However, this enables mouse in all modes and I
+found that it can get very irritating if mouse gets moved
+during typing in insert mode. Luckily vim also supports
+selective usage of the mouse.</p>
+
+<pre><code>a = all
+n = normal mode
+v = visual mode
+i = insert mode
+</code></pre>
+
+<p>There are other options too (check using <code>help mouse</code>).
+I found that using:</p>
+
+<p><code>set mouse=nv</code></p>
+
+<p>(for normal and visual, but not insert mode) works best for me.</p>
 
                     </div>
                 </div>
