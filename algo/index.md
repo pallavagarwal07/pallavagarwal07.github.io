@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Behind the Scenes
+scripts: algo.js
 ---
 
 When I decided to make a blog, I wasn't sure how I
