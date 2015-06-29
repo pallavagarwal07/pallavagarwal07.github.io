@@ -1,7 +1,28 @@
 ---
 title: Homepage
-layout: tags
+layout: default
 img: homepage.jpg
 img-alt: Programmers Wallpaper banner
 ---
-testing
+
+{% for post in paginator.posts %}
+  <a href="{{ post.url }}">{{ post.title | upcase}}</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">{{ post.date | date: "%b %d, %Y"}}</span>
+  </p>
+  <div class="content">
+    {{ post.content || truncatewords: 100}}
+  </div>
+  <br /><br />
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination" style="text-align: center; width: 100%;">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% endif %}
+</div>

@@ -3,7 +3,7 @@ description: ""
 
 url: "http://www.varstack.com"
 
-#paginate: 10
+paginate: 10
 
 markdown: rdiscount
 permalink: pretty
