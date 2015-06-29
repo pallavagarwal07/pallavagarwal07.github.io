@@ -3,6 +3,7 @@ title: "IIT Kanpur: The First Year"
 layout: default
 img: HRK.jpg
 img-alt: A photo of our IIT Kanpur Campus
+tags: post
 ---
 First of all, I think congratulations are in order. If you are reading this, you have probably cracked one of the toughest exams in the world. After two years of hard work and challenges, you have finally succeeded! You have made it to one of the world's finest engineering colleges, the Indian Institutes of Technology.
 

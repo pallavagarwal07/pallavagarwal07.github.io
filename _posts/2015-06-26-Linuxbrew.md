@@ -1,6 +1,7 @@
 ---
 title: "Package Management without root access - An intro to LinuxBrew"
 layout: default
+tags: post
 ---
 
 

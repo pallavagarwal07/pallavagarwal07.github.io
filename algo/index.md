@@ -94,8 +94,7 @@ If you navigate to the search results page, you can actually see
 the tags that were generated, in your browser's developer tools.
 If you want to implement something like this on your own blog,
 or website, you can do so (the source code for everything is public on
-github). Although it would be nice if you gave me credit.
+[github](http://github.com/pallavagarwal07)). Although it would be nice if you gave me credit.
 
-<br /><br />
-<br /><br />
+<br />
 
