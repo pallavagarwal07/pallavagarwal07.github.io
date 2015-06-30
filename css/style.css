@@ -54,6 +54,9 @@
   .modal .modal-header {
     text-align: left; }
 
+a strong {
+  color: #048; }
+
 blockquote {
   font-size: 15px;
   font-family: serif;

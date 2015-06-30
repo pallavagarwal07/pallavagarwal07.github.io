@@ -1,4 +1,4 @@
-<title>Behind the Scenes - VARSTACK</title>
+<title>Vim Customization: Guide to writing your own VIMRC - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -13,8 +13,6 @@
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
 
-<script src="/js/algo.js" ></script>
-
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -25,6 +23,8 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    
+    <img src="/img/vim.jpg" id="bg-img" alt="Screenshot of my vim configuration">
     
     <div class="container">
         <div class="row" id="menu">
@@ -49,6 +49,8 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row" id="image"> </div>
         
         <div class="row" id="content">
             <div class="col-sm-3" id="recent">
@@ -80,110 +82,102 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>Behind the Scenes</h3>
+                    <h3>Vim Customization: Guide to writing your own VIMRC</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <p>When I decided to make a blog, I wasn't sure how I
-was going to make it. I had a variety of options,
-whether to use <a href="http://getbootstrap.com">bootstrap</a> or not.
-Where to host my website? Whether I would need databases
-or not. Or if I should just go ahead and install
-<a href="http://wordpress.org">Wordpress</a>.</p>
+                        <p>Vim is all about customization. It comes from a long line
+of ancestors starting from ed (1971), ex (1976), vi (1979),
+and finally VIM (1991).</p>
 
-<p>It was then that I heard of <a href="http://jekyllrb.com">Jekyll</a>.</p>
+<p>Vim is designed with the philosophy of speed and minimal
+keystrokes. But I guess, if you're on this page, you
+already know that.</p>
 
-<blockquote><p>Jekyll is a simple, blog-aware, static site
-generator. It takes a template directory containing
-raw text files in various formats, runs it through
-a converter (like Markdown) and our Liquid renderer,
-and spits out a complete, ready-to-publish static
-website suitable for serving with your favorite web
-server.</p>
+<p>The screenshot in above banner is how my vim looks currently.
+(In case you can't see it, click <a href="/img/vim.jpg">here</a>)
+If you'd notice, there's a bar on the top showing the buffers I
+have currently open, the bottom bar shows the mode, character
+encoding, github branch (when I'm inside a project). The code
+is color highlighted, the indentation happens automatically
+based on the language of the program, brackets match themselves,
+it offers syntax completion, word completion, and even points
+out errors in my programs. All in all, it is pretty much
+everything you can ever want from a text editor.</p>
 
-<p>Jekyll also happens to be the engine behind
-GitHub Pages, which means you can use Jekyll to
-host your project’s page, blog, or website from
-GitHub’s servers for free.</p></blockquote>
+<p>Note that it is still running inside my terminal. I am
+NOT running gvim. All of vim (even inside a console) can
+be tweaked and configured to your liking.</p>
 
-<p><strong>Jekyll had quite a few advantages that I was looking for:</strong></p>
+<p>Unfortunately, none of these customizations are on by default.
+When you open vim for the first time, it looks somewhat like
+this:</p>
 
-<ul>
-<li>I could write posts directly in markup (markdown or liquid)</li>
-<li>I could host it directly on github, and thus get a reliable
-hosting for free.</li>
-<li>Jekyll would take care of preprocessing and I could code
-in CoffeeScript, Sass without running their separate compilers.</li>
-<li>Since there was no server side (Jekyll creates a static
-website), the pages would load up faster and unlike Wordpress,
-my blog wouldn't succumb on loads of requests.</li>
-<li>Git support meant I would have complete version control
-over the website.</li>
-</ul>
+<p><img src="/img/vim-old.png" img-alt="vim before customizations" class="img-responsive"></p>
 
+<p>Sadly, this is also the reason, many users don't try it
+out. I mean who would guess that this is the same editor
+as the one shown on the top.</p>
 
-<p><br /></p>
-
-<p><strong>Unfortunately, there were also some disadvantages:</strong></p>
-
-<ul>
-<li>No server side!!! How would I implement search?</li>
-<li>No server side!!! How would I implement comments?</li>
-<li>No server side!!! You get the idea...</li>
-</ul>
-
-
-<p>If you notice on the top, my site <strong>does</strong> have a search.
-Go ahead.. Try it out. It works.</p>
-
-<p>But I didn't use google custom search, or any implementations
-available on the internet. I tried almost all of them, but
-none of them seemed to work that well. The primary problem with
-those implementations was that they could be atmost of two
-types:</p>
-
-<ol>
-<li><p>Like google search. Redirect to another domain for
-the search. This would probably give the most accurate
-search results, but I don't want the search results
-to be displayed on a different domain.</p></li>
-<li><p>Based on Javascript - They would either search only
-in the titles of everypage or download ALL the posts to the
-user's computer to search through it all. Not a good idea
-either.</p></li>
-</ol>
-
+<p>Anyway, we will see how to customize your vim, so that
+it doesn't just look like a premium text editor, but
+functions better than one too.</p>
 
 <p><br /></p>
 
-<p><strong>So how did I implement the search?</strong></p>
-
-<p>Well.. Programming is one thing I'm good at. I needed a
-way so that I could search through atleast the important words
-of the content - Tags. But adding tags manually for each post
-is definitely <strong>not</strong> the way to go. I would be wasting too
-much time writing tags. So I decided to use a python library
-based on NLP (Natural Language Processing) to detect and extract
-important words and phrases from the text. Once I did that, I had
-to find a way to integrate those tags with the search functionality.</p>
-
-<p>If you have ever used Jekyll (or Liquid), a lot of content is
-manipulated using filters. These filters are basically snippets
-of ruby code acting on the text/numbers/arrays. All I had to do
-is to integrate my python program with ruby to create a filter to
-extract tags from passed content. And voila, I had a page with all
-posts' titles, and tags.</p>
-
-<p>Now I wrote some javascript to search for the passed content in the
-post data, and hide the ones with a low enough score (Each tag has
-a weight score) and sort the rest.</p>
-
-<p>If you navigate to the search results page, you can actually see
-the tags that were generated, in your browser's developer tools.
-If you want to implement something like this on your own blog,
-or website, you can do so (the source code for everything is public on
-<a href="http://github.com/pallavagarwal07">github</a>). Although it would be nice if you gave me credit.</p>
+<p><strong>The rest of the post is split into multiple Tips and Posts,
+each acting to explain a specific section of the vimrc.</strong></p>
 
 <p><br /></p>
+
+<p><strong>1. PACKAGE MANAGER:</strong></p>
+
+<p><em>For any good vimrc, package management is a must. You
+have multiple options to choose from, including
+vim-plug, vundle, neobundle, pathogen etc. Follow the link
+to get a quick rundown.</em></p>
+
+<p><br /></p>
+
+<p><strong>2. COLORSCHEME:</strong></p>
+
+<p><em>Your vim colorscheme defines you. Whether you like
+a dark background or light, whether you like comments
+to be emphasised or dulled down. I cover some of
+my personal favorites in this post.</em></p>
+
+<p><br /></p>
+
+<p><strong>3. MAPPINGS:</strong></p>
+
+<p><em>This is where vim - specific awesomeness starts.
+You can (literally) ask your editor to do what
+you want with the keys that YOU want. I've covered
+the basic ways of making vim keybindings in the above
+link.</em></p>
+
+<p><br /></p>
+
+<p><a href="/2015/06/30/Mouse-with-vim/"><strong>4. MOUSE CONTROL:</strong></a></p>
+
+<p><em>If you are using vim, you probably shouldn't be
+using mouse at all. Yet, I sometimes find it convinient
+to quickly resize panes and windows with my mouse.
+It is good to know that vim has mouse support built in.</em></p>
+
+<p><br /></p>
+
+<p><strong>5. PLUGINS:</strong></p>
+
+<p><em>What's a plugin manager, without all the lovely
+plugins? As it turns out, some of the plugins can
+be almost essential for an efficient workflow.</em></p>
+
+<p><br /></p>
+
+<p>Now that you've learnt the secrets of your editor,
+it is time to customize your own.</p>
+
+<p>Happy VIMMING.</p>
 
                     </div>
                 </div>
