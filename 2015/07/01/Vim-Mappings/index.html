@@ -1,4 +1,4 @@
-<title>About Me - VARSTACK</title>
+<title>Quick intro to custom Vim Mappings - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -13,8 +13,8 @@
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
 
-<script src="/js/about.js" ></script>
 
+<script src="/js/tips.js"></script>
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -84,55 +84,68 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>About Me</h3>
+                    <h3>Quick intro to custom Vim Mappings</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <blockquote><p>"It always takes longer than you expect, even
-when you take into account Hofstadter's Law."
-<p style="text-align:right"> —Hofstader's Law </p></p></blockquote>
+                        <p>One of the best things about vim is its ability to create
+custom mappings for <em>almost</em> any key in all modes.</p>
 
-<p>Hi, let me first introduce myself.
-I am Pallav Agarwal, a sophomore at the department of
-Computer Science and Engineering, Indian Institute of
-Technology, Kanpur. I love trying new tech, languages,
-programs, operating systems.. Well, pretty much everything
-remotely related to a computer.</p>
+<p>Suppose you want Ctrl+S to save your document while you are
+in insert mode, because pressing</p>
 
-<p>It has been pointed out to me that I'm a <em>reinvent the wheel</em>
-kind of guy. I built this website up from scratch without
-using any prebuilt themes, pain as it was to get it
-cross compatible. Even for the search functionality, I
-wrote my own algorithm (<a href="/algo/">Behind The Scenes</a>)
-instead of using the implementations available online
-or using google custom search etc. My current operating
-system is a finely configured Arch Linux on i3, a tiling
-window manager. But that isn't custom enough, and so I am
-currently building my own operating system, using the
-(B)LFS project.</p>
+<pre><code>&lt;Esc&gt;:w&lt;Enter&gt;i
+</code></pre>
 
-<p>So, now I would like to offer an explanation,
-I may like to reinvent the wheel, but I only do it
-because everytime I complete one of my custom projects,
-I end up adding a lot to my knowledge. To make this
-blog, I learned CSS, HTML5, and a lot of Javascript.
-To make the search functionality, I had to learn some
-ruby, and NLP in python. The LFS project taught me more
-about the linux operating system, than most linux
-enthusiasts learn in a lifetime.</p>
+<p>to switch to normal mode, save the file, and return back
+to insert mode is a bit too much. According to vim philosophy,
+it actually <strong>IS</strong> too much, and thus you can map Ctrl+S to
+those keys just as easily.</p>
 
-<p>My only motive in creating this blog was so that
-I could provide answers to some questions that
-I had trouble finding the answers to.</p>
+<p>For this, add the following to your vimrc</p>
 
-<p>You can:</p>
+<pre><code>inoremap &lt;C-S&gt; &lt;Esc&gt;:w&lt;Enter&gt;i
+</code></pre>
 
-<ul>
-<li>Message me on <a href="http://fb.com/pallavagarwal07">Facebook</a></li>
-<li>Follow me on <a href="http://github.com/pallavagarwal07">Github</a></li>
-</ul>
+<h4>EXPLANATION:</h4>
 
+<p>The command has separate parts but follows the format</p>
 
-<h3>Enjoy ☺</h3>
+<pre><code>&lt;cmd&gt; &lt;lhs&gt; &lt;rhs&gt;
+</code></pre>
+
+<p>The command maps lhs to rhs in the mode specified by cmd.
+<code>&lt;cmd&gt;</code> can be further broken down in the following format:</p>
+
+<p><code>&lt;mode&gt;[nore]map</code></p>
+
+<p>where the following modes are common (All
+modes are covered in the following post)</p>
+
+<pre><code>(none): normal, visual, operator mode
+i: insert mode
+v: visual mode
+n: normal mode
+</code></pre>
+
+<p><code>nore</code> is used for no-remapping, i.e. the default functions
+of <code>rhs</code> and not their aliases will be used. When skipped,
+The <code>rhs</code> will be further resolved if a remapping is found.
+Vim, even has a max resolve-depth in case of an infinite loop.</p>
+
+<p>For <code>lhs</code> and <code>rhs</code> the keys are named as follows:</p>
+
+<pre><code>&lt;C-a&gt; : Ctrl + a
+&lt;S-a&gt; : Shift + a
+&lt;A-a&gt; : Alt + a
+&lt;C-S-a&gt; : Ctrl + Shift + a
+&lt;Enter&gt;
+&lt;BS&gt; : Backspace
+etc..
+</code></pre>
+
+<p>The whole list can be viewed
+<a href="http://vimdoc.sourceforge.net/htmldoc/intro.html#key-notation">here</a>
+or using the <code>:help key-notation</code> command inside vim.</p>
 
                     </div>
                 </div>

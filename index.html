@@ -74,6 +74,10 @@
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2015/07/01/Vim-Mappings/" class="color_change">Quick intro to custom Vim Mappings...</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2015/06/30/Mouse-with-vim/" class="color_change">Using Mouse with VIM in the...</a>
                     </li>
                     
@@ -86,6 +90,15 @@
                     <hr />
                     <div class="row text-justify" id="content-holder">
                         
+  <a href="/2015/07/01/Vim-Mappings/">QUICK INTRO TO CUSTOM VIM MAPPINGS</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">Jul 01, 2015</span>
+  </p>
+  <div class="content">
+    <p>One of the best things about vim is its ability to create custom mappings for <em>almost</em> any key in all modes.</p> <p>Suppose you want Ctrl+S to save your document while you are in insert mode, because pressing</p> <pre><code>&lt;Esc&gt;:w&lt;Enter&gt;i </code></pre> <p>to switch to normal mode, save the file, and return back to insert mode is a bit too much. According to vim philosophy, it actually <strong>IS</strong> too much, and thus you can map Ctrl+S to those keys just as easily.</p> <p>For this, add the following to your vimrc</p> <pre><code>inoremap &lt;C-S&gt; &lt;Esc&gt;:w&lt;Enter&gt;i </code></pre> <h4>EXPLANATION:</h4> <p>The command has separate parts but follows the...
+  </div>
+  <br /><br />
+
   <a href="/2015/07/01/Vim-Customization/">VIM CUSTOMIZATION: GUIDE TO WRITING YOUR OWN VIMRC</a>
   <p class="author" style="text-align: right;">
     <span class="date">Jul 01, 2015</span>
