@@ -69,7 +69,7 @@ my personal favorites in this post._
 <br />
 
 
-__3. MAPPINGS:__
+[__3. MAPPINGS:__](/2015/07/01/Vim-Mappings/)
 
 _This is where vim - specific awesomeness starts.
 You can (literally) ask your editor to do what
