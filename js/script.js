@@ -1,9 +1,11 @@
 (function() {
+  var imgSet, parallax;
+
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(f) {
     return setTimeout(f, 1000 / 60);
   };
 
-  this.parallax = function() {
+  parallax = function() {
     var banH, divH, img, imgH, imgW, scrollTop, top;
     img = $('#bg-img');
     imgH = img.height();
@@ -33,7 +35,7 @@
     }
   };
 
-  this.imgSet = function() {
+  imgSet = function() {
     var arr, i, im2, j, ref, results;
     arr = $('.img-responsive');
     results = [];
@@ -55,8 +57,10 @@
     return requestAnimationFrame(parallax);
   }), false);
 
-  $(this.parallax);
+  $(parallax);
 
-  $(this.imgSet);
+  $(imgSet);
+
+  window.setTimeout(parallax, 500);
 
 }).call(this);
