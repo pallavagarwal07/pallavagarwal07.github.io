@@ -7,7 +7,7 @@ window.requestAnimationFrame = window.requestAnimationFrame ||
     window.msRequestAnimationFrame ||
     (f) -> setTimeout(f, 1000/60)
 
-this.parallax = () ->
+parallax = () ->
     img = $('#bg-img')
     imgH = img.height()
     imgW = img.height()
@@ -32,7 +32,7 @@ this.parallax = () ->
     else if -top+banH+divH >0 && img.css('display') == 'none'
         img.show()
 
-this.imgSet = () ->
+imgSet = () ->
     arr = $('.img-responsive')
     for i in [0..arr.length-1]
         im2 = $(arr[i])
@@ -43,5 +43,6 @@ this.imgSet = () ->
 
 window.addEventListener('scroll', (-> requestAnimationFrame(parallax)), false)
 window.addEventListener('resize', (-> requestAnimationFrame(parallax)), false)
-$(this.parallax)
-$(this.imgSet)
+$(parallax)
+$(imgSet)
+window.setTimeout(parallax, 500)
