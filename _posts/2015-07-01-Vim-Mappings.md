@@ -38,10 +38,12 @@ The command maps lhs to rhs in the mode specified by cmd.
 `<mode>[nore]map`
 
 where the following modes are common (All
-modes are covered in the following post)
+modes can be viewed
+[here](http://vimdoc.sourceforge.net/htmldoc/map.html#map-modes)
+or using `:help map-modes`)
 
 ```
-(none): normal, visual, operator mode
+(none): normal, visual, operator-pending mode
 i: insert mode
 v: visual mode
 n: normal mode
