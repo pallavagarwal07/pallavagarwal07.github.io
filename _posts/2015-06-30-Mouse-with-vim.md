@@ -31,3 +31,5 @@ I found that using:
 `set mouse=nv`
 
 (for normal and visual, but not insert mode) works best for me.
+
+<br />
