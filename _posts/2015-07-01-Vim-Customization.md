@@ -50,7 +50,7 @@ each acting to explain a specific section of the vimrc.__
 
 <br />
 
-__1. PACKAGE MANAGER:__
+[__1. PACKAGE MANAGER:__](/2015/07/03/Vim-Plug-Plugin-Manager/)
 
 _For any good vimrc, package management is a must. You
 have multiple options to choose from, including
