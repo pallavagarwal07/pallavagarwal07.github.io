@@ -1,4 +1,4 @@
-<title>About Me - VARSTACK</title>
+<title>Plugin Management in VIM - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -13,8 +13,6 @@
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
 
-<script src="/js/about.js" ></script>
-
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -25,6 +23,8 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    
+    <img src="/img/vim-plug.png" id="bg-img" alt="Screenshot of vim-plug plugin manager in action">
     
     <div class="container">
         <div class="row" id="menu">
@@ -49,6 +49,8 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row" id="image"> </div>
         
         <div class="row" id="content">
             <div class="col-sm-3" id="recent">
@@ -88,55 +90,150 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>About Me</h3>
+                    <h3>Plugin Management in VIM</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <blockquote><p>"It always takes longer than you expect, even
-when you take into account Hofstadter's Law."
-<p style="text-align:right"> —Hofstader's Law </p></p></blockquote>
+                        <p><em>What I've written in this post is my opinion, and should
+not be taken as fact. There may be features I don't know
+about, and my preference order may not be same as yours.</em></p>
 
-<p>Hi, let me first introduce myself.
-I am Pallav Agarwal, a sophomore at the department of
-Computer Science and Engineering, Indian Institute of
-Technology, Kanpur. I love trying new tech, languages,
-programs, operating systems.. Well, pretty much everything
-remotely related to a computer.</p>
+<p>Here is a quick overview of the plugin managers that I've used,
+ending with explanaions on how to use my personal favorite,
+Vim-Plug. You may skip the comparision section if you just want
+to be started quickly.</p>
 
-<p>It has been pointed out to me that I'm a <em>reinvent the wheel</em>
-kind of guy. I built this website up from scratch without
-using any prebuilt themes, pain as it was to get it
-cross compatible. Even for the search functionality, I
-wrote my own algorithm (<a href="/algo/">Behind The Scenes</a>)
-instead of using the implementations available online
-or using google custom search etc. My current operating
-system is a finely configured Arch Linux on i3, a tiling
-window manager. But that isn't custom enough, and so I am
-currently building my own operating system, using the
-(B)LFS project.</p>
+<p><br /></p>
 
-<p>So, now I would like to offer an explanation,
-I may like to reinvent the wheel, but I only do it
-because everytime I complete one of my custom projects,
-I end up adding a lot to my knowledge. To make this
-blog, I learned CSS, HTML5, and a lot of Javascript.
-To make the search functionality, I had to learn some
-ruby, and NLP in python. The LFS project taught me more
-about the linux operating system, than most linux
-enthusiasts learn in a lifetime.</p>
+<h3>3. PATHOGEN</h3>
 
-<p>My only motive in creating this blog was so that
-I could provide answers to some questions that
-I had trouble finding the answers to.</p>
+<p>No discussion of package managers is complete without mentioning
+pathogen. Pathogen is one of the oldest Package Manager for vim.
+It simply allows you to clone every plugin into a separate directory
+inside a bundle folder.
+This way, all plugins can retain their git directories, and can be
+updated with proper git commands. All Pathogen does, is ensure that
+all plugins get loaded at runtime when vim is started.</p>
 
-<p>You can:</p>
+<p><strong>JUDGEMENT</strong>: Too low level. You cannot disable and enable plugins as
+easily as other package managers, your plugins aren't shown in vimrc.</p>
 
-<ul>
-<li>Message me on <a href="http://fb.com/pallavagarwal07">Facebook</a></li>
-<li>Follow me on <a href="http://github.com/pallavagarwal07">Github</a></li>
-</ul>
+<p><br /></p>
 
+<h3>2. VUNDLE</h3>
 
-<h3>Enjoy ☺</h3>
+<p>Vundle is the plugin manager I've used the longest. All plugins
+can be listed in your vimrc, and you don't have to clone each one
+manually. A simple <code>:PluginInstall</code> takes care of the plugins'
+installations. Commenting out a single line from vimrc keeps
+that plugin from loading up. Updating plugins and upgrading VUNDLE
+is just as easy as the install command.</p>
+
+<p><strong>JUDGEMENT</strong>: Vundle has some difficult to remember boilerplate
+code, and the plugin install is single threaded. On my system,
+that takes a significantly more time (around 5x) than the multi
+threaded Vim-Plug.</p>
+
+<p><br /></p>
+
+<h3>1. VIM-PLUG</h3>
+
+<p>Vim-Plug is a fork of Vundle, and thus has all its features.
+Apart from that, if your vim is compiled with python or ruby
+support, or you are using Neovim, Vim-Plug uses multi-threading
+to clone your plugins in parallel. Vim-Plug also supports lazy
+loading of plugins, which means that plugins may be set to load
+only on specific commands, making your vim loadup much faster.</p>
+
+<p><strong>JUDGEMENT</strong>: I shifted to Vim-Plug a few weeks ago, and haven't
+looked back since. I haven't encountered any problems and till now
+it seems like the perfect plugin manager to me.</p>
+
+<p><br />
+<br /></p>
+
+<h2>Using Vim-Plug Plugin Manager</h2>
+
+<p><br /></p>
+
+<p>The good thing about Vim-Plug is that there's no boilerplate code
+to make it work.</p>
+
+<p>First, let us install Vim-Plug (This only needs to be done once).
+Download <a href="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim">this</a>
+file and place it <code>~/.vim/autoload</code></p>
+
+<p>Alternatively, you can use the following command to do it for you.
+Paste the following inside a terminal.</p>
+
+<pre><code>curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+</code></pre>
+
+<p>At the top of vimrc, start the plugin manager with
+the command <code>call plug#begin()</code>.</p>
+
+<p>This starts the area within which all your plugins will be listed.
+A plugin is listed in the following format:</p>
+
+<pre><code class="vimscript">Plug '&lt;plugin name&gt;'  "If the plugin is on vim-scripts.org
+Plug '&lt;username&gt;/&lt;pluginname&gt;'  "If the plugin is on github.com
+</code></pre>
+
+<p>If the plugin is on vim-scripts.org, there would be a mirrored github
+version which you can find via Google. For example, in case of</p>
+
+<p><code>https://github.com/vim-scripts/Wombat</code> the corresponding code
+will be</p>
+
+<pre><code class="vimscript">Plug 'Wombat' "OR
+Plug 'vim-scripts/Wombat'
+</code></pre>
+
+<p>while in the case of</p>
+
+<p><code>https://github.com/nanotech/jellybeans.vim</code> the corresponding code
+will be</p>
+
+<pre><code class="vimscript">Plug 'nanotech/jellybeans.vim'
+</code></pre>
+
+<p><strong>Note: Text following <code>"</code> inside vimrc represents a comment.</strong></p>
+
+<p><br /></p>
+
+<p>In case you want to lazy load a plugin,
+<a href="https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins">this</a>
+would be a good place to learn how.</p>
+
+<p>Once you have listed all your plugins, end the call with
+<code>call plug#end()</code>.</p>
+
+<p><br /></p>
+
+<p>Putting all this together, we get:</p>
+
+<pre><code>call plug#begin()
+Plug 'Wombat'
+Plug 'nanotech/jellybeans.vim'
+Plug 'scrooloose/nerdtree' , {'on': 'NERDTreeToggle'}  "Lazy Loading Example
+call plug#end()
+</code></pre>
+
+<p>Put this in your .vimrc and you are good to go.</p>
+
+<p><br /></p>
+
+<p><strong>PRO-TIP:</strong> If you are like me, and do not want to do the installation step
+every time you have to use your vimrc on a new system, you can put the
+following on the top of your vimrc. It basically checks if Vim-Plug is
+installed, and downloads the file in the proper place if it isn't.</p>
+
+<pre><code>if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
+endif
+</code></pre>
 
                     </div>
                 </div>
