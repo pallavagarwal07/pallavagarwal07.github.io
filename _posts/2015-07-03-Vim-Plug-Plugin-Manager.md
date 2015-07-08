@@ -11,7 +11,7 @@ not be taken as fact. There may be features I don't know
 about, and my preference order may not be same as yours._
 
 Here is a quick overview of the plugin managers that I've used,
-ending with explanaions on how to use my personal favorite,
+ending with explanations on how to use my personal favorite,
 Vim-Plug. You may skip the comparision section if you just want
 to be started quickly.
 

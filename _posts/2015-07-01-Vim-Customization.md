@@ -59,7 +59,7 @@ to get a quick rundown._
 
 <br />
 
-__2. COLORSCHEME:__
+[__2. COLORSCHEME:__](/2015/07/08/Vim-Colorscheme/)
 
 _Your vim colorscheme defines you. Whether you like
 a dark background or light, whether you like comments
