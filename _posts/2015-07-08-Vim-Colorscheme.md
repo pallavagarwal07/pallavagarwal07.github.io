@@ -94,7 +94,8 @@ a terminal and then running vim.
 * Some themes however, would never appear well (or at all) on 256 color terminals.
 That's because they don't support them. To still use those themes, you can use
 plugin `csapprox` which would make map the colors to a 256 color pallete as best
-as it can.
+as it can. For inquisitive minds, searching for truecolor terminals might also be a good
+workout.
 
 * If you can't find a colorscheme in the pack, that's probably because the names are
 case sensitive for example, the correct names for the above are:
