@@ -81,9 +81,6 @@
   .modal .modal-header {
     text-align: left; }
 
-a strong {
-  color: #048; }
-
 blockquote {
   font-size: 15px;
   font-family: serif;
@@ -103,3 +100,7 @@ hr {
 
 body {
   font-family: 'Lato', sans-serif; }
+
+a strong {
+  color: #048; }
+
