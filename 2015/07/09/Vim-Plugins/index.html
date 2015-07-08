@@ -1,4 +1,4 @@
-<title>Tips - VARSTACK</title>
+<title>Essential VIM plugins - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href="/css/bootstrap.css" rel="stylesheet">
@@ -10,8 +10,6 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
-
-<script src="/js/tips.js" ></script>
 
 
 <script type="text/javascript">var switchTo5x=true;</script>
@@ -93,24 +91,79 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>Tips</h3>
+                    <h3>Essential VIM plugins</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <p><strong><a href="/2015/07/01/Vim-Mappings/">QUICK INTRO TO CUSTOM VIM MAPPINGS</a></strong></p>
+                        <h4>RECAP:</h4>
 
-<p>One of the best things about vim is its ability to create custom mappings for <em>almost</em> any key in all modes.</p>
-
-
-<p> <p>Suppose you want Ctrl+S to save your document while you are in insert mode, because pressing</p> <pre><code>&lt;Esc&gt;:w&lt;Enter&gt;i </code></pre> <p>to switch to normal mode, save the file, and return back to insert mode is a bit too much. According to vim philosophy, it actually <strong>IS</strong> too much, and thus you...</p>
+<p>First, lets recap. Vim plugins are used to add functionality to vim. That functionality
+can be syntax highlighting, bracket matching, mode switching, easy file searching etc.
+Pretty much, there's a plugin for every functionality that is not built-in to vim.</p>
 
 <p><br /></p>
 
-<p><strong><a href="/2015/06/30/Mouse-with-vim/">USING MOUSE WITH VIM IN THE TERMINAL</a></strong></p>
+<h4>INSTALLATIONS:</h4>
 
-<p>Just when you thought vim couldn't surprise you anymore, vim strikes again. As it turns out, vim supports mouse integration even in the terminal. Not only that, the support is mind blowingly simple and amazing. You can move your cursor, select text and even resize your panes in a split screen.</p>
+<p>The way of installation varies with the type of plugin manager you are using.
+Almost all plugins are either developed or backed up on github. Most plugin managers
+make it trivial to install plugins from github repositories.</p>
+
+<p>For pathogen, clone the plugin in the <code>bundle</code> folder in the <code>.vim</code> directory
+in your home folder.</p>
+
+<p>For Vundle, NeoBundle, Vim-Plug, add</p>
+
+<pre><code>Plugin '&lt;key&gt;'              " OR
+NeoBundle '&lt;key&gt;'           " OR
+Plug '&lt;key&gt;'
+</code></pre>
+
+<p>respectively to your <code>.vimrc</code>. Where <em>&lt;key&gt;</em> for a plugin with github link
+<code>https://github.com/scrooloose/nerdcommenter</code>, would be</p>
+
+<p><code>scrooloose/nerdcommenter</code>.</p>
+
+<p><br /></p>
+
+<ol>
+<li><p><a href="https://github.com/bling/vim-airline">AIRLINE</a>: I used to think I could live without
+this plugin. It usually made the vim startup a bit slower, and I never liked that. But
+once I started working on actual projects, Airline became an essential plugin for me.
+Airline displays a top and a bottom status bar in vim, with information about open
+buffers, current mode, text encoding, git branch etc.</p></li>
+<li><p><a href="https://github.com/scrooloose/nerdcommenter">NERDCOMMENTER</a>: Nerd Commenter makes
+commenting and uncommenting lines of code extremely simple. It is ideal when debugging
+code as you can comment out lines with a simple keystroke irrespective of the language
+your code is in.</p></li>
+<li><p><a href="https://github.com/KabbAmine/zeavim.vim">ZEAVIM</a>: This is an integration plugin
+for Zeal app. You can jump to the documentation of any term of any language just by
+pressing a sequence of keys from inside vim.</p></li>
+<li><p><a href="https://github.com/vim-scripts/auto-pairs-gentle">AUTO-PAIRS-GENTLE</a>: You know how
+every code editor auto completes your ending braces? This plugin gives you the same
+functionality inside vim.</p></li>
+<li><p><a href="https://github.com/Lokaltog/vim-easymotion">EASYMOTION</a>: This comes last in my list
+because I've almost stopped using it. You can jump to any character or word in a
+particular FOV using a few keystrokes. I however find it more natural to use relative
+numbering to move up and down and <code>f</code> key to move left and right on the same line.</p></li>
+</ol>
 
 
-<p> <p>Most websites just say to use <code>set mouse=a</code> in your <code>.vimrc</code> to add mouse support to your vim. However,...</p>
+<p><br /></p>
+
+<p>I would also like to mention <code>AutoComplPop</code> and <code>YouCompleteMe</code> plugins for syntax
+completion. However, I feel that vim's functionality is best expressed using the
+inbuilt keys, as you can control the type of completion (filename, line, word,
+syntax, ctags etc.)</p>
+
+<p><br /></p>
+
+<p>I also recommend that you look at other users' vimrcs for more plugins. You never
+know what you'll discover. <a href="https://github.com/pallavagarwal07/_vim">Here's</a> mine
+to start with.</p>
+
+<p><br /></p>
+
+<p><strong>BEST OF LUCK CUSTOMIZING YOUR VIMRC!</strong></p>
 
 <p><br /></p>
 
