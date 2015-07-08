@@ -90,7 +90,7 @@ It is good to know that vim has mouse support built in._
 <br />
 
 
-__5. PLUGINS:__
+[__5. PLUGINS:__](/2015/07/09/Vim-Plugins/)
 
 _What's a plugin manager, without all the lovely
 plugins? As it turns out, some of the plugins can
