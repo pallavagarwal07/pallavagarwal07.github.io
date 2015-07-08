@@ -1,4 +1,4 @@
-<title>Using Mouse with VIM in the terminal - VARSTACK</title>
+<title>VIM: Setting a colorscheme - VARSTACK</title>
 <meta charset="utf-8"/>
 
 <link href="/css/bootstrap.css" rel="stylesheet">
@@ -11,8 +11,6 @@
 <script src="/js/SmoothScroll.js"></script>
 <script src="/js/script.js"></script>
 
-
-<script src="/js/tips.js"></script>
 
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript">stLight.options({publisher: "7839e2af-f9d1-4f68-9304-dcf13d3352ea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
@@ -89,35 +87,118 @@
             <div class="col-sm-7">
                 <div class="row" id="data">
                     <br />
-                    <h3>Using Mouse with VIM in the terminal</h3>
+                    <h3>VIM: Setting a colorscheme</h3>
                     <hr />
                     <div class="row text-justify" id="content-holder">
-                        <p>Just when you thought vim couldn't surprise you
-anymore, vim strikes again.
-As it turns out, vim supports mouse integration even
-in the terminal. Not only that, the support is mind
-blowingly simple and amazing. You can move your cursor,
-select text and even resize your panes in a split screen.</p>
+                        <p>Every good text editor deserves to have a customizable color scheme.
+For vim, colorschemes are installed as any other plugin. Most colorschemes
+can be downloaded as a <code>.vim</code> file. <em>If</em> you are not using a plugin manager,
+you need to copy the <code>.vim</code> file to an <code>autoload</code> folder inside a <code>.vim</code> folder
+in your home directory.</p>
 
-<p>Most websites just say to use
-<code>set mouse=a</code> in your <code>.vimrc</code> to add mouse support to
-your vim. However, this enables mouse in all modes and I
-found that it can get very irritating if mouse gets moved
-during typing in insert mode. Luckily vim also supports
-selective usage of the mouse.</p>
+<p>However, if you <em>are</em> using a plugin manager, (<em>as you should</em>), then depending
+on the plugin manager, the colorscheme may be installed like a plugin. Personally,
+I suggest you install a <a href="http://github.com/flazz/vim-colorschemes">colorscheme-pack</a>.
+Since it makes it trivially easy to switch to any colorscheme (it has almost all
+colorschemes you can think of, and you can create a pull request for missing ones).</p>
 
-<pre><code>a = all
-n = normal mode
-v = visual mode
-i = insert mode
+<p><br /></p>
+
+<h3>INSTALLATION:</h3>
+
+<p><br /></p>
+
+<h4>1. Vim-Plug</h4>
+
+<pre><code>Plug 'flazz/vim-colorschemes'
 </code></pre>
 
-<p>There are other options too (check using <code>help mouse</code>).
-I found that using:</p>
+<p><br /></p>
 
-<p><code>set mouse=nv</code></p>
+<h4>2. Vundle</h4>
 
-<p>(for normal and visual, but not insert mode) works best for me.</p>
+<pre><code>Plugin 'flazz/vim-colorschemes'
+</code></pre>
+
+<p><br /></p>
+
+<h4>3. NeoBundle</h4>
+
+<pre><code>NeoBundle 'flazz/vim-colorschemes'
+</code></pre>
+
+<p><br /></p>
+
+<h4>4. Pathogen</h4>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#Execute this in terminal:</span>
+<span class="nb">cd</span> ~/.vim/bundle
+git clone https://github.com/flazz/vim-colorschemes</code></pre></div>
+
+
+<p><br /></p>
+
+<p>Once the colorscheme pack is installed, you can go ahead and try out
+the colorschemes for yourself.</p>
+
+<h3>USAGE:</h3>
+
+<p>Suppose you want to try out <a href="http://github.com/nanotech/jellybeans.vim">jellybeans</a> colorscheme (<em>my favorite, BTW</em>).
+Open up vim, and while in normal mode, type:</p>
+
+<pre><code>:colors jellybeans
+</code></pre>
+
+<p>Cool, right?</p>
+
+<p>You can also try some other famous colorschemes:</p>
+
+<ol>
+<li><a href="http://github.com/altercation/vim-colors-solarized">Solarized</a> - Both dark and light
+background variants are widely popular.</li>
+<li><a href="https://github.com/29decibel/codeschool-vim-theme">CodeSchool</a></li>
+<li><a href="https://github.com/jgdavey/vim-railscasts">RailsCasts</a></li>
+<li><a href="https://github.com/tpope/vim-vividchalk">Vividchalk</a> - High contrast colorscheme</li>
+<li><a href="https://github.com/jonathanfilip/vim-lucius">Lucius</a> - One of the few good light color schemes</li>
+<li><a href="https://github.com/squarefrog/tomorrow-night.vim">Tomorrow Night</a></li>
+<li><a href="https://github.com/squarefrog/tomorrow-night.vim">Mustang</a></li>
+</ol>
+
+
+<h3>TROUBLESHOOTING:</h3>
+
+<ul>
+<li><p>Vim colorschemes can be tricky. Most colorschemes should work without any problems on
+<code>gvim</code>, however, if you like to do all your work on terminal, then you <em>might</em> not have
+the luxury of 16 million colors. Most new terminals support atleast 256 colors.</p></li>
+<li><p>If you are unsure, there is a script called
+<a href="http://www.google.com/search?q=256color.pl">256color.pl</a> which can be used to find out
+if your terminal supports all 256 colors. If it does, and vim still isn't showing
+proper colors, try <code>:set t_Co=256</code> to force vim to use 256 colors. Alternatively
+you can try setting the terminal name manually by typing <code>TERM=xterm-256color</code> in
+a terminal and then running vim.</p></li>
+<li><p>Some themes however, would never appear well (or at all) on 256 color terminals.
+That's because they don't support them. To still use those themes, you can use
+plugin <code>csapprox</code> which would make map the colors to a 256 color pallete as best
+as it can.</p></li>
+<li><p>If you can't find a colorscheme in the pack, that's probably because the names are
+case sensitive for example, the correct names for the above are:</p>
+
+<ul>
+<li>jellybeans</li>
+<li>solarized</li>
+<li>codeschool</li>
+<li>railscasts</li>
+<li>vividchalk</li>
+<li>lucius</li>
+<li>Tomorrow-Night</li>
+<li>mustang</li>
+</ul>
+</li>
+</ul>
+
+
+<p>As always, use tab completion in vim to make searching for colorschemes easier.</p>
 
 <p><br /></p>
 
