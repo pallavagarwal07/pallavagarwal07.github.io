@@ -43,6 +43,5 @@ imgSet = () ->
 
 window.addEventListener('scroll', (-> requestAnimationFrame(parallax)), false)
 window.addEventListener('resize', (-> requestAnimationFrame(parallax)), false)
-$(parallax)
-$(imgSet)
-window.setInterval(parallax, 500)
+window.setInterval(imgSet, 20)
+window.setInterval(parallax, 20)
