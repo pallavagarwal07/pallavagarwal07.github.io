@@ -61,6 +61,6 @@
 
   $(imgSet);
 
-  window.setTimeout(parallax, 500);
+  window.setInterval(parallax, 500);
 
 }).call(this);

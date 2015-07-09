@@ -6,6 +6,6 @@
     return $('#algo').addClass('active');
   };
 
-  $(init);
+  setInterval(init, 200);
 
 }).call(this);
