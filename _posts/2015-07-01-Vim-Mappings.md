@@ -16,7 +16,7 @@ in insert mode, because pressing
 
 to switch to normal mode, save the file, and return back
 to insert mode is a bit too much. According to vim philosophy,
-it actually __IS__ too much, and thus you can map Ctrl+S to
+it actually __is__ too much, and thus you can map Ctrl+S to
 those keys just as easily.
 
 For this, add the following to your vimrc
