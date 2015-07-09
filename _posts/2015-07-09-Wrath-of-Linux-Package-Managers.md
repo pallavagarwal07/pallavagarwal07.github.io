@@ -71,3 +71,5 @@ idea to leave them alone to their musings. They do not like competition and if
 you try to install Pacman on Debian or Portage on Arch, you will (_more likely than
 not_) end up with a broken, unusable system as the different package managers
 will step on each other's files and overwrite each other's essential files.
+
+<br />
