@@ -7,3 +7,5 @@ paginate: 10
 markdown: rdiscount
 permalink: pretty
 highlighter: pygments
+gems:
+  - jekyll-sitemap
