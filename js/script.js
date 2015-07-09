@@ -57,10 +57,8 @@
     return requestAnimationFrame(parallax);
   }), false);
 
-  $(parallax);
+  window.setInterval(imgSet, 20);
 
-  $(imgSet);
-
-  window.setInterval(parallax, 500);
+  window.setInterval(parallax, 20);
 
 }).call(this);
