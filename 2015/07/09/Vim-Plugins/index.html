@@ -1,4 +1,5 @@
 <title>Essential VIM plugins - VARSTACK</title>
+<meta name=viewport content="width=device-width, initial-scale=1">
 <meta charset="utf-8"/>
 
 <noscript>
@@ -30,24 +31,22 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     
     <div class="container">
         <div class="row" id="menu">
-            <div class="table_this" id="tableRow">
-                <div class="col-md-3 vcenter" id="site_title"><a href="/" style="color:black;">VARSTACK</a></div>
-                <div class="col-md-6 vcenter">
-                    <div class="row" id="top_menu">
-                        <ul class="nav nav-pills">
-                            <li class="active" id="blog"><a class="color_change" href="/">Blog</a></li>
-                            <li id="tips"><a class="color_change" href="/tips/">Tips</a></li>
-                            <li id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
-                            <li id="about"><a class="color_change" href="/about_me/">About Me</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 vcenter">
-                    <div class="row">
-                        <form action="/search/" id='search-form'>
-                            <input id="search-box" type="text" name="query" placeholder="Search..">
-                        </form>
-                    </div>
+            <div class="col-md-3 col-xs-8 menu" id="site_title">
+                <a href="/" style="color:black;">VARSTACK</a>
+            </div>
+            <div class="col-md-3 col-md-push-6 col-xs-4 menu">
+                <form action="/search/" id='search-form'>
+                    <input id="search-box" type="text" name="query" placeholder="Search..">
+                </form>
+            </div>
+            <div class="col-md-6 col-md-pull-3 col-xs-12 menu">
+                <div class="row" id="top_menu">
+                    <ul class="nav nav-pills">
+                        <li class="active" id="blog"><a class="color_change" href="/">Blog</a></li>
+                        <li id="tips"><a class="color_change" href="/tips/">Tips</a></li>
+                        <li id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
+                        <li id="about"><a class="color_change" href="/about_me/">About Me</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
