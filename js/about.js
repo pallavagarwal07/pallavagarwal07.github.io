@@ -6,6 +6,6 @@
     return $('#about').addClass('active');
   };
 
-  $(init);
+  setInterval(init, 20);
 
 }).call(this);

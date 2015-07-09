@@ -6,6 +6,6 @@
     return $('#tips').addClass('active');
   };
 
-  setInterval(init, 200);
+  setInterval(init, 20);
 
 }).call(this);
