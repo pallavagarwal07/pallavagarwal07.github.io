@@ -90,27 +90,27 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
             <div class="col-md-2">
             </div>
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-xs-11">
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-                    <script src="/js/SmoothScroll.js"></script>
-                    <script src="/js/script.js"></script>
-                    {% for script in page.scripts | split:' ' %}
-                    <script src="/js/{{script}}"></script>
-                    {% endfor %}
-                    {% if page.tags contains 'tip' %}
-                    <script src="/js/tips.js"></script>
-                    {% endif %}
-                    <script type="text/javascript">var switchTo5x=true;</script>
-                    <script type="text/javascript">stLight.options({publisher: "7839e2af-f9d1-4f68-9304-dcf13d3352ea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-                    <span class='st_sharethis_large' displayText='ShareThis'></span>
-                    <span class='st_facebook_large' displayText='Facebook'></span>
-                    <span class='st_twitter_large' displayText='Tweet'></span>
-                    <span class='st_googleplus_large' displayText='Google +'></span>
-                    <span class='st_linkedin_large' displayText='LinkedIn'></span>
-                    <span class='st_pinterest_large' displayText='Pinterest'></span>
-                    <div id="disqus_thread"></div>
-                    <script type="text/javascript" async>
+                <div class="col-md-7 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                        <script src="/js/SmoothScroll.js"></script>
+                        <script src="/js/script.js"></script>
+                        {% for script in page.scripts | split:' ' %}
+                        <script src="/js/{{script}}"></script>
+                        {% endfor %}
+                        {% if page.tags contains 'tip' %}
+                        <script src="/js/tips.js"></script>
+                        {% endif %}
+                        <script type="text/javascript">var switchTo5x=true;</script>
+                        <script type="text/javascript">stLight.options({publisher: "7839e2af-f9d1-4f68-9304-dcf13d3352ea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+                        <span class='st_sharethis_large' displayText='ShareThis'></span>
+                        <span class='st_facebook_large' displayText='Facebook'></span>
+                        <span class='st_twitter_large' displayText='Tweet'></span>
+                        <span class='st_googleplus_large' displayText='Google +'></span>
+                        <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                        <span class='st_pinterest_large' displayText='Pinterest'></span>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript" async>
 /* * * CONFIGURATION VARIABLES * * */
 var disqus_shortname = 'varstack';
 
@@ -127,9 +127,9 @@ var disqus_shortname = 'varstack';
 
 ga('create', 'UA-21768487-2', 'auto');
 ga('send', 'pageview');
-                    </script>
-                    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js" async></script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                        </script>
+                        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js" async></script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
                 </div>
             </div>
         </div>
