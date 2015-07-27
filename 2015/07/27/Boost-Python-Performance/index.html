@@ -1,4 +1,4 @@
-<title>Vim Customization: Guide to writing your own VIMRC - VARSTACK</title>
+<title>Cython: Boost Python Code Performance - VARSTACK</title>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta charset="utf-8"/>
 
@@ -20,8 +20,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    
-    <img src="/img/vim.jpg" id="bg-img" alt="Screenshot of my vim configuration">
     
     <div class="container">
         <div class="row" id="menu">
@@ -45,110 +43,60 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
             </div>
         </div>
         
-        <div class="row" id="image"> </div>
-        
         <div class="row" id="content">
             <div class="col-md-7 col-md-push-3">
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>Vim Customization: Guide to writing your own VIMRC</h3>
+                        <h3>Cython: Boost Python Code Performance</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p>Vim is all about customization. It comes from a long line
-of ancestors starting from ed (1971), ex (1976), vi (1979),
-and finally VIM (1991).</p>
-
-<p>Vim is designed with the philosophy of speed and minimal
-keystrokes. But I guess, if you're on this page, you
-already know that.</p>
-
-<p>The screenshot in above banner is how my vim looks currently.
-(In case you can't see it, click <a href="/img/vim.jpg">here</a>)
-If you'd notice, there's a bar on the top showing the buffers I
-have currently open, the bottom bar shows the mode, character
-encoding, github branch (when I'm inside a project). The code
-is color highlighted, the indentation happens automatically
-based on the language of the program, brackets match themselves,
-it offers syntax completion, word completion, and even points
-out errors in my programs. All in all, it is pretty much
-everything you can ever want from a text editor.</p>
-
-<p>Note that it is still running inside my terminal. I am
-NOT running gvim. All of vim (even inside a console) can
-be tweaked and configured to your liking.</p>
-
-<p>Unfortunately, none of these customizations are on by default.
-When you open vim for the first time, it looks somewhat like
-this:</p>
-
-<p><img src="/img/vim-old.png" img-alt="vim before customizations" class="img-responsive"></p>
-
-<p>Sadly, this is also the reason, many users don't try it
-out. I mean who would guess that this is the same editor
-as the one shown on the top.</p>
-
-<p>Anyway, we will see how to customize your vim, so that
-it doesn't just look like a premium text editor, but
-functions better than one too.</p>
+                                <p>This tip is for those people who have been working on large python projects and the fact
+that python is a slow language as compared to statically compiled languages has finally
+caught up with them. This tip is about Cython, what it is and where can you use
+it for maximum effect.</p>
 
 <p><br /></p>
 
-<p><strong>The rest of the post is split into multiple Tips and Posts,
-each acting to explain a specific section of the vimrc.</strong></p>
+<h4><strong>What is Cython?</strong></h4>
+
+<p>From the docs themselves,</p>
+
+<blockquote><p>Cython is an optimising static compiler for both the Python programming language and
+the extended Cython programming language (based on Pyrex).</p>
+
+<p>The Cython language is a superset of the Python language that additionally supports
+calling C functions and declaring C types on variables and class attributes. This
+allows the compiler to generate very efficient C code from Cython code. The C
+code is generated once and then compiles with all major C/C++ compilers in CPython
+2.6, 2.7 (2.4+ with Cython 0.20.x) as well as 3.2 and all later versions.</p></blockquote>
 
 <p><br /></p>
 
-<p><a href="/2015/07/03/Vim-Plug-Plugin-Manager/"><strong>1. PACKAGE MANAGER:</strong></a></p>
+<h4><strong>How do I use it?</strong></h4>
 
-<p><em>For any good vimrc, package management is a must. You
-have multiple options to choose from, including
-vim-plug, vundle, neobundle, pathogen etc. Follow the link
-to get a quick rundown.</em></p>
+<p>The documentation is pretty complete in itself. However to give you a general idea,
+let's say you have to process two strings in python. First part of the processing requires
+you to, lets say, find the
+<a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a> of the two
+strings (Real World example from a project of mine). In python, even the most efficient
+implementation of the algorithm was taking over two seconds for two significantly long
+strings.</p>
 
-<p><br /></p>
+<p><a href="/img/code-diff.png">Here</a> is the code and the changes I had to make for the speedup.</p>
 
-<p><a href="/2015/07/08/Vim-Colorscheme/"><strong>2. COLORSCHEME:</strong></a></p>
+<h4><strong>The result??</strong></h4>
 
-<p><em>Your vim colorscheme defines you. Whether you like
-a dark background or light, whether you like comments
-to be emphasised or dulled down. I cover some of
-my personal favorites in this post.</em></p>
+<p>Just with 4 lines of changes, I got over 15x speedup! What actually happens is that by
+adding static type declarations to the most used variables in the time hogging fnx,
+you are telling Cython to treat them as those types, and assign C semantics to those,
+translating it to very efficient C code.</p>
 
-<p><br /></p>
+<p>I'll now leave you alone, while you explore Cython's extensive documentation, and pride
+yourself on reading this post.</p>
 
-<p><a href="/2015/07/01/Vim-Mappings/"><strong>3. MAPPINGS:</strong></a></p>
-
-<p><em>This is where vim - specific awesomeness starts.
-You can (literally) ask your editor to do what
-you want with the keys that YOU want. I've covered
-the basic ways of making vim keybindings in the above
-link.</em></p>
-
-<p><br /></p>
-
-<p><a href="/2015/06/30/Mouse-with-vim/"><strong>4. MOUSE CONTROL:</strong></a></p>
-
-<p><em>If you are using vim, you probably shouldn't be
-using mouse at all. Yet, I sometimes find it convinient
-to quickly resize panes and windows with my mouse.
-It is good to know that vim has mouse support built in.</em></p>
-
-<p><br /></p>
-
-<p><a href="/2015/07/09/Vim-Plugins/"><strong>5. PLUGINS:</strong></a></p>
-
-<p><em>What's a plugin manager, without all the lovely
-plugins? As it turns out, some of the plugins can
-be almost essential for an efficient workflow.</em></p>
-
-<p><br /></p>
-
-<p>Now that you've learnt the secrets of your editor,
-it is time to customize your own.</p>
-
-<p>Happy VIMMING.</p>
+<p>I hope that helped. Please Share. :)</p>
 
                             </div>
                         </div>
@@ -213,6 +161,8 @@ it is time to customize your own.</p>
                         <script src="/js/SmoothScroll.js"></script>
                         <script src="/js/script.js"></script>
                         
+                        
+                        <script src="/js/tips.js"></script>
                         
                         <script type="text/javascript">var switchTo5x=true;</script>
                         <script type="text/javascript">stLight.options({publisher: "7839e2af-f9d1-4f68-9304-dcf13d3352ea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
