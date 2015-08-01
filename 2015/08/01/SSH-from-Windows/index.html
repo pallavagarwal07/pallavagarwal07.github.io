@@ -1,4 +1,4 @@
-<title>Essential VIM plugins - VARSTACK</title>
+<title>Using SSH from Windows 10 without PuTTY - VARSTACK</title>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta charset="utf-8"/>
 
@@ -48,82 +48,41 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>Essential VIM plugins</h3>
+                        <h3>Using SSH from Windows 10 without PuTTY</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <h4>RECAP:</h4>
+                                <p>With the recent upgrade to Windows 10, Microsoft fixed many of
+the things that I despised in Windows 8.
+I don't usually use Windows if I can avoid it, but unfortunately,
+some of my work requires me to use it anyway. For those times,
+one of the basic needs for me is an SSH client. A <em>LOT</em> of the time
+I'm programming directly on a SSHed server machine.</p>
 
-<p>First, lets recap. Vim plugins are used to add functionality to vim. That functionality
-can be syntax highlighting, bracket matching, mode switching, easy file searching etc.
-Pretty much, there's a plugin for every functionality that is not built-in to vim.</p>
+<p>Till a few days ago, this meant that I had to use PuTTY everytime
+I had to use SSH from Windows. If you have ever used PuTTY, you'd know
+that it isn't pretty. It doesn't properly support xterm escape
+sequences, it can't be easily resized and thus programs like vim
+look absolute crap.</p>
 
-<p><br /></p>
-
-<h4>INSTALLATIONS:</h4>
-
-<p>The way of installation varies with the type of plugin manager you are using.
-Almost all plugins are either developed or backed up on github. Most plugin managers
-make it trivial to install plugins from github repositories.</p>
-
-<p>For pathogen, clone the plugin in the <code>bundle</code> folder in the <code>.vim</code> directory
-in your home folder.</p>
-
-<p>For Vundle, NeoBundle, Vim-Plug, add</p>
-
-<pre><code>Plugin '&lt;key&gt;'              " OR
-NeoBundle '&lt;key&gt;'           " OR
-Plug '&lt;key&gt;'
-</code></pre>
-
-<p>respectively to your <code>.vimrc</code>. Where <em>&lt;key&gt;</em> for a plugin with github link
-<code>https://github.com/scrooloose/nerdcommenter</code>, would be</p>
-
-<p><code>scrooloose/nerdcommenter</code>.</p>
+<p>With the windowed Metro apps in Windows 10, I finally decided
+to give a Metro App a chance as a SSH client.
+<a href="https://www.microsoft.com/en-us/store/apps/remote-terminal/9wzdncrdn8b3">Here</a>
+is the app that I used.</p>
 
 <p><br /></p>
 
-<ol>
-<li><p><a href="https://github.com/bling/vim-airline">AIRLINE</a>: I used to think I could live without
-this plugin. It usually made the vim startup a bit slower, and I never liked that. But
-once I started working on actual projects, Airline became an essential plugin for me.
-Airline displays a top and a bottom status bar in vim, with information about open
-buffers, current mode, text encoding, git branch etc.</p></li>
-<li><p><a href="https://github.com/scrooloose/nerdcommenter">NERDCOMMENTER</a>: Nerd Commenter makes
-commenting and uncommenting lines of code extremely simple. It is ideal when debugging
-code as you can comment out lines with a simple keystroke irrespective of the language
-your code is in.</p></li>
-<li><p><a href="https://github.com/KabbAmine/zeavim.vim">ZEAVIM</a>: This is an integration plugin
-for Zeal app. You can jump to the documentation of any term of any language just by
-pressing a sequence of keys from inside vim.</p></li>
-<li><p><a href="https://github.com/vim-scripts/auto-pairs-gentle">AUTO-PAIRS-GENTLE</a>: You know how
-every code editor auto completes your ending braces? This plugin gives you the same
-functionality inside vim.</p></li>
-<li><p><a href="https://github.com/Lokaltog/vim-easymotion">EASYMOTION</a>: This comes last in my list
-because I've almost stopped using it. You can jump to any character or word in a
-particular FOV using a few keystrokes. I however find it more natural to use relative
-numbering to move up and down and <code>f</code> key to move left and right on the same line.</p></li>
-</ol>
+<h4><strong>RESULT?</strong></h4>
 
+<p>Amazing! Not only does it support xterm color escape sequences,
+when running in full screen mode, it is indistinguishable from
+a linux terminal (After SSHing obviously).</p>
 
 <p><br /></p>
 
-<p>I would also like to mention <code>AutoComplPop</code> and <code>YouCompleteMe</code> plugins for syntax
-completion. However, I feel that vim's functionality is best expressed using the
-inbuilt keys, as you can control the type of completion (filename, line, word,
-syntax, ctags etc.)</p>
+<p><img src="/img/ssh.jpg" alt="SSH from inside Windows 10" class="img-responsive"></p>
 
-<p><br /></p>
-
-<p>I also recommend that you look at other users' vimrcs for more plugins. You never
-know what you'll discover. <a href="https://github.com/pallavagarwal07/_vim">Here's</a> mine
-to start with.</p>
-
-<p><br /></p>
-
-<p><strong>BEST OF LUCK CUSTOMIZING YOUR VIMRC!</strong></p>
-
-<p><br /></p>
+<p><em>Yes, this is windows SSHed into a linux machine.</em></p>
 
                             </div>
                         </div>
@@ -192,6 +151,8 @@ to start with.</p>
                         <script src="/js/SmoothScroll.js"></script>
                         <script src="/js/script.js"></script>
                         
+                        
+                        <script src="/js/tips.js"></script>
                         
                         <script type="text/javascript">var switchTo5x=true;</script>
                         <script type="text/javascript">stLight.options({publisher: "7839e2af-f9d1-4f68-9304-dcf13d3352ea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
