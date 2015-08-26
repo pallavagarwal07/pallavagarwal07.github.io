@@ -23,9 +23,12 @@ wrote my own algorithm ([Behind The Scenes](/algo/))
 instead of using the implementations available online
 or using google custom search etc. My current operating
 system is a finely configured Arch Linux on i3, a tiling
-window manager. But that isn't custom enough, and so I am
+window manager. But that isn't custom enough, and so <s>I am
 currently building my own operating system, using the
-(B)LFS project.
+(B)LFS project.</s><br/>UPDATE: I finally finished my LFS project
+when I ended up injecting Gentoo's package manager `Portage`
+into my OS, essentially making it identical to Gentoo. I have
+decided, for now, to stick with Arch Linux.
 
 So, now I would like to offer an explanation,
 I may like to reinvent the wheel, but I only do it
