@@ -1,4 +1,4 @@
-<title>Using Mouse with VIM in the terminal - VARSTACK</title>
+<title>Shared SSH sessions with TMUX - Best of terminal - VARSTACK</title>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta charset="utf-8"/>
 
@@ -20,6 +20,8 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    
+    <img src="/img/ssh-arch.png" id="bg-img" alt="Arch SSH screenshot">
     
     <div class="container">
         <div class="row" id="menu">
@@ -43,43 +45,64 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
             </div>
         </div>
         
+        <div class="row" id="image"> </div>
+        
         <div class="row" id="content">
             <div class="col-md-7 col-md-push-3">
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>Using Mouse with VIM in the terminal</h3>
+                        <h3>Shared SSH sessions with TMUX - Best of terminal</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p>Just when you thought vim couldn't surprise you
-anymore, vim strikes again.
-As it turns out, vim supports mouse integration even
-in the terminal. Not only that, the support is mind
-blowingly simple and amazing. You can move your cursor,
-select text and even resize your panes in a split screen.</p>
+                                <p>Since the title isn't very descriptive, let us look at what we
+are trying to achieve. Click the image below to view the animation
+I recorded. The two terminals are made to mirror each other, i.e.
+anything I type on one terminal will appear on the second one,
+and vice versa.</p>
 
-<p>Most websites just say to use
-<code>set mouse=a</code> in your <code>.vimrc</code> to add mouse support to
-your vim. However, this enables mouse in all modes and I
-found that it can get very irritating if mouse gets moved
-during typing in insert mode. Luckily vim also supports
-selective usage of the mouse.</p>
+<p><br />
+<img src="/img/TMUX-animation.gif" alt="SSH shared session using TMUX" class="img-responsive">
+<br /></p>
 
-<pre><code>a = all
-n = normal mode
-v = visual mode
-i = insert mode
+<p>This won't make much sense, or seem of any use, until you realize that
+the two terminals need not be on the same computer. That is, me and
+my friend from across the country could do this and it'd still work.</p>
+
+<p>This has amazing applications. I have found it useful in teaching basic
+stuff to others, like programming, or how to use a terminal. There are a
+lot of high-end softwares like TeamViewer that do this for graphical
+environments. But it's good to know that something like this can be achieved
+tremendously easily on terminal.</p>
+
+<p><br />
+<br /></p>
+
+<p><strong>So, how do I do it?</strong></p>
+
+<p>First of all, both machines need to SSH to a common server. If you don't have
+access to a common server, then you need to set up OpenSSH on one of the two
+computers and have the other person SSH into your computer.</p>
+
+<p>Since I am at IIT Kanpur, I will use one of the computers in our Lab as the
+common server.</p>
+
+<pre><code>ssh username@ccpc121.cc.iitk.ac.in
 </code></pre>
 
-<p>There are other options too (check using <code>help mouse</code>).
-I found that using:</p>
+<p>Now on one of the PC, run TMUX (<code>tmux</code>). For this to work, you must have
+tmux installed. Install it using the usual package manager if you have
+root access or use <a href="/2015/06/26/Linuxbrew/">Linuxbrew</a> to install it
+if you don't. Now from the other computer, run <code>tmux attach</code>.</p>
 
-<p><code>set mouse=nv</code></p>
+<p>This should attach the second terminal to the same TMUX session.</p>
 
-<p>(for normal and visual, but not insert mode) works best for me.</p>
+<p>ENJOY!</p>
 
-<p><br /></p>
+<p><br /><br /></p>
+
+<p><em>If you liked this article, please comment below, or share with others.</em></p>
 
                             </div>
                         </div>
@@ -148,8 +171,6 @@ I found that using:</p>
                         <script src="/js/SmoothScroll.js"></script>
                         <script src="/js/script.js"></script>
                         
-                        
-                        <script src="/js/tips.js"></script>
                         
                         <script type="text/javascript">var switchTo5x=true;</script>
                         <script type="text/javascript">stLight.options({publisher: "7839e2af-f9d1-4f68-9304-dcf13d3352ea", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
