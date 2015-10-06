@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.varstack.com/2015/10/06/Introduction-to-Cimulator/</loc>
+    <lastmod>2015-10-06T00:00:00+05:30</lastmod>
+  </url>
+  <url>
     <loc>http://www.varstack.com/2015/08/24/Shared-TMUX-sessions/</loc>
     <lastmod>2015-08-24T00:00:00+05:30</lastmod>
   </url>
