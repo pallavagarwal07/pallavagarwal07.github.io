@@ -1,4 +1,4 @@
-<title>VIM: Setting a colorscheme - VARSTACK</title>
+<title>Configuration Management in Linux - VARSTACK</title>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta charset="utf-8"/>
 
@@ -20,6 +20,8 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    
+    <img src="/img/config.png" id="bg-img" alt="Screenshot of configuration system">
     
     <div class="container">
         <div class="row" id="menu">
@@ -43,127 +45,140 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
             </div>
         </div>
         
+        <div class="row" id="image"> </div>
+        
         <div class="row" id="content">
             <div class="col-md-7 col-md-push-3">
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>VIM: Setting a colorscheme</h3>
+                        <h3>Configuration Management in Linux</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p>Every good text editor deserves to have a customizable color scheme.
-For vim, colorschemes are installed as any other plugin. Most colorschemes
-can be downloaded as a <code>.vim</code> file. <em>If</em> you are not using a plugin manager,
-you need to copy the <code>.vim</code> file to an <code>autoload</code> folder inside a <code>.vim</code> folder
-in your home directory.</p>
+                                <p>You can't yourself a linux enthusiast if you've never run into the problem
+of sorting out your configuration files. All of your precious files like
+<code>.bashrc</code>, <code>.zshrc</code>, <code>.vimrc</code>, <code>.emacs</code>, <code>.fonts</code>, <code>.Xdefaults</code> are some of
+the ones that can take a lot of pain to customize from the ground up.</p>
 
-<p>However, if you <em>are</em> using a plugin manager, (<em>as you should</em>), then depending
-on the plugin manager, the colorscheme may be installed like a plugin. Personally,
-I suggest you install a <a href="http://github.com/flazz/vim-colorschemes">colorscheme-pack</a>.
-Since it makes it trivially easy to switch to any colorscheme (it has almost all
-colorschemes you can think of, and you can create a pull request for missing ones).</p>
+<p>Like most people, I started out by always backing up my important config files.
+But the list soon got so huge that I started having trouble remebering which
+files to back up, and to do it after every change.</p>
 
-<p><br /></p>
+<p>So, obviously, I moved on to the next obvious option, <strong>symlinks</strong>! I started
+to keep all my config files in a single folder and started to symlink them to
+the places that they belonged to. I kept this up for a few months (mostly
+because it didn't seem like any trouble) when I finally decided to change my
+operating system. And the problem hit me. I already had over 50 configuration
+files under version control and had no real way to put them in correct places in
+the new OS. These files had accumulated over time and to put them back at
+correct places was an endeavour I wasn't going to undertake.</p>
 
-<h3>INSTALLATION:</h3>
+<p>Now I tried to look for a tool that would help me manage and restore dotfiles
+at will. A friend suggested using <code>vcsh</code> and <code>mr</code>. You can find the relevant
+article <a href="http://srijanshetty.in/technical/vcsh-mr-dotfiles-nirvana/">here</a>.
+I would've tried that too but it seemed too complicated to be an elegant way
+to handle this problem. For one thing, I wanted a script that could be a part
+of my dotfiles and not an external dependency. So as you might've already
+guessed, I started to plan out my own way to manage my dotfiles. So without
+further ado, I present to you:</p>
 
-<p><br /></p>
+<p><br/></p>
 
-<h4>1. Vim-Plug</h4>
+<h4><strong><em>Config Management, the UNIX way:</em></strong></h4>
 
-<pre><code>Plug 'flazz/vim-colorschemes'
+<p>First things first, <a href="https://github.com/pallavagarwal07/ConfigManagement">here</a>
+is the repository for my project. The configuration system is inspired by
+VIM's modelines, which are basically comments that can control VIM's settings
+separately for code files. So, something like</p>
+
+<pre><code>// vim: set nonumbers:
 </code></pre>
 
-<p><br /></p>
+<p>in a source code's top or bottom lines would turn off line numbering in VIM
+when opening that source file. This is elegant as every config file has some
+comment system (and isn't worth using if it doesn't) and file properties can
+be easily specified in this way for every file.</p>
 
-<h4>2. Vundle</h4>
+<p>Let's look at the file structure.</p>
 
-<pre><code>Plugin 'flazz/vim-colorschemes'
+<pre><code>myconfig
+    ├── backup
+    │   ├── 2015-11-30_13-46-31
+    │   └── ........
+    ├── configs
+    │   ├── nvimrc
+    │   ├── Xdefaults
+    │   └── ........
+    ├── configure.py
+    └── current_state
 </code></pre>
 
-<p><br /></p>
+<p>During the initial setup, you are only concerned with <code>configure.py</code>, and the
+folder <code>configs</code>. An empty <code>current_state</code> file may be needed. Your dotfiles
+and config folders go inside <code>configs</code> folder. The files can have any name
+and do not need to be named the same as the final target. For eg. <code>.vimrc</code>
+when kept inside the <code>configs</code> folder can be named <code>mysuperamazingvimconfig</code>
+and it won't matter. You can also group files of similar purpose together
+as the files will be searched recursively.</p>
 
-<h4>3. NeoBundle</h4>
+<p>Now how do the files know where to go? Here is the easy part. Inside the
+corrsponding file, you just mention where that files need to go. So, for
+your <code>mysuperamazingvimconfig</code>, you will have the following in your source:</p>
 
-<pre><code>NeoBundle 'flazz/vim-colorschemes'
+<pre><code>" place ''~/.vimrc''
 </code></pre>
 
-<p><br /></p>
+<p>The first double quote is to start a comment and the rest is the needed command.
+Please note that the path is enclosed by a pair of <code>two single quotes</code> not a
+double quote. Also, this comment will be looked for in the top 3 and the bottom
+3 lines of the source code.</p>
 
-<h4>4. Pathogen</h4>
+<p>Another alternative for the command is:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#Execute this in terminal:</span>
-<span class="nb">cd</span> ~/.vim/bundle
-git clone https://github.com/flazz/vim-colorschemes</code></pre></div>
-
-
-<p><br /></p>
-
-<p>Once the colorscheme pack is installed, you can go ahead and try out
-the colorschemes for yourself.</p>
-
-<h3>USAGE:</h3>
-
-<p>Suppose you want to try out <a href="http://github.com/nanotech/jellybeans.vim">jellybeans</a> colorscheme (<em>my favorite, BTW</em>).
-Open up vim, and while in normal mode, type:</p>
-
-<pre><code>:colors jellybeans
+<pre><code>" place &amp;~/.vimrc&amp;
 </code></pre>
 
-<p>Cool, right?</p>
+<p>especially if the file has a special meaning for the single quote (like
+<code>.Xdefaults</code>).</p>
 
-<p>You can also try some other famous colorschemes:</p>
+<p><br/></p>
 
-<ol>
-<li><a href="http://github.com/altercation/vim-colors-solarized">Solarized</a> - Both dark and light
-background variants are widely popular.</li>
-<li><a href="https://github.com/29decibel/codeschool-vim-theme">CodeSchool</a></li>
-<li><a href="https://github.com/jgdavey/vim-railscasts">RailsCasts</a></li>
-<li><a href="https://github.com/tpope/vim-vividchalk">Vividchalk</a> - High contrast colorscheme</li>
-<li><a href="https://github.com/jonathanfilip/vim-lucius">Lucius</a> - One of the few good light color schemes</li>
-<li><a href="https://github.com/squarefrog/tomorrow-night.vim">Tomorrow Night</a></li>
-<li><a href="https://github.com/squarefrog/tomorrow-night.vim">Mustang</a></li>
-</ol>
+<p><em><strong>What about the folders?</strong></em></p>
 
+<p>For the folder that need to be symlinked, you create a file named folder_config
+inside the folder and put the same command as above. If the folder itself is
+being symlinked, then it won't be checked further for symlinkable files/folders.
+The rest of the folders, obviously will still be. For example, if you have a
+folder named fonts in <code>configs</code> and you want to place it as <code>~/.fonts</code>, you will
+make a file <code>folder_config</code> inside <code>fonts</code> folder with the content:</p>
 
-<h3>TROUBLESHOOTING:</h3>
+<pre><code>place ''~/.fonts''
+</code></pre>
 
-<ul>
-<li><p>Vim colorschemes can be tricky. Most colorschemes should work without any problems on
-<code>gvim</code>, however, if you like to do all your work on terminal, then you <em>might</em> not have
-the luxury of 16 million colors. Most new terminals support atleast 256 colors.</p></li>
-<li><p>If you are unsure, there is a script called
-<a href="http://www.google.com/search?q=256color.pl">256color.pl</a> which can be used to find out
-if your terminal supports all 256 colors. If it does, and vim still isn't showing
-proper colors, try <code>:set t_Co=256</code> to force vim to use 256 colors. Alternatively
-you can try setting the terminal name manually by typing <code>TERM=xterm-256color</code> in
-a terminal and then running vim.</p></li>
-<li><p>Some themes however, would never appear well (or at all) on 256 color terminals.
-That's because they don't support them. To still use those themes, you can use
-plugin <code>csapprox</code> which would make map the colors to a 256 color pallete as best
-as it can. For inquisitive minds, searching for truecolor terminals might also be a good
-workout.</p></li>
-<li><p>If you can't find a colorscheme in the pack, that's probably because the names are
-case sensitive for example, the correct names for the above are:</p>
+<p>and you are done. All you have to do to create/update the symlinks is run
+<code>./configure.py</code> or <code>python2 configure.py</code>.</p>
 
-<ul>
-<li>jellybeans</li>
-<li>solarized</li>
-<li>codeschool</li>
-<li>railscasts</li>
-<li>vividchalk</li>
-<li>lucius</li>
-<li>Tomorrow-Night</li>
-<li>mustang</li>
-</ul>
-</li>
-</ul>
+<p><br/><br/></p>
 
+<h4><strong><em>Under the Hood</em></strong>:</h4>
 
-<p>As always, use tab completion in vim to make searching for colorschemes easier.</p>
+<p>A lot of cool stuff happens under under the hood to ensure that no data loss
+occurs and no redundant files are created when <code>configure.py</code> is executed.
+Your current symlink status is stored in <code>current_status</code> so that the next time
+you change a <code>place ''&lt;path&gt;''</code>, the old symlink is deleted to prevent
+redundancy. If you manually remove the file from configuration management and
+place the real file in the actual place, then it will take care not to touch it
+even if it was part of <code>current_status</code>. While adding a file to config system
+for first time, if the file at target path is not a symlink but a real file, it
+is copied to the backups folder under current date and time before being
+replaced by a symlink to prevent data loss.</p>
 
-<p><br /></p>
+<p><br/><br/></p>
+
+<p><em>I hope you enjoyed reading this article.</em></p>
+
+<p><strong>Consider sharing this article using the links below.</strong></p>
 
                             </div>
                         </div>
