@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 from bs4 import BeautifulSoup as blsp
 from markdown import markdown as mkdn
 from topia.termextract import extract
@@ -7,7 +7,7 @@ from re import sub
 
 extractor = extract.TermExtractor()
 
-html = mkdn(open(argv[1]).read())
+html = mkdn(unicode( open(argv[1]).read(), 'utf-8' ))
 text = ''.join(blsp(html).findAll(text=True))
 
 whit = lambda x:sub('\s+', ' ', sub('[^\w]', ' ', x)).strip()
