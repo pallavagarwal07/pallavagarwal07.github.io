@@ -1,8 +1,6 @@
 ---
 title: "Configuration Management in Linux"
 layout: default
-img: config.png
-img-alt: Screenshot of configuration system
 tags: post
 ---
 You can't yourself a linux enthusiast if you've never run into the problem
