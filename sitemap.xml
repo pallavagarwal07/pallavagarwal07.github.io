@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master/</loc>
+    <lastmod>2015-12-12T00:00:00+05:30</lastmod>
+  </url>
+  <url>
     <loc>http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux/</loc>
     <lastmod>2015-12-10T00:00:00+05:30</lastmod>
   </url>
@@ -74,9 +78,6 @@
   </url>
   <url>
     <loc>http://www.varstack.com/about_me/</loc>
-  </url>
-  <url>
-    <loc>http://www.varstack.com/page2/</loc>
   </url>
   <url>
     <loc>http://www.varstack.com/google9e4f8c5b081efbdd.html</loc>
