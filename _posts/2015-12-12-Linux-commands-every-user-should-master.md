@@ -296,7 +296,6 @@ using C++ or python. These commands allow creation of really clean and
 compact scripts (_OK, maybe **just** compact scripts_).
 
 **Now, that you know the secrets, get cracking!**
-
 <br/><br/>
 
 _I hope you enjoyed reading this post._
