@@ -6,7 +6,14 @@ if (d.getElementById(id)) return;
 js = d.createElement(s); js.id = id;
 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
 fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+var host = "varstack.com";
+var hostwww = "www.varstack.com";
+if (((host == window.location.host) || (hostwww == window.location.host))
+        && (window.location.protocol != 'https:')){
+  window.location = window.location.toString().replace(/^http:/, "https:");
+}
+</script>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta charset="utf-8"/>
 
