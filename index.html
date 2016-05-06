@@ -47,6 +47,7 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <li class="active" id="blog"><a class="color_change" href="/">Blog</a></li>
                         <li id="tips"><a class="color_change" href="/tips/">Tips</a></li>
                         <li id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
+                        <li id="gsoc"><a class="color_change" href="/gsoc/">GSoC_2016</a></li>
                         <li id="about"><a class="color_change" href="/about_me/">About Me</a></li>
                     </ul>
                 </div>
@@ -65,6 +66,43 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
                                 
+  <a href="/2016/05/06/SSH-port-forwarding-and-some-cool-uses/">SSH PORT FORWARDING AND SOME COOL USES</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">May 06, 2016</span>
+  </p>
+  <div class="content">
+    <p>I'll begin with some of the bare minimum and absolutely amazing things ssh port forwarding is capable of, and see if I can convert this to a proper blog post later.</p> <p><br/></p> <h4><strong>1. Local port forwarding</strong></h4> <p>Syntax:</p> <pre><code>ssh -L8081:example.com:80 pallav@myserver.com </code></pre> <p>Meaning: Opens a SSH connection to myserver.com, and forward all requests to <strong>my</strong> port 8081 to port 80 (default http port) of example.com <em>via</em> myserver. Thus, if example.com is blocked on my PC, but it can be accessed by some other PC which I have ssh access to, then I can use this command to gain access to the...
+  </div>
+  <br /><br />
+
+  <a href="/2016/04/30/Google-Summer-of-Code-with-Gentoo/">GOOGLE SUMMER OF CODE WITH GENTOO</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">Apr 30, 2016</span>
+  </p>
+  <div class="content">
+    <p>I am excited to say that I've been accepted for this year's summer of code under Gentoo Organisation. <a href="/gsoc">This section of the blog</a> will be dedicated to documenting anything and everything I learn that is interesting or remotely related to my project.</p> <p>My proposal for the project can be found <a href="/img/gsoc.pdf">here</a>. The abstract for the same has been given below.</p> <blockquote><p>Gentoo is an operating system with extreme focus on configurability and performance. To provide fully customizable experience, without interfering with the stability of the system, Gentoo has a concept of masked packages. These masked packages (or versions) are...
+  </div>
+  <br /><br />
+
+  <a href="/2016/04/27/SSH-keys/">EASY SHARING OF SSH KEYS</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">Apr 27, 2016</span>
+  </p>
+  <div class="content">
+    <p>This tip may be obvious to many people, but I feel this worth mentioning. A lot of us
+have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma)
+that you can actually share your public keys with others by giving them your github
+username.
+For example,</p>
+
+<pre><code>curl https://github.com/pallavagarwal07.keys &gt;&gt; ~/.ssh/authorized_keys
+</code></pre>
+
+<p>would give me ssh/scp access to your PC.</p>
+
+  </div>
+  <br /><br />
+
   <a href="/2015/12/12/Linux-commands-every-user-should-master/">LINUX COMMANDS EVERY USER SHOULD MASTER</a>
   <p class="author" style="text-align: right;">
     <span class="date">Dec 12, 2015</span>
@@ -128,33 +166,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
   </div>
   <br /><br />
 
-  <a href="/2015/07/09/Wrath-of-Linux-Package-Managers/">WRATH OF LINUX PACKAGE MANAGERS</a>
-  <p class="author" style="text-align: right;">
-    <span class="date">Jul 09, 2015</span>
-  </p>
-  <div class="content">
-    <p>We all love to characterise things as <em>"More than the sum of it's parts"</em>. We'd like to say the same about our linux operating system. My <strong>ARCH</strong> is more than the sum of it's parts! Well.. no.</p> <p>A linux system is exactly the sum of it's parts. And most of those parts are connected to the base package manager, the beast that acts like a framework, holding everything together.</p> <p>Have you ever wondered what makes <em>Ubuntu</em> <strong>Ubuntu</strong>? Or what is the difference between <em>ARCH</em> and <em>GENTOO</em>? If you guessed <em>a package manager</em>, you'd be right.</p> <p>You probably don't believe me?...
-  </div>
-  <br /><br />
-
-  <a href="/2015/07/09/Vim-Plugins/">ESSENTIAL VIM PLUGINS</a>
-  <p class="author" style="text-align: right;">
-    <span class="date">Jul 09, 2015</span>
-  </p>
-  <div class="content">
-    <h4>RECAP:</h4> <p>First, lets recap. Vim plugins are used to add functionality to vim. That functionality can be syntax highlighting, bracket matching, mode switching, easy file searching etc. Pretty much, there's a plugin for every functionality that is not built-in to vim.</p> <p><br /></p> <h4>INSTALLATIONS:</h4> <p>The way of installation varies with the type of plugin manager you are using. Almost all plugins are either developed or backed up on github. Most plugin managers make it trivial to install plugins from github repositories.</p> <p>For pathogen, clone the plugin in the <code>bundle</code> folder in the <code>.vim</code> directory in your home folder.</p> <p>For Vundle,...
-  </div>
-  <br /><br />
-
-  <a href="/2015/07/08/Vim-Colorscheme/">VIM: SETTING A COLORSCHEME</a>
-  <p class="author" style="text-align: right;">
-    <span class="date">Jul 08, 2015</span>
-  </p>
-  <div class="content">
-    <p>Every good text editor deserves to have a customizable color scheme. For vim, colorschemes are installed as any other plugin. Most colorschemes can be downloaded as a <code>.vim</code> file. <em>If</em> you are not using a plugin manager, you need to copy the <code>.vim</code> file to an <code>autoload</code> folder inside a <code>.vim</code> folder in your home directory.</p> <p>However, if you <em>are</em> using a plugin manager, (<em>as you should</em>), then depending on the plugin manager, the colorscheme may be installed like a plugin. Personally, I suggest you install a <a href="http://github.com/flazz/vim-colorschemes">colorscheme-pack</a>. Since it makes it trivially easy to switch to any colorscheme...
-  </div>
-  <br /><br />
-
 
 <!-- Pagination links -->
 <div class="pagination" style="text-align: center; width: 100%;">
@@ -176,6 +187,10 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" class="color_change">SSH port forwarding and some cool...</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2015/12/12/Linux-commands-every-user-should-master/" class="color_change">Linux commands every user should master...</a>
                     </li>
                     
@@ -191,13 +206,13 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <a href="/2015/08/24/Shared-TMUX-sessions/" class="color_change">Shared SSH sessions with TMUX -...</a>
                     </li>
                     
-                    <li>
-                        <a href="/2015/08/01/Windows-10/" class="color_change">Windows 10: A Linux User's Perspective...</a>
-                    </li>
-                    
                 </ul>
                 <h4>RECENT TIPS</h4>
                 <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="/2016/04/27/SSH-keys/" class="color_change">Easy sharing of SSH keys</a>
+                    </li>
                     
                     <li>
                         <a href="/2015/08/01/SSH-from-Windows/" class="color_change">Using SSH from Windows 10 without...</a>
@@ -213,10 +228,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                     
                     <li>
                         <a href="/2015/07/01/Vim-Mappings/" class="color_change">Quick intro to custom Vim Mappings...</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/2015/06/30/Mouse-with-vim/" class="color_change">Using Mouse with VIM in the...</a>
                     </li>
                     
                 </ul>

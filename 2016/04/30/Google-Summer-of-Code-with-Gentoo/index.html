@@ -1,4 +1,4 @@
-<title>About Me - VARSTACK</title>
+<title>Google Summer of Code with Gentoo - VARSTACK</title>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,51 +57,57 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>About Me</h3>
+                        <h3>Google Summer of Code with Gentoo</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <blockquote><p>"It always takes longer than you expect, even
-when you take into account Hofstadter's Law."
-<p style="text-align:right"> —Hofstader's Law </p></p></blockquote>
+                                <p>I am excited to say that I've been accepted for this year's summer of code under
+Gentoo Organisation. <a href="/gsoc">This section of the blog</a> will be dedicated to documenting
+anything and everything I learn that is interesting or remotely related to my project.</p>
 
-<p>Hi, let me first introduce myself.
-I am Pallav Agarwal, a sophomore at the department of Computer Science and
-Engineering, Indian Institute of Technology, Kanpur. I love trying new tech,
-languages, programs, operating systems.. Well, pretty much everything remotely
-related to a computer.</p>
+<p>My proposal for the project can be found <a href="/img/gsoc.pdf">here</a>. The abstract for the
+same has been given below.</p>
 
-<p>It has been pointed out to me that I'm a <em>reinvent the wheel</em> kind of guy. I
-built this website up from scratch without using any prebuilt themes, pain as it
-was to get it cross compatible. Even for the search functionality, I wrote my
-own algorithm (<a href="/algo/">Behind The Scenes</a>) instead of using the implementations
-available online or using google custom search etc. My current operating system
-is a finely configured <s>Arch Linux</s> Nix OS on i3, a tiling window manager.
-But that isn't custom enough, and so <s>I am currently building my own operating
-system, using the (B)LFS project.</s><br/>UPDATE: I finally finished my LFS
-project when I ended up injecting Gentoo's package manager <code>Portage</code> into my OS,
-essentially making it identical to Gentoo. I decided to go with Nix OS instead
-and have been loving it since.</p>
+<blockquote><p>Gentoo is an operating system with extreme focus on configurability and performance.
+To provide fully customizable experience, without interfering with the stability of
+the system, Gentoo has a concept of masked packages. These masked packages (or
+versions) are either untested, or are known to be unstable and are installed only if
+the user explicitly unmasks them. While this concept is a boon to the stability of
+the operating system, the current implementation requires the packages to be tested
+manually by a team of developers. This significantly increases the time in which new
+packages are made safely available to the users. The goal of this project is to
+provide a mechanism to test and stabilize the packages automatically with little or
+no human intervention.</p></blockquote>
 
-<p>So, now I would like to offer an explanation, I may like to reinvent the wheel,
-but I only do it because everytime I complete one of my custom projects, I end
-up adding a lot to my knowledge. To make this blog, I learned CSS, HTML5, and a
-lot of Javascript.  To make the search functionality, I had to learn some ruby,
-and NLP in python. The LFS project taught me more about the linux operating
-system, than most linux enthusiasts learn in a lifetime.</p>
+<p>The first phase of summer of code is the community bonding period (April 23rd - May 22nd)
+, which has already started. The first and foremosts tasks for now (community bonding)
+are:</p>
 
-<p>My only motive in creating this blog was so that I could provide answers to some
-questions that I had trouble finding the answers to.</p>
-
-<p>You can:</p>
-
-<ul>
-<li>Message me on <a href="http://fb.com/pallavagarwal07">Facebook</a></li>
-<li>Follow me on <a href="http://github.com/pallavagarwal07">Github</a></li>
-</ul>
+<ol>
+<li>Get familiar with architecture testing.</li>
+<li>Contact people who can give suggestion on my project.</li>
+<li>Create a plan of action for the coding period, by taking the suggestions into account
+with the current plans.</li>
+</ol>
 
 
-<h3>Enjoy ☺</h3>
+<p>For the first, architecture testing, I tested and stabilized a new version of gitflow a
+few days ago.  The package itself was small, with no complicated dependencies and was
+easy enough to handle. But since, my project also aims to create a platform for
+maintainers to create automated test scripts, I had been thinking of ways to implement
+that.</p>
+
+<p>I have also been following Agostino's (Ago's) <a href="https://blogs.gentoo.org/ago/">blog</a> for
+rules/tips pertaining to architecture testing, specifically for the more difficult to
+test things like Kernel, libraries, kernel dependent packages (like virtualbox) etc.</p>
+
+<p>Lastly, I've been looking at the source of package management and testing related tools
+in Gentoo, including tatt and eix.</p>
+
+<p>I would keep on updating this page with more information as I find it.</p>
+
+<p><i>Thanks for reading</i>
+<br /><br /></p>
 
                             </div>
                         </div>
@@ -174,8 +180,6 @@ questions that I had trouble finding the answers to.</p>
                                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
                                 <script src="/js/SmoothScroll.js"></script>
                                 <script src="/js/script.js"></script>
-                                
-                                <script src="/js/about.js"></script>
                                 
                                 
                                 <script type="text/javascript">var switchTo5x=true;</script>

@@ -1,4 +1,4 @@
-<title>About Me - VARSTACK</title>
+<title>SSH port forwarding and some cool uses - VARSTACK</title>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -29,6 +29,8 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <![endif]-->
 
     
+    <img src="/img/secure.jpg" id="bg-img" alt="Encrypted SSH">
+    
     <div class="container">
         <div class="row" id="menu">
             <div class="col-md-3 col-xs-8 menu" id="site_title">
@@ -52,56 +54,92 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
             </div>
         </div>
         
+        <div class="row" id="image"> </div>
+        
         <div class="row" id="content">
             <div class="col-md-7 col-md-push-3">
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>About Me</h3>
+                        <h3>SSH port forwarding and some cool uses</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <blockquote><p>"It always takes longer than you expect, even
-when you take into account Hofstadter's Law."
-<p style="text-align:right"> —Hofstader's Law </p></p></blockquote>
+                                <p>I'll begin with some of the bare minimum and absolutely amazing things ssh port
+forwarding is capable of, and see if I can convert this to a proper blog post
+later.</p>
 
-<p>Hi, let me first introduce myself.
-I am Pallav Agarwal, a sophomore at the department of Computer Science and
-Engineering, Indian Institute of Technology, Kanpur. I love trying new tech,
-languages, programs, operating systems.. Well, pretty much everything remotely
-related to a computer.</p>
+<p><br/></p>
 
-<p>It has been pointed out to me that I'm a <em>reinvent the wheel</em> kind of guy. I
-built this website up from scratch without using any prebuilt themes, pain as it
-was to get it cross compatible. Even for the search functionality, I wrote my
-own algorithm (<a href="/algo/">Behind The Scenes</a>) instead of using the implementations
-available online or using google custom search etc. My current operating system
-is a finely configured <s>Arch Linux</s> Nix OS on i3, a tiling window manager.
-But that isn't custom enough, and so <s>I am currently building my own operating
-system, using the (B)LFS project.</s><br/>UPDATE: I finally finished my LFS
-project when I ended up injecting Gentoo's package manager <code>Portage</code> into my OS,
-essentially making it identical to Gentoo. I decided to go with Nix OS instead
-and have been loving it since.</p>
+<h4><strong>1. Local port forwarding</strong></h4>
 
-<p>So, now I would like to offer an explanation, I may like to reinvent the wheel,
-but I only do it because everytime I complete one of my custom projects, I end
-up adding a lot to my knowledge. To make this blog, I learned CSS, HTML5, and a
-lot of Javascript.  To make the search functionality, I had to learn some ruby,
-and NLP in python. The LFS project taught me more about the linux operating
-system, than most linux enthusiasts learn in a lifetime.</p>
+<p>Syntax:</p>
 
-<p>My only motive in creating this blog was so that I could provide answers to some
-questions that I had trouble finding the answers to.</p>
+<pre><code>ssh -L8081:example.com:80 pallav@myserver.com
+</code></pre>
 
-<p>You can:</p>
+<p>Meaning: Opens a SSH connection to myserver.com, and forward all requests to <strong>my</strong> port 8081
+to port 80 (default http port) of example.com <em>via</em> myserver. Thus, if example.com is blocked
+on my PC, but it can be accessed by some other PC which I have ssh access to, then I can use
+this command to gain access to the blocked website (The website is now accessible on
+localhost:8081 in my browser). Also, ssh connections are encrypted, so the only thing ISP sees
+is an open connection to myserver, and not the website I'm trying to access.</p>
 
-<ul>
-<li>Message me on <a href="http://fb.com/pallavagarwal07">Facebook</a></li>
-<li>Follow me on <a href="http://github.com/pallavagarwal07">Github</a></li>
-</ul>
+<p>Apart from this, you can forward any arbitrary port data to any arbitrary port, from
+this point, only thing stopping you is your imagination.</p>
+
+<p><br/></p>
+
+<h4><strong>2. Remote port forwarding</strong></h4>
+
+<p>Syntax:</p>
+
+<pre><code>ssh -R8081:example.com:22 pallav@myserver.com
+</code></pre>
+
+<p>This is extremely similar to local port forwarding, which is why it causes a lot of
+people confusion. In previous case, the port being mapped was on local machine and the
+request was being sent to example.com via remote server. In this case, the port being
+mapped is on the remote server, while the request being sent is from local computer.
+Get the difference? Good.</p>
+
+<p>This is typically used if the local computer doesn't have a public IP address, and you
+need access to it from outside. In that case, something like</p>
+
+<pre><code>ssh -R8081:localhost:22 pallav@myserver.com
+</code></pre>
+
+<p>Would give ssh access to (previously publically unaccessible) local PC via port 8081 of
+remote server.</p>
+
+<h4><strong>3. Dynamic port forwarding</strong></h4>
+
+<p>Syntax:</p>
+
+<pre><code>ssh -D8081 pallav@myserver.com
+</code></pre>
+
+<p>In local port forwarding, we were restricted to forwarding request to a particular port
+of example.com. But what if we want the requests to reach different destinations, on
+different ports? By the above command, the port 8081 on localhost is dynamically mapped
+such that, localhost:8081 can be used as a socks proxy for any request. Thus, this means
+you can use remote server as a free VPN, by using the above command, and then setting
+localhost:8081 as the socks proxy in the browser (leave other fields empty).</p>
+
+<h3><strong>Quiz time</strong></h3>
+
+<p>Let's say you are in a hotel that has free wifi. But like every hotel, once you connect
+to the wifi, it redirects you to the login page, which only allows one login per room
+☹. But you are a hacker, and decide to share the connection with you brother, who also
+has a laptop. What do you do?</p>
+
+<div class="spoiler">Turn on sshd service on one laptop (whichever one logins to internet)
+Use the other laptop to ssh into this one using local ip address (shown in ifconfig)
+. While SSHing, set up dynamic port forwarding. Now internet is accessible via
+socks proxy through the tunnel.</div>
 
 
-<h3>Enjoy ☺</h3>
+<p><br /><br /></p>
 
                             </div>
                         </div>
@@ -174,8 +212,6 @@ questions that I had trouble finding the answers to.</p>
                                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
                                 <script src="/js/SmoothScroll.js"></script>
                                 <script src="/js/script.js"></script>
-                                
-                                <script src="/js/about.js"></script>
                                 
                                 
                                 <script type="text/javascript">var switchTo5x=true;</script>
