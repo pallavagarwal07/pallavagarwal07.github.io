@@ -9,3 +9,4 @@ gem 'github-pages', versions['github-pages']
 gem 'jekyll-assets'
 gem 'jekyll-sitemap'
 gem 'sanitize'
+
