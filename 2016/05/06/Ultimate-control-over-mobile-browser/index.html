@@ -1,4 +1,4 @@
-<title>Quick intro to custom Vim Mappings - VARSTACK</title>
+<title>Ultimate control over Mobile Browser with Firefox - VARSTACK</title>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -37,6 +37,8 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <![endif]-->
 
     
+    <img src="/img/firefox.png" id="bg-img" alt="Firefox Banner">
+    
     <div class="container">
         <div class="row" id="menu">
             <div class="col-md-3 col-xs-8 menu" id="site_title">
@@ -60,76 +62,32 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
             </div>
         </div>
         
+        <div class="row" id="image"> </div>
+        
         <div class="row" id="content">
             <div class="col-md-7 col-md-push-3">
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>Quick intro to custom Vim Mappings</h3>
+                        <h3>Ultimate control over Mobile Browser with Firefox</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p>One of the best things about vim is its ability to create
-custom mappings for <em>almost</em> any key in all modes.</p>
+                                <p>It is no secret that I love firefox. Even though sometimes, it can run a bit slower than
+Chrome, Firefox has always provided me with better developer tools and better control
+over all of my settings, even those which are usually unavailable via <code>about:config</code>.</p>
 
-<p>Suppose you want Ctrl+S to save your document while you are
-in insert mode, because pressing</p>
+<p>However, it was only recently that I discovered, that <code>about:config</code> works flawlessly
+on the mobile version of the firefox browser too. That means, all of the features you'd
+think that mobile browsers miss, like proxy settings, cache, pipelining settings, etc.
+can be found just by typing <code>about:config</code> on the URL.</p>
 
-<pre><code>&lt;Esc&gt;:w&lt;Enter&gt;i
-</code></pre>
+<p>Before you go off try, and fail - note that you need to understand how some of those
+settings play together. For example, to set proxy settings, the URLs and the ports
+themselves aren't enough. The <code>network.proxy.type</code> needs to be set to 2 (which is the
+equivalent of the menu option "Manual proxy configuration")</p>
 
-<p>to switch to normal mode, save the file, and return back
-to insert mode is a bit too much. According to vim philosophy,
-it actually <strong>is</strong> too much, and thus you can map Ctrl+S to
-those keys just as easily.</p>
-
-<p>For this, add the following to your vimrc</p>
-
-<pre><code>inoremap &lt;C-S&gt; &lt;Esc&gt;:w&lt;Enter&gt;i
-</code></pre>
-
-<h4>EXPLANATION:</h4>
-
-<p>The command has separate parts but follows the format</p>
-
-<pre><code>&lt;cmd&gt; &lt;lhs&gt; &lt;rhs&gt;
-</code></pre>
-
-<p>The command maps lhs to rhs in the mode specified by cmd.
-<code>&lt;cmd&gt;</code> can be further broken down in the following format:</p>
-
-<p><code>&lt;mode&gt;[nore]map</code></p>
-
-<p>where the following modes are common (All
-modes can be viewed
-<a href="http://vimdoc.sourceforge.net/htmldoc/map.html#map-modes">here</a>
-or using <code>:help map-modes</code>)</p>
-
-<pre><code>(none): normal, visual, operator-pending mode
-i: insert mode
-v: visual mode
-n: normal mode
-</code></pre>
-
-<p><code>nore</code> is used for no-remapping, i.e. the default functions
-of <code>rhs</code> and not their aliases will be used. When skipped,
-The <code>rhs</code> will be further resolved if a remapping is found.
-Vim, even has a max resolve-depth in case of an infinite loop.</p>
-
-<p>For <code>lhs</code> and <code>rhs</code> the keys are named as follows:</p>
-
-<pre><code>&lt;C-a&gt; : Ctrl + a
-&lt;S-a&gt; : Shift + a
-&lt;A-a&gt; : Alt + a
-&lt;C-S-a&gt; : Ctrl + Shift + a
-&lt;Enter&gt;
-&lt;BS&gt; : Backspace
-etc..
-</code></pre>
-
-<p>The whole list can be viewed
-<a href="http://vimdoc.sourceforge.net/htmldoc/intro.html#key-notation">here</a>
-or using the <code>:help key-notation</code> command inside vim.</p>
+<p><br /><br /></p>
 
                             </div>
                         </div>
