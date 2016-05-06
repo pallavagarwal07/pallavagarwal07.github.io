@@ -25,6 +25,10 @@ on my PC, but it can be accessed by some other PC which I have ssh access to, th
 this command to gain access to the blocked website (The website is now accessible on 
 localhost:8081 in my browser). Also, ssh connections are encrypted, so the only thing ISP sees
 is an open connection to myserver, and not the website I'm trying to access.
+Unfortunately, many websites you see day to day check the hostname of request (which
+would be localhost) and won't work this way. However, this trick is great to forward
+SSH connections over multiple hops. (For bypassing website restrictions, read on)
+
 
 Apart from this, you can forward any arbitrary port data to any arbitrary port, from
 this point, only thing stopping you is your imagination.
