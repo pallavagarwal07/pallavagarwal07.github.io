@@ -10,7 +10,8 @@ fjs.parentNode.insertBefore(js, fjs);
 var host = "varstack.com";
 var hostwww = "www.varstack.com";
 if (((host == window.location.host) || (hostwww == window.location.host))
-        && (window.location.protocol != 'https:')){
+        && (window.location.protocol != 'https:'
+            || window.location.toString().match(/http.?:\/\/www\./))){
   window.location = window.location.toString().replace(/^http:/, "https:").replace(/https:\/\/varstack/, "https://www.varstack");
 }
 </script>
