@@ -101,6 +101,14 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
                     </li>
                     {% endfor %}
                 </ul>
+                <h4>TAGGED POSTS</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    {% for post in site.tags.tagged | limit:5 %}
+                    <li>
+                        <a href="{{ post.url }}" class="color_change">{{ post.title | truncatewords:6}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
                 <br />
                 <br />
             </div>

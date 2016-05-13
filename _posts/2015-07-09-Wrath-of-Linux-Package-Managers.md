@@ -1,7 +1,7 @@
 ---
 title: "Wrath of Linux Package Managers"
 layout: default
-tags: tip
+tags: post
 ---
 
 We all love to characterise things as _"More than the sum of it's parts"_.
