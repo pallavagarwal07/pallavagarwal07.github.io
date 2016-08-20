@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.10'
 
 require 'json'
 require 'open-uri'
@@ -9,3 +10,6 @@ gem 'github-pages', versions['github-pages']
 gem 'jekyll-assets'
 gem 'jekyll-sitemap'
 gem 'sanitize'
+gem 'nokogumbo'
+gem 'rdiscount'
+gem 'pygments.rb'

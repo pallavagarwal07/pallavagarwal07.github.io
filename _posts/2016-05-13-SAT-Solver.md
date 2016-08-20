@@ -28,7 +28,7 @@ decided to model the problem as a graph problem. More specifically, as a boolean
 satisfiability problem.
 
 So, long story short, here's what I did at
-[https://github.com/pallavagarwal07/SummerOfCode16/blob/master/satsolver/solver.py](https://github.com/pallavagarwal07/SummerOfCode16/blob/master/satsolver/solver.py).
+[SummerOfCode16](https://github.com/pallavagarwal07/SummerOfCode16/blob/dd07d92004b60a00531881773ed6a0a1b41fbd35/Containers/scripts/FlagGenerator/solver.py).
 
 We have five main kinds of operators.
 
