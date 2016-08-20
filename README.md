@@ -1,3 +1,3 @@
-# pallavagarwal07.gitlab.io
+# pallavagarwal07.github.io
 The website is live at www.varstack.com
 
