@@ -8,7 +8,7 @@ from re import sub
 extractor = extract.TermExtractor()
 
 html = mkdn(unicode( open(argv[1]).read(), 'utf-8' ))
-text = ''.join(blsp(html).findAll(text=True))
+text = ''.join(blsp(html, "html.parser").findAll(text=True))
 
 whit = lambda x:sub('\s+', ' ', sub('[^\w]', ' ', x)).strip()
 

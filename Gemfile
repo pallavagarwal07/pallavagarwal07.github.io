@@ -1,14 +1,19 @@
 source 'https://rubygems.org'
-ruby '2.1.10'
+ruby "2.2.3"
 
 require 'json'
 require 'open-uri'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+gem 'nokogiri', '1.6.4'
+gem 'nokogumbo', '1.4.4'
+gem 'kramdown'
 gem 'paginator'
 gem 'jekyll-watch'
-gem 'github-pages', versions['github-pages']
+gem 'github-pages'
 gem 'jekyll-assets'
 gem 'jekyll-sitemap'
+gem 'listen'
+gem 'i18n'
 gem 'sanitize'
 gem 'nokogumbo'
 gem 'rdiscount'

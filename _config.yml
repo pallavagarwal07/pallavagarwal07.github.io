@@ -12,3 +12,4 @@ gems:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-coffeescript
+  - jekyll-feed
