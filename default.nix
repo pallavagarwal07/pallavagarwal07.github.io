@@ -7,11 +7,16 @@ stdenv.mkDerivation {
     name = "python-nix";
     version = "0.1.0.0";
     src = ./.;
-    buildInputs = [ pkgs.python2
-                    pythonIRClib
-                    pkgs.python2Packages.zope_interface
-                    pkgs.python2Packages.beautifulsoup4
-                    pkgs.python2Packages.markdown
-                    ];
-    preBuild = "~/.gem/ruby/2.2.0/bin/jekyll serve";
+    buildInputs = [
+            pkgs.python2
+            pkgs.ruby
+            pkgs.bundler
+            pkgs.zlib
+            pkgs.pythonIRClib
+            pkgs.python2Packages.zope_interface
+            pkgs.python2Packages.beautifulsoup4
+            pkgs.python2Packages.markdown
+            pkgs.python2Packages.pygments
+    ];
+    shellHook = "bundle exec jekyll serve";
 }

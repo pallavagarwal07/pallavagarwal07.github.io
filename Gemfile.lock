@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     activesupport (4.2.7)
       i18n (~> 0.7)
@@ -12,10 +12,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    colorator (0.1)
+    colorator (1.1.0)
     concurrent-ruby (1.0.2)
     crass (1.0.2)
-    ethon (0.9.0)
+    ethon (0.9.1)
       ffi (>= 1.3.0)
     execjs (2.7.0)
     extras (0.1.0)
@@ -27,15 +27,15 @@ GEM
     ffi (1.9.14)
     forwardable-extended (2.6.0)
     gemoji (2.1.0)
-    github-pages (89)
+    github-pages (96)
       activesupport (= 4.2.7)
-      github-pages-health-check (= 1.1.0)
-      jekyll (= 3.1.6)
+      github-pages-health-check (= 1.2.0)
+      jekyll (= 3.2.1)
       jekyll-coffeescript (= 1.0.1)
       jekyll-feed (= 0.5.1)
       jekyll-gist (= 1.4.0)
       jekyll-github-metadata (= 2.0.2)
-      jekyll-mentions (= 1.1.3)
+      jekyll-mentions (= 1.2.0)
       jekyll-paginate (= 1.1.0)
       jekyll-redirect-from (= 0.11.0)
       jekyll-sass-converter (= 1.3.0)
@@ -46,9 +46,10 @@ GEM
       liquid (= 3.0.6)
       listen (= 3.0.6)
       mercenary (~> 0.3)
+      minima (= 1.2.0)
       rouge (= 1.11.1)
       terminal-table (~> 1.4)
-    github-pages-health-check (1.1.0)
+    github-pages-health-check (1.2.0)
       addressable (~> 2.3)
       net-dns (~> 0.8)
       octokit (~> 4.0)
@@ -58,13 +59,14 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     i18n (0.7.0)
-    jekyll (3.1.6)
-      colorator (~> 0.1)
+    jekyll (3.2.1)
+      colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
       kramdown (~> 1.3)
       liquid (~> 3.0)
       mercenary (~> 0.3.3)
+      pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
     jekyll-assets (2.2.8)
@@ -82,7 +84,8 @@ GEM
     jekyll-github-metadata (2.0.2)
       jekyll (~> 3.1)
       octokit (~> 4.0)
-    jekyll-mentions (1.1.3)
+    jekyll-mentions (1.2.0)
+      activesupport (~> 4.0)
       html-pipeline (~> 2.3)
       jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
@@ -107,13 +110,13 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
     mercenary (0.3.6)
-    mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    mini_portile (0.6.2)
+    minima (1.2.0)
+    minitest (5.9.1)
     multipart-post (2.0.0)
     net-dns (0.8.0)
-    nokogiri (1.6.8)
-      mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
+    nokogiri (1.6.4)
+      mini_portile (~> 0.6.0)
     nokogumbo (1.4.9)
       nokogiri
     octokit (4.3.0)
@@ -121,7 +124,6 @@ GEM
     paginator (1.2.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    pkg-config (1.1.7)
     posix-spawn (0.3.11)
     public_suffix (1.5.3)
     pygments.rb (0.6.3)
@@ -134,7 +136,7 @@ GEM
     rdiscount (2.2.0.1)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sanitize (4.1.0)
+    sanitize (4.3.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4.1)
@@ -145,30 +147,34 @@ GEM
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    terminal-table (1.6.0)
+    terminal-table (1.7.3)
+      unicode-display_width (~> 1.1.1)
     thread_safe (0.3.5)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unicode-display_width (1.1.1)
     yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages (= 89)
+  github-pages
+  i18n
   jekyll-assets
   jekyll-sitemap
   jekyll-watch
+  json
+  kramdown
+  listen
+  nokogiri (= 1.6.4)
   nokogumbo
   paginator
   pygments.rb
   rdiscount
   sanitize
 
-RUBY VERSION
-   ruby 2.1.10p492
-
 BUNDLED WITH
-   1.12.5
+   1.10.6

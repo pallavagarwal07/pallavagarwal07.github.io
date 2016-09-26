@@ -23,11 +23,14 @@ if (((host == window.location.host) || (hostwww == window.location.host))
     <link href="/css/highlighting.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     
+    
 </noscript>
+
 <script id="loadcss">function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
 loadCSS( "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", document.getElementById("loadcss"));
 loadCSS( "/css/highlighting.css", document.getElementById("loadcss"));
 loadCSS( "/css/style.css", document.getElementById("loadcss"));
+    
     
 </script>
 
@@ -74,22 +77,22 @@ when you take into account Hofstadter's Law."
 <p style="text-align:right"> —Hofstader's Law </p></p></blockquote>
 
 <p>Hi, let me first introduce myself.
-I am Pallav Agarwal, a sophomore at the department of Computer Science and
-Engineering, Indian Institute of Technology, Kanpur. I love trying new tech,
-languages, programs, operating systems.. Well, pretty much everything remotely
-related to a computer.</p>
+I am Pallav Agarwal, a third year undergrad at the department of Computer
+Science and Engineering, Indian Institute of Technology, Kanpur. I love trying
+new tech, languages, programs, operating systems.. Well, pretty much everything
+remotely related to a computer.</p>
 
 <p>It has been pointed out to me that I'm a <em>reinvent the wheel</em> kind of guy. I
-built this website up from scratch without using any prebuilt themes, pain as it
-was to get it cross compatible. Even for the search functionality, I wrote my
-own algorithm (<a href="/algo/">Behind The Scenes</a>) instead of using the implementations
-available online or using google custom search etc. My current operating system
-is a finely configured <s>Arch Linux</s> Nix OS on i3, a tiling window manager.
-But that isn't custom enough, and so <s>I am currently building my own operating
-system, using the (B)LFS project.</s><br/>UPDATE: I finally finished my LFS
-project when I ended up injecting Gentoo's package manager <code>Portage</code> into my OS,
-essentially making it identical to Gentoo. I decided to go with Nix OS instead
-and have been loving it since.</p>
+built this website up from scratch without using any prebuilt themes, pain as
+it was to get it cross compatible. Even for the search functionality, I wrote
+my own algorithm (<a href="/algo/">Behind The Scenes</a>) instead of using the
+implementations available online or using google custom search etc. My current
+operating system is a finely configured <s>Arch Linux</s> Nix OS on i3, a
+tiling window manager.  But that isn't custom enough, and so <s>I am currently
+building my own operating system, using the (B)LFS project.</s><br/>UPDATE: I
+finally finished my LFS project when I ended up injecting Gentoo's package
+manager <code>Portage</code> into my OS, essentially making it identical to Gentoo. I
+decided to go with <strong>Nix OS</strong> instead and have been loving it since.</p>
 
 <p>So, now I would like to offer an explanation, I may like to reinvent the wheel,
 but I only do it because everytime I complete one of my custom projects, I end
@@ -98,8 +101,8 @@ lot of Javascript.  To make the search functionality, I had to learn some ruby,
 and NLP in python. The LFS project taught me more about the linux operating
 system, than most linux enthusiasts learn in a lifetime.</p>
 
-<p>My only motive in creating this blog was so that I could provide answers to some
-questions that I had trouble finding the answers to.</p>
+<p>My only motive in creating this blog was so that I could provide answers to
+some questions that I had trouble finding the answers to.</p>
 
 <p>You can:</p>
 
@@ -122,6 +125,10 @@ questions that I had trouble finding the answers to.</p>
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2016/09/26/YourHonour-k8s-programming-judge/" class="color_change">YourHonour: A k8s based distributed programming...</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" class="color_change">SSH port forwarding and some cool...</a>
                     </li>
                     
@@ -135,10 +142,6 @@ questions that I had trouble finding the answers to.</p>
                     
                     <li>
                         <a href="/2015/10/06/Introduction-to-Cimulator/" class="color_change">Introduction to Cimulator</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/2015/08/24/Shared-TMUX-sessions/" class="color_change">Shared SSH sessions with TMUX -...</a>
                     </li>
                     
                 </ul>
@@ -190,6 +193,7 @@ questions that I had trouble finding the answers to.</p>
                                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
                                 <script src="/js/SmoothScroll.js"></script>
                                 <script src="/js/script.js"></script>
+                                
                                 
                                 <script src="/js/about.js"></script>
                                 

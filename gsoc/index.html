@@ -23,11 +23,14 @@ if (((host == window.location.host) || (hostwww == window.location.host))
     <link href="/css/highlighting.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     
+    
 </noscript>
+
 <script id="loadcss">function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
 loadCSS( "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", document.getElementById("loadcss"));
 loadCSS( "/css/highlighting.css", document.getElementById("loadcss"));
 loadCSS( "/css/style.css", document.getElementById("loadcss"));
+    
     
 </script>
 
@@ -69,7 +72,16 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p><strong><a href="/2016/05/13/SAT-Solver/">DETERMINING LEGAL USE FLAG COMBINATIONS USING A CNF SAT SOLVER</a></strong></p>
+                                <p><strong><a href="/2016/06/09/Bugzilla-Landfills/">LEARNING FROM MISTAKES: BUGZILLA LANDFILLS</a></strong></p>
+
+<p>This post is regarding a recent incident that happened when I was working for my project in Google Summer of Code.</p>
+
+
+<p> <p>My day's task was to automate the filing of a bug in bugzilla if and when a build fails. Though, not too hard, it would obviously require testing, because I can't just assume that my code would work the way it is supposed to.</p> <p>This didn't seem like much...</p></p>
+
+<p><br /></p>
+
+<p><strong><a href="/2016/05/13/SAT-Solver/">DETERMINING LEGAL USE FLAG COMBINATIONS USING A CNF SAT SOLVER</a></strong></p>
 
 <p>I spent my time doing something rather interesting today.</p>
 
@@ -98,6 +110,10 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2016/09/26/YourHonour-k8s-programming-judge/" class="color_change">YourHonour: A k8s based distributed programming...</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" class="color_change">SSH port forwarding and some cool...</a>
                     </li>
                     
@@ -111,10 +127,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                     
                     <li>
                         <a href="/2015/10/06/Introduction-to-Cimulator/" class="color_change">Introduction to Cimulator</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/2015/08/24/Shared-TMUX-sessions/" class="color_change">Shared SSH sessions with TMUX -...</a>
                     </li>
                     
                 </ul>
@@ -166,6 +178,7 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
                                 <script src="/js/SmoothScroll.js"></script>
                                 <script src="/js/script.js"></script>
+                                
                                 
                                 <script src="/js/gsoc.js"></script>
                                 
