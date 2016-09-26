@@ -1,11 +1,11 @@
-source 'https://rubygems.org'
-ruby "2.2.3"
+source 'http://rubygems.org'
+#ruby "2.2.3"
 
 require 'json'
 require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+#versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 gem 'nokogiri', '1.6.4'
-gem 'nokogumbo', '1.4.4'
+gem 'nokogumbo'
 gem 'kramdown'
 gem 'paginator'
 gem 'jekyll-watch'
@@ -15,6 +15,5 @@ gem 'jekyll-sitemap'
 gem 'listen'
 gem 'i18n'
 gem 'sanitize'
-gem 'nokogumbo'
 gem 'rdiscount'
 gem 'pygments.rb'

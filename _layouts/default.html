@@ -1,36 +1,4 @@
 <title>{{ page.title }} - VARSTACK</title>
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -54,7 +22,8 @@ if (((host == window.location.host) || (hostwww == window.location.host))
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/highlighting.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
-    {% for style in page.styles | split:' ' %}
+    {% assign lp = page.styles | split:' ' %}
+    {% for style in lp %}
     <link href="/css/{{style}}" rel="stylesheet">
     {% endfor %}
 </noscript>
@@ -63,7 +32,8 @@ if (((host == window.location.host) || (hostwww == window.location.host))
 loadCSS( "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", document.getElementById("loadcss"));
 loadCSS( "/css/highlighting.css", document.getElementById("loadcss"));
 loadCSS( "/css/style.css", document.getElementById("loadcss"));
-    {% for style in page.styles | split:' ' %}
+    {% assign lp = page.styles | split:' ' %}
+    {% for style in lp %}
 loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
     {% endfor %}
 </script>
@@ -120,7 +90,7 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
             <div class="col-md-3 col-md-pull-7" id="recent">
                 <h4>RECENT POSTS</h4>
                 <ul class="nav nav-pills nav-stacked">
-                    {% for post in site.tags.post | limit:5 %}
+                    {% for post in site.tags.post limit:5 %}
                     <li>
                         <a href="{{ post.url }}" class="color_change">{{ post.title | truncatewords:6}}</a>
                     </li>
@@ -128,7 +98,7 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
                 </ul>
                 <h4>RECENT TIPS</h4>
                 <ul class="nav nav-pills nav-stacked">
-                    {% for post in site.tags.tip | limit:5 %}
+                    {% for post in site.tags.tip limit:5 %}
                     <li>
                         <a href="{{ post.url }}" class="color_change">{{ post.title | truncatewords:6}}</a>
                     </li>
@@ -136,7 +106,7 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
                 </ul>
                 <h4>TAGGED POSTS</h4>
                 <ul class="nav nav-pills nav-stacked">
-                    {% for post in site.tags.tagged | limit:5 %}
+                    {% for post in site.tags.tagged limit:5 %}
                     <li>
                         <a href="{{ post.url }}" class="color_change">{{ post.title | truncatewords:6}}</a>
                     </li>
@@ -158,7 +128,8 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
                                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
                                 <script src="/js/SmoothScroll.js"></script>
                                 <script src="/js/script.js"></script>
-                                {% for script in page.scripts | split:' ' %}
+                                {% assign lp = page.scripts | split:' ' %}
+                                {% for script in lp %}
                                 <script src="/js/{{script}}"></script>
                                 {% endfor %}
                                 {% if page.tags contains 'tip' %}
@@ -222,35 +193,3 @@ ga('send', 'pageview');
             </div>
         </div>
     </div>
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->
-<!--THE END OF THE FLAG IS CSSSUCKS} -->

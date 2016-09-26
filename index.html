@@ -11,7 +11,7 @@ img-alt: Programmers Wallpaper banner
     <span class="date">{{ post.date | date: "%b %d, %Y"}}</span>
   </p>
   <div class="content">
-    {{ post.content || truncatewords: 100}}
+    {{ post.content | truncatewords: 100}}
   </div>
   <br /><br />
 {% endfor %}
