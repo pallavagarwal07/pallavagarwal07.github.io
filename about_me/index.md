@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About Me
-scripts: about.js
+activate: about
 ---
 
 > "It always takes longer than you expect, even

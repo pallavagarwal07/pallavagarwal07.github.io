@@ -1,7 +1,7 @@
 ---
 title: Tips
 layout: default
-scripts: tips.js
+activate: tips
 ---
 
 {% for post in site.tags.tip %}

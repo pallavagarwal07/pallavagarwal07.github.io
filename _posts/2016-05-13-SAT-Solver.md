@@ -1,7 +1,7 @@
 ---
 title: "Determining legal USE Flag combinations using a CNF SAT Solver"
 layout: default
-tags: gsoc
+tags: post
 ---
 
 I spent my time doing something rather interesting today.

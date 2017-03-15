@@ -1,4 +1,4 @@
-require 'nokogumbo'
+#require 'nokogumbo'
 require 'sanitize'
 
 module Jekyll

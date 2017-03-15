@@ -48,24 +48,25 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
     {% endif %}
     <div class="container">
         <div class="row" id="menu">
-            <div class="col-md-3 col-xs-8 menu" id="site_title">
-                <a href="/" style="color:black;">VARSTACK</a>
+            <div class="col-sm-2 col-xs-2 menu" id="site_title">
+                <a href="/" style="color:black;">
+                    <img src="/img/logo.png" style="max-height:90%;">
+                </a>
             </div>
-            <div class="col-md-3 col-md-push-6 col-xs-4 menu">
+            <div class="col-sm-6 col-xs-10 menu">
+                <div class="row" id="top_menu">
+                    <ul class="nav nav-pills">
+                        <li class="{% if page.activate == nil %}active{% endif %}" id="blog"><a class="color_change" href="/">Blog</a></li>
+                        <li class="{% if page.activate == 'tips' %}active{% endif %}" id="tips"><a class="color_change" href="/tips/">Tips</a></li>
+                        <li class="{% if page.activate == 'algo' %}active{% endif %}" id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
+                        <li class="{% if page.activate == 'about' %}active{% endif %}" id="about"><a class="color_change" href="/about_me/">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12 menu">
                 <form action="/search/" id='search-form'>
                     <input id="search-box" type="text" name="query" placeholder="Search..">
                 </form>
-            </div>
-            <div class="col-md-6 col-md-pull-3 col-xs-12 menu">
-                <div class="row" id="top_menu">
-                    <ul class="nav nav-pills">
-                        <li class="active" id="blog"><a class="color_change" href="/">Blog</a></li>
-                        <li id="tips"><a class="color_change" href="/tips/">Tips</a></li>
-                        <li id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
-                        <li id="gsoc"><a class="color_change" href="/gsoc/">GSoC_2016</a></li>
-                        <li id="about"><a class="color_change" href="/about_me/">About Me</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
         {% if page.img %}
@@ -126,7 +127,6 @@ loadCSS( "/css/{{style}}", document.getElementById("loadcss"));
                             <div class="col-xs-8 text-right">
                                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
                                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-                                <script src="/js/SmoothScroll.js"></script>
                                 <script src="/js/script.js"></script>
                                 {% assign lp = page.scripts | split:' ' %}
                                 {% for script in lp %}

@@ -1,7 +1,7 @@
 ---
 title: "Learning from mistakes: Bugzilla Landfills"
 layout: default
-tags: gsoc
+tags: post
 ---
 
 This post is regarding a recent incident that happened when I was working for
