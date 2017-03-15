@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://www.varstack.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.varstack.com/" rel="alternate" type="text/html" /><updated>2016-09-26T20:14:58+00:00</updated><id>http://www.varstack.com/</id><title>Something new you wish to know</title><subtitle></subtitle><entry><title>YourHonour: A k8s based distributed programming judge</title><link href="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/" rel="alternate" type="text/html" title="YourHonour: A k8s based distributed programming judge" /><published>2016-09-26T00:00:00+00:00</published><updated>2016-09-26T00:00:00+00:00</updated><id>http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge</id><content type="html" xml:base="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/">&lt;p&gt;So, this is something I have been working on recently for some time. The
-project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.varstack.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.varstack.com/" rel="alternate" type="text/html" /><updated>2017-03-15T22:21:02+05:30</updated><id>http://www.varstack.com/</id><title>Something new you wish to know</title><subtitle></subtitle><entry><title>YourHonour: A k8s based distributed programming judge</title><link href="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/" rel="alternate" type="text/html" title="YourHonour: A k8s based distributed programming judge" /><published>2016-09-26T00:00:00+05:30</published><updated>2016-09-26T00:00:00+05:30</updated><id>http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge</id><content type="html" xml:base="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/">&lt;p&gt;So, this is something I have been working on recently for some time. The
+project&#39;s name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
 organising programming competitions.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;YourHonour&lt;/strong&gt; came into being because the Open Source solutions already present
@@ -8,10 +8,10 @@ that are easy to set up, as well as provide complete functionality are either
 paid, or non-free.&lt;/p&gt;
 
 &lt;p&gt;Anyway, I decided to build my own judge. Hell, how hard can it be? As it turns
-out, creating a judge isn't as easy as I initially thought. There are way too
+out, creating a judge isn&#39;t as easy as I initially thought. There are way too
 many things that can go wrong at any given time, most of the problems stemming
 from the fact that the judge is supposed to run arbitrary code from the user on
-the server, and make sure that it can't do anything malicious.&lt;/p&gt;
+the server, and make sure that it can&#39;t do anything malicious.&lt;/p&gt;
 
 &lt;p&gt;Lastly, the judge should properly utilize resources from the cluster or machine
 on which it is running, and properly give the resources to each program. It should
@@ -24,19 +24,19 @@ look something like this:&lt;/p&gt;
 &lt;li&gt;Kill after desired time&lt;/li&gt;
 &lt;li&gt;Possibility to schedule on a cluster of computers/VMs&lt;/li&gt;
 &lt;li&gt;Limit resources, distribute resources&lt;/li&gt;
-&lt;li&gt;Handle exit status/signal of the user's code&lt;/li&gt;
+&lt;li&gt;Handle exit status/signal of the user&#39;s code&lt;/li&gt;
 &lt;li&gt;Preventing malicious behaviour&lt;/li&gt;
 &lt;/ol&gt;
 
 
-&lt;p&gt;&lt;strong&gt;Let's tackle these one by one:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let&#39;s tackle these one by one:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3&gt;&lt;strong&gt;Run isolated code&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;The first thing that comes to mind when talking about isolation is a container.
-That's pretty much it. That is probably the most sensible way to do it. In my
-implementation, &lt;strong&gt;I use docker containers to run the user's code&lt;/strong&gt;. This way,
-the container is isolated, and the code inside can't get access to any of my
+That&#39;s pretty much it. That is probably the most sensible way to do it. In my
+implementation, &lt;strong&gt;I use docker containers to run the user&#39;s code&lt;/strong&gt;. This way,
+the container is isolated, and the code inside can&#39;t get access to any of my
 files.&lt;/p&gt;
 
 &lt;h3&gt;&lt;strong&gt;Kill after desired time&lt;/strong&gt;&lt;/h3&gt;
@@ -60,7 +60,7 @@ method).&lt;/p&gt;
 
 &lt;h3&gt;&lt;strong&gt; Limit and distribute resources&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;Kubernetes provides configuration for this, and thus isn't a concern.&lt;/p&gt;
+&lt;p&gt;Kubernetes provides configuration for this, and thus isn&#39;t a concern.&lt;/p&gt;
 
 &lt;h3&gt;&lt;strong&gt;Exit/Signal status of child&lt;/strong&gt;&lt;/h3&gt;
 
@@ -73,9 +73,9 @@ alarm signal registered on the kernel.&lt;/p&gt;
 
 &lt;h3&gt;&lt;strong&gt;Restrict internet access in container&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;I didn't find a very elegant solution to this. The containers which run without
-&lt;code&gt;--privileged&lt;/code&gt; flag, &lt;strong&gt;don't have any way to turn off internet access from
-inside the container&lt;/strong&gt;. And the internet can't be turned off before the
+&lt;p&gt;I didn&#39;t find a very elegant solution to this. The containers which run without
+&lt;code&gt;--privileged&lt;/code&gt; flag, &lt;strong&gt;don&#39;t have any way to turn off internet access from
+inside the container&lt;/strong&gt;. And the internet can&#39;t be turned off before the
 continer is launched because the container uses the network to fetch the
 input/output files from local machines on cluster.&lt;/p&gt;
 
@@ -91,7 +91,7 @@ uncomfortable using the &lt;code&gt;--privileged&lt;/code&gt; flag.&lt;/p&gt;
 
 &lt;h3&gt;&lt;strong&gt;Prevent malicious behaviour&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;This one is probably the most involved since we don't know what is meant by
+&lt;p&gt;This one is probably the most involved since we don&#39;t know what is meant by
 &lt;em&gt;malicious&lt;/em&gt;. We have already stopped it from accessing internet, and our files,
 drives and devices are safe. We have also tried our best to stop it from using
 too many resources by limit container resources. So now what?&lt;/p&gt;
@@ -103,11 +103,11 @@ major problems (till now):&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;DoS attacks crush the server very easily:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Apparently nodejs server doesn't have protection against DoS attacks.
-&lt;em&gt;&lt;strong&gt;Sigh&lt;/strong&gt;&lt;/em&gt;. I didn't want to add a proxy gateway just to filter out DoS
+&lt;p&gt;Apparently nodejs server doesn&#39;t have protection against DoS attacks.
+&lt;em&gt;&lt;strong&gt;Sigh&lt;/strong&gt;&lt;/em&gt;. I didn&#39;t want to add a proxy gateway just to filter out DoS
 attacks, so for now I have patched the server with a temporary solution. If
 the server detects multiple consecutive requests (too many), it adds an
-iptable rule to drop connections from that IP. This isn't perfect, but it
+iptable rule to drop connections from that IP. This isn&#39;t perfect, but it
 works. The server recovers from the attack in a few seconds, and the source
 is blocked from making any requests for some time (configurable).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Fork bombs in source code:&lt;/strong&gt;&lt;/p&gt;
@@ -117,36 +117,36 @@ the number of processes a lot faster than the used up memory. This completely
 clutters up the ready queue and prevents the parent from being scheduled. In
 worst cases (and the behaviour is unpredictable), the docker container ends up
 crashing the host node (i.e.  computer or VM) as well. While the ideal solution
-would be to restrict the number of allowed processes, but I couldn't find the
-correct way to do this in docker.  As an alternative, &lt;strong&gt;I increase the child's
+would be to restrict the number of allowed processes, but I couldn&#39;t find the
+correct way to do this in docker.  As an alternative, &lt;strong&gt;I increase the child&#39;s
 niceness value&lt;/strong&gt; making it less important than the parent in the scheduling
 algorithm. The &lt;strong&gt;parent sends the kill signal to ALL processes it is allowed to
 send to&lt;/strong&gt;, and hence kills all descendants of the malicious process as well.
-This seems to work well, and I haven't had much problem since.&lt;/p&gt;&lt;/li&gt;
+This seems to work well, and I haven&#39;t had much problem since.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="post" /><summary>So, this is something I have been working on recently for some time. The
-project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
-organising programming competitions.</summary></entry><entry><title>Learning from mistakes: Bugzilla Landfills</title><link href="http://www.varstack.com/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00+00:00</published><updated>2016-06-09T00:00:00+00:00</updated><id>http://www.varstack.com/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://www.varstack.com/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
+project&#39;s name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
+organising programming competitions.</summary></entry><entry><title>Learning from mistakes: Bugzilla Landfills</title><link href="http://www.varstack.com/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00+05:30</published><updated>2016-06-09T00:00:00+05:30</updated><id>http://www.varstack.com/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://www.varstack.com/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
 my project in Google Summer of Code.&lt;/p&gt;
 
-&lt;p&gt;My day's task was to automate the filing of a bug in bugzilla if and when a
+&lt;p&gt;My day&#39;s task was to automate the filing of a bug in bugzilla if and when a
 build fails. Though, not too hard, it would obviously require testing, because
-I can't just assume that my code would work the way it is supposed to.&lt;/p&gt;
+I can&#39;t just assume that my code would work the way it is supposed to.&lt;/p&gt;
 
-&lt;p&gt;This didn't seem like much of a problem at that time. What I decided to do was,
-test on a single bug and delete it when I'm done. Simple Enough?&lt;/p&gt;
+&lt;p&gt;This didn&#39;t seem like much of a problem at that time. What I decided to do was,
+test on a single bug and delete it when I&#39;m done. Simple Enough?&lt;/p&gt;
 
-&lt;p&gt;As it turns out, it wasn't so simple. And I would've known that, had I done a
+&lt;p&gt;As it turns out, it wasn&#39;t so simple. And I would&#39;ve known that, had I done a
 bit of a research. You see, once a bug is reported, it can be edited, yet
 closing, or deleting the bug is something only the administrators are capable
 of. So, by creating a bug in bugzilla I inadvertantly sent an email about a
 bug to numerous people.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="gsoc" /><summary>This post is regarding a recent incident that happened when I was working for
-my project in Google Summer of Code.</summary></entry><entry><title>Determining legal USE Flag combinations using a CNF SAT Solver</title><link href="http://www.varstack.com/2016/05/13/SAT-Solver/" rel="alternate" type="text/html" title="Determining legal USE Flag combinations using a CNF SAT Solver" /><published>2016-05-13T00:00:00+00:00</published><updated>2016-05-13T00:00:00+00:00</updated><id>http://www.varstack.com/2016/05/13/SAT-Solver</id><content type="html" xml:base="http://www.varstack.com/2016/05/13/SAT-Solver/">&lt;p&gt;I spent my time doing something rather interesting today.&lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="post" /><summary>This post is regarding a recent incident that happened when I was working for
+my project in Google Summer of Code.</summary></entry><entry><title>Determining legal USE Flag combinations using a CNF SAT Solver</title><link href="http://www.varstack.com/2016/05/13/SAT-Solver/" rel="alternate" type="text/html" title="Determining legal USE Flag combinations using a CNF SAT Solver" /><published>2016-05-13T00:00:00+05:30</published><updated>2016-05-13T00:00:00+05:30</updated><id>http://www.varstack.com/2016/05/13/SAT-Solver</id><content type="html" xml:base="http://www.varstack.com/2016/05/13/SAT-Solver/">&lt;p&gt;I spent my time doing something rather interesting today.&lt;/p&gt;
 
 &lt;p&gt;In my proposal, I had
 mentioned that the USE flag combinations to be tested would be:&lt;/p&gt;
@@ -161,7 +161,7 @@ or inverse of default flags or those generated by tatt.&lt;/p&gt;&lt;/blockquote
 &lt;p&gt;Yesterday, a guy, Harald Timeraider pointed out that some of the USE flag combinations
 given by the above rules may not be legal. For example, if an ebuild specifies
 &lt;code&gt;REQUIRED_USE=&quot;^^ (a b c)&quot;&lt;/code&gt; then EXACTLY one flag out of &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, and &lt;code&gt;c&lt;/code&gt; should be
-enabled. This doesn't fall under &quot;without USE flags&quot; or &quot;with all USE flags&quot; category.&lt;/p&gt;
+enabled. This doesn&#39;t fall under &quot;without USE flags&quot; or &quot;with all USE flags&quot; category.&lt;/p&gt;
 
 &lt;p&gt;At first I was thinking that for combination os USE flags, I would use the portage API
 to verify if the USE flag combo was valid and is not, I would randomly generate another
@@ -169,7 +169,7 @@ combination. But soon, as it always happens, I began to overthink the problem an
 decided to model the problem as a graph problem. More specifically, as a boolean
 satisfiability problem.&lt;/p&gt;
 
-&lt;p&gt;So, long story short, here's what I did at
+&lt;p&gt;So, long story short, here&#39;s what I did at
 &lt;a href=&quot;https://github.com/pallavagarwal07/SummerOfCode16/blob/dd07d92004b60a00531881773ed6a0a1b41fbd35/Containers/scripts/FlagGenerator/solver.py&quot;&gt;SummerOfCode16&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We have five main kinds of operators.&lt;/p&gt;
@@ -198,7 +198,7 @@ bracket is preceded by &lt;code&gt;||&lt;/code&gt; or &lt;code&gt;^^&lt;/code&gt
 &lt;/ol&gt;
 
 
-&lt;p&gt;Also, because I was having fun and wasn't sure if Portage supported it, I added support
+&lt;p&gt;Also, because I was having fun and wasn&#39;t sure if Portage supported it, I added support
 for arbitrary amount of nesting, given that the above rules are all followed.&lt;/p&gt;
 
 &lt;p&gt;The code I wrote uses &lt;code&gt;satispy&lt;/code&gt; to convert constructed SAT formula into CNF form, and
@@ -211,7 +211,7 @@ solutions as I want. Also the output is a bit easier on the eyes in the form of 
 &lt;p&gt;If you have any queries, post them below or open up an issue on github.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="gsoc" /><summary>I spent my time doing something rather interesting today.</summary></entry><entry><title>Reference Sheets and Useful Links</title><link href="http://www.varstack.com/2016/05/13/Reference-Sheets-and-Useful-Links/" rel="alternate" type="text/html" title="Reference Sheets and Useful Links" /><published>2016-05-13T00:00:00+00:00</published><updated>2016-05-13T00:00:00+00:00</updated><id>http://www.varstack.com/2016/05/13/Reference-Sheets-and-Useful-Links</id><content type="html" xml:base="http://www.varstack.com/2016/05/13/Reference-Sheets-and-Useful-Links/">&lt;p&gt;This post was long due. I often find blog posts, reference sheets and useful links that
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="post" /><summary>I spent my time doing something rather interesting today.</summary></entry><entry><title>Reference Sheets and Useful Links</title><link href="http://www.varstack.com/2016/05/13/Reference-Sheets-and-Useful-Links/" rel="alternate" type="text/html" title="Reference Sheets and Useful Links" /><published>2016-05-13T00:00:00+05:30</published><updated>2016-05-13T00:00:00+05:30</updated><id>http://www.varstack.com/2016/05/13/Reference-Sheets-and-Useful-Links</id><content type="html" xml:base="http://www.varstack.com/2016/05/13/Reference-Sheets-and-Useful-Links/">&lt;p&gt;This post was long due. I often find blog posts, reference sheets and useful links that
 I feel I should bookmark. However, I often lose these bookmarks when I shift Operating
 Systems or browsers (which happens very often). I am hoping that this will be a better
 and a more reliable way to keep track of all these resources.&lt;/p&gt;
@@ -225,23 +225,23 @@ cheat sheat to write cross compatible code for both PYTHON-2 and PYTHON-3&lt;/li
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="tagged" /><summary>This post was long due. I often find blog posts, reference sheets and useful links that
 I feel I should bookmark. However, I often lose these bookmarks when I shift Operating
 Systems or browsers (which happens very often). I am hoping that this will be a better
-and a more reliable way to keep track of all these resources.</summary></entry><entry><title>Ultimate control over Mobile Browser with Firefox</title><link href="http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser/" rel="alternate" type="text/html" title="Ultimate control over Mobile Browser with Firefox" /><published>2016-05-06T00:00:00+00:00</published><updated>2016-05-06T00:00:00+00:00</updated><id>http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser</id><content type="html" xml:base="http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser/">&lt;p&gt;It is no secret that I love firefox. Even though sometimes, it can run a bit slower than
+and a more reliable way to keep track of all these resources.</summary></entry><entry><title>Ultimate control over Mobile Browser with Firefox</title><link href="http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser/" rel="alternate" type="text/html" title="Ultimate control over Mobile Browser with Firefox" /><published>2016-05-06T00:00:00+05:30</published><updated>2016-05-06T00:00:00+05:30</updated><id>http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser</id><content type="html" xml:base="http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser/">&lt;p&gt;It is no secret that I love firefox. Even though sometimes, it can run a bit slower than
 Chrome, Firefox has always provided me with better developer tools and better control
 over all of my settings, even those which are usually unavailable via &lt;code&gt;about:config&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;However, it was only recently that I discovered, that &lt;code&gt;about:config&lt;/code&gt; works flawlessly
-on the mobile version of the firefox browser too. That means, all of the features you'd
+on the mobile version of the firefox browser too. That means, all of the features you&#39;d
 think that mobile browsers miss, like proxy settings, cache, pipelining settings, etc.
 can be found just by typing &lt;code&gt;about:config&lt;/code&gt; on the URL.&lt;/p&gt;
 
 &lt;p&gt;Before you go off try, and fail - note that you need to understand how some of those
 settings play together. For example, to set proxy settings, the URLs and the ports
-themselves aren't enough. The &lt;code&gt;network.proxy.type&lt;/code&gt; needs to be set to 2 (which is the
+themselves aren&#39;t enough. The &lt;code&gt;network.proxy.type&lt;/code&gt; needs to be set to 2 (which is the
 equivalent of the menu option &quot;Manual proxy configuration&quot;)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="tip" /><summary>It is no secret that I love firefox. Even though sometimes, it can run a bit slower than
 Chrome, Firefox has always provided me with better developer tools and better control
-over all of my settings, even those which are usually unavailable via about:config.</summary></entry><entry><title>SSH port forwarding and some cool uses</title><link href="http://www.varstack.com/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" rel="alternate" type="text/html" title="SSH port forwarding and some cool uses" /><published>2016-05-06T00:00:00+00:00</published><updated>2016-05-06T00:00:00+00:00</updated><id>http://www.varstack.com/2016/05/06/SSH-port-forwarding-and-some-cool-uses</id><content type="html" xml:base="http://www.varstack.com/2016/05/06/SSH-port-forwarding-and-some-cool-uses/">&lt;p&gt;I'll begin with some of the bare minimum and absolutely amazing things ssh port
+over all of my settings, even those which are usually unavailable via about:config.</summary></entry><entry><title>SSH port forwarding and some cool uses</title><link href="http://www.varstack.com/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" rel="alternate" type="text/html" title="SSH port forwarding and some cool uses" /><published>2016-05-06T00:00:00+05:30</published><updated>2016-05-06T00:00:00+05:30</updated><id>http://www.varstack.com/2016/05/06/SSH-port-forwarding-and-some-cool-uses</id><content type="html" xml:base="http://www.varstack.com/2016/05/06/SSH-port-forwarding-and-some-cool-uses/">&lt;p&gt;I&#39;ll begin with some of the bare minimum and absolutely amazing things ssh port
 forwarding is capable of, and see if I can convert this to a proper blog post
 later.&lt;/p&gt;
 
@@ -259,9 +259,9 @@ to port 80 (default http port) of example.com &lt;em&gt;via&lt;/em&gt; myserver.
 on my PC, but it can be accessed by some other PC which I have ssh access to, then I can use
 this command to gain access to the blocked website (The website is now accessible on
 localhost:8081 in my browser). Also, ssh connections are encrypted, so the only thing ISP sees
-is an open connection to myserver, and not the website I'm trying to access.
+is an open connection to myserver, and not the website I&#39;m trying to access.
 Unfortunately, many websites you see day to day check the hostname of request (which
-would be localhost) and won't work this way. However, this trick is great to forward
+would be localhost) and won&#39;t work this way. However, this trick is great to forward
 SSH connections over multiple hops. (For bypassing website restrictions, read on)&lt;/p&gt;
 
 &lt;p&gt;Apart from this, you can forward any arbitrary port data to any arbitrary port, from
@@ -282,7 +282,7 @@ request was being sent to example.com via remote server. In this case, the port 
 mapped is on the remote server, while the request being sent is from local computer.
 Get the difference? Good.&lt;/p&gt;
 
-&lt;p&gt;This is typically used if the local computer doesn't have a public IP address, and you
+&lt;p&gt;This is typically used if the local computer doesn&#39;t have a public IP address, and you
 need access to it from outside. In that case, something like&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;ssh -R8081:localhost:22 pallav@myserver.com
@@ -307,7 +307,7 @@ localhost:8081 as the socks proxy in the browser (leave other fields empty).&lt;
 
 &lt;h3&gt;&lt;strong&gt;Quiz time&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;Let's say you are in a hotel that has free wifi. But like every hotel, once you connect
+&lt;p&gt;Let&#39;s say you are in a hotel that has free wifi. But like every hotel, once you connect
 to the wifi, it redirects you to the login page, which only allows one login per room
 ☹. But you are a hacker, and decide to share the connection with you brother, who also
 has a laptop. What do you do?&lt;/p&gt;
@@ -318,9 +318,9 @@ Use the other laptop to ssh into this one using local ip address (shown in ifcon
 socks proxy through the tunnel.&lt;/div&gt;
 
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="post" /><summary>I'll begin with some of the bare minimum and absolutely amazing things ssh port
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="post" /><summary>I&#39;ll begin with some of the bare minimum and absolutely amazing things ssh port
 forwarding is capable of, and see if I can convert this to a proper blog post
-later.</summary></entry><entry><title>Google Summer of Code with Gentoo</title><link href="http://www.varstack.com/2016/04/30/Google-Summer-of-Code-with-Gentoo/" rel="alternate" type="text/html" title="Google Summer of Code with Gentoo" /><published>2016-04-30T00:00:00+00:00</published><updated>2016-04-30T00:00:00+00:00</updated><id>http://www.varstack.com/2016/04/30/Google-Summer-of-Code-with-Gentoo</id><content type="html" xml:base="http://www.varstack.com/2016/04/30/Google-Summer-of-Code-with-Gentoo/">&lt;p&gt;I am excited to say that I've been accepted for this year's summer of code under
+later.</summary></entry><entry><title>Google Summer of Code with Gentoo</title><link href="http://www.varstack.com/2016/04/30/Google-Summer-of-Code-with-Gentoo/" rel="alternate" type="text/html" title="Google Summer of Code with Gentoo" /><published>2016-04-30T00:00:00+05:30</published><updated>2016-04-30T00:00:00+05:30</updated><id>http://www.varstack.com/2016/04/30/Google-Summer-of-Code-with-Gentoo</id><content type="html" xml:base="http://www.varstack.com/2016/04/30/Google-Summer-of-Code-with-Gentoo/">&lt;p&gt;I am excited to say that I&#39;ve been accepted for this year&#39;s summer of code under
 Gentoo Organisation. &lt;a href=&quot;/gsoc&quot;&gt;This section of the blog&lt;/a&gt; will be dedicated to documenting
 anything and everything I learn that is interesting or remotely related to my project.&lt;/p&gt;
 
@@ -356,19 +356,19 @@ easy enough to handle. But since, my project also aims to create a platform for
 maintainers to create automated test scripts, I had been thinking of ways to implement
 that.&lt;/p&gt;
 
-&lt;p&gt;I have also been following Agostino's (Ago's) &lt;a href=&quot;https://blogs.gentoo.org/ago/&quot;&gt;blog&lt;/a&gt; for
+&lt;p&gt;I have also been following Agostino&#39;s (Ago&#39;s) &lt;a href=&quot;https://blogs.gentoo.org/ago/&quot;&gt;blog&lt;/a&gt; for
 rules/tips pertaining to architecture testing, specifically for the more difficult to
 test things like Kernel, libraries, kernel dependent packages (like virtualbox) etc.&lt;/p&gt;
 
-&lt;p&gt;Lastly, I've been looking at the source of package management and testing related tools
+&lt;p&gt;Lastly, I&#39;ve been looking at the source of package management and testing related tools
 in Gentoo, including tatt and eix.&lt;/p&gt;
 
 &lt;p&gt;I would keep on updating this page with more information as I find it.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="gsoc" /><summary>I am excited to say that I've been accepted for this year's summer of code under
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="post" /><summary>I am excited to say that I&#39;ve been accepted for this year&#39;s summer of code under
 Gentoo Organisation. This section of the blog will be dedicated to documenting
-anything and everything I learn that is interesting or remotely related to my project.</summary></entry><entry><title>Easy sharing of SSH keys</title><link href="http://www.varstack.com/2016/04/27/SSH-keys/" rel="alternate" type="text/html" title="Easy sharing of SSH keys" /><published>2016-04-27T00:00:00+00:00</published><updated>2016-04-27T00:00:00+00:00</updated><id>http://www.varstack.com/2016/04/27/SSH-keys</id><content type="html" xml:base="http://www.varstack.com/2016/04/27/SSH-keys/">&lt;p&gt;This tip may be obvious to many people, but I feel this worth mentioning. A lot of us
+anything and everything I learn that is interesting or remotely related to my project.</summary></entry><entry><title>Easy sharing of SSH keys</title><link href="http://www.varstack.com/2016/04/27/SSH-keys/" rel="alternate" type="text/html" title="Easy sharing of SSH keys" /><published>2016-04-27T00:00:00+05:30</published><updated>2016-04-27T00:00:00+05:30</updated><id>http://www.varstack.com/2016/04/27/SSH-keys</id><content type="html" xml:base="http://www.varstack.com/2016/04/27/SSH-keys/">&lt;p&gt;This tip may be obvious to many people, but I feel this worth mentioning. A lot of us
 have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma)
 that you can actually share your public keys with others by giving them your github
 username.
@@ -381,9 +381,9 @@ For example,&lt;/p&gt;
 have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma)
 that you can actually share your public keys with others by giving them your github
 username.
-For example,</summary></entry><entry><title>Linux commands every user should master</title><link href="http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master/" rel="alternate" type="text/html" title="Linux commands every user should master" /><published>2015-12-12T00:00:00+00:00</published><updated>2015-12-12T00:00:00+00:00</updated><id>http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master</id><content type="html" xml:base="http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master/">&lt;p&gt;When it comes to linux, there are some commands that you can't live without and
-then there are some you &lt;em&gt;shouldn't&lt;/em&gt; live without. I mean sure, you can live your
-life without ever using &lt;code&gt;grep&lt;/code&gt; or &lt;code&gt;find&lt;/code&gt; but you'd never believe how much
+For example,</summary></entry><entry><title>Linux commands every user should master</title><link href="http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master/" rel="alternate" type="text/html" title="Linux commands every user should master" /><published>2015-12-12T00:00:00+05:30</published><updated>2015-12-12T00:00:00+05:30</updated><id>http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master</id><content type="html" xml:base="http://www.varstack.com/2015/12/12/Linux-commands-every-user-should-master/">&lt;p&gt;When it comes to linux, there are some commands that you can&#39;t live without and
+then there are some you &lt;em&gt;shouldn&#39;t&lt;/em&gt; live without. I mean sure, you can live your
+life without ever using &lt;code&gt;grep&lt;/code&gt; or &lt;code&gt;find&lt;/code&gt; but you&#39;d never believe how much
 productive knowing a few more terminal commands can make you.&lt;/p&gt;
 
 &lt;p&gt;Here is a list of the commands we are going to take a look at:&lt;/p&gt;
@@ -400,7 +400,7 @@ productive knowing a few more terminal commands can make you.&lt;/p&gt;
 
 &lt;h4&gt;&lt;strong&gt;The command that started it all: &lt;em&gt;man&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
 
-&lt;p&gt;I really hope you know this one. But in case you don't, well today is your
+&lt;p&gt;I really hope you know this one. But in case you don&#39;t, well today is your
 lucky day. This command is really special because it will, from today onwards
 be your first guide to using &lt;strong&gt;any&lt;/strong&gt; terminal command. &lt;code&gt;man&lt;/code&gt; stands for
 &lt;em&gt;manual&lt;/em&gt; and is literally your handbook of linux commands. Any time you are
@@ -416,7 +416,7 @@ type&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;and it will give you a quick summary of what the command is, and how to use
-it. There isn't anything more than that to it, yet I use it multiple times
+it. There isn&#39;t anything more than that to it, yet I use it multiple times
 everyday when I forget the syntax of &lt;code&gt;chmod&lt;/code&gt; command or have forgotten how
 the &lt;code&gt;bash time&lt;/code&gt; command is different from that packaged with &lt;code&gt;zsh&lt;/code&gt;.&lt;/p&gt;
 
@@ -425,27 +425,27 @@ the &lt;code&gt;bash time&lt;/code&gt; command is different from that packaged w
 &lt;h4&gt;&lt;strong&gt;Search through files, content, outputs, basically anything: &lt;em&gt;grep&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;This one is basically a search command. But unlike the upcoming &lt;code&gt;find&lt;/code&gt; command,
-this one doesn't search for just the names of files. It searches through their
+this one doesn&#39;t search for just the names of files. It searches through their
 content as well. Not only that, it is also super handy when you have to filter
-out lines that contain some specific content from let's say a huge output from
+out lines that contain some specific content from let&#39;s say a huge output from
 previous command. This command takes getting some used to, but after some time,
-you wouldn't even believe you used to be able to get any work without it. Let's
+you wouldn&#39;t even believe you used to be able to get any work without it. Let&#39;s
 start, shall we?&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Content from files&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Let's say you want to search for any files in which you have TODO written
+&lt;p&gt;Let&#39;s say you want to search for any files in which you have TODO written
 inside (as in code comments maybe?) also, you want the search to be case
 insensitive and search all subfolders of current folder too (recursively).
-You'd write:&lt;/p&gt;
+You&#39;d write:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;grep -i -r TODO .
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Now, I suggest you look up the flags (those dash followed by characters) I
 used in the above command using &lt;code&gt;man grep&lt;/code&gt;. I will still tell you in case
-you don't have a means to run the &lt;code&gt;man&lt;/code&gt; command right now.&lt;/p&gt;
+you don&#39;t have a means to run the &lt;code&gt;man&lt;/code&gt; command right now.&lt;/p&gt;
 
 &lt;p&gt;The &lt;code&gt;-i&lt;/code&gt; flag is for case-insensistive search.&lt;/p&gt;
 
@@ -453,7 +453,7 @@ you don't have a means to run the &lt;code&gt;man&lt;/code&gt; command right now
 
 &lt;p&gt;&lt;code&gt;TODO&lt;/code&gt; is the phrase we want to search for. You can even use regex
 expressions (which is where the true power lies), and that seems to be true
-for many linux commands you'll learn in future.&lt;/p&gt;
+for many linux commands you&#39;ll learn in future.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;.&lt;/code&gt; is the usual symbol for current directory. &lt;code&gt;..&lt;/code&gt; can be used for parent
 directory, or a directory name can be given, relative to the current
@@ -461,7 +461,7 @@ directory.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Content from stdin or &lt;em&gt;pipe&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;If the last parameter &lt;code&gt;file or folder name to search&lt;/code&gt; in previous command
-is not provided, then &lt;code&gt;grep&lt;/code&gt; tries to search in &lt;code&gt;stdin&lt;/code&gt;. Now, that doesn't
+is not provided, then &lt;code&gt;grep&lt;/code&gt; tries to search in &lt;code&gt;stdin&lt;/code&gt;. Now, that doesn&#39;t
 mean you actually have to type the content, but being able to take content
 from stdin allows grep to use something much more useful in linux - &lt;strong&gt;pipes&lt;/strong&gt;!
 What a pipe or &lt;code&gt;|&lt;/code&gt; does is that it sends the output of one command as stdin
@@ -486,7 +486,7 @@ matching arguments you specify.  &lt;code&gt;find&lt;/code&gt; can be used in va
 with its various flags to find files by permissions, users, groups, file type,
 date, size and other possible criteria.  The format for the &lt;code&gt;find&lt;/code&gt; command is a
 little unintuitive for those with a habit of using &lt;code&gt;grep&lt;/code&gt; or &lt;code&gt;ag&lt;/code&gt;. Like always,
-I'd advice you to read the man page for &lt;code&gt;find&lt;/code&gt; using &lt;code&gt;man find&lt;/code&gt; command.&lt;/p&gt;
+I&#39;d advice you to read the man page for &lt;code&gt;find&lt;/code&gt; using &lt;code&gt;man find&lt;/code&gt; command.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Files by their name&lt;/strong&gt;&lt;/p&gt;
@@ -515,7 +515,7 @@ more filters at your disposal.
 This will also search all sub-directories in the current folder recursively.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Files using advanced filters&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Let's look at the following command:&lt;/p&gt;
+&lt;p&gt;Let&#39;s look at the following command:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;find -maxdepth 4 -amin +3 -iname &quot;PaLLaV&quot; -size -4M -type f -user root
 &lt;/code&gt;&lt;/pre&gt;
@@ -529,7 +529,7 @@ subdirectories) while searching.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;-amin +3&lt;/code&gt; will keep only those files that were last accessed &lt;strong&gt;more than&lt;/strong&gt;
 3 minutes ago (notice the &lt;code&gt;+&lt;/code&gt; in &lt;code&gt;+3&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;-iname &quot;PaLLaV&quot;&lt;/code&gt; will search for files with name &lt;code&gt;pallav&lt;/code&gt; WITHOUT caring
-about case sensitivity (&lt;code&gt;-name&lt;/code&gt; would've been case sensitive).&lt;/p&gt;&lt;/li&gt;
+about case sensitivity (&lt;code&gt;-name&lt;/code&gt; would&#39;ve been case sensitive).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;-size -4M&lt;/code&gt; will only choose those results that are &lt;strong&gt;less than&lt;/strong&gt; 4MegaBytes
 because of &lt;code&gt;-&lt;/code&gt; in &lt;code&gt;-4M&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;-type f&lt;/code&gt; will filter out the files and ignore the directories.&lt;/p&gt;&lt;/li&gt;
@@ -548,12 +548,12 @@ lost on your hard drive and only remember vague details about.&lt;/p&gt;
 &lt;h4&gt;&lt;strong&gt;The stream editor with all powers of an editor: &lt;em&gt;sed&lt;/em&gt; &lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;I know I promised you a tutorial of &lt;em&gt;sed&lt;/em&gt;, but the fact is, there is no way I
-can do justice to its power in a few paragraphs. So, instead I'm going to refer
-you to &lt;a href=&quot;http://www.grymoire.com/Unix/Sed.html#uh-0&quot;&gt;this&lt;/a&gt; tutorial. It's long,
+can do justice to its power in a few paragraphs. So, instead I&#39;m going to refer
+you to &lt;a href=&quot;http://www.grymoire.com/Unix/Sed.html#uh-0&quot;&gt;this&lt;/a&gt; tutorial. It&#39;s long,
 but I really recommend you go through the starting parts. &lt;em&gt;sed&lt;/em&gt; has terrible
-documentation and &lt;code&gt;man sed&lt;/code&gt; doesn't help a lot in this case, because just
-knowing the format of commands doesn't bring out its power at all. If you aren't
-sold yet, I'll give you an easy example of &lt;code&gt;sed&lt;/code&gt; usage. Let's say you ran
+documentation and &lt;code&gt;man sed&lt;/code&gt; doesn&#39;t help a lot in this case, because just
+knowing the format of commands doesn&#39;t bring out its power at all. If you aren&#39;t
+sold yet, I&#39;ll give you an easy example of &lt;code&gt;sed&lt;/code&gt; usage. Let&#39;s say you ran
 &lt;code&gt;ifconfig&lt;/code&gt; and got the output:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;enp9s0: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt;  mtu 1500
@@ -586,7 +586,7 @@ address as in:&lt;/p&gt;
  netmask 255.0.0.0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Let's try to make the output like that:&lt;/p&gt;
+&lt;p&gt;Let&#39;s try to make the output like that:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;First grep to filter out the lines that have IP addresses.&lt;/p&gt;
@@ -595,10 +595,10 @@ address as in:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Couple of things to note: The &lt;code&gt;-P&lt;/code&gt; is for using perl type regex.
-This allows us to use &lt;code&gt;\d&lt;/code&gt; for digits, in sed we'll still have to
-use &lt;code&gt;[0-9]&lt;/code&gt; as &lt;code&gt;\d&lt;/code&gt; format isn't supported. Then we say that there
+This allows us to use &lt;code&gt;\d&lt;/code&gt; for digits, in sed we&#39;ll still have to
+use &lt;code&gt;[0-9]&lt;/code&gt; as &lt;code&gt;\d&lt;/code&gt; format isn&#39;t supported. Then we say that there
 will be atleast 1 and at most 3 digits &lt;code&gt;{1,3}&lt;/code&gt;. Then it will be
-followed by a dot &lt;code&gt;\.&lt;/code&gt;. Read up on regex if you don't know why the
+followed by a dot &lt;code&gt;\.&lt;/code&gt;. Read up on regex if you don&#39;t know why the
 dot has been preceded by a &lt;code&gt;\&lt;/code&gt;. Then this whole group (digits and dot)
 is repeated exactly 3 times, followed by another group of 1-3 digits.&lt;/p&gt;
 
@@ -616,7 +616,7 @@ is repeated exactly 3 times, followed by another group of 1-3 digits.&lt;/p&gt;
 substitute command. &lt;code&gt;|&lt;/code&gt; is the separator (can be anything not used
 in the substitution pattern). This is followed by the same regex
 expression as before, but instead of &lt;code&gt;\d&lt;/code&gt; we have used &lt;code&gt;[0-9]&lt;/code&gt; as
-&lt;code&gt;\d&lt;/code&gt; isn't supported by &lt;code&gt;sed&lt;/code&gt;. Then we use another separator &lt;code&gt;|&lt;/code&gt;.
+&lt;code&gt;\d&lt;/code&gt; isn&#39;t supported by &lt;code&gt;sed&lt;/code&gt;. Then we use another separator &lt;code&gt;|&lt;/code&gt;.
 Then we have the substitution content. &lt;code&gt;\0&lt;/code&gt; just puts the whole
 pattern that was matched. This is needed as we do not want to delete
 the original content. The &lt;code&gt;\n&lt;/code&gt; is for a newline. The &lt;code&gt;|g&lt;/code&gt; is another
@@ -631,13 +631,13 @@ every line will be replaced. Now the output is:&lt;/p&gt;
   netmask 255.0.0.0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Unfortunately, the formatting doesn't look too good.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Let's add a new sed command to eat all the beginning spaces:&lt;/p&gt;
+&lt;p&gt;Unfortunately, the formatting doesn&#39;t look too good.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Let&#39;s add a new sed command to eat all the beginning spaces:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sed -r &quot;s|^ *||&quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This one's easy, by using &lt;code&gt;^&lt;/code&gt;, we are substituting for all the spaces
+&lt;p&gt;This one&#39;s easy, by using &lt;code&gt;^&lt;/code&gt;, we are substituting for all the spaces
 in the beginning of the line and replacing with nothing.
 This gives us the final output:&lt;/p&gt;
 
@@ -657,7 +657,7 @@ netmask 255.0.0.0
     &quot;s|([0-9]{1,3}\.){3}[0-9]{1,3}|\0\n|g&quot; | sed -r &quot;s|^ *||&quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;and while this might seem like too much work, think about how much you'd
+&lt;p&gt;and while this might seem like too much work, think about how much you&#39;d
 have to write if you were to create a script to do these transformations
 using C++ or python. These commands allow creation of really clean and
 compact scripts (&lt;em&gt;OK, maybe &lt;strong&gt;just&lt;/strong&gt; compact scripts&lt;/em&gt;).&lt;/p&gt;
@@ -667,10 +667,10 @@ compact scripts (&lt;em&gt;OK, maybe &lt;strong&gt;just&lt;/strong&gt; compact s
 
 &lt;p&gt;&lt;em&gt;I hope you enjoyed reading this post.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Consider sharing this article using the links below.&lt;/strong&gt;&lt;/p&gt;</content><category term="post" /><summary>When it comes to linux, there are some commands that you can't live without and
-then there are some you shouldn't live without. I mean sure, you can live your
-life without ever using grep or find but you'd never believe how much
-productive knowing a few more terminal commands can make you.</summary></entry><entry><title>Configuration Management in Linux</title><link href="http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux/" rel="alternate" type="text/html" title="Configuration Management in Linux" /><published>2015-12-10T00:00:00+00:00</published><updated>2015-12-10T00:00:00+00:00</updated><id>http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux</id><content type="html" xml:base="http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux/">&lt;p&gt;You can't yourself a linux enthusiast if you've never run into the problem
+&lt;p&gt;&lt;strong&gt;Consider sharing this article using the links below.&lt;/strong&gt;&lt;/p&gt;</content><category term="post" /><summary>When it comes to linux, there are some commands that you can&#39;t live without and
+then there are some you shouldn&#39;t live without. I mean sure, you can live your
+life without ever using grep or find but you&#39;d never believe how much
+productive knowing a few more terminal commands can make you.</summary></entry><entry><title>Configuration Management in Linux</title><link href="http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux/" rel="alternate" type="text/html" title="Configuration Management in Linux" /><published>2015-12-10T00:00:00+05:30</published><updated>2015-12-10T00:00:00+05:30</updated><id>http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux</id><content type="html" xml:base="http://www.varstack.com/2015/12/10/Configuration-Management-in-Linux/">&lt;p&gt;You can&#39;t yourself a linux enthusiast if you&#39;ve never run into the problem
 of sorting out your configuration files. All of your precious files like
 &lt;code&gt;.bashrc&lt;/code&gt;, &lt;code&gt;.zshrc&lt;/code&gt;, &lt;code&gt;.vimrc&lt;/code&gt;, &lt;code&gt;.emacs&lt;/code&gt;, &lt;code&gt;.fonts&lt;/code&gt;, &lt;code&gt;.Xdefaults&lt;/code&gt; are some of
 the ones that can take a lot of pain to customize from the ground up.&lt;/p&gt;
@@ -682,18 +682,18 @@ files to back up, and to do it after every change.&lt;/p&gt;
 &lt;p&gt;So, obviously, I moved on to the next obvious option, &lt;strong&gt;symlinks&lt;/strong&gt;! I started
 to keep all my config files in a single folder and started to symlink them to
 the places that they belonged to. I kept this up for a few months (mostly
-because it didn't seem like any trouble) when I finally decided to change my
+because it didn&#39;t seem like any trouble) when I finally decided to change my
 operating system. And the problem hit me. I already had over 50 configuration
 files under version control and had no real way to put them in correct places in
 the new OS. These files had accumulated over time and to put them back at
-correct places was an endeavour I wasn't going to undertake.&lt;/p&gt;
+correct places was an endeavour I wasn&#39;t going to undertake.&lt;/p&gt;
 
 &lt;p&gt;Now I tried to look for a tool that would help me manage and restore dotfiles
 at will. A friend suggested using &lt;code&gt;vcsh&lt;/code&gt; and &lt;code&gt;mr&lt;/code&gt;. You can find the relevant
 article &lt;a href=&quot;http://srijanshetty.in/technical/vcsh-mr-dotfiles-nirvana/&quot;&gt;here&lt;/a&gt;.
-I would've tried that too but it seemed too complicated to be an elegant way
+I would&#39;ve tried that too but it seemed too complicated to be an elegant way
 to handle this problem. For one thing, I wanted a script that could be a part
-of my dotfiles and not an external dependency. So as you might've already
+of my dotfiles and not an external dependency. So as you might&#39;ve already
 guessed, I started to plan out my own way to manage my dotfiles. So without
 further ado, I present to you:&lt;/p&gt;
 
@@ -703,18 +703,18 @@ further ado, I present to you:&lt;/p&gt;
 
 &lt;p&gt;First things first, &lt;a href=&quot;https://github.com/pallavagarwal07/ConfigManagement&quot;&gt;here&lt;/a&gt;
 is the repository for my project. The configuration system is inspired by
-VIM's modelines, which are basically comments that can control VIM's settings
+VIM&#39;s modelines, which are basically comments that can control VIM&#39;s settings
 separately for code files. So, something like&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;// vim: set nonumbers:
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;in a source code's top or bottom lines would turn off line numbering in VIM
+&lt;p&gt;in a source code&#39;s top or bottom lines would turn off line numbering in VIM
 when opening that source file. This is elegant as every config file has some
-comment system (and isn't worth using if it doesn't) and file properties can
+comment system (and isn&#39;t worth using if it doesn&#39;t) and file properties can
 be easily specified in this way for every file.&lt;/p&gt;
 
-&lt;p&gt;Let's look at the file structure.&lt;/p&gt;
+&lt;p&gt;Let&#39;s look at the file structure.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;myconfig
     ├── backup
@@ -733,14 +733,14 @@ folder &lt;code&gt;configs&lt;/code&gt;. An empty &lt;code&gt;current_state&lt;/
 and config folders go inside &lt;code&gt;configs&lt;/code&gt; folder. The files can have any name
 and do not need to be named the same as the final target. For eg. &lt;code&gt;.vimrc&lt;/code&gt;
 when kept inside the &lt;code&gt;configs&lt;/code&gt; folder can be named &lt;code&gt;mysuperamazingvimconfig&lt;/code&gt;
-and it won't matter. You can also group files of similar purpose together
+and it won&#39;t matter. You can also group files of similar purpose together
 as the files will be searched recursively.&lt;/p&gt;
 
 &lt;p&gt;Now how do the files know where to go? Here is the easy part. Inside the
 corrsponding file, you just mention where that files need to go. So, for
 your &lt;code&gt;mysuperamazingvimconfig&lt;/code&gt;, you will have the following in your source:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&quot; place ''~/.vimrc''
+&lt;pre&gt;&lt;code&gt;&quot; place &#39;&#39;~/.vimrc&#39;&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The first double quote is to start a comment and the rest is the needed command.
@@ -762,12 +762,12 @@ double quote. Also, this comment will be looked for in the top 3 and the bottom
 
 &lt;p&gt;For the folder that need to be symlinked, you create a file named folder_config
 inside the folder and put the same command as above. If the folder itself is
-being symlinked, then it won't be checked further for symlinkable files/folders.
+being symlinked, then it won&#39;t be checked further for symlinkable files/folders.
 The rest of the folders, obviously will still be. For example, if you have a
 folder named fonts in &lt;code&gt;configs&lt;/code&gt; and you want to place it as &lt;code&gt;~/.fonts&lt;/code&gt;, you will
 make a file &lt;code&gt;folder_config&lt;/code&gt; inside &lt;code&gt;fonts&lt;/code&gt; folder with the content:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;place ''~/.fonts''
+&lt;pre&gt;&lt;code&gt;place &#39;&#39;~/.fonts&#39;&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;and you are done. All you have to do to create/update the symlinks is run
@@ -780,7 +780,7 @@ make a file &lt;code&gt;folder_config&lt;/code&gt; inside &lt;code&gt;fonts&lt;/
 &lt;p&gt;A lot of cool stuff happens under under the hood to ensure that no data loss
 occurs and no redundant files are created when &lt;code&gt;configure.py&lt;/code&gt; is executed.
 Your current symlink status is stored in &lt;code&gt;current_status&lt;/code&gt; so that the next time
-you change a &lt;code&gt;place ''&amp;lt;path&amp;gt;''&lt;/code&gt;, the old symlink is deleted to prevent
+you change a &lt;code&gt;place &#39;&#39;&amp;lt;path&amp;gt;&#39;&#39;&lt;/code&gt;, the old symlink is deleted to prevent
 redundancy. If you manually remove the file from configuration management and
 place the real file in the actual place, then it will take care not to touch it
 even if it was part of &lt;code&gt;current_status&lt;/code&gt;. While adding a file to config system
@@ -792,7 +792,7 @@ replaced by a symlink to prevent data loss.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;I hope you enjoyed reading this article.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Consider sharing this article using the links below.&lt;/strong&gt;&lt;/p&gt;</content><category term="post" /><summary>You can't yourself a linux enthusiast if you've never run into the problem
+&lt;p&gt;&lt;strong&gt;Consider sharing this article using the links below.&lt;/strong&gt;&lt;/p&gt;</content><category term="post" /><summary>You can&#39;t yourself a linux enthusiast if you&#39;ve never run into the problem
 of sorting out your configuration files. All of your precious files like
 .bashrc, .zshrc, .vimrc, .emacs, .fonts, .Xdefaults are some of
 the ones that can take a lot of pain to customize from the ground up.</summary></entry></feed>

@@ -10,7 +10,6 @@ stdenv.mkDerivation {
     buildInputs = [
             pkgs.python2
             pkgs.ruby
-            pkgs.bundler
             pkgs.zlib
             pkgs.pythonIRClib
             pkgs.python2Packages.zope_interface
@@ -18,5 +17,6 @@ stdenv.mkDerivation {
             pkgs.python2Packages.markdown
             pkgs.python2Packages.pygments
     ];
-    shellHook = "bundle exec jekyll serve";
+    preUnpack = "echo $PWD";
+    #shellHook = "bundle exec jekyll serve";
 }
