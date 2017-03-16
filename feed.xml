@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.varstack.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.varstack.com/" rel="alternate" type="text/html" /><updated>2017-03-15T22:56:12+05:30</updated><id>http://www.varstack.com/</id><title>VARSTACK</title><subtitle></subtitle><entry><title>YourHonour: A k8s based distributed programming judge</title><link href="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/" rel="alternate" type="text/html" title="YourHonour: A k8s based distributed programming judge" /><published>2016-09-26T00:00:00+05:30</published><updated>2016-09-26T00:00:00+05:30</updated><id>http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge</id><content type="html" xml:base="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/">&lt;p&gt;So, this is something I have been working on recently for some time. The
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://www.varstack.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.varstack.com/" rel="alternate" type="text/html" /><updated>2017-03-16T11:58:16+05:30</updated><id>http://www.varstack.com/</id><title>VARSTACK</title><subtitle></subtitle><entry><title>YourHonour: A k8s based distributed programming judge</title><link href="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/" rel="alternate" type="text/html" title="YourHonour: A k8s based distributed programming judge" /><published>2016-09-26T00:00:00+05:30</published><updated>2016-09-26T00:00:00+05:30</updated><id>http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge</id><content type="html" xml:base="http://www.varstack.com/2016/09/26/YourHonour-k8s-programming-judge/">&lt;p&gt;So, this is something I have been working on recently for some time. The
 project&#39;s name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
 organising programming competitions.&lt;/p&gt;
 
@@ -219,10 +219,19 @@ and a more reliable way to keep track of all these resources.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://python-future.org/compatible_idioms.html&quot;&gt;Python Future&lt;/a&gt;: This is a brilliant
 cheat sheat to write cross compatible code for both PYTHON-2 and PYTHON-3&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="tagged" /><summary>This post was long due. I often find blog posts, reference sheets and useful links that
+&lt;li&gt;&lt;a href=&quot;http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/&quot;&gt;What Color is Your Function?&lt;/a&gt;:
+An absolutely amazing article about the design choices of a &lt;em&gt;modern language&lt;/em&gt;.
+I won&#39;t spoil the surprise by revealing which language and what choices.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.faqs.org/docs/artu/&quot;&gt;Art of Unix Programming&lt;/a&gt;: If you aren&#39;t into reading
+plain text articles, atleast go through the Appendix D. You&#39;ll find some hilarious
+Unix bedtime stories :)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array&quot;&gt;Sorted vs Unsorted Array&lt;/a&gt;:
+One of the most upvoted questions on stackoverflow. This may be obvious to me now,
+but I wish I knew this before I took the Architecture course in IITK. Must Read.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/927358/how-to-undo-last-commits-in-git&quot;&gt;Undo Last Git Commit&lt;/a&gt;:
+Another one stolen from StackOverflow highest voted category.
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="tagged" /><summary>This post was long due. I often find blog posts, reference sheets and useful links that
 I feel I should bookmark. However, I often lose these bookmarks when I shift Operating
 Systems or browsers (which happens very often). I am hoping that this will be a better
 and a more reliable way to keep track of all these resources.</summary></entry><entry><title>Ultimate control over Mobile Browser with Firefox</title><link href="http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser/" rel="alternate" type="text/html" title="Ultimate control over Mobile Browser with Firefox" /><published>2016-05-06T00:00:00+05:30</published><updated>2016-05-06T00:00:00+05:30</updated><id>http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser</id><content type="html" xml:base="http://www.varstack.com/2016/05/06/Ultimate-control-over-mobile-browser/">&lt;p&gt;It is no secret that I love firefox. Even though sometimes, it can run a bit slower than
