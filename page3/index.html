@@ -78,6 +78,15 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
                                 
+  <a href="/2015/07/01/Vim-Mappings/">QUICK INTRO TO CUSTOM VIM MAPPINGS</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">Jul 01, 2015</span>
+  </p>
+  <div class="content">
+    <p>One of the best things about vim is its ability to create custom mappings for <em>almost</em> any key in all modes.</p> <p>Suppose you want Ctrl+S to save your document while you are in insert mode, because pressing</p> <pre><code>&lt;Esc&gt;:w&lt;Enter&gt;i </code></pre> <p>to switch to normal mode, save the file, and return back to insert mode is a bit too much. According to vim philosophy, it actually <strong>is</strong> too much, and thus you can map Ctrl+S to those keys just as easily.</p> <p>For this, add the following to your vimrc</p> <pre><code>inoremap &lt;C-S&gt; &lt;Esc&gt;:w&lt;Enter&gt;i </code></pre> <h4>EXPLANATION:</h4> <p>The command has separate parts but follows the...
+  </div>
+  <br /><br />
+
   <a href="/2015/07/01/Vim-Customization/">VIM CUSTOMIZATION: GUIDE TO WRITING YOUR OWN VIMRC</a>
   <p class="author" style="text-align: right;">
     <span class="date">Jul 01, 2015</span>
@@ -135,6 +144,10 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2017/05/07/How-I-got-here/" class="color_change">An intern's views - How I...</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2016/09/26/YourHonour-k8s-programming-judge/" class="color_change">YourHonour: A k8s based distributed programming...</a>
                     </li>
                     
@@ -148,10 +161,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                     
                     <li>
                         <a href="/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" class="color_change">SSH port forwarding and some cool...</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/2016/04/30/Google-Summer-of-Code-with-Gentoo/" class="color_change">Google Summer of Code with Gentoo...</a>
                     </li>
                     
                 </ul>
