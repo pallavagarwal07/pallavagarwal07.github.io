@@ -18,7 +18,10 @@ As it turns out, it wasn't so simple. And I would've known that, had I done a
 bit of a research. You see, once a bug is reported, it can be edited, yet
 closing, or deleting the bug is something only the administrators are capable
 of. So, by creating a bug in bugzilla I inadvertantly sent an email about a
-bug to numerous people. 
+bug to numerous people.
+
+Anyway, for future reference, there is something called a Bugzilla Landfill
+that you can use for testing out something on a Bugzilla.
 
 <i>Thanks for reading</i>
 <br /><br />

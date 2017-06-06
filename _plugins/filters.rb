@@ -1,4 +1,3 @@
-#require 'nokogumbo'
 require 'sanitize'
 
 module Jekyll
