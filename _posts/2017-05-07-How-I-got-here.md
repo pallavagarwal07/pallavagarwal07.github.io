@@ -25,7 +25,7 @@ I originally wrote "A good Resume", but frankly, I have seen people with not
 a lot of experience get into Google, so I'm revising it to say "Fair".
 
 I don't think this needs to be explained much. If you are from a good college,
-have a fair CPI it should be enough to get you an interview. If you don't,
+have a fair CPI, it should be enough to get you an interview. If you don't,
 you'd need some good projects up your sleeve, or good performance in programming
 competitions. They don't expect you to be great, because contrary to our belief,
 undergrads aren't expected to know everything in the whole universe.
@@ -39,8 +39,8 @@ recruiter would give any weightage to the fact that you won the blindfold
 Rubik's cube national competition?
 
 Your Resume needs to be made differently for every company to apply to, and I
-would suggest that you keep the most important points on your Resume if you apply
-to a Tech company like Google.
+would suggest that you keep only the most important points on your Resume if
+you apply to a Tech company like Google.
 
 For reference, [here](/res/resume.pdf) is a snapshot of the Resume I submitted
 to Google - Short, Sleek and to the point.
@@ -57,19 +57,19 @@ This is one of the *only* things I don't like about my college. Look at this
 from a game theoretic perspective. Let's follow a person's thought process:
 
 1. If I get the placement penalty, I'll get to sit for only two companies in my
-final year.
+   final year.
 2. If those two companies don't select me, I'll be jobless.
 3. I don't want to be jobless.
 4. I can't take penalty.
 5. I have two choices, either only apply for campus placements, or only apply
-outside.
+   outside.
 6. There's a higher chance to get a job via campus placements.
 7. I can't sit for outside placements.
 8. I won't apply to Google.
 
 Unfortunately, I saw tens of people follow this thought process. None of them
 even tried to apply to Google or Facebook or Amazon or any of the amazing
-companies that never visited the college\*.
+companies that didn't visit our college.
 
 There's nothing wrong with the above thought process, but if you would allow
 me, I'd want you to ask yourself a couple of questions.
