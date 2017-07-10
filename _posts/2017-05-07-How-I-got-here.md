@@ -10,7 +10,7 @@ linked by the rest of the (monthly) articles in this series (I'll update the
 links as I write them)
 
 1. [An intern's views - How I got here](/2017/05/07/How-I-got-here/)
-2. An intern's views - A month's end at Google
+2. [An intern's views - A month's end at Google](/2017/06/07/A-month-end-at-Google/)
 3. An intern's views - How far have I come?
 4. An intern's views - End of diary
 
@@ -47,11 +47,13 @@ to Google - Short, Sleek and to the point.
 
 ### Application Procedure
 With fear of stating the obvious, to get into Google, you need to apply to
-Google.  I mean really? Take my college for example. We have a placement cell
-in which students register for campus placements. Now, if you sit for campus
-placements, accepting an outside offer causes you to be labelled a "defaulter".
-What this means for you is that you are allowed to sit for only 2 companies in
-campus placements in the first week of next year.
+Google.  I mean really?
+
+Take my college for example. We have a placement cell in which students
+register for campus placements. Now, if you sit for campus placements,
+accepting an outside offer causes you to be labelled a "defaulter".  What this
+means for you is that you are allowed to sit for only 2 companies in campus
+placements in the first week of next year.
 
 This is one of the *only* things I don't like about my college. Look at this
 from a game theoretic perspective. Let's follow a person's thought process:
@@ -97,10 +99,11 @@ Now that I've completely lost your attention, let's get to how you can actually
 apply to Google. There are primarily two ways.
 
 The first is to apply online through Google's portal. If you are a first or
-second year undergrad, you can apply for an Engineering Practicum Intern (which
-I didn't know existed :/ ), and if you are third year or above, you can apply
-for a Software Engineering Intern. You can view the exact details on
-https://careers.google.com
+second year undergrad, you can apply for an Engineering Practicum Intern
+(~~which I didn't know existed~~ as pointed out by *Bhavishya* in comments,
+apparently only for students from North America :/ ), and if you are third year
+or above, you can apply for a Software Engineering Intern. You can view the
+exact details on <https://careers.google.com>.
 
 The second is to apply through a referral.
 
