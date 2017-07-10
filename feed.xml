@@ -1,11 +1,169 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-06T00:03:53-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How I got here</title><link href="http://localhost:4000/2017/05/07/How-I-got-here/" rel="alternate" type="text/html" title="An intern's views - How I got here" /><published>2017-05-07T00:00:00-04:00</published><updated>2017-05-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/07/How-I-got-here</id><content type="html" xml:base="http://localhost:4000/2017/05/07/How-I-got-here/">&lt;p&gt;AKA, how I got an internship in Google. In case you were wondering why the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-10T00:53:34-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - A month’s end at Google</title><link href="http://localhost:4000/2017/06/07/A-month-end-at-Google/" rel="alternate" type="text/html" title="An intern's views - A month's end at Google" /><published>2017-06-07T00:00:00-04:00</published><updated>2017-06-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/06/07/A-month-end-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/06/07/A-month-end-at-Google/">&lt;p&gt;The series:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An intern's views - How far have I come?&lt;/li&gt;
+&lt;li&gt;An intern's views - End of diary&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Okay, okay.. I know this article is a bit late (and I've backdated it a bit),
+but I've been really busy. As it turns out, work at Google isn't all that easy
+(...did I think it would be?). But I'll get to that later 😉.&lt;/p&gt;
+
+&lt;p&gt;So let's walk through my first few days in the office. So, on my first day in
+office, I actually got late. Imagine that...&lt;/p&gt;
+
+&lt;p&gt;Anyway, the first week is orientation. I had to go to one of three buildings
+in which Google resides. It wasn't too hard to find, and when I got there, I
+realised that reaching late wasn't that bad anyway, since I had to wait in line
+to be badged as an intern. Also, I wasn't the only one who had had trouble
+finding their way around the city.&lt;/p&gt;
+
+&lt;p&gt;All interns join on a Monday, which means that there is an orientation every
+week, and my batch was one of the earliest. There weren't a ton of interns
+joining that week. However, in U.S. interns have orientation in one of the two
+biggest offices: Mountain View for all west coast offices, and New York for all
+east cost offices. So we had interns from many other offices as well (Waterloo,
+for instance).&lt;/p&gt;
+
+&lt;p&gt;We had our I-9 documents checked, and proceeded to the orientation room. It was
+a presentation, where they showed us some of the things that we needed to know.
+Basic stuff. We got a t-shirt, a bag, our work laptops (to be returned), and
+those infamous funky caps with a propeller on them. Basically, after my first day,
+I looked something like this:&lt;/p&gt;
+
+&lt;div style=&quot;display: inline-block; width:29%; vertical-align: top&quot;&gt;
+&lt;img src=&quot;/img/intern-cap.jpg&quot; style=&quot;max-width:100%&quot; /&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&quot;display: inline-block; width:69%;&quot;&gt;
+If you're wondering whether we are supposed to ever wear those caps, then yes,
+we were supposed to wear them during our first TGIF (which ironically are on
+Thursdays). &lt;br /&gt;&lt;br /&gt;
+After getting to know some of the rules about Google, and making some new
+friends, we continued on with the rest of the orientation. That is, for the
+whole first week, we spent our time sitting in lectures about some technologies
+used by Google, work practices, ethics etc. &lt;br/&gt;&lt;br/&gt;
+The work actually doesn't start in first week, since most interns are actually
+not in their own office, so the first week is usually all about going home
+early, exploring the office, meeting other Googlers, and exploring more of
+Google on its intranet.
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;I think the thing I love most about Google is how open the culture is. Google
+has all their code in a single (huge) repository, and even interns had access
+to all the source code. This includes most of Google's projects, and their
+systems. This is also very opposed to a company like Apple, where people in one
+department aren't even allowed to talk to people from other departments about
+their work. I know some people prefer the secrecy/privacy model, so I'm not
+praising one over the other, it is just my own preference.&lt;/p&gt;
+
+&lt;p&gt;I guess some of you may have seen the movie &lt;a href=&quot;//www.imdb.com/title/tt2234155/&quot;&gt;The Internship
+(2013)&lt;/a&gt;, and would be wondering: &lt;strong&gt;what about
+all the things they showed in the movie? Free food? Quidditch matches?  Coding
+on transparent boards? Competing against other interns? Restrictions on
+dating?? Is that all true?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hmmm... this is going to take a while.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Free Food&lt;/strong&gt; - Yes, this one is completely true. Google has two kinds of food
+outlets; micro kitchens (MKs) and cafes. Micro Kitchens have fillers: fruits,
+eggs, milk, soft drinks, energy drinks, coffee machines, and even the big
+barista machine to make your own coffee if you don't trust the automatic
+machine to do it right. MKs are open 24/7 and usually fully stocked. There's
+around 2 or 3 MKs on every floor in Google. The rule of thumb is, no matter
+where your desk is, the food wouldn't be more than 30 second walk away.  BUT!!!
+Cafes is where Google shines even more. Cafes are for proper meals: breakfast,
+lunch AND dinner. Cafes open on weekdays (not weekends), but the food is
+amazing (.. did I mention free?). There are a lot of cafes, and each has their
+own speciality (some excel at desserts, some at breakfasts); and they have
+different opening/closing times, so usually you can find at least some cafe open
+during the work hours. Just Google &quot;google food&quot; to get a look at the variety
+(images aren't even exaggerated).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quidditch matches&lt;/strong&gt; - Unfortunately I haven't seen one happen. Google does
+keep buying tickets to stuff though. I got to go to a Yankees game last
+weekend, with best seats, and... you guessed it, all you can eat hotdogs and
+drinks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Coding on transparent boards&lt;/strong&gt; - Okay, so this one is tricky. I have a work
+desktop, where I prefer to code, so I usually don't use the boards. But I've
+seen people discussing stuff on whiteboards. Managers often have cabins with
+glass walls, and I've seen them writing on walls, so I'll have to say yes to
+this one.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Competing against other interns&lt;/strong&gt; - NO. Google has separate projects for
+different interns, and they are not supposed to compete against each other.
+Some projects may have more than a single intern, in which case they'd
+collaborate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Restrictions on dating&lt;/strong&gt; - I'm not even sure why I put this here. Maybe
+because I was pretty surprised about this in the actual movie. We had to take
+some ethics classes in the beginning of the intern, and yes, they did mention
+that dating a person who is your immediate manager is inappropriate (and a
+request for transfer is recommended, I think), but anything else is fine (yes,
+this was part of the online mandatory ethics course).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What about other things? Surely there are more?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hmmm... this is going to take even longer than I originally thought.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Game rooms&lt;/strong&gt; - We have 2 game rooms in our NYC office. These game rooms have
+arcade games, table tennis tables, air hockey, video games (smash anyone?), pool,
+tons of board games, foosball tables. I could go on (I'm not joking), but I think
+you get the idea. Apart from this, we have a room dedicated to wall climbing too.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Naps&lt;/strong&gt; - The whole office is filled with places to sleep. From nap pods to beds,
+we have it all. It is also pretty convenient and practical since a nap during work
+hours can really help to reset the mind. How convenient you ask? Look for yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/sleep1.jpg&quot; width=&quot;49%&quot;&gt;&lt;img src=&quot;/img/sleep2.jpg&quot; width=&quot;49%&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tech stops&lt;/strong&gt; - If you've been to nice offices, they always have these
+stationary racks, filled with all stationary you'd ever need. Like papers,
+copies, pens, refills, clips, whiteners, etc. This is like that, but it is not
+stationary. These are electronic accessories you'd ever need in your work.
+Power converters, dongles, USB cables, chargers, privacy screens, mouse,
+keyboards, mouse pads... You get the idea.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Massages&lt;/strong&gt; - Googlers (and interns) get some free professional massages an
+year, and I haven't been to one yet. I have a booking coming up, and maybe I'll
+elaborate later (yes, there are multiple massage rooms in the office).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Massage chairs&lt;/strong&gt; - Poor man's massage? I guess these chairs aren't cheap to
+buy. But they are spread around the office so you keep running into them from
+time to time. Unlike the professional massage, these are free to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gyms&lt;/strong&gt; - Yes, the office has more than one gyms. Whether you are looking to
+lift weights, or you are looking for a spin class, you can do it in the office
+itself.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Classes&lt;/strong&gt; - Google has classes for a variety of things. While many of the
+classes are based on developing technical skills, or professional skills, there
+are a number of classes on seemingly random topics. I took a cooking class,
+where I baked a set of delicious cookies (which I got to take home).&lt;/p&gt;
+
+&lt;h2&gt;Verdict&lt;/h2&gt;
+
+&lt;p&gt;I really think that Google goes well and beyond to get its employees happy. I
+didn't mention a lot of other things like people's pet projects that line up the
+walls, the amazing chefs, and I really would elaborate more on the &quot;working&quot;
+part of the intern later.&lt;/p&gt;
+
+&lt;p&gt;But till then, if you're reading this, leave a comment below :)&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">The series:</summary></entry><entry><title type="html">An intern’s views - How I got here</title><link href="http://localhost:4000/2017/05/07/How-I-got-here/" rel="alternate" type="text/html" title="An intern's views - How I got here" /><published>2017-05-07T00:00:00-04:00</published><updated>2017-05-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/07/How-I-got-here</id><content type="html" xml:base="http://localhost:4000/2017/05/07/How-I-got-here/">&lt;p&gt;AKA, how I got an internship in Google. In case you were wondering why the
 actual title is so obscure, it is because I want this article to be mostly
 linked by the rest of the (monthly) articles in this series (I'll update the
 links as I write them)&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An intern's views - A month's end at Google&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;An intern's views - How far have I come?&lt;/li&gt;
 &lt;li&gt;An intern's views - End of diary&lt;/li&gt;
 &lt;/ol&gt;
@@ -46,11 +204,13 @@ to Google - Short, Sleek and to the point.&lt;/p&gt;
 &lt;h3&gt;Application Procedure&lt;/h3&gt;
 
 &lt;p&gt;With fear of stating the obvious, to get into Google, you need to apply to
-Google.  I mean really? Take my college for example. We have a placement cell
-in which students register for campus placements. Now, if you sit for campus
-placements, accepting an outside offer causes you to be labelled a &quot;defaulter&quot;.
-What this means for you is that you are allowed to sit for only 2 companies in
-campus placements in the first week of next year.&lt;/p&gt;
+Google.  I mean really?&lt;/p&gt;
+
+&lt;p&gt;Take my college for example. We have a placement cell in which students
+register for campus placements. Now, if you sit for campus placements,
+accepting an outside offer causes you to be labelled a &quot;defaulter&quot;.  What this
+means for you is that you are allowed to sit for only 2 companies in campus
+placements in the first week of next year.&lt;/p&gt;
 
 &lt;p&gt;This is one of the &lt;em&gt;only&lt;/em&gt; things I don't like about my college. Look at this
 from a game theoretic perspective. Let's follow a person's thought process:&lt;/p&gt;
@@ -102,10 +262,11 @@ during an interview&quot;. It will take me some time to work on that...&lt;/p&gt
 apply to Google. There are primarily two ways.&lt;/p&gt;
 
 &lt;p&gt;The first is to apply online through Google's portal. If you are a first or
-second year undergrad, you can apply for an Engineering Practicum Intern (which
-I didn't know existed :/ ), and if you are third year or above, you can apply
-for a Software Engineering Intern. You can view the exact details on
-https://careers.google.com&lt;/p&gt;
+second year undergrad, you can apply for an Engineering Practicum Intern
+(&lt;del&gt;which I didn't know existed&lt;/del&gt; as pointed out by &lt;em&gt;Bhavishya&lt;/em&gt; in comments,
+apparently only for students from North America :/ ), and if you are third year
+or above, you can apply for a Software Engineering Intern. You can view the
+exact details on &lt;a href=&quot;https://careers.google.com&quot;&gt;https://careers.google.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The second is to apply through a referral.&lt;/p&gt;
 
@@ -680,290 +841,4 @@ For example,&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;curl https://github.com/pallavagarwal07.keys &amp;gt;&amp;gt; ~/.ssh/authorized_keys
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;would give me ssh/scp access to your PC.&lt;/p&gt;</content><author><name></name></author><category term="tip" /><summary type="html">This tip may be obvious to many people, but I feel this worth mentioning. A lot of us have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma) that you can actually share your public keys with others by giving them your github username. For example,</summary></entry><entry><title type="html">Linux commands every user should master</title><link href="http://localhost:4000/2015/12/12/Linux-commands-every-user-should-master/" rel="alternate" type="text/html" title="Linux commands every user should master" /><published>2015-12-12T00:00:00-05:00</published><updated>2015-12-12T00:00:00-05:00</updated><id>http://localhost:4000/2015/12/12/Linux-commands-every-user-should-master</id><content type="html" xml:base="http://localhost:4000/2015/12/12/Linux-commands-every-user-should-master/">&lt;p&gt;When it comes to linux, there are some commands that you can't live without and
-then there are some you &lt;em&gt;shouldn't&lt;/em&gt; live without. I mean sure, you can live your
-life without ever using &lt;code&gt;grep&lt;/code&gt; or &lt;code&gt;find&lt;/code&gt; but you'd never believe how much
-productive knowing a few more terminal commands can make you.&lt;/p&gt;
-
-&lt;p&gt;Here is a list of the commands we are going to take a look at:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;em&gt;man&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;grep&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;find&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;sed&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;The command that started it all: &lt;em&gt;man&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;I really hope you know this one. But in case you don't, well today is your
-lucky day. This command is really special because it will, from today onwards
-be your first guide to using &lt;strong&gt;any&lt;/strong&gt; terminal command. &lt;code&gt;man&lt;/code&gt; stands for
-&lt;em&gt;manual&lt;/em&gt; and is literally your handbook of linux commands. Any time you are
-wondering how to use a command, &lt;code&gt;sed&lt;/code&gt; for example, open up your terminal and
-type&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;man &amp;lt;command&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or as in this case,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;man sed
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and it will give you a quick summary of what the command is, and how to use
-it. There isn't anything more than that to it, yet I use it multiple times
-everyday when I forget the syntax of &lt;code&gt;chmod&lt;/code&gt; command or have forgotten how
-the &lt;code&gt;bash time&lt;/code&gt; command is different from that packaged with &lt;code&gt;zsh&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;Search through files, content, outputs, basically anything: &lt;em&gt;grep&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;This one is basically a search command. But unlike the upcoming &lt;code&gt;find&lt;/code&gt; command,
-this one doesn't search for just the names of files. It searches through their
-content as well. Not only that, it is also super handy when you have to filter
-out lines that contain some specific content from let's say a huge output from
-previous command. This command takes getting some used to, but after some time,
-you wouldn't even believe you used to be able to get any work without it. Let's
-start, shall we?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Content from files&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Let's say you want to search for any files in which you have TODO written
-inside (as in code comments maybe?) also, you want the search to be case
-insensitive and search all subfolders of current folder too (recursively).
-You'd write:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;grep -i -r TODO .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now, I suggest you look up the flags (those dash followed by characters) I
-used in the above command using &lt;code&gt;man grep&lt;/code&gt;. I will still tell you in case
-you don't have a means to run the &lt;code&gt;man&lt;/code&gt; command right now.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;-i&lt;/code&gt; flag is for case-insensistive search.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;-r&lt;/code&gt; searches sub-folders recursively.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;TODO&lt;/code&gt; is the phrase we want to search for. You can even use regex
-expressions (which is where the true power lies), and that seems to be true
-for many linux commands you'll learn in future.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;.&lt;/code&gt; is the usual symbol for current directory. &lt;code&gt;..&lt;/code&gt; can be used for parent
-directory, or a directory name can be given, relative to the current
-directory.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Content from stdin or &lt;em&gt;pipe&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If the last parameter &lt;code&gt;file or folder name to search&lt;/code&gt; in previous command
-is not provided, then &lt;code&gt;grep&lt;/code&gt; tries to search in &lt;code&gt;stdin&lt;/code&gt;. Now, that doesn't
-mean you actually have to type the content, but being able to take content
-from stdin allows grep to use something much more useful in linux - &lt;strong&gt;pipes&lt;/strong&gt;!
-What a pipe or &lt;code&gt;|&lt;/code&gt; does is that it sends the output of one command as stdin
-to another. Thus, a command like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ls | grep -i txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will execute &lt;code&gt;ls&lt;/code&gt; and then take that output and give it to &lt;code&gt;grep&lt;/code&gt;. Now grep
-will execute its search on this content (output of &lt;code&gt;ls&lt;/code&gt;). Thus, in above
-example, it will search for lines that will have txt in them.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;The plain old but much more powerful than you thought &lt;em&gt;find&lt;/em&gt; command&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;The &lt;code&gt;find&lt;/code&gt; command is one of the most used commands in Linux.
-&lt;code&gt;find&lt;/code&gt; command is used to search and locate list of files and directories
-matching arguments you specify.  &lt;code&gt;find&lt;/code&gt; can be used in variety of conditions
-with its various flags to find files by permissions, users, groups, file type,
-date, size and other possible criteria.  The format for the &lt;code&gt;find&lt;/code&gt; command is a
-little unintuitive for those with a habit of using &lt;code&gt;grep&lt;/code&gt; or &lt;code&gt;ag&lt;/code&gt;. Like always,
-I'd advice you to read the man page for &lt;code&gt;find&lt;/code&gt; using &lt;code&gt;man find&lt;/code&gt; command.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Files by their name&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;To find a file by its name, just use the following format:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find &amp;lt;directory&amp;gt; -name &amp;lt;name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So, if you want to search for a file named &lt;code&gt;abc.txt&lt;/code&gt; in current directory, you
-can do&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -name &quot;abc.txt&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -name &quot;*.txt&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to find all files ending with &lt;code&gt;.txt&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that the only compulsory argument is the directory name. The &lt;code&gt;-name&lt;/code&gt; is
-just to filter the files by name. And as you may have guessed, there are a lot
-more filters at your disposal.
-This will also search all sub-directories in the current folder recursively.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Files using advanced filters&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Let's look at the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find -maxdepth 4 -amin +3 -iname &quot;PaLLaV&quot; -size -4M -type f -user root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is an example of how multiple filters can be chained up to create an
-advanced search.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;-maxdepth 4&lt;/code&gt; will go at max 4 levels down (in
-subdirectories) while searching.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;-amin +3&lt;/code&gt; will keep only those files that were last accessed &lt;strong&gt;more than&lt;/strong&gt;
-3 minutes ago (notice the &lt;code&gt;+&lt;/code&gt; in &lt;code&gt;+3&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;-iname &quot;PaLLaV&quot;&lt;/code&gt; will search for files with name &lt;code&gt;pallav&lt;/code&gt; WITHOUT caring
-about case sensitivity (&lt;code&gt;-name&lt;/code&gt; would've been case sensitive).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;-size -4M&lt;/code&gt; will only choose those results that are &lt;strong&gt;less than&lt;/strong&gt; 4MegaBytes
-because of &lt;code&gt;-&lt;/code&gt; in &lt;code&gt;-4M&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;-type f&lt;/code&gt; will filter out the files and ignore the directories.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;-user root&lt;/code&gt; will only give out the files that are owned by &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;As you may have guessed, these are &lt;em&gt;not&lt;/em&gt; the only filters you can use. There are
-actually tons more. You can literally phrase the command to find any file you
-lost on your hard drive and only remember vague details about.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;The stream editor with all powers of an editor: &lt;em&gt;sed&lt;/em&gt; &lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;I know I promised you a tutorial of &lt;em&gt;sed&lt;/em&gt;, but the fact is, there is no way I
-can do justice to its power in a few paragraphs. So, instead I'm going to refer
-you to &lt;a href=&quot;http://www.grymoire.com/Unix/Sed.html#uh-0&quot;&gt;this&lt;/a&gt; tutorial. It's long,
-but I really recommend you go through the starting parts. &lt;em&gt;sed&lt;/em&gt; has terrible
-documentation and &lt;code&gt;man sed&lt;/code&gt; doesn't help a lot in this case, because just
-knowing the format of commands doesn't bring out its power at all. If you aren't
-sold yet, I'll give you an easy example of &lt;code&gt;sed&lt;/code&gt; usage. Let's say you ran
-&lt;code&gt;ifconfig&lt;/code&gt; and got the output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;enp9s0: flags=4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt;  mtu 1500
-        inet 172.24.8.63  netmask 255.255.255.255  broadcast 172.24.8.63
-        inet6 fe80::f276:1cff:fe0b:b377  prefixlen 64  scopeid 0x20&amp;lt;link&amp;gt;
-        ether f0:76:1c:0b:b3:77  txqueuelen 1000  (Ethernet)
-        RX packets 2578393  bytes 3323277819 (3.0 GiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 1368479  bytes 189953405 (181.1 MiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-lo: flags=73&amp;lt;UP,LOOPBACK,RUNNING&amp;gt;  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10&amp;lt;host&amp;gt;
-        loop  txqueuelen 0  (Local Loopback)
-        RX packets 529  bytes 1361550 (1.2 MiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 529  bytes 1361550 (1.2 MiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;but you just want the output to be type followed by ip addr, for every ip
-address as in:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; inet 172.24.8.63
- netmask 255.255.255.255
- broadcast 172.24.8.63
-
- inet 127.0.0.1
- netmask 255.0.0.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Let's try to make the output like that:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;First grep to filter out the lines that have IP addresses.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ifconfig | grep -P &quot;(\d{1,3}\.){3}\d{1,3}&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Couple of things to note: The &lt;code&gt;-P&lt;/code&gt; is for using perl type regex.
-This allows us to use &lt;code&gt;\d&lt;/code&gt; for digits, in sed we'll still have to
-use &lt;code&gt;[0-9]&lt;/code&gt; as &lt;code&gt;\d&lt;/code&gt; format isn't supported. Then we say that there
-will be atleast 1 and at most 3 digits &lt;code&gt;{1,3}&lt;/code&gt;. Then it will be
-followed by a dot &lt;code&gt;\.&lt;/code&gt;. Read up on regex if you don't know why the
-dot has been preceded by a &lt;code&gt;\&lt;/code&gt;. Then this whole group (digits and dot)
-is repeated exactly 3 times, followed by another group of 1-3 digits.&lt;/p&gt;
-
-&lt;p&gt;This filters out the lines with IP addresses as in:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    inet 172.24.8.63  netmask 255.255.255.255  broadcast 172.24.8.63
-    inet 127.0.0.1  netmask 255.0.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Now we use sed to add newlines after every IP address.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sed -r &quot;s|([0-9]{1,3}\.){3}[0-9]{1,3}|\0\n|g&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now, the &lt;code&gt;-r&lt;/code&gt; is to use extended regular expressions. &lt;code&gt;s&lt;/code&gt; is for
-substitute command. &lt;code&gt;|&lt;/code&gt; is the separator (can be anything not used
-in the substitution pattern). This is followed by the same regex
-expression as before, but instead of &lt;code&gt;\d&lt;/code&gt; we have used &lt;code&gt;[0-9]&lt;/code&gt; as
-&lt;code&gt;\d&lt;/code&gt; isn't supported by &lt;code&gt;sed&lt;/code&gt;. Then we use another separator &lt;code&gt;|&lt;/code&gt;.
-Then we have the substitution content. &lt;code&gt;\0&lt;/code&gt; just puts the whole
-pattern that was matched. This is needed as we do not want to delete
-the original content. The &lt;code&gt;\n&lt;/code&gt; is for a newline. The &lt;code&gt;|g&lt;/code&gt; is another
-separator followed by &lt;code&gt;global&lt;/code&gt; without which only the first match in
-every line will be replaced. Now the output is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;        inet 172.24.8.63
-  netmask 255.255.255.255
-  broadcast 172.24.8.63
-
-        inet 127.0.0.1
-  netmask 255.0.0.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Unfortunately, the formatting doesn't look too good.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Let's add a new sed command to eat all the beginning spaces:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sed -r &quot;s|^ *||&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This one's easy, by using &lt;code&gt;^&lt;/code&gt;, we are substituting for all the spaces
-in the beginning of the line and replacing with nothing.
-This gives us the final output:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;inet 172.24.8.63
-netmask 255.255.255.255
-broadcast 172.24.8.63
-
-inet 127.0.0.1
-netmask 255.0.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;Note, our final command thus will be:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ifconfig | grep -P &quot;(\d{1,3}\.){3}\d{1,3}&quot; | sed -r
-    &quot;s|([0-9]{1,3}\.){3}[0-9]{1,3}|\0\n|g&quot; | sed -r &quot;s|^ *||&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and while this might seem like too much work, think about how much you'd
-have to write if you were to create a script to do these transformations
-using C++ or python. These commands allow creation of really clean and
-compact scripts (&lt;em&gt;OK, maybe &lt;strong&gt;just&lt;/strong&gt; compact scripts&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Now, that you know the secrets, get cracking!&lt;/strong&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;I hope you enjoyed reading this post.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Consider sharing this article using the links below.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">When it comes to linux, there are some commands that you can't live without and then there are some you shouldn't live without. I mean sure, you can live your life without ever using grep or find but you'd never believe how much productive knowing a few more terminal commands can make you.</summary></entry></feed>
+&lt;p&gt;would give me ssh/scp access to your PC.&lt;/p&gt;</content><author><name></name></author><category term="tip" /><summary type="html">This tip may be obvious to many people, but I feel this worth mentioning. A lot of us have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma) that you can actually share your public keys with others by giving them your github username. For example,</summary></entry></feed>

@@ -1,4 +1,4 @@
-<title>YourHonour: A k8s based distributed programming judge - VARSTACK</title>
+<title>An intern's views - A month's end at Google - VARSTACK</title>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,7 +40,7 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <![endif]-->
 
     
-    <img src="/img/yourhonourlogo.png" id="bg-img" alt="YourHonour Banner">
+    <img src="/img/google.jpg" id="bg-img" alt="Pallav sitting with Google logo">
     
     <div class="container">
         <div class="row" id="menu">
@@ -73,139 +73,169 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>YourHonour: A k8s based distributed programming judge</h3>
+                        <h3>An intern's views - A month's end at Google</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p>So, this is something I have been working on recently for some time. The
-project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
-organising programming competitions.</p>
-
-<p><strong>YourHonour</strong> came into being because the Open Source solutions already present
-either do not fit all the criteria, or are just too hard to setup. The ones
-that are easy to set up, as well as provide complete functionality are either
-paid, or non-free.</p>
-
-<p>Anyway, I decided to build my own judge. Hell, how hard can it be? As it turns
-out, creating a judge isn't as easy as I initially thought. There are way too
-many things that can go wrong at any given time, most of the problems stemming
-from the fact that the judge is supposed to run arbitrary code from the user on
-the server, and make sure that it can't do anything malicious.</p>
-
-<p>Lastly, the judge should properly utilize resources from the cluster or machine
-on which it is running, and properly give the resources to each program. It should
-schedule the tasks properly, and kill them after a desired time. When listed, these
-look something like this:</p>
+                                <p>The series:</p>
 
 <ol>
-<li>Run Isolated code</li>
-<li>No internet access to executable</li>
-<li>Kill after desired time</li>
-<li>Possibility to schedule on a cluster of computers/VMs</li>
-<li>Limit resources, distribute resources</li>
-<li>Handle exit status/signal of the user's code</li>
-<li>Preventing malicious behaviour</li>
+<li><a href="/2017/05/07/How-I-got-here/">An intern's views - How I got here</a></li>
+<li><a href="/2017/06/07/A-month-end-at-Google/">An intern's views - A month's end at Google</a></li>
+<li>An intern's views - How far have I come?</li>
+<li>An intern's views - End of diary</li>
 </ol>
 
 
-<p><strong>Let's tackle these one by one:</strong></p>
+<p>Okay, okay.. I know this article is a bit late (and I've backdated it a bit),
+but I've been really busy. As it turns out, work at Google isn't all that easy
+(...did I think it would be?). But I'll get to that later 😉.</p>
 
-<h3><strong>Run isolated code</strong></h3>
+<p>So let's walk through my first few days in the office. So, on my first day in
+office, I actually got late. Imagine that...</p>
 
-<p>The first thing that comes to mind when talking about isolation is a container.
-That's pretty much it. That is probably the most sensible way to do it. In my
-implementation, <strong>I use docker containers to run the user's code</strong>. This way,
-the container is isolated, and the code inside can't get access to any of my
-files.</p>
+<p>Anyway, the first week is orientation. I had to go to one of three buildings
+in which Google resides. It wasn't too hard to find, and when I got there, I
+realised that reaching late wasn't that bad anyway, since I had to wait in line
+to be badged as an intern. Also, I wasn't the only one who had had trouble
+finding their way around the city.</p>
 
-<h3><strong>Kill after desired time</strong></h3>
+<p>All interns join on a Monday, which means that there is an orientation every
+week, and my batch was one of the earliest. There weren't a ton of interns
+joining that week. However, in U.S. interns have orientation in one of the two
+biggest offices: Mountain View for all west coast offices, and New York for all
+east cost offices. So we had interns from many other offices as well (Waterloo,
+for instance).</p>
 
-<p>Killing a process after desired time is important in a process because we need
-to catch any kind of TimeLimit errors too. To do this, we need to keep a track
-of the running process somehow. Usual way to do this is to have the process as
-a child of our own process. Then the parent would be able to wait on the child
-as well as kill it if need be. We will later see that just killing the spawned
-process may not be enough.</p>
+<p>We had our I-9 documents checked, and proceeded to the orientation room. It was
+a presentation, where they showed us some of the things that we needed to know.
+Basic stuff. We got a t-shirt, a bag, our work laptops (to be returned), and
+those infamous funky caps with a propeller on them. Basically, after my first day,
+I looked something like this:</p>
 
-<h3><strong>Scheduling on cluster</strong></h3>
-
-<p>Since I went with docker to isolate the codes, the obvious choice for container
-orchestration was the brilliant Kubernetes. The only problem - terrible
-documentation. Half of their links in the docs keep breaking. But that is not
-my concern. Usually a google search can be used to find non-404 pages.
-Kubernetes can be used to schedule the containers with both memory and CPU
-limits, as well as is pretty easy to setup (especially the docker-multinode
-method).</p>
-
-<h3><strong> Limit and distribute resources</strong></h3>
-
-<p>Kubernetes provides configuration for this, and thus isn't a concern.</p>
-
-<h3><strong>Exit/Signal status of child</strong></h3>
-
-<p>As mentioned before, if the process is run as a child of our process, the
-parent can listen to the events of the child, and find out any data needed
-about the child.  This is implemented by having the parent call the fork call,
-rewrite the stdout and stdin file descriptors, change user permissions and
-execv the child process. Then the parent calls wait on the child, with a wakeup
-alarm signal registered on the kernel.</p>
-
-<h3><strong>Restrict internet access in container</strong></h3>
-
-<p>I didn't find a very elegant solution to this. The containers which run without
-<code>--privileged</code> flag, <strong>don't have any way to turn off internet access from
-inside the container</strong>. And the internet can't be turned off before the
-continer is launched because the container uses the network to fetch the
-input/output files from local machines on cluster.</p>
-
-<p>On the other hand, adding the <code>--privileged</code> flag gives the container access to
-my devices, including my hard drive, which a malicious code could use to
-potentially mount and gain access to my system. What I ended up doing was a
-compromise between the two. I run the docker with <code>--privileged</code> flag, but
-before the executable is called, the <code>wrapper</code> (or the "parent") sets its UID
-to an unprivileged user. Before doing so, the parent turns off the internet in
-the container. Hope is that there is no way for the unprivileged user to turn
-its internet connection back on (most probably true), however I still feel
-uncomfortable using the <code>--privileged</code> flag.</p>
-
-<h3><strong>Prevent malicious behaviour</strong></h3>
-
-<p>This one is probably the most involved since we don't know what is meant by
-<em>malicious</em>. We have already stopped it from accessing internet, and our files,
-drives and devices are safe. We have also tried our best to stop it from using
-too many resources by limit container resources. So now what?</p>
-
-<p>Unfortunately, it is not easy to see what is missing. So I had some seniors in
-security look over the program and test it for vulnerabilities. They found two
-major problems (till now):</p>
-
-<ol>
-<li><p><strong>DoS attacks crush the server very easily:</strong></p>
-
-<p>Apparently nodejs server doesn't have protection against DoS attacks.
-<em><strong>Sigh</strong></em>. I didn't want to add a proxy gateway just to filter out DoS
-attacks, so for now I have patched the server with a temporary solution. If
-the server detects multiple consecutive requests (too many), it adds an
-iptable rule to drop connections from that IP. This isn't perfect, but it
-works. The server recovers from the attack in a few seconds, and the source
-is blocked from making any requests for some time (configurable).</p></li>
-<li><p><strong>Fork bombs in source code:</strong></p>
-
-<p>Even though the resources for the container are limited, a fork bomb increases
-the number of processes a lot faster than the used up memory. This completely
-clutters up the ready queue and prevents the parent from being scheduled. In
-worst cases (and the behaviour is unpredictable), the docker container ends up
-crashing the host node (i.e.  computer or VM) as well. While the ideal solution
-would be to restrict the number of allowed processes, but I couldn't find the
-correct way to do this in docker.  As an alternative, <strong>I increase the child's
-niceness value</strong> making it less important than the parent in the scheduling
-algorithm. The <strong>parent sends the kill signal to ALL processes it is allowed to
-send to</strong>, and hence kills all descendants of the malicious process as well.
-This seems to work well, and I haven't had much problem since.</p></li>
-</ol>
+<div style="display: inline-block; width:29%; vertical-align: top">
+<img src="/img/intern-cap.jpg" style="max-width:100%" />
+</div>
 
 
-<p><br /><br /></p>
+<div style="display: inline-block; width:69%;">
+If you're wondering whether we are supposed to ever wear those caps, then yes,
+we were supposed to wear them during our first TGIF (which ironically are on
+Thursdays). <br /><br />
+After getting to know some of the rules about Google, and making some new
+friends, we continued on with the rest of the orientation. That is, for the
+whole first week, we spent our time sitting in lectures about some technologies
+used by Google, work practices, ethics etc. <br/><br/>
+The work actually doesn't start in first week, since most interns are actually
+not in their own office, so the first week is usually all about going home
+early, exploring the office, meeting other Googlers, and exploring more of
+Google on its intranet.
+</div>
+
+
+<p><br/></p>
+
+<p>I think the thing I love most about Google is how open the culture is. Google
+has all their code in a single (huge) repository, and even interns had access
+to all the source code. This includes most of Google's projects, and their
+systems. This is also very opposed to a company like Apple, where people in one
+department aren't even allowed to talk to people from other departments about
+their work. I know some people prefer the secrecy/privacy model, so I'm not
+praising one over the other, it is just my own preference.</p>
+
+<p>I guess some of you may have seen the movie <a href="//www.imdb.com/title/tt2234155/">The Internship
+(2013)</a>, and would be wondering: <strong>what about
+all the things they showed in the movie? Free food? Quidditch matches?  Coding
+on transparent boards? Competing against other interns? Restrictions on
+dating?? Is that all true?</strong></p>
+
+<p>Hmmm... this is going to take a while.</p>
+
+<p><strong>Free Food</strong> - Yes, this one is completely true. Google has two kinds of food
+outlets; micro kitchens (MKs) and cafes. Micro Kitchens have fillers: fruits,
+eggs, milk, soft drinks, energy drinks, coffee machines, and even the big
+barista machine to make your own coffee if you don't trust the automatic
+machine to do it right. MKs are open 24/7 and usually fully stocked. There's
+around 2 or 3 MKs on every floor in Google. The rule of thumb is, no matter
+where your desk is, the food wouldn't be more than 30 second walk away.  BUT!!!
+Cafes is where Google shines even more. Cafes are for proper meals: breakfast,
+lunch AND dinner. Cafes open on weekdays (not weekends), but the food is
+amazing (.. did I mention free?). There are a lot of cafes, and each has their
+own speciality (some excel at desserts, some at breakfasts); and they have
+different opening/closing times, so usually you can find at least some cafe open
+during the work hours. Just Google "google food" to get a look at the variety
+(images aren't even exaggerated).</p>
+
+<p><strong>Quidditch matches</strong> - Unfortunately I haven't seen one happen. Google does
+keep buying tickets to stuff though. I got to go to a Yankees game last
+weekend, with best seats, and... you guessed it, all you can eat hotdogs and
+drinks.</p>
+
+<p><strong>Coding on transparent boards</strong> - Okay, so this one is tricky. I have a work
+desktop, where I prefer to code, so I usually don't use the boards. But I've
+seen people discussing stuff on whiteboards. Managers often have cabins with
+glass walls, and I've seen them writing on walls, so I'll have to say yes to
+this one.</p>
+
+<p><strong>Competing against other interns</strong> - NO. Google has separate projects for
+different interns, and they are not supposed to compete against each other.
+Some projects may have more than a single intern, in which case they'd
+collaborate.</p>
+
+<p><strong>Restrictions on dating</strong> - I'm not even sure why I put this here. Maybe
+because I was pretty surprised about this in the actual movie. We had to take
+some ethics classes in the beginning of the intern, and yes, they did mention
+that dating a person who is your immediate manager is inappropriate (and a
+request for transfer is recommended, I think), but anything else is fine (yes,
+this was part of the online mandatory ethics course).</p>
+
+<p><strong>What about other things? Surely there are more?</strong></p>
+
+<p>Hmmm... this is going to take even longer than I originally thought.</p>
+
+<p><strong>Game rooms</strong> - We have 2 game rooms in our NYC office. These game rooms have
+arcade games, table tennis tables, air hockey, video games (smash anyone?), pool,
+tons of board games, foosball tables. I could go on (I'm not joking), but I think
+you get the idea. Apart from this, we have a room dedicated to wall climbing too.</p>
+
+<p><strong>Naps</strong> - The whole office is filled with places to sleep. From nap pods to beds,
+we have it all. It is also pretty convenient and practical since a nap during work
+hours can really help to reset the mind. How convenient you ask? Look for yourself.</p>
+
+<p><img src="/img/sleep1.jpg" width="49%"><img src="/img/sleep2.jpg" width="49%"></p>
+
+<p><strong>Tech stops</strong> - If you've been to nice offices, they always have these
+stationary racks, filled with all stationary you'd ever need. Like papers,
+copies, pens, refills, clips, whiteners, etc. This is like that, but it is not
+stationary. These are electronic accessories you'd ever need in your work.
+Power converters, dongles, USB cables, chargers, privacy screens, mouse,
+keyboards, mouse pads... You get the idea.</p>
+
+<p><strong>Massages</strong> - Googlers (and interns) get some free professional massages an
+year, and I haven't been to one yet. I have a booking coming up, and maybe I'll
+elaborate later (yes, there are multiple massage rooms in the office).</p>
+
+<p><strong>Massage chairs</strong> - Poor man's massage? I guess these chairs aren't cheap to
+buy. But they are spread around the office so you keep running into them from
+time to time. Unlike the professional massage, these are free to use.</p>
+
+<p><strong>Gyms</strong> - Yes, the office has more than one gyms. Whether you are looking to
+lift weights, or you are looking for a spin class, you can do it in the office
+itself.</p>
+
+<p><strong>Classes</strong> - Google has classes for a variety of things. While many of the
+classes are based on developing technical skills, or professional skills, there
+are a number of classes on seemingly random topics. I took a cooking class,
+where I baked a set of delicious cookies (which I got to take home).</p>
+
+<h2>Verdict</h2>
+
+<p>I really think that Google goes well and beyond to get its employees happy. I
+didn't mention a lot of other things like people's pet projects that line up the
+walls, the amazing chefs, and I really would elaborate more on the "working"
+part of the intern later.</p>
+
+<p>But till then, if you're reading this, leave a comment below :)</p>
 
                             </div>
                         </div>
