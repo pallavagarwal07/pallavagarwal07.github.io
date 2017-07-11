@@ -78,6 +78,25 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
                                 
+  <a href="/2016/04/27/SSH-keys/">EASY SHARING OF SSH KEYS</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">Apr 27, 2016</span>
+  </p>
+  <div class="content">
+    <p>This tip may be obvious to many people, but I feel this worth mentioning. A lot of us
+have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma)
+that you can actually share your public keys with others by giving them your github
+username.
+For example,</p>
+
+<pre><code>curl https://github.com/pallavagarwal07.keys &gt;&gt; ~/.ssh/authorized_keys
+</code></pre>
+
+<p>would give me ssh/scp access to your PC.</p>
+
+  </div>
+  <br /><br />
+
   <a href="/2015/12/12/Linux-commands-every-user-should-master/">LINUX COMMANDS EVERY USER SHOULD MASTER</a>
   <p class="author" style="text-align: right;">
     <span class="date">Dec 12, 2015</span>
@@ -159,15 +178,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
   </div>
   <br /><br />
 
-  <a href="/2015/07/08/Vim-Colorscheme/">VIM: SETTING A COLORSCHEME</a>
-  <p class="author" style="text-align: right;">
-    <span class="date">Jul 08, 2015</span>
-  </p>
-  <div class="content">
-    <p>Every good text editor deserves to have a customizable color scheme. For vim, colorschemes are installed as any other plugin. Most colorschemes can be downloaded as a <code>.vim</code> file. <em>If</em> you are not using a plugin manager, you need to copy the <code>.vim</code> file to an <code>autoload</code> folder inside a <code>.vim</code> folder in your home directory.</p> <p>However, if you <em>are</em> using a plugin manager, (<em>as you should</em>), then depending on the plugin manager, the colorscheme may be installed like a plugin. Personally, I suggest you install a <a href="http://github.com/flazz/vim-colorschemes">colorscheme-pack</a>. Since it makes it trivially easy to switch to any colorscheme...
-  </div>
-  <br /><br />
-
 
 <!-- Pagination links -->
 <div class="pagination" style="text-align: center; width: 100%;">
@@ -191,6 +201,10 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2017/07/10/How-far-have-I-come-working-at-Google/" class="color_change">An intern's views - How far...</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2017/06/07/A-month-end-at-Google/" class="color_change">An intern's views - A month's...</a>
                     </li>
                     
@@ -204,10 +218,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                     
                     <li>
                         <a href="/2016/06/09/Bugzilla-Landfills/" class="color_change">Learning from mistakes: Bugzilla Landfills</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/2016/05/13/SAT-Solver/" class="color_change">Determining legal USE Flag combinations using...</a>
                     </li>
                     
                 </ul>

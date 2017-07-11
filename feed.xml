@@ -1,9 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-10T00:53:34-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - A month’s end at Google</title><link href="http://localhost:4000/2017/06/07/A-month-end-at-Google/" rel="alternate" type="text/html" title="An intern's views - A month's end at Google" /><published>2017-06-07T00:00:00-04:00</published><updated>2017-06-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/06/07/A-month-end-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/06/07/A-month-end-at-Google/">&lt;p&gt;The series:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-11T00:08:05-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
+things I found here. But I have still made no mention of what I do here. Well,
+here it is. So sit back, and read on.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An intern's views - How far have I come?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An intern's views - End of diary&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;In case you haven't read the last article, you might want to.&lt;/p&gt;
+
+&lt;p&gt;So where were we? Oh yeah, end of orientation (week 1). So, after week 1,
+interns actually start working in full force. Now, the command structure is
+something like this - I'm an intern. I have a host who is responsible for
+hosting my project. He is primary reviewer on all my code, and my main point of
+contact in case of any problems. Apart from my host, I have a second reviewer,
+who is basically the person who has worked on similar stuff before and is in
+the best position to help me deploy my code.&lt;/p&gt;
+
+&lt;p&gt;Above them is our manager, and then more managers above him (in a nutshell).&lt;/p&gt;
+
+&lt;p&gt;So what do I work on? Hmmm.. I am not sure if I'm allowed to say yet?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;TODO: Replace with a proper description of my  work after project is released
+as open source.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Anyway, I am in the Blaze team. Blaze is the internal name for Bazel
+(&lt;a href=&quot;https://bazel.build&quot;&gt;https://bazel.build&lt;/a&gt;). To understand what Blaze is, first let's jog your
+memory. Which names do you recognize?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make (Makefile)&lt;/li&gt;
+&lt;li&gt;Ant&lt;/li&gt;
+&lt;li&gt;Maven&lt;/li&gt;
+&lt;li&gt;CMake&lt;/li&gt;
+&lt;li&gt;Gradle&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;All the above mentioned are build tools, and they all work on a similar
+concept. You have a build configuration, and they try to build the project by
+minimizing the work done. For example, if only one file has changed, they'd try
+not to build the whole project again, but just that one file. Now as projects
+become complicated, these tools become inefficient, and slowly more and more
+incompetent. Google has all their source code in one huge repository (really
+really huge), and code can takes hours to build on parallel running machine
+clusters. These tools can neither handle such complexity, nor the functionality
+required for such a thing.&lt;/p&gt;
+
+&lt;p&gt;This is where Bazel (Blaze) comes in. Blaze is &lt;em&gt;the&lt;/em&gt; build tool used by every
+project in Google. It is what builds tens of thousands of projects everyday.
+Now, Bazel is the open source version of Blaze, which other people can use in
+their projects, but is mostly used by other companies (like Dropbox), whose
+requirements are that huge.&lt;/p&gt;
+
+&lt;p&gt;If you are in a CS related field, you would've heard the term &quot;correctness&quot;
+thrown around a lot. Proof of correctness of algorithms? Correctness in multi
+threaded systems? Anyway, the main aim for a build tool is to ensure that the
+build output is always correct (deterministic). Thus, the changing
+circumstances should not change the build. For example, if a project A does not
+depend on project B, then whether or not you have B installed should not have
+an effect on build of A.&lt;/p&gt;
+
+&lt;p&gt;One important way to ensure correctness is to sandbox the compiler. This
+basically means to remove anything that might affect the build, except for the
+dependencies declared by the programmer. Now this can be quite slow to do for
+1000s of parallel builds, having 10,000s of dependencies. The current approach
+can take up to 300% extra time for a build with sandboxing enabled than
+disabled for some projects with a lot of dependencies. My project is a
+completely different (and hopefully fast) approach to solving this.&lt;/p&gt;
+
+&lt;p&gt;Back to working at Google; how does the work feel? One word - challenging. I
+take up problems quickly, I can code fast, I can even understand libraries,
+APIs faster than people expect me too. But I was not prepared for this. I don't
+think I'm the only one who felt this way. My friends, who are interning at
+Google or even other big companies felt the same. Programming in a company is
+not the same as programming projects as a hobby.&lt;/p&gt;
+
+&lt;p&gt;What am I talking about? Code Reviews, Lints, Style Guides. Writing code for
+Google is not the same as writing code for oneself. Your code needs to work,
+but that is low priority (okay, not really). Anybody reading your code should
+be able to understand what it does, and that's high priority. I'm not
+complaining, I have learnt more about writing &quot;good&quot; code in the last two
+months than I did in years coding by myself. However, I am going on this rant
+because I want whoever is reading this, to realise that if you are in college
+right now, you have a wonderful opportunity to learn to write &quot;good&quot; code.&lt;/p&gt;
+
+&lt;p&gt;What are code reviews? Code reviews are comments on your code, asking you to
+fix problems (that you didn't even think were present) using alternatives you
+would've never come up with yourself. Frankly, the first time around, code
+reviews feel something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/review.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the record, I made that meme for memegen &lt;strong&gt;&lt;em&gt;after&lt;/em&gt;&lt;/strong&gt; I finally got my first
+pull request (or change list) accepted. It got 850+ upvotes, so I'm pretty sure
+I'm not the only one who felt this way.&lt;/p&gt;
+
+&lt;p&gt;Hmmm... Memes should be standard way of getting a point across. Memegen is full
+of memes about &quot;Intern's first pull request&quot;, because it is a standard scene.
+Intern comes, confident, writes a bunch of code, sends it for review, and BAM!
+40+ comments on the code. Been there, done that. My first pull request (~400
+lines) had over 90 comments and was finally submitted after 2 weeks when I had
+managed to please all the reviewers by fixing every problem.&lt;/p&gt;
+
+&lt;p&gt;Why am I writing about all this? Do I still feel the pain? Well, yes, but a lot
+less than I originally did. After the code reviews, the code actually does look
+a lot better. It also gives a sense of inferiority, that takes time getting
+used to. At my college, there are a total of 2 people who can make me feel
+inferior (in programming). At Google, every second employee manages to do it
+with ease. We were told in our orientation that almost 70% of the Googlers have
+felt that they don't belong here due to inferiority complex at some point in
+their lives. But then a Googler comes along and asks for my help in area he
+doesn't have any experience in, and the feeling goes away. These people aren't
+all superior, they have just been working among the best too long.&lt;/p&gt;
+
+&lt;p&gt;Best part of working at Google? The Googlers. Not only are the people here
+brilliant at what they do, I have actually met some of the most down to Earth
+people here.  And the benefit of working with the best people? I have a doubt
+in Go; the Go team sits 6 rows from my desk. I need help implementing
+something? I bet at least 3 people in the 50 step radius have done it before.
+Can't remember the name of that one spaceship from Star Trek? I'm pretty sure 1
+out of 5 people here know that too. I don't even need to Google my doubts that
+often because somebody can usually clear them up (yeah, I can see the irony).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I know most of you don't care about how my project is going, but I'm going to put
+it here anyway :P It's going well, and I had a fairly nice mid-term review. I'm
+currently pushing hard to get the project released as open source (lots of
+legal issues to solve in the way). Finger crossed :D&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So, any regrets? Yes, from back at college. I really wish somebody had told me
+about all this. Told me that the programming as I know it, isn't exactly how
+it's done in real life. I wish I had had someone read all my codes, just to see
+if they can understand it. I wish I had an expert nit-picking on my codes just
+so having that now wouldn't be so surprising.&lt;/p&gt;
+
+&lt;p&gt;Next steps? I like to help out others, so let's hope I can help a few people
+avoid this shock. For now, mandatory code reviews on Programming Club IITK
+repositories, adding test suites and continuous integration to important
+projects and planning lectures on just these topics.
+&lt;br/&gt; &lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Doubt? Question? Suggestion? I think the comment panel below works :)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">AKA, what the hell about work? I have gone on and on about getting here. The things I found here. But I have still made no mention of what I do here. Well, here it is. So sit back, and read on.</summary></entry><entry><title type="html">An intern’s views - A month’s end at Google</title><link href="http://localhost:4000/2017/06/07/A-month-end-at-Google/" rel="alternate" type="text/html" title="An intern's views - A month's end at Google" /><published>2017-06-07T00:00:00-04:00</published><updated>2017-06-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/06/07/A-month-end-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/06/07/A-month-end-at-Google/">&lt;p&gt;The series:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;An intern's views - End of diary&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -149,6 +295,10 @@ classes are based on developing technical skills, or professional skills, there
 are a number of classes on seemingly random topics. I took a cooking class,
 where I baked a set of delicious cookies (which I got to take home).&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Memegen&lt;/strong&gt; - Of course, how can one work on a computer without periodically
+looking at memes, right? Lo and behold! Google even has its own meme website
+internally. Your best source of fun and fake news about everything Google!&lt;/p&gt;
+
 &lt;h2&gt;Verdict&lt;/h2&gt;
 
 &lt;p&gt;I really think that Google goes well and beyond to get its employees happy. I
@@ -164,7 +314,7 @@ links as I write them)&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An intern's views - How far have I come?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;An intern's views - End of diary&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -832,13 +982,4 @@ in Gentoo, including tatt and eix.&lt;/p&gt;
 &lt;p&gt;I would keep on updating this page with more information as I find it.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I am excited to say that I've been accepted for this year's summer of code under Gentoo Organisation. This section of the blog will be dedicated to documenting anything and everything I learn that is interesting or remotely related to my project.</summary></entry><entry><title type="html">Easy sharing of SSH keys</title><link href="http://localhost:4000/2016/04/27/SSH-keys/" rel="alternate" type="text/html" title="Easy sharing of SSH keys" /><published>2016-04-27T00:00:00-04:00</published><updated>2016-04-27T00:00:00-04:00</updated><id>http://localhost:4000/2016/04/27/SSH-keys</id><content type="html" xml:base="http://localhost:4000/2016/04/27/SSH-keys/">&lt;p&gt;This tip may be obvious to many people, but I feel this worth mentioning. A lot of us
-have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma)
-that you can actually share your public keys with others by giving them your github
-username.
-For example,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;curl https://github.com/pallavagarwal07.keys &amp;gt;&amp;gt; ~/.ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;would give me ssh/scp access to your PC.&lt;/p&gt;</content><author><name></name></author><category term="tip" /><summary type="html">This tip may be obvious to many people, but I feel this worth mentioning. A lot of us have SSH keys set up for github. I found out today, from a friend (github/sakshamsharma) that you can actually share your public keys with others by giving them your github username. For example,</summary></entry></feed>
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I am excited to say that I've been accepted for this year's summer of code under Gentoo Organisation. This section of the blog will be dedicated to documenting anything and everything I learn that is interesting or remotely related to my project.</summary></entry></feed>
