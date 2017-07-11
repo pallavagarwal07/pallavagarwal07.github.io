@@ -9,7 +9,7 @@ The series:
 
 1. [An intern's views - How I got here](/2017/05/07/How-I-got-here/)
 2. [An intern's views - A month's end at Google](/2017/06/07/A-month-end-at-Google/)
-3. An intern's views - How far have I come?
+3. [An intern's views - How far have I come?](/2017/07/10/How-far-have-I-come-working-at-Google/)
 4. An intern's views - End of diary
 
 Okay, okay.. I know this article is a bit late (and I've backdated it a bit),
@@ -147,6 +147,10 @@ itself.
 classes are based on developing technical skills, or professional skills, there
 are a number of classes on seemingly random topics. I took a cooking class,
 where I baked a set of delicious cookies (which I got to take home).
+
+**Memegen** - Of course, how can one work on a computer without periodically
+looking at memes, right? Lo and behold! Google even has its own meme website
+internally. Your best source of fun and fake news about everything Google!
 
 ## Verdict
 
