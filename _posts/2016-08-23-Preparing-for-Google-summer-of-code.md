@@ -93,6 +93,8 @@ All the above seems like general advice, sort of like what you’d find in any
 website. So I’ll end (in a few more paras) by telling what I did to achieve
 this for the past year.
 
+**My Backstory:**
+
 A little more than 1 year ago, I was in first year, with my endsems nearing
 when I first heard about GSoC (I actually had no idea, it existed).
 
@@ -125,11 +127,11 @@ Around this time I had taken a huge interest in Operating Systems. I came
 across a project LFS (linux from scratch) in which all packages are manually
 compiled, starting from the compiler itself. Fascinating :P So I tried it. I
 didn’t have open source or git or gsoc in mind. I did it because it was fun,
-and i like learning something new. And compiling so many packages, I also
+and I like learning something new. And compiling so many packages, I also
 developed a respect for our dear package managers (apt-get, pacman, portage).
 Anyway, when I saw a github project facebook/pathpicker, with a community
 request for packaging scripts, I was intrigued. I had already done so much
-compiling and played with package managers so much, it seemed easy to do write
+compiling and played with package managers so much, it seemed easy to write
 scripts to make a debian package. So I did. And the developers were pleased
 with the work. Don’t get me wrong - the work was trivial - but the fact that
 developers were nice enough to show their appreciation gave me a morale boost.
@@ -152,7 +154,7 @@ package manager automation). I told truthfully that my daily driver OS is NixOS
 and I would be installing Gentoo for the second time in my life (which would
 mean that everything in the organization was completely new to me, and they
 knew it). But I assured them that my experience with different OSs will only
-help me with this task . I kept in contact with my mentors, asking for opinion
+help me with this task. I kept in contact with my mentors, asking for opinion
 on every part of my proposal. I messaged other active people on IRC (internet
 relay chat) asking for their opinions, and shamelessly gave my opinions on
 their project page ideas. I did every task they gave me, and kept bugging my
@@ -179,15 +181,15 @@ sign if they do ;)
 **Note 3:** I didn’t say anything about how to choose an organization, because
 I really don’t know. Some people say that you should apply to organizations
 that have the most slots (predicted from previous years), while some people say
-that choose the ones least people will think to apply to. I personally chose
-one I thought I would enjoy working with, since I already mentioned that I am
+to choose the ones least people will think to apply to. I personally chose one
+I thought I would enjoy working with, since I already mentioned that I am
 fascinated with operating systems and package managers (ever want to try
-something cool? try nixos - one of the most amazing os I have ever seen -
+something cool? try nixos - one of the most amazing OS I have ever seen -
 sorry, I couldn’t resist :P )
 
 Best of luck with your preparation (coding) and get to work (coding).
-Remember, never hesitate to ask for help (contact details can be found on the
-"About me" page).
+Remember, never hesitate to ask for help (my contact details can be found on
+the "About me" page).
 
 Pallav Agarwal (<https://github.com/pallavagarwal07>)
 
