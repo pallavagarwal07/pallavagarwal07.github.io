@@ -39,5 +39,4 @@ searchInit = () ->
         $('#content-holder').append(div.item)
     if obj.length == 0
         $('#content-holder').append('Sorry, no search results found.')
-
 $(searchInit)

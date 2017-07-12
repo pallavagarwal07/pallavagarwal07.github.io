@@ -4,19 +4,21 @@ title: Search
 scripts: search.js
 styles: search.css
 ---
-{% for post in site.posts %}
-<div class="post">
-    <a href="{{post.url}}" class='shead'>
-        {{post.title | strip_html}}
-    </a>
-    <br />
-    <div class="excerpt">
-        {{post.content | strip_html | truncatewords:25}}{{post.content | strip_html | truncatelastwords:25}}
-    </div>
-    <br />
+<div id="initHide" style="display: none">
+    {% for post in site.posts %}
+    <div class="post">
+        <a href="{{post.url}}" class='shead'>
+            {{post.title | strip_html}}
+        </a>
+        <br />
+        <div class="excerpt">
+            {{post.content | strip_html | truncatewords:25}}{{post.content | strip_html | truncatelastwords:25}}
+        </div>
+        <br />
 
-    <div class='tags'>
-        {{post.content | strip_html | tokenize}}
+        <div class='tags'>
+            {{post.content | strip_html | tokenize}}
+        </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
