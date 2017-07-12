@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-12T00:14:23-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-12T00:17:14-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
 things I found here. But I have still made no mention of what I do here. Well,
 here it is. So sit back, and read on.&lt;/p&gt;
 
@@ -779,10 +779,10 @@ way to achieve that.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Slowly increase your reach:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Go to Github Explore and look for projects that seem interesting. You’ll often
-find things reported in the issues section that seem easy enough to fix. Fix
-them! If you followed the first part, you should already know how to contribute
-your changes (google - pull request)&lt;/p&gt;
+&lt;p&gt;Go to &lt;a href=&quot;https://github.com/explore&quot;&gt;Github Explore&lt;/a&gt; and look for projects that
+seem interesting. You’ll often find things reported in the issues section that
+seem easy enough to fix. Fix them! If you followed the first part, you should
+already know how to contribute your changes (google - pull request)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Communicate:&lt;/strong&gt;&lt;/p&gt;
 
