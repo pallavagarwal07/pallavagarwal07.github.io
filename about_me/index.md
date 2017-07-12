@@ -9,7 +9,7 @@ activate: about
 > <p style="text-align:right"> —Hofstader's Law </p>
 
 Hi, let me first introduce myself.
-I am Pallav Agarwal, a third year undergrad at the department of Computer
+I am Pallav Agarwal, a final year undergrad at the department of Computer
 Science and Engineering, Indian Institute of Technology, Kanpur. I love trying
 new tech, languages, programs, operating systems.. Well, pretty much everything
 remotely related to a computer.
@@ -40,5 +40,9 @@ You can:
 
 * Message me on [Facebook](http://fb.com/pallavagarwal07)
 * Follow me on [Github](http://github.com/pallavagarwal07)
+
+If you send me a friend request, there is a high probability I wouldn't accept
+it, so message me first in case you want to contact me. I read all my messages,
+and try to reply to all of them.
 
 ###Enjoy ☺
