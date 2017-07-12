@@ -1,0 +1,398 @@
+<title>Preparation for Google Summer of Code - VARSTACK</title>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+var host = "varstack.com";
+var hostwww = "www.varstack.com";
+if (((host == window.location.host) || (hostwww == window.location.host))
+        && (window.location.protocol != 'https:'
+            || window.location.toString().match(/http.?:\/\/var/))){
+  window.location = window.location.toString().replace(/^http:/, "https:").replace(/https:\/\/varstack/, "https://www.varstack");
+}
+</script>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+
+<noscript>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/highlighting.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    
+    
+</noscript>
+
+<script id="loadcss">function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],r=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(e){for(var n,o=0;o<r.length;o++)r[o].href&&r[o].href===d.href&&(n=!0);n?e():setTimeout(function(){d.onloadcssdefined(e)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
+loadCSS( "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", document.getElementById("loadcss"));
+loadCSS( "/css/highlighting.css", document.getElementById("loadcss"));
+loadCSS( "/css/style.css", document.getElementById("loadcss"));
+    
+    
+</script>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+    <img src="/img/gsoc.png" id="bg-img" alt="Google Summer of Code banner">
+    
+    <div class="container">
+        <div class="row" id="menu">
+            <div class="col-sm-2 col-xs-2 menu" id="site_title">
+                <a href="/" style="color:black;">
+                    <img src="/img/logo.png" style="max-height:90%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-xs-10 menu">
+                <div class="row" id="top_menu">
+                    <ul class="nav nav-pills">
+                        <li class="active" id="blog"><a class="color_change" href="/">Blog</a></li>
+                        <li class="" id="tips"><a class="color_change" href="/tips/">Tips</a></li>
+                        <li class="" id="algo"><a class="color_change" href="/algo/">Behind The Scenes</a></li>
+                        <li class="" id="about"><a class="color_change" href="/about_me/">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12 menu">
+                <form action="/search/" id='search-form'>
+                    <input id="search-box" type="text" name="query" placeholder="Search..">
+                </form>
+            </div>
+        </div>
+        
+        <div class="row" id="image"> </div>
+        
+        <div class="row" id="content">
+            <div class="col-md-7 col-md-push-3">
+                <div class="row" id="data">
+                    <div class="col-md-12">
+                        <br />
+                        <h3>Preparation for Google Summer of Code</h3>
+                        <hr />
+                        <div class="row text-justify" id="content-holder">
+                            <div class="col-md-12">
+                                <p><strong>Preface:</strong> I have been selected for Google Summer of Code ’16 under Gentoo
+Organization.</p>
+
+<p>Firstly, I would suggest that you start now. Since I do not know anything about
+your background, I will start at the beginning. Feel free to jump to the
+relevant point in the process. But DO NOT skip anything as irrelevant.</p>
+
+<p><strong>The basics:</strong></p>
+
+<p>To start, first you need the right tools.</p>
+
+<p>Learn (read “master”) at least one VCS (Version Control System). Since git is
+the most common and the most popular, I recommend you start with that, however
+knowing what svn and mercurial are won’t hurt. Start committing EVERYTHING you
+code online. It doesn’t matter if your code sucks, you will improve. But even
+the stupidest things you code need to be online.</p>
+
+<p>Make your own github repositories, play around. You wouldn’t believe how much
+you can learn just while playing with different ideas.</p>
+
+<p><strong>The essential:</strong></p>
+
+<p>Needless to say, shift to open source. Get rid of windows, install Linux, start
+befriending your terminal. Avoid non-free (google this term) software as much
+as possible. Start becoming familiar with the tools you use. This isn’t
+difficult, if you use linux on a daily basis, you are pretty much set.</p>
+
+<p><strong>Start small:</strong></p>
+
+<p>You’ll need to work with someone else’s code. Actually the organization you
+will work for, will have code from tens to hundreds of developers. It is very
+easy to be scared of looking at such a code. Which is why, you need to start
+small. If you have computer courses, borrow codes from your friends or help
+them with debugging. Get a bit comfortable with understanding someone else’s
+code. Helping your friends out with their codes is probably one of the easiest
+way to achieve that.</p>
+
+<p><strong>Slowly increase your reach:</strong></p>
+
+<p>Go to Github Explore and look for projects that seem interesting. You’ll often
+find things reported in the issues section that seem easy enough to fix. Fix
+them! If you followed the first part, you should already know how to contribute
+your changes (google - pull request)</p>
+
+<p><strong>Communicate:</strong></p>
+
+<p><strong>I can’t stress this enough.</strong> Ask for advice. If you are looking at an
+interesting project with a bug you want to fix, but can’t seem to understand
+how, ASK THE DEVS! In most cases, they’d know what to do but have been too busy
+to actually fix it. In rare cases, it might be because it needs too much manual
+labor (refactoring of code for example). Take the initiative and do the work.
+Believe me, after your first accepted pull request, you’ll be much more
+confident about the next one.</p>
+
+<p><strong>But what does this have to do with GSoC?</strong></p>
+
+<p>Experience. This is the only form of preparation that counts. I’ve heard people
+(many of whom have never been selected in GSoC) that a kickass proposal is all
+that matters. This is NOT true. A kickass proposal can be a free entry to GSoC
+but not having such a proposal doesn’t mean you have no chance, it means you’ll
+have to improve the proposal before the deadline.</p>
+
+<p>Wait, what?</p>
+
+<p>What I mean to say, that if you are enthusiastic enough, the mentors of the
+project would help you to ensure that you have a kickass proposal in the end,
+and so it doesn’t matter if you don’t begin with an awesome one.</p>
+
+<p>Another thing that I’ve often heard thrown around is that you need to be
+affiliated with the organization or be working with it beforehand to get
+selected. This isn’t at all true either. I came in contact with my organization
+only after the proposal time had started and here I am answering this question.</p>
+
+<p>Ok, I will do the above. Anything Else?</p>
+
+<p>Maybe. One another thing I would like to suggest is to keep a written record (I
+mean a blog) of everything you do. Maybe you learnt something new in git, or
+learnt to fix something in your operating system. This is advisable due to 2
+reasons. It is very likely that you will run into a similar problem again, and
+it is VERY handy to have your previously found solutions with you. Other, this
+doesn’t only help retain your interest, it goes a long way to show others that
+you are interested in something, and that includes the mentors you’d be
+applying to.</p>
+
+<p>All the above seems like general advice, sort of like what you’d find in any
+website. So I’ll end (in a few more paras) by telling what I did to achieve
+this for the past year.</p>
+
+<p>A little more than 1 year ago, I was in first year, with my endsems nearing
+when I first heard about GSoC (I actually had no idea, it existed).</p>
+
+<p>My experience till then: Fairly good at coding (c, c++, python) but nothing to
+show for it. One git repo of a group competition in robotics. That’s it.</p>
+
+<p>I applied for GSoC but I didn’t have any confidence in my work and I didn’t
+make much contact with the mentors. The project required to do some programming
+tasks which I did without breaking a sweat. After writing a long detailed and
+well thought out proposal about the project, I submitted the draft. Then I
+started waiting.</p>
+
+<p>Big Mistake. I pretended I was waiting for some sort of contact from the
+mentors but the truth was, I am usually dead scared of conversation and I was
+fooling myself by saying that I don’t want to bug the mentors. You have to bug
+the mentors.</p>
+
+<p>Anyway, I wasn’t selected - big surprise :/</p>
+
+<p>I took a project under a professor, and started coding my summers anyway.</p>
+
+<p>This time however, I wanted to see what I could do so that I wouldn’t fail next
+year. So I started exploring more and more github. Try it - even if you don’t
+want to contribute. It is a pleasurable experience to surf through some
+amazingly awesome code pieces. Note that some of the most starred repos contain
+less than 100 lines of code. Surely you can gather the courage to try and
+understand them?</p>
+
+<p>Around this time I had taken a huge interest in Operating Systems. I came
+across a project LFS (linux from scratch) in which all packages are manually
+compiled, starting from the compiler itself. Fascinating :P So I tried it. I
+didn’t have open source or git or gsoc in mind. I did it because it was fun,
+and i like learning something new. And compiling so many packages, I also
+developed a respect for our dear package managers (apt-get, pacman, portage).
+Anyway, when I saw a github project facebook/pathpicker, with a community
+request for packaging scripts, I was intrigued. I had already done so much
+compiling and played with package managers so much, it seemed easy to do write
+scripts to make a debian package. So I did. And the developers were pleased
+with the work. Don’t get me wrong - the work was trivial - but the fact that
+developers were nice enough to show their appreciation gave me a morale boost.</p>
+
+<p>Similarly, the text editor I use (neovim - fork of vim) was misbehaving a
+little, so I went to its github repo and made a new issue. They never fixed it,
+but I got to talk to some really awesome developers and got to know why
+something like that would be really hard to fix. There were several small
+incidents like this, and I can’t go into detail over every one.</p>
+
+<p>I also started a blog (<a href="https://www.varstack.com">https://www.varstack.com</a>) where I started writing
+posts whenever I found something really interesting, for example when I first
+learnt to use SSH port forwarding (that one was recent, and mind blowing).</p>
+
+<p>So, when the judgment day arrived, that’s how I sold myself. My proposal was
+detailed about the project, but it was nowhere near perfect. But I explained
+very clearly who I was and what I liked. I told about my experience with
+package managers and my fascination (the project I applied for is related to
+package manager automation). I told truthfully that my daily driver OS is NixOS
+and I would be installing Gentoo for the second time in my life (which would
+mean that everything in the organization was completely new to me, and they
+knew it). But I assured them that my experience with different OSs will only
+help me with this task . I kept in contact with my mentors, asking for opinion
+on every part of my proposal. I messaged other active people on IRC (internet
+relay chat) asking for their opinions, and shamelessly gave my opinions on
+their project page ideas. I did every task they gave me, and kept bugging my
+mentors for more. Even though I had never used Gentoo before (properly), I was
+able to complete the tasks they gave me in exceptionally small times, which was
+due a conscious effort “What if a few minutes extra to the task gain me the
+selection?”.</p>
+
+<p>This isn’t preparation for University exam, you don’t have to have that state
+of mind for 2 years. It’s a single week of proposal submission in which you
+might lose sleep. And now I can easily say it was worth it.</p>
+
+<p><strong>Note 1:</strong> Losing sleep also refers to the fact that I kept my phone on full
+notification volume so that I was responsive to my mentor’s mails even if I had
+to wake up in the middle of the night (different time zones :/). This was
+probably overkill, and I’m not advising you do that. But showing some
+enthusiasm will go a long way.</p>
+
+<p><strong>Note 2:</strong> The week of proposal submission is important, but the month that
+follows before the result is also not to be neglected. The mentors will tell
+you if they expect you to work during that time too, and I think it’s a good
+sign if they do ;)</p>
+
+<p><strong>Note 3:</strong> I didn’t say anything about how to choose an organization, because
+I really don’t know. Some people say that you should apply to organizations
+that have the most slots (predicted from previous years), while some people say
+that choose the ones least people will think to apply to. I personally chose
+one I thought I would enjoy working with, since I already mentioned that I am
+fascinated with operating systems and package managers (ever want to try
+something cool? try nixos - one of the most amazing os I have ever seen -
+sorry, I couldn’t resist :P )</p>
+
+<p>Best of luck with your preparation (coding) and get to work (coding).
+Remember, never hesitate to ask for help (contact details can be found on the
+"About me" page).</p>
+
+<p>Pallav Agarwal (<a href="https://github.com/pallavagarwal07">https://github.com/pallavagarwal07</a>)</p>
+
+<p><strong>Note 4:</strong> This article was originally written as a Quora answer, and can still
+be found on the website.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr /><br />
+            </div>
+            <div class="col-md-3 col-md-pull-7" id="recent">
+                <h4>RECENT POSTS</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="/2017/07/10/How-far-have-I-come-working-at-Google/" class="color_change">An intern's views - How far...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2017/06/07/A-month-end-at-Google/" class="color_change">An intern's views - A month's...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2017/05/07/How-I-got-here/" class="color_change">An intern's views - How I...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2016/09/26/YourHonour-k8s-programming-judge/" class="color_change">YourHonour: A k8s based distributed programming...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2016/08/23/Preparing-for-Google-summer-of-code/" class="color_change">Preparation for Google Summer of Code...</a>
+                    </li>
+                    
+                </ul>
+                <h4>RECENT TIPS</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="/2016/05/06/Ultimate-control-over-mobile-browser/" class="color_change">Ultimate control over Mobile Browser with...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2016/04/27/SSH-keys/" class="color_change">Easy sharing of SSH keys</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2015/08/01/SSH-from-Windows/" class="color_change">Using SSH from Windows 10 without...</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2015/07/27/Boost-Python-Performance/" class="color_change">Cython: Boost Python Code Performance</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/2015/07/01/Vim-Mappings/" class="color_change">Quick intro to custom Vim Mappings...</a>
+                    </li>
+                    
+                </ul>
+                <h4>TAGGED POSTS</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    
+                    <li>
+                        <a href="/2016/05/13/Reference-Sheets-and-Useful-Links/" class="color_change">Reference Sheets and Useful Links</a>
+                    </li>
+                    
+                </ul>
+                <br />
+                <br />
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="row">
+                <div class="col-md-7 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                    <div class="row">
+                            <div class="col-xs-4">
+                                <div class="fb-like" data-href="//www.varstack.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                            </div>
+                            <div class="col-xs-8 text-right">
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                                <script src="/js/script.js"></script>
+                                
+                                
+                                
+                            </div>
+                    </div>
+                    <br/>
+                </div>
+                <div class="col-md-7 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript" async>
+/* * * CONFIGURATION VARIABLES * * */
+var disqus_shortname = 'varstack';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-21768487-2', 'auto');
+ga('send', 'pageview');
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Image Preview
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="imagepreview" style="max-height: 100%; max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-11T22:12:30-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-12T00:04:51-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
 things I found here. But I have still made no mention of what I do here. Well,
 here it is. So sit back, and read on.&lt;/p&gt;
 
@@ -740,7 +740,194 @@ This seems to work well, and I haven't had much problem since.&lt;/p&gt;&lt;/li&
 &lt;/ol&gt;
 
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">So, this is something I have been working on recently for some time. The project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for organising programming competitions.</summary></entry><entry><title type="html">Learning from mistakes: Bugzilla Landfills</title><link href="http://localhost:4000/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00-04:00</published><updated>2016-06-09T00:00:00-04:00</updated><id>http://localhost:4000/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://localhost:4000/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">So, this is something I have been working on recently for some time. The project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for organising programming competitions.</summary></entry><entry><title type="html">Preparation for Google Summer of Code</title><link href="http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code/" rel="alternate" type="text/html" title="Preparation for Google Summer of Code" /><published>2016-08-23T00:00:00-04:00</published><updated>2016-08-23T00:00:00-04:00</updated><id>http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code</id><content type="html" xml:base="http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code/">&lt;p&gt;&lt;strong&gt;Preface:&lt;/strong&gt; I have been selected for Google Summer of Code ’16 under Gentoo
+Organization.&lt;/p&gt;
+
+&lt;p&gt;Firstly, I would suggest that you start now. Since I do not know anything about
+your background, I will start at the beginning. Feel free to jump to the
+relevant point in the process. But DO NOT skip anything as irrelevant.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The basics:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To start, first you need the right tools.&lt;/p&gt;
+
+&lt;p&gt;Learn (read “master”) at least one VCS (Version Control System). Since git is
+the most common and the most popular, I recommend you start with that, however
+knowing what svn and mercurial are won’t hurt. Start committing EVERYTHING you
+code online. It doesn’t matter if your code sucks, you will improve. But even
+the stupidest things you code need to be online.&lt;/p&gt;
+
+&lt;p&gt;Make your own github repositories, play around. You wouldn’t believe how much
+you can learn just while playing with different ideas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The essential:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Needless to say, shift to open source. Get rid of windows, install Linux, start
+befriending your terminal. Avoid non-free (google this term) software as much
+as possible. Start becoming familiar with the tools you use. This isn’t
+difficult, if you use linux on a daily basis, you are pretty much set.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Start small:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll need to work with someone else’s code. Actually the organization you
+will work for, will have code from tens to hundreds of developers. It is very
+easy to be scared of looking at such a code. Which is why, you need to start
+small. If you have computer courses, borrow codes from your friends or help
+them with debugging. Get a bit comfortable with understanding someone else’s
+code. Helping your friends out with their codes is probably one of the easiest
+way to achieve that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slowly increase your reach:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Go to Github Explore and look for projects that seem interesting. You’ll often
+find things reported in the issues section that seem easy enough to fix. Fix
+them! If you followed the first part, you should already know how to contribute
+your changes (google - pull request)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Communicate:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I can’t stress this enough.&lt;/strong&gt; Ask for advice. If you are looking at an
+interesting project with a bug you want to fix, but can’t seem to understand
+how, ASK THE DEVS! In most cases, they’d know what to do but have been too busy
+to actually fix it. In rare cases, it might be because it needs too much manual
+labor (refactoring of code for example). Take the initiative and do the work.
+Believe me, after your first accepted pull request, you’ll be much more
+confident about the next one.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;But what does this have to do with GSoC?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Experience. This is the only form of preparation that counts. I’ve heard people
+(many of whom have never been selected in GSoC) that a kickass proposal is all
+that matters. This is NOT true. A kickass proposal can be a free entry to GSoC
+but not having such a proposal doesn’t mean you have no chance, it means you’ll
+have to improve the proposal before the deadline.&lt;/p&gt;
+
+&lt;p&gt;Wait, what?&lt;/p&gt;
+
+&lt;p&gt;What I mean to say, that if you are enthusiastic enough, the mentors of the
+project would help you to ensure that you have a kickass proposal in the end,
+and so it doesn’t matter if you don’t begin with an awesome one.&lt;/p&gt;
+
+&lt;p&gt;Another thing that I’ve often heard thrown around is that you need to be
+affiliated with the organization or be working with it beforehand to get
+selected. This isn’t at all true either. I came in contact with my organization
+only after the proposal time had started and here I am answering this question.&lt;/p&gt;
+
+&lt;p&gt;Ok, I will do the above. Anything Else?&lt;/p&gt;
+
+&lt;p&gt;Maybe. One another thing I would like to suggest is to keep a written record (I
+mean a blog) of everything you do. Maybe you learnt something new in git, or
+learnt to fix something in your operating system. This is advisable due to 2
+reasons. It is very likely that you will run into a similar problem again, and
+it is VERY handy to have your previously found solutions with you. Other, this
+doesn’t only help retain your interest, it goes a long way to show others that
+you are interested in something, and that includes the mentors you’d be
+applying to.&lt;/p&gt;
+
+&lt;p&gt;All the above seems like general advice, sort of like what you’d find in any
+website. So I’ll end (in a few more paras) by telling what I did to achieve
+this for the past year.&lt;/p&gt;
+
+&lt;p&gt;A little more than 1 year ago, I was in first year, with my endsems nearing
+when I first heard about GSoC (I actually had no idea, it existed).&lt;/p&gt;
+
+&lt;p&gt;My experience till then: Fairly good at coding (c, c++, python) but nothing to
+show for it. One git repo of a group competition in robotics. That’s it.&lt;/p&gt;
+
+&lt;p&gt;I applied for GSoC but I didn’t have any confidence in my work and I didn’t
+make much contact with the mentors. The project required to do some programming
+tasks which I did without breaking a sweat. After writing a long detailed and
+well thought out proposal about the project, I submitted the draft. Then I
+started waiting.&lt;/p&gt;
+
+&lt;p&gt;Big Mistake. I pretended I was waiting for some sort of contact from the
+mentors but the truth was, I am usually dead scared of conversation and I was
+fooling myself by saying that I don’t want to bug the mentors. You have to bug
+the mentors.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I wasn’t selected - big surprise :/&lt;/p&gt;
+
+&lt;p&gt;I took a project under a professor, and started coding my summers anyway.&lt;/p&gt;
+
+&lt;p&gt;This time however, I wanted to see what I could do so that I wouldn’t fail next
+year. So I started exploring more and more github. Try it - even if you don’t
+want to contribute. It is a pleasurable experience to surf through some
+amazingly awesome code pieces. Note that some of the most starred repos contain
+less than 100 lines of code. Surely you can gather the courage to try and
+understand them?&lt;/p&gt;
+
+&lt;p&gt;Around this time I had taken a huge interest in Operating Systems. I came
+across a project LFS (linux from scratch) in which all packages are manually
+compiled, starting from the compiler itself. Fascinating :P So I tried it. I
+didn’t have open source or git or gsoc in mind. I did it because it was fun,
+and i like learning something new. And compiling so many packages, I also
+developed a respect for our dear package managers (apt-get, pacman, portage).
+Anyway, when I saw a github project facebook/pathpicker, with a community
+request for packaging scripts, I was intrigued. I had already done so much
+compiling and played with package managers so much, it seemed easy to do write
+scripts to make a debian package. So I did. And the developers were pleased
+with the work. Don’t get me wrong - the work was trivial - but the fact that
+developers were nice enough to show their appreciation gave me a morale boost.&lt;/p&gt;
+
+&lt;p&gt;Similarly, the text editor I use (neovim - fork of vim) was misbehaving a
+little, so I went to its github repo and made a new issue. They never fixed it,
+but I got to talk to some really awesome developers and got to know why
+something like that would be really hard to fix. There were several small
+incidents like this, and I can’t go into detail over every one.&lt;/p&gt;
+
+&lt;p&gt;I also started a blog (&lt;a href=&quot;https://www.varstack.com&quot;&gt;https://www.varstack.com&lt;/a&gt;) where I started writing
+posts whenever I found something really interesting, for example when I first
+learnt to use SSH port forwarding (that one was recent, and mind blowing).&lt;/p&gt;
+
+&lt;p&gt;So, when the judgment day arrived, that’s how I sold myself. My proposal was
+detailed about the project, but it was nowhere near perfect. But I explained
+very clearly who I was and what I liked. I told about my experience with
+package managers and my fascination (the project I applied for is related to
+package manager automation). I told truthfully that my daily driver OS is NixOS
+and I would be installing Gentoo for the second time in my life (which would
+mean that everything in the organization was completely new to me, and they
+knew it). But I assured them that my experience with different OSs will only
+help me with this task . I kept in contact with my mentors, asking for opinion
+on every part of my proposal. I messaged other active people on IRC (internet
+relay chat) asking for their opinions, and shamelessly gave my opinions on
+their project page ideas. I did every task they gave me, and kept bugging my
+mentors for more. Even though I had never used Gentoo before (properly), I was
+able to complete the tasks they gave me in exceptionally small times, which was
+due a conscious effort “What if a few minutes extra to the task gain me the
+selection?”.&lt;/p&gt;
+
+&lt;p&gt;This isn’t preparation for University exam, you don’t have to have that state
+of mind for 2 years. It’s a single week of proposal submission in which you
+might lose sleep. And now I can easily say it was worth it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note 1:&lt;/strong&gt; Losing sleep also refers to the fact that I kept my phone on full
+notification volume so that I was responsive to my mentor’s mails even if I had
+to wake up in the middle of the night (different time zones :/). This was
+probably overkill, and I’m not advising you do that. But showing some
+enthusiasm will go a long way.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note 2:&lt;/strong&gt; The week of proposal submission is important, but the month that
+follows before the result is also not to be neglected. The mentors will tell
+you if they expect you to work during that time too, and I think it’s a good
+sign if they do ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note 3:&lt;/strong&gt; I didn’t say anything about how to choose an organization, because
+I really don’t know. Some people say that you should apply to organizations
+that have the most slots (predicted from previous years), while some people say
+that choose the ones least people will think to apply to. I personally chose
+one I thought I would enjoy working with, since I already mentioned that I am
+fascinated with operating systems and package managers (ever want to try
+something cool? try nixos - one of the most amazing os I have ever seen -
+sorry, I couldn’t resist :P )&lt;/p&gt;
+
+&lt;p&gt;Best of luck with your preparation (coding) and get to work (coding).
+Remember, never hesitate to ask for help (contact details can be found on the
+&quot;About me&quot; page).&lt;/p&gt;
+
+&lt;p&gt;Pallav Agarwal (&lt;a href=&quot;https://github.com/pallavagarwal07&quot;&gt;https://github.com/pallavagarwal07&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note 4:&lt;/strong&gt; This article was originally written as a Quora answer, and can still
+be found on the website.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Preface: I have been selected for Google Summer of Code ’16 under Gentoo Organization.</summary></entry><entry><title type="html">Learning from mistakes: Bugzilla Landfills</title><link href="http://localhost:4000/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00-04:00</published><updated>2016-06-09T00:00:00-04:00</updated><id>http://localhost:4000/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://localhost:4000/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
 my project in Google Summer of Code.&lt;/p&gt;
 
 &lt;p&gt;My day's task was to automate the filing of a bug in bugzilla if and when a
@@ -936,50 +1123,4 @@ Use the other laptop to ssh into this one using local ip address (shown in ifcon
 socks proxy through the tunnel.&lt;/div&gt;
 
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I'll begin with some of the bare minimum and absolutely amazing things ssh port forwarding is capable of, and see if I can convert this to a proper blog post later.</summary></entry><entry><title type="html">Google Summer of Code with Gentoo</title><link href="http://localhost:4000/2016/04/30/Google-Summer-of-Code-with-Gentoo/" rel="alternate" type="text/html" title="Google Summer of Code with Gentoo" /><published>2016-04-30T00:00:00-04:00</published><updated>2016-04-30T00:00:00-04:00</updated><id>http://localhost:4000/2016/04/30/Google-Summer-of-Code-with-Gentoo</id><content type="html" xml:base="http://localhost:4000/2016/04/30/Google-Summer-of-Code-with-Gentoo/">&lt;p&gt;I am excited to say that I've been accepted for this year's summer of code under
-Gentoo Organisation. &lt;a href=&quot;/gsoc&quot;&gt;This section of the blog&lt;/a&gt; will be dedicated to documenting
-anything and everything I learn that is interesting or remotely related to my project.&lt;/p&gt;
-
-&lt;p&gt;My proposal for the project can be found &lt;a href=&quot;/img/gsoc.pdf&quot;&gt;here&lt;/a&gt;. The abstract for the
-same has been given below.&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;Gentoo is an operating system with extreme focus on configurability and performance.
-To provide fully customizable experience, without interfering with the stability of
-the system, Gentoo has a concept of masked packages. These masked packages (or
-versions) are either untested, or are known to be unstable and are installed only if
-the user explicitly unmasks them. While this concept is a boon to the stability of
-the operating system, the current implementation requires the packages to be tested
-manually by a team of developers. This significantly increases the time in which new
-packages are made safely available to the users. The goal of this project is to
-provide a mechanism to test and stabilize the packages automatically with little or
-no human intervention.&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;The first phase of summer of code is the community bonding period (April 23rd - May 22nd)
-, which has already started. The first and foremosts tasks for now (community bonding)
-are:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Get familiar with architecture testing.&lt;/li&gt;
-&lt;li&gt;Contact people who can give suggestion on my project.&lt;/li&gt;
-&lt;li&gt;Create a plan of action for the coding period, by taking the suggestions into account
-with the current plans.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;For the first, architecture testing, I tested and stabilized a new version of gitflow a
-few days ago.  The package itself was small, with no complicated dependencies and was
-easy enough to handle. But since, my project also aims to create a platform for
-maintainers to create automated test scripts, I had been thinking of ways to implement
-that.&lt;/p&gt;
-
-&lt;p&gt;I have also been following Agostino's (Ago's) &lt;a href=&quot;https://blogs.gentoo.org/ago/&quot;&gt;blog&lt;/a&gt; for
-rules/tips pertaining to architecture testing, specifically for the more difficult to
-test things like Kernel, libraries, kernel dependent packages (like virtualbox) etc.&lt;/p&gt;
-
-&lt;p&gt;Lastly, I've been looking at the source of package management and testing related tools
-in Gentoo, including tatt and eix.&lt;/p&gt;
-
-&lt;p&gt;I would keep on updating this page with more information as I find it.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I am excited to say that I've been accepted for this year's summer of code under Gentoo Organisation. This section of the blog will be dedicated to documenting anything and everything I learn that is interesting or remotely related to my project.</summary></entry></feed>
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I'll begin with some of the bare minimum and absolutely amazing things ssh port forwarding is capable of, and see if I can convert this to a proper blog post later.</summary></entry></feed>
