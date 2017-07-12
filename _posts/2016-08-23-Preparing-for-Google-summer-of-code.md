@@ -44,10 +44,10 @@ way to achieve that.
 
 **Slowly increase your reach:**
 
-Go to Github Explore and look for projects that seem interesting. You’ll often
-find things reported in the issues section that seem easy enough to fix. Fix
-them! If you followed the first part, you should already know how to contribute
-your changes (google - pull request)
+Go to [Github Explore](https://github.com/explore) and look for projects that
+seem interesting. You’ll often find things reported in the issues section that
+seem easy enough to fix. Fix them! If you followed the first part, you should
+already know how to contribute your changes (google - pull request)
 
 **Communicate:**
 
