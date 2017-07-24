@@ -78,6 +78,15 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
                                 
+  <a href="/2016/05/06/SSH-port-forwarding-and-some-cool-uses/">SSH PORT FORWARDING AND SOME COOL USES</a>
+  <p class="author" style="text-align: right;">
+    <span class="date">May 06, 2016</span>
+  </p>
+  <div class="content">
+    <p>I'll begin with some of the bare minimum and absolutely amazing things ssh port forwarding is capable of, and see if I can convert this to a proper blog post later.</p> <p><br/></p> <h4><strong>1. Local port forwarding</strong></h4> <p>Syntax:</p> <pre><code>ssh -L8081:example.com:80 pallav@myserver.com </code></pre> <p>Meaning: Opens a SSH connection to myserver.com, and forward all requests to <strong>my</strong> port 8081 to port 80 (default http port) of example.com <em>via</em> myserver. Thus, if example.com is blocked on my PC, but it can be accessed by some other PC which I have ssh access to, then I can use this command to gain access to the...
+  </div>
+  <br /><br />
+
   <a href="/2016/04/30/Google-Summer-of-Code-with-Gentoo/">GOOGLE SUMMER OF CODE WITH GENTOO</a>
   <p class="author" style="text-align: right;">
     <span class="date">Apr 30, 2016</span>
@@ -169,15 +178,6 @@ For example,</p>
   </div>
   <br /><br />
 
-  <a href="/2015/07/09/Wrath-of-Linux-Package-Managers/">WRATH OF LINUX PACKAGE MANAGERS</a>
-  <p class="author" style="text-align: right;">
-    <span class="date">Jul 09, 2015</span>
-  </p>
-  <div class="content">
-    <p>We all love to characterise things as <em>"More than the sum of it's parts"</em>. We'd like to say the same about our linux operating system. My <strong>ARCH</strong> is more than the sum of it's parts! Well.. no.</p> <p>A linux system is exactly the sum of it's parts. And most of those parts are connected to the base package manager, the beast that acts like a framework, holding everything together.</p> <p>Have you ever wondered what makes <em>Ubuntu</em> <strong>Ubuntu</strong>? Or what is the difference between <em>ARCH</em> and <em>GENTOO</em>? If you guessed <em>a package manager</em>, you'd be right.</p> <p>You probably don't believe me?...
-  </div>
-  <br /><br />
-
 
 <!-- Pagination links -->
 <div class="pagination" style="text-align: center; width: 100%;">
@@ -201,6 +201,10 @@ For example,</p>
                 <ul class="nav nav-pills nav-stacked">
                     
                     <li>
+                        <a href="/2017/07/24/Mistakes-are-okay/" class="color_change">Mistakes are okay</a>
+                    </li>
+                    
+                    <li>
                         <a href="/2017/07/10/How-far-have-I-come-working-at-Google/" class="color_change">An intern's views - How far...</a>
                     </li>
                     
@@ -214,10 +218,6 @@ For example,</p>
                     
                     <li>
                         <a href="/2016/09/26/YourHonour-k8s-programming-judge/" class="color_change">YourHonour: A k8s based distributed programming...</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/2016/08/23/Preparing-for-Google-summer-of-code/" class="color_change">Preparation for Google Summer of Code...</a>
                     </li>
                     
                 </ul>

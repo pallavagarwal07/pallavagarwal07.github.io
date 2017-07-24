@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-12T00:17:14-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-24T19:51:06-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">Mistakes are okay</title><link href="http://localhost:4000/2017/07/24/Mistakes-are-okay/" rel="alternate" type="text/html" title="Mistakes are okay" /><published>2017-07-24T00:00:00-04:00</published><updated>2017-07-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/24/Mistakes-are-okay</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Mistakes-are-okay/">&lt;p&gt;Hey.. Whoever is reading this.&lt;/p&gt;
+
+&lt;p&gt;This article has been sitting in my mind for a week now, and I finally decided
+to write it. So, a week ago, a guy messages me to ask some tips on GSoC. I like
+that, it makes me happy to know that I can help someone. However, it was obvious
+that the guy didn't have much confidence in himself.&lt;/p&gt;
+
+&lt;p&gt;I guess that's fine. Anybody who has seen me during exams and interviews would
+know how much I panic before anything important. But there is a key difference.
+I never feel like I can't do something. I don't like it when people say they
+don't have what it takes to do something.&lt;/p&gt;
+
+&lt;p&gt;Anyway, the story goes something like this. I'm advising this guy, and it comes
+up that he feels like he makes too many mistakes. Hmmm, alright. Then he goes on
+to say &quot;It's all right for you, you don't make major mistakes.&quot;. Sigh.&lt;/p&gt;
+
+&lt;p&gt;Wait, I know where the problem is! People (myself included) always write and
+tell people about things they've been successful at. Nobody writes about things
+they didn't achieve. Nobody blogs about the things they failed to do. The
+mistakes they made. Let me rephrase. When you seek advice from a person who
+achieved 'X', you ask how they achieved it. You never ask what Y, Z things they
+tried and failed. This leads to a very strong &quot;&lt;a href=&quot;https://en.wikipedia.org/wiki/Survivorship_bias&quot;&gt;survival
+bias&lt;/a&gt;&quot;. And for the people on
+the other end, it leads to imposter syndrome.&lt;/p&gt;
+
+&lt;p&gt;There are plenty of things I could write about. There was the time when I
+deleted my whole blog experimenting with git. Recently, I ended up breaking
+around 30 targets in production, at Google, causing a flood of bug reports
+being filed to my user id within an hour. There was the time when I was
+explaining my algorithm to my host, and didn't realise that I was speaking in
+Hindi instead of English (he obviously, not being Indian, did not understand a
+word of it) and made a complete fool of myself on my 2nd week of internship.&lt;/p&gt;
+
+&lt;p&gt;But all of these things don't get the same vibe of stupidity that I want you to
+realise that anybody can have. So let's talk about how I &lt;em&gt;almost&lt;/em&gt; screwed up my
+internship, and almost put everything at stake. A few weeks ago, I lived one of
+the worst days of my life.&lt;/p&gt;
+
+&lt;p&gt;I woke up and realised my bag was missing. You know.. the one with visa and
+passport and office laptop and office badge. (A bit of info here. At the time
+of writing this article, I'm in New York, U.S., on an internship in Google,
+while I am from India).&lt;/p&gt;
+
+&lt;p&gt;Now there are a couple of things of interest here. Why was my passport in a bag
+and not in my room? Because I'm stupid enough not to realise that carrying a
+passport everywhere, everyday, is not necessary when in US. :(&lt;/p&gt;
+
+&lt;p&gt;Do you know what happens when you lose your passport? I do. Because I spent the
+next hour trying to figure out what to do. Anyway, it's not pretty. You have to
+go back to your country on a temporary identity, then get a new passport and
+then a new visa (which takes time), and then you may be allowed to come back IF
+you can get your work authorisation verified (and you have time left on the
+original work authorization documents).&lt;/p&gt;
+
+&lt;p&gt;So obviously, I did the most obvious thing that came to mind. I started
+panicking. After a while when I had convinced myself that losing one internship
+and summers is not the end of the world, I started retracing my steps.&lt;/p&gt;
+
+&lt;p&gt;Then I remembered I had the dinner at restaurant. Hoping that that's where I'd
+left it, I went to the restaurant. But it was obviously closed as it was 8:30
+am. So I sent mail to my host explaining why I wouldn't come on time and
+waited. It opened 4 hours later.&lt;/p&gt;
+
+&lt;p&gt;Must've imagined every possible scenario in that time. Everything from getting
+kicked out of Google to getting deported. Anyway, once the restaurant opened, I
+went in. Well.. The first few employees I asked were a bit rude. I was not
+willing to give up so easily, so I kept asking whoever I could find in that
+restaurant. After a little while a man heard the word 'bag', and came inside,
+and said he knew where my bag is. He went to the cash counter, and retrieved
+the bag from a locked drawer underneath the counter. I have never been more
+relieved in my life.&lt;/p&gt;
+
+&lt;p&gt;The point of this article is for you to stop thinking that others don't make
+mistakes. That others are capable of being silly at times. Stop comparing other
+peoples (successes) with your (successes, failures). Please.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt; &lt;br/&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Hey.. Whoever is reading this.</summary></entry><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
 things I found here. But I have still made no mention of what I do here. Well,
 here it is. So sit back, and read on.&lt;/p&gt;
 
@@ -1048,81 +1124,4 @@ settings play together. For example, to set proxy settings, the URLs and the por
 themselves aren't enough. The &lt;code&gt;network.proxy.type&lt;/code&gt; needs to be set to 2 (which is the
 equivalent of the menu option &quot;Manual proxy configuration&quot;)&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tip" /><summary type="html">It is no secret that I love firefox. Even though sometimes, it can run a bit slower than Chrome, Firefox has always provided me with better developer tools and better control over all of my settings, even those which are usually unavailable via about:config.</summary></entry><entry><title type="html">SSH port forwarding and some cool uses</title><link href="http://localhost:4000/2016/05/06/SSH-port-forwarding-and-some-cool-uses/" rel="alternate" type="text/html" title="SSH port forwarding and some cool uses" /><published>2016-05-06T00:00:00-04:00</published><updated>2016-05-06T00:00:00-04:00</updated><id>http://localhost:4000/2016/05/06/SSH-port-forwarding-and-some-cool-uses</id><content type="html" xml:base="http://localhost:4000/2016/05/06/SSH-port-forwarding-and-some-cool-uses/">&lt;p&gt;I'll begin with some of the bare minimum and absolutely amazing things ssh port
-forwarding is capable of, and see if I can convert this to a proper blog post
-later.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;1. Local port forwarding&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;Syntax:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh -L8081:example.com:80 pallav@myserver.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Meaning: Opens a SSH connection to myserver.com, and forward all requests to &lt;strong&gt;my&lt;/strong&gt; port 8081
-to port 80 (default http port) of example.com &lt;em&gt;via&lt;/em&gt; myserver. Thus, if example.com is blocked
-on my PC, but it can be accessed by some other PC which I have ssh access to, then I can use
-this command to gain access to the blocked website (The website is now accessible on
-localhost:8081 in my browser). Also, ssh connections are encrypted, so the only thing ISP sees
-is an open connection to myserver, and not the website I'm trying to access.
-Unfortunately, many websites you see day to day check the hostname of request (which
-would be localhost) and won't work this way. However, this trick is great to forward
-SSH connections over multiple hops. (For bypassing website restrictions, read on)&lt;/p&gt;
-
-&lt;p&gt;Apart from this, you can forward any arbitrary port data to any arbitrary port, from
-this point, only thing stopping you is your imagination.&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;2. Remote port forwarding&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;Syntax:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh -R8081:example.com:22 pallav@myserver.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is extremely similar to local port forwarding, which is why it causes a lot of
-people confusion. In previous case, the port being mapped was on local machine and the
-request was being sent to example.com via remote server. In this case, the port being
-mapped is on the remote server, while the request being sent is from local computer.
-Get the difference? Good.&lt;/p&gt;
-
-&lt;p&gt;This is typically used if the local computer doesn't have a public IP address, and you
-need access to it from outside. In that case, something like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh -R8081:localhost:22 pallav@myserver.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Would give ssh access to (previously publically unaccessible) local PC via port 8081 of
-remote server.&lt;/p&gt;
-
-&lt;h4&gt;&lt;strong&gt;3. Dynamic port forwarding&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;Syntax:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh -D8081 pallav@myserver.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In local port forwarding, we were restricted to forwarding request to a particular port
-of example.com. But what if we want the requests to reach different destinations, on
-different ports? By the above command, the port 8081 on localhost is dynamically mapped
-such that, localhost:8081 can be used as a socks proxy for any request. Thus, this means
-you can use remote server as a free VPN, by using the above command, and then setting
-localhost:8081 as the socks proxy in the browser (leave other fields empty).&lt;/p&gt;
-
-&lt;h3&gt;&lt;strong&gt;Quiz time&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;Let's say you are in a hotel that has free wifi. But like every hotel, once you connect
-to the wifi, it redirects you to the login page, which only allows one login per room
-☹. But you are a hacker, and decide to share the connection with you brother, who also
-has a laptop. What do you do?&lt;/p&gt;
-
-&lt;div class=&quot;spoiler&quot;&gt;Turn on sshd service on one laptop (whichever one logins to internet)
-Use the other laptop to ssh into this one using local ip address (shown in ifconfig)
-. While SSHing, set up dynamic port forwarding. Now internet is accessible via
-socks proxy through the tunnel.&lt;/div&gt;
-
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I'll begin with some of the bare minimum and absolutely amazing things ssh port forwarding is capable of, and see if I can convert this to a proper blog post later.</summary></entry></feed>
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tip" /><summary type="html">It is no secret that I love firefox. Even though sometimes, it can run a bit slower than Chrome, Firefox has always provided me with better developer tools and better control over all of my settings, even those which are usually unavailable via about:config.</summary></entry></feed>
