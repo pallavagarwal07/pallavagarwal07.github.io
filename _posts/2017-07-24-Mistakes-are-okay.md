@@ -79,4 +79,5 @@ The point of this article is for you to stop thinking that others don't make
 mistakes. That others are capable of being silly at times. Stop comparing other
 peoples (successes) with your (successes, failures). Please.
 
+
 <br/> <br/>
