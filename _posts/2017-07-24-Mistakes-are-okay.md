@@ -80,4 +80,5 @@ mistakes. That others are capable of being silly at times. Stop comparing other
 peoples (successes) with your (successes, failures). Please.
 
 
+If you think this article is worth re-telling, share it :)
 <br/> <br/>

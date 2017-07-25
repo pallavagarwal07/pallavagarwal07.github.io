@@ -139,7 +139,7 @@ elaborate later (yes, there are multiple massage rooms in the office).
 buy. But they are spread around the office so you keep running into them from
 time to time. Unlike the professional massage, these are free to use.
 
-**Gyms** - Yes, the office has more than one gyms. Whether you are looking to
+**Gyms** - Yes, the office has more than one gym. Whether you are looking to
 lift weights, or you are looking for a spin class, you can do it in the office
 itself.
 
