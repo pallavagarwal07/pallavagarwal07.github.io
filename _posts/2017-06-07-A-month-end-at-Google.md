@@ -160,3 +160,7 @@ walls, the amazing chefs, and I really would elaborate more on the "working"
 part of the intern later.
 
 But till then, if you're reading this, leave a comment below :)
+
+Next in series: [An intern's views - How far have I
+come?](/2017/07/10/How-far-have-I-come-working-at-Google/)
+

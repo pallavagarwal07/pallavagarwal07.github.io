@@ -147,3 +147,4 @@ projects and planning lectures on just these topics.
 
 *Doubt? Question? Suggestion? I think the comment panel below works :)*
 
+Next in series: [An intern's views - End of diary](/2017/07/29/End-of-Diary/)

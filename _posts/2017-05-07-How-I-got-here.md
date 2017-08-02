@@ -292,7 +292,8 @@ find the contact details on the "About Me" page on top.
 I'd only leave you with one thought. Do you really think you would regret the
 experience even if you tried and failed?
 
-Thanks, and have a nice day :)
+Next in the series: [An intern's views - A month's end at
+Google](/2017/06/07/A-month-end-at-Google/)
 
 <br />
 <br />
