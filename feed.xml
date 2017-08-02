@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-24T20:01:28-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">Mistakes are okay</title><link href="http://localhost:4000/2017/07/24/Mistakes-are-okay/" rel="alternate" type="text/html" title="Mistakes are okay" /><published>2017-07-24T00:00:00-04:00</published><updated>2017-07-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/24/Mistakes-are-okay</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Mistakes-are-okay/">&lt;p&gt;Hey.. Whoever is reading this.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-02T09:13:48-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00-04:00</published><updated>2017-07-29T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/29/End-of-Diary/&quot;&gt;An intern's views - End of diary&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Before I start, I would like to point out that I'm writing this from Hong Kong,
+sitting in front of Disneyland, waiting for it to open. Life is good.&lt;/p&gt;
+
+&lt;p&gt;I'm not really sure what to write about. I've mostly written about my
+experience as a Google Intern. I've written about the work I've done. I've
+written about how I got here. Last few weeks have been all about wrapping up.
+And since its pretty boring to write about wrap up, I've instead converted this
+post into an FAQ about the full experience. Some of these may be specific to
+IITK and my situation, so feel free to skip them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. Google came to IITK. Why didn't you wait for it in campus placements?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This one goes first because I was asked this again and again by people, and not
+even with this tone. The tone was usually &quot;You could've waited for Google, you
+would've definitely gotten it.&quot;.&lt;/p&gt;
+
+&lt;p&gt;So basically, most people assumed that the reason I didn't wait for Google was
+because I was afraid that I wouldn't get Google, and I wouldn't have any
+intern. I didn't wait for Google because it was Google India, and Google India
+doesn't have any good teams working on systems. While Google India would still
+be preferable over LinkedIn (which I sat and got in campus internship
+placements), sitting for Google India would've made me ineligible to sit for
+Google U.S., which was my target. Also, as a side benefit, Google U.S. pays a
+lot more, which is always preferable ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. Everything considered, why do you think Google is the better place to intern?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It's culture. Finance companies will always pay more, even for tech jobs. And I
+understand that many people would prefer that. But for me, I don't want to wake
+up on time everyday to go to office. I don't want to stick to some dress code,
+I want to go to office in shorts, like I do in college. I don't want to be
+restricted to my own department when working. I want to learn what other people
+are doing, without the company firing me for talking to people on a project
+that isn't mine.&lt;/p&gt;
+
+&lt;p&gt;Google has an open codebase. In the sense that all code that drives Google and
+its' projects, is in a single repository, that everyone has access to. Which
+means that, even as an intern I had tremendous amount of knowledge one click
+away. While working, I often read other papers (design documents) of things
+Google was working on, and I was never disappointed. Google is fascinating from
+the inside.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">The series:</summary></entry><entry><title type="html">Mistakes are okay</title><link href="http://localhost:4000/2017/07/24/Mistakes-are-okay/" rel="alternate" type="text/html" title="Mistakes are okay" /><published>2017-07-24T00:00:00-04:00</published><updated>2017-07-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/24/Mistakes-are-okay</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Mistakes-are-okay/">&lt;p&gt;Hey.. Whoever is reading this.&lt;/p&gt;
 
 &lt;p&gt;This article has been sitting in my mind for a week now, and I finally decided
 to write it. So, a week ago, a guy messages me to ask some tips on GSoC. I like
@@ -83,7 +133,7 @@ here it is. So sit back, and read on.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An intern's views - End of diary&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/29/End-of-Diary/&quot;&gt;An intern's views - End of diary&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 
@@ -227,7 +277,7 @@ projects and planning lectures on just these topics.
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An intern's views - End of diary&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/29/End-of-Diary/&quot;&gt;An intern's views - End of diary&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 
@@ -392,7 +442,7 @@ links as I write them)&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/06/07/A-month-end-at-Google/&quot;&gt;An intern's views - A month's end at Google&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I come?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An intern's views - End of diary&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/07/29/End-of-Diary/&quot;&gt;An intern's views - End of diary&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 
@@ -1111,18 +1161,4 @@ but I wish I knew this before I took the Architecture course in IITK. Must Read.
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/927358/how-to-undo-last-commits-in-git&quot;&gt;Undo Last Git Commit&lt;/a&gt;:
 Another one stolen from StackOverflow highest voted category.
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="tagged" /><summary type="html">This post was long due. I often find blog posts, reference sheets and useful links that I feel I should bookmark. However, I often lose these bookmarks when I shift Operating Systems or browsers (which happens very often). I am hoping that this will be a better and a more reliable way to keep track of all these resources.</summary></entry><entry><title type="html">Ultimate control over Mobile Browser with Firefox</title><link href="http://localhost:4000/2016/05/06/Ultimate-control-over-mobile-browser/" rel="alternate" type="text/html" title="Ultimate control over Mobile Browser with Firefox" /><published>2016-05-06T00:00:00-04:00</published><updated>2016-05-06T00:00:00-04:00</updated><id>http://localhost:4000/2016/05/06/Ultimate-control-over-mobile-browser</id><content type="html" xml:base="http://localhost:4000/2016/05/06/Ultimate-control-over-mobile-browser/">&lt;p&gt;It is no secret that I love firefox. Even though sometimes, it can run a bit slower than
-Chrome, Firefox has always provided me with better developer tools and better control
-over all of my settings, even those which are usually unavailable via &lt;code&gt;about:config&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;However, it was only recently that I discovered, that &lt;code&gt;about:config&lt;/code&gt; works flawlessly
-on the mobile version of the firefox browser too. That means, all of the features you'd
-think that mobile browsers miss, like proxy settings, cache, pipelining settings, etc.
-can be found just by typing &lt;code&gt;about:config&lt;/code&gt; on the URL.&lt;/p&gt;
-
-&lt;p&gt;Before you go off try, and fail - note that you need to understand how some of those
-settings play together. For example, to set proxy settings, the URLs and the ports
-themselves aren't enough. The &lt;code&gt;network.proxy.type&lt;/code&gt; needs to be set to 2 (which is the
-equivalent of the menu option &quot;Manual proxy configuration&quot;)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tip" /><summary type="html">It is no secret that I love firefox. Even though sometimes, it can run a bit slower than Chrome, Firefox has always provided me with better developer tools and better control over all of my settings, even those which are usually unavailable via about:config.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><category term="tagged" /><summary type="html">This post was long due. I often find blog posts, reference sheets and useful links that I feel I should bookmark. However, I often lose these bookmarks when I shift Operating Systems or browsers (which happens very often). I am hoping that this will be a better and a more reliable way to keep track of all these resources.</summary></entry></feed>
