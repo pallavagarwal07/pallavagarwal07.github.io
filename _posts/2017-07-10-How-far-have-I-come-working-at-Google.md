@@ -11,7 +11,7 @@ here it is. So sit back, and read on.
 1. [An intern's views - How I got here](/2017/05/07/How-I-got-here/)
 2. [An intern's views - A month's end at Google](/2017/06/07/A-month-end-at-Google/)
 3. [An intern's views - How far have I come?](/2017/07/10/How-far-have-I-come-working-at-Google/)
-4. An intern's views - End of diary
+4. [An intern's views - End of diary](/2017/07/29/End-of-Diary/)
 
 In case you haven't read the last article, you might want to.
 

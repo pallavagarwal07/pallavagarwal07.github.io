@@ -10,7 +10,7 @@ The series:
 1. [An intern's views - How I got here](/2017/05/07/How-I-got-here/)
 2. [An intern's views - A month's end at Google](/2017/06/07/A-month-end-at-Google/)
 3. [An intern's views - How far have I come?](/2017/07/10/How-far-have-I-come-working-at-Google/)
-4. An intern's views - End of diary
+4. [An intern's views - End of diary](/2017/07/29/End-of-Diary/)
 
 Okay, okay.. I know this article is a bit late (and I've backdated it a bit),
 but I've been really busy. As it turns out, work at Google isn't all that easy
