@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-02T10:12:56-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00-04:00</published><updated>2017-07-29T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-03T00:06:06-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00-04:00</published><updated>2017-07-29T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
@@ -300,8 +300,8 @@ finding their way around the city.&lt;/p&gt;
 week, and my batch was one of the earliest. There weren't a ton of interns
 joining that week. However, in U.S. interns have orientation in one of the two
 biggest offices: Mountain View for all west coast offices, and New York for all
-east cost offices. So we had interns from many other offices as well (Waterloo,
-for instance).&lt;/p&gt;
+east coast offices. So we had interns from many other offices as well
+(Waterloo, for instance).&lt;/p&gt;
 
 &lt;p&gt;We had our I-9 documents checked, and proceeded to the orientation room. It was
 a presentation, where they showed us some of the things that we needed to know.
@@ -602,7 +602,7 @@ include personal experience, and I wish more people did. It helps a lot to know
 what to expect at each step of the process. So let's go through the timeline -
 or rather how much I was made to wait for every step of the road.&lt;/p&gt;
 
-&lt;table class=&quot;tg&quot; style=&quot;width:200%; line-height:2em&quot;&gt;
+&lt;table class=&quot;tg table&quot; style=&quot;width:200%; line-height:2em&quot;&gt;
 &lt;tr&gt;
 &lt;th class=&quot;tg-031e&quot;&gt;Date&lt;/th&gt;
 &lt;th class=&quot;tg-031e&quot;&gt;Event&lt;/th&gt;
@@ -613,35 +613,33 @@ or rather how much I was made to wait for every step of the road.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-031e&quot;&gt;26th Sep&lt;/td&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;GSoC support confirmed that they had received my request&lt;/td&gt;
+&lt;td class=&quot;tg-031e&quot;&gt;GSoC support confirmed that they had received my
+request&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-031e&quot;&gt;11th Oct&lt;/td&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;I got a mail from Google recruiter about scheduling my interviews&lt;/td&gt;
+&lt;td class=&quot;tg-031e&quot;&gt;I got a mail from Google recruiter about scheduling my
+interviews&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-031e&quot;&gt;17th Oct&lt;/td&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;They confirmed the date of 26th October for two, one hour, interviews&lt;/td&gt;
+&lt;td class=&quot;tg-031e&quot;&gt;They confirmed the date of 26th October for two, one hour,
+interviews&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-031e&quot;&gt;26th Oct&lt;/td&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;Two interviews, each lasting for about 40 minutes + 10 minutes random talk.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;The interviews were over the phone, with laptop for coding online.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-031e&quot;&gt;Learnt &lt;strong&gt;never to ask for interview over phone&lt;/strong&gt;. The voice was choppy, and combined&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;with the interviewer's accent, I couldn't understand anything. Went OK, not too good.&lt;/td&gt;
+&lt;td class=&quot;tg-031e&quot;&gt;
+Two interviews, each lasting for about 40 minutes + 10 minutes random talk.
+&lt;br/&gt;
+The interviews were over the phone, with laptop for coding online. &lt;br/&gt;
+Learnt &lt;strong&gt;never to ask for interview over phone&lt;/strong&gt;.  &lt;br/&gt;
+The voice was choppy, and combined with the interviewer's accent, I couldn't
+understand anything. Went OK, not too good.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;2nd Nov&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;They asked to schedule one more interview - I requested an interview over Hangouts instead&lt;/td&gt;
+&lt;td class=&quot;tg-yw4l&quot;&gt;They asked to schedule one more interview - I requested an
+interview over Hangouts instead&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;7th Nov&lt;/td&gt;
@@ -649,15 +647,13 @@ or rather how much I was made to wait for every step of the road.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;17th Nov&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;Interview on Hangouts. Voice was clear, and interview went much better.&lt;/td&gt;
+&lt;td class=&quot;tg-yw4l&quot;&gt;Interview on Hangouts. Voice was clear, and interview went
+much better.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;6th Dec&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;They confirmed that they are moving forward to the project matching (I had 6 weeks&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;to get selected for a project)&lt;/td&gt;
+&lt;td class=&quot;tg-yw4l&quot;&gt;They confirmed that they are moving forward to the project
+matching (I had 6 weeks to get selected for a project)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;7th Dec&lt;/td&gt;
@@ -665,11 +661,8 @@ or rather how much I was made to wait for every step of the road.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;8th Dec&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;I had to fill a form on my interests and strengths to be matched to a team with&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;similar work and interests&lt;/td&gt;
+&lt;td class=&quot;tg-yw4l&quot;&gt;I had to fill a form on my interests and strengths to be
+matched to a team with similar work and interests&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;13th Dec&lt;/td&gt;
@@ -677,27 +670,19 @@ or rather how much I was made to wait for every step of the road.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;14th Dec&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;Back to Google: Recruiter informs me of a potential project host who wants to interview me!&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;Interview scheduled for 15th December (EST) or 16th Dec (IST)!&lt;/td&gt;
+&lt;td class=&quot;tg-yw4l&quot;&gt;Back to Google: Recruiter informs me of a potential project
+host who wants to interview me! &lt;br/&gt;
+Interview scheduled for 15th December (EST) or 16th Dec (IST)!&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;tg-yw4l&quot;&gt;16th Dec&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;12:15 AM - Interview for about 30 min. I loved the project and talked enthusiastically&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;4:04 AM - &lt;i&gt;Recruiter mails me to tell that the host would love to work with me 😲&lt;/i&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;4:08 AM - I confirm that I would like to work in the project as well.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-yw4l&quot;&gt;4:15 AM - Recruiter replies with steps to complete offer acceptance&lt;/td&gt;
+&lt;td class=&quot;tg-yw4l&quot;&gt;
+12:15 AM - Interview for about 30 min. I loved the project
+and talked enthusiastically &lt;br/&gt;
+4:04 AM - &lt;i&gt;Recruiter mails me to tell that the host would love to work with
+me 😲&lt;/i&gt; &lt;br/&gt;
+4:08 AM - I confirm that I would like to work in the project as well.&lt;br/&gt;
+4:15 AM - Recruiter replies with steps to complete offer acceptance&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
 
