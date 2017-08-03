@@ -156,7 +156,7 @@ include personal experience, and I wish more people did. It helps a lot to know
 what to expect at each step of the process. So let's go through the timeline -
 or rather how much I was made to wait for every step of the road.
 
-<table class="tg" style="width:200%; line-height:2em">
+<table class="tg table" style="width:200%; line-height:2em">
 <tr>
 <th class="tg-031e">Date</th>
 <th class="tg-031e">Event</th>
@@ -167,35 +167,33 @@ or rather how much I was made to wait for every step of the road.
 </tr>
 <tr>
 <td class="tg-031e">26th Sep</td>
-<td class="tg-031e">GSoC support confirmed that they had received my request</td>
+<td class="tg-031e">GSoC support confirmed that they had received my
+request</td>
 </tr>
 <tr>
 <td class="tg-031e">11th Oct</td>
-<td class="tg-031e">I got a mail from Google recruiter about scheduling my interviews</td>
+<td class="tg-031e">I got a mail from Google recruiter about scheduling my
+interviews</td>
 </tr>
 <tr>
 <td class="tg-031e">17th Oct</td>
-<td class="tg-031e">They confirmed the date of 26th October for two, one hour, interviews</td>
+<td class="tg-031e">They confirmed the date of 26th October for two, one hour,
+interviews</td>
 </tr>
 <tr>
 <td class="tg-031e">26th Oct</td>
-<td class="tg-031e">Two interviews, each lasting for about 40 minutes + 10 minutes random talk.</td>
-</tr>
-<tr>
-<td class="tg-031e"></td>
-<td class="tg-031e">The interviews were over the phone, with laptop for coding online.</td>
-</tr>
-<tr>
-<td class="tg-031e"></td>
-<td class="tg-031e">Learnt <strong>never to ask for interview over phone</strong>. The voice was choppy, and combined</td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">with the interviewer's accent, I couldn't understand anything. Went OK, not too good.</td>
+<td class="tg-031e">
+Two interviews, each lasting for about 40 minutes + 10 minutes random talk.
+<br/>
+The interviews were over the phone, with laptop for coding online. <br/>
+Learnt <strong>never to ask for interview over phone</strong>.  <br/>
+The voice was choppy, and combined with the interviewer's accent, I couldn't
+understand anything. Went OK, not too good.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">2nd Nov</td>
-<td class="tg-yw4l">They asked to schedule one more interview - I requested an interview over Hangouts instead</td>
+<td class="tg-yw4l">They asked to schedule one more interview - I requested an
+interview over Hangouts instead</td>
 </tr>
 <tr>
 <td class="tg-yw4l">7th Nov</td>
@@ -203,15 +201,13 @@ or rather how much I was made to wait for every step of the road.
 </tr>
 <tr>
 <td class="tg-yw4l">17th Nov</td>
-<td class="tg-yw4l">Interview on Hangouts. Voice was clear, and interview went much better.</td>
+<td class="tg-yw4l">Interview on Hangouts. Voice was clear, and interview went
+much better.</td>
 </tr>
 <tr>
 <td class="tg-yw4l">6th Dec</td>
-<td class="tg-yw4l">They confirmed that they are moving forward to the project matching (I had 6 weeks</td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">to get selected for a project)</td>
+<td class="tg-yw4l">They confirmed that they are moving forward to the project
+matching (I had 6 weeks to get selected for a project)</td>
 </tr>
 <tr>
 <td class="tg-yw4l">7th Dec</td>
@@ -219,11 +215,8 @@ or rather how much I was made to wait for every step of the road.
 </tr>
 <tr>
 <td class="tg-yw4l">8th Dec</td>
-<td class="tg-yw4l">I had to fill a form on my interests and strengths to be matched to a team with</td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">similar work and interests</td>
+<td class="tg-yw4l">I had to fill a form on my interests and strengths to be
+matched to a team with similar work and interests</td>
 </tr>
 <tr>
 <td class="tg-yw4l">13th Dec</td>
@@ -231,27 +224,19 @@ or rather how much I was made to wait for every step of the road.
 </tr>
 <tr>
 <td class="tg-yw4l">14th Dec</td>
-<td class="tg-yw4l">Back to Google: Recruiter informs me of a potential project host who wants to interview me!</td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">Interview scheduled for 15th December (EST) or 16th Dec (IST)!</td>
+<td class="tg-yw4l">Back to Google: Recruiter informs me of a potential project
+host who wants to interview me! <br/>
+Interview scheduled for 15th December (EST) or 16th Dec (IST)!</td>
 </tr>
 <tr>
 <td class="tg-yw4l">16th Dec</td>
-<td class="tg-yw4l">12:15 AM - Interview for about 30 min. I loved the project and talked enthusiastically</td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">4:04 AM - <i>Recruiter mails me to tell that the host would love to work with me 😲</i></td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">4:08 AM - I confirm that I would like to work in the project as well.</td>
-</tr>
-<tr>
-<td class="tg-yw4l"></td>
-<td class="tg-yw4l">4:15 AM - Recruiter replies with steps to complete offer acceptance</td>
+<td class="tg-yw4l">
+12:15 AM - Interview for about 30 min. I loved the project
+and talked enthusiastically <br/>
+4:04 AM - <i>Recruiter mails me to tell that the host would love to work with
+me 😲</i> <br/>
+4:08 AM - I confirm that I would like to work in the project as well.<br/>
+4:15 AM - Recruiter replies with steps to complete offer acceptance</td>
 </tr>
 </table>
 

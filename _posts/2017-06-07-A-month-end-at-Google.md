@@ -29,8 +29,8 @@ All interns join on a Monday, which means that there is an orientation every
 week, and my batch was one of the earliest. There weren't a ton of interns
 joining that week. However, in U.S. interns have orientation in one of the two
 biggest offices: Mountain View for all west coast offices, and New York for all
-east cost offices. So we had interns from many other offices as well (Waterloo,
-for instance).
+east coast offices. So we had interns from many other offices as well
+(Waterloo, for instance).
 
 We had our I-9 documents checked, and proceeded to the orientation room. It was
 a presentation, where they showed us some of the things that we needed to know.

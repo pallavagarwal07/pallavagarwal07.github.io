@@ -137,6 +137,10 @@ blockquote {
     font-style: italic;
 }
 
+.borderless td, .borderless th {
+    border: none !important;
+}
+
 input {
     width: 100%;
     height: 100%;
