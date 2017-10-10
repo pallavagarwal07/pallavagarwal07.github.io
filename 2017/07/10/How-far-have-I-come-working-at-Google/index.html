@@ -97,11 +97,9 @@ the best position to help me deploy my code.</p>
 
 <p>Above them is our manager, and then more managers above him (in a nutshell).</p>
 
-<p>So what do I work on? Hmmm.. I am not sure if I'm allowed to say yet?</p>
-
-<pre><code>TODO: Replace with a proper description of my  work after project is released
-as open source.
-</code></pre>
+<p>So what do I work on? <del>Hmmm.. I am not sure if I'm allowed to say yet?</del>
+This blog article describes my project pretty well: <a href="https://blog.bazel.build/2017/08/25/introducing-sandboxfs.html">Introducing
+Sandboxfs</a></p>
 
 <p>Anyway, I am in the Blaze team. Blaze is the internal name for Bazel
 (<a href="https://bazel.build">https://bazel.build</a>). To understand what Blaze is, first let's jog your
@@ -122,15 +120,15 @@ minimizing the work done. For example, if only one file has changed, they'd try
 not to build the whole project again, but just that one file. Now as projects
 become complicated, these tools become inefficient, and slowly more and more
 incompetent. Google has all their source code in one huge repository (really
-really huge), and code can takes hours to build on parallel running machine
+really huge), and code can take hours to build on parallel running machine
 clusters. These tools can neither handle such complexity, nor the functionality
 required for such a thing.</p>
 
 <p>This is where Bazel (Blaze) comes in. Blaze is <em>the</em> build tool used by every
 project in Google. It is what builds tens of thousands of projects everyday.
 Now, Bazel is the open source version of Blaze, which other people can use in
-their projects, but is mostly used by other companies (like Dropbox), whose
-requirements are that huge.</p>
+their projects, but is mostly used by other companies (like Dropbox), who have
+such huge requirements.</p>
 
 <p>If you are in a CS related field, you would've heard the term "correctness"
 thrown around a lot. Proof of correctness of algorithms? Correctness in multi

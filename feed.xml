@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-03T00:06:06-04:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00-04:00</published><updated>2017-07-29T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-10T20:09:55+05:30</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00+05:30</published><updated>2017-07-29T00:00:00+05:30</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
@@ -48,7 +48,7 @@ its' projects, is in a single repository, that everyone has access to. Which
 means that, even as an intern I had tremendous amount of knowledge one click
 away. While working, I often read other papers (design documents) of things
 Google was working on, and I was never disappointed. Google is fascinating from
-the inside.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">The series:</summary></entry><entry><title type="html">Mistakes are okay</title><link href="http://localhost:4000/2017/07/24/Mistakes-are-okay/" rel="alternate" type="text/html" title="Mistakes are okay" /><published>2017-07-24T00:00:00-04:00</published><updated>2017-07-24T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/24/Mistakes-are-okay</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Mistakes-are-okay/">&lt;p&gt;Hey.. Whoever is reading this.&lt;/p&gt;
+the inside.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">The series:</summary></entry><entry><title type="html">Mistakes are okay</title><link href="http://localhost:4000/2017/07/24/Mistakes-are-okay/" rel="alternate" type="text/html" title="Mistakes are okay" /><published>2017-07-24T00:00:00+05:30</published><updated>2017-07-24T00:00:00+05:30</updated><id>http://localhost:4000/2017/07/24/Mistakes-are-okay</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Mistakes-are-okay/">&lt;p&gt;Hey.. Whoever is reading this.&lt;/p&gt;
 
 &lt;p&gt;This article has been sitting in my mind for a week now, and I finally decided
 to write it. So, a week ago, a guy messages me to ask some tips on GSoC. I like
@@ -125,7 +125,7 @@ mistakes. That others are capable of being silly at times. Stop comparing other
 peoples (successes) with your (successes, failures). Please.&lt;/p&gt;
 
 &lt;p&gt;If you think this article is worth re-telling, share it :)
-&lt;br/&gt; &lt;br/&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Hey.. Whoever is reading this.</summary></entry><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00-04:00</published><updated>2017-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
+&lt;br/&gt; &lt;br/&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Hey.. Whoever is reading this.</summary></entry><entry><title type="html">An intern’s views - How far have I come?</title><link href="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/" rel="alternate" type="text/html" title="An intern's views - How far have I come?" /><published>2017-07-10T00:00:00+05:30</published><updated>2017-07-10T00:00:00+05:30</updated><id>http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/07/10/How-far-have-I-come-working-at-Google/">&lt;p&gt;AKA, what the hell about work? I have gone on and on about getting here. The
 things I found here. But I have still made no mention of what I do here. Well,
 here it is. So sit back, and read on.&lt;/p&gt;
 
@@ -149,11 +149,9 @@ the best position to help me deploy my code.&lt;/p&gt;
 
 &lt;p&gt;Above them is our manager, and then more managers above him (in a nutshell).&lt;/p&gt;
 
-&lt;p&gt;So what do I work on? Hmmm.. I am not sure if I'm allowed to say yet?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;TODO: Replace with a proper description of my  work after project is released
-as open source.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So what do I work on? &lt;del&gt;Hmmm.. I am not sure if I'm allowed to say yet?&lt;/del&gt;
+This blog article describes my project pretty well: &lt;a href=&quot;https://blog.bazel.build/2017/08/25/introducing-sandboxfs.html&quot;&gt;Introducing
+Sandboxfs&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Anyway, I am in the Blaze team. Blaze is the internal name for Bazel
 (&lt;a href=&quot;https://bazel.build&quot;&gt;https://bazel.build&lt;/a&gt;). To understand what Blaze is, first let's jog your
@@ -174,15 +172,15 @@ minimizing the work done. For example, if only one file has changed, they'd try
 not to build the whole project again, but just that one file. Now as projects
 become complicated, these tools become inefficient, and slowly more and more
 incompetent. Google has all their source code in one huge repository (really
-really huge), and code can takes hours to build on parallel running machine
+really huge), and code can take hours to build on parallel running machine
 clusters. These tools can neither handle such complexity, nor the functionality
 required for such a thing.&lt;/p&gt;
 
 &lt;p&gt;This is where Bazel (Blaze) comes in. Blaze is &lt;em&gt;the&lt;/em&gt; build tool used by every
 project in Google. It is what builds tens of thousands of projects everyday.
 Now, Bazel is the open source version of Blaze, which other people can use in
-their projects, but is mostly used by other companies (like Dropbox), whose
-requirements are that huge.&lt;/p&gt;
+their projects, but is mostly used by other companies (like Dropbox), who have
+such huge requirements.&lt;/p&gt;
 
 &lt;p&gt;If you are in a CS related field, you would've heard the term &quot;correctness&quot;
 thrown around a lot. Proof of correctness of algorithms? Correctness in multi
@@ -273,7 +271,7 @@ projects and planning lectures on just these topics.
 
 &lt;p&gt;&lt;em&gt;Doubt? Question? Suggestion? I think the comment panel below works :)&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Next in series: &lt;a href=&quot;/2017/07/29/End-of-Diary/&quot;&gt;An intern's views - End of diary&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">AKA, what the hell about work? I have gone on and on about getting here. The things I found here. But I have still made no mention of what I do here. Well, here it is. So sit back, and read on.</summary></entry><entry><title type="html">An intern’s views - A month’s end at Google</title><link href="http://localhost:4000/2017/06/07/A-month-end-at-Google/" rel="alternate" type="text/html" title="An intern's views - A month's end at Google" /><published>2017-06-07T00:00:00-04:00</published><updated>2017-06-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/06/07/A-month-end-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/06/07/A-month-end-at-Google/">&lt;p&gt;The series:&lt;/p&gt;
+&lt;p&gt;Next in series: &lt;a href=&quot;/2017/07/29/End-of-Diary/&quot;&gt;An intern's views - End of diary&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">AKA, what the hell about work? I have gone on and on about getting here. The things I found here. But I have still made no mention of what I do here. Well, here it is. So sit back, and read on.</summary></entry><entry><title type="html">An intern’s views - A month’s end at Google</title><link href="http://localhost:4000/2017/06/07/A-month-end-at-Google/" rel="alternate" type="text/html" title="An intern's views - A month's end at Google" /><published>2017-06-07T00:00:00+05:30</published><updated>2017-06-07T00:00:00+05:30</updated><id>http://localhost:4000/2017/06/07/A-month-end-at-Google</id><content type="html" xml:base="http://localhost:4000/2017/06/07/A-month-end-at-Google/">&lt;p&gt;The series:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
@@ -438,7 +436,7 @@ part of the intern later.&lt;/p&gt;
 &lt;p&gt;But till then, if you're reading this, leave a comment below :)&lt;/p&gt;
 
 &lt;p&gt;Next in series: &lt;a href=&quot;/2017/07/10/How-far-have-I-come-working-at-Google/&quot;&gt;An intern's views - How far have I
-come?&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">The series:</summary></entry><entry><title type="html">An intern’s views - How I got here</title><link href="http://localhost:4000/2017/05/07/How-I-got-here/" rel="alternate" type="text/html" title="An intern's views - How I got here" /><published>2017-05-07T00:00:00-04:00</published><updated>2017-05-07T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/07/How-I-got-here</id><content type="html" xml:base="http://localhost:4000/2017/05/07/How-I-got-here/">&lt;p&gt;AKA, how I got an internship in Google. In case you were wondering why the
+come?&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">The series:</summary></entry><entry><title type="html">An intern’s views - How I got here</title><link href="http://localhost:4000/2017/05/07/How-I-got-here/" rel="alternate" type="text/html" title="An intern's views - How I got here" /><published>2017-05-07T00:00:00+05:30</published><updated>2017-05-07T00:00:00+05:30</updated><id>http://localhost:4000/2017/05/07/How-I-got-here</id><content type="html" xml:base="http://localhost:4000/2017/05/07/How-I-got-here/">&lt;p&gt;AKA, how I got an internship in Google. In case you were wondering why the
 actual title is so obscure, it is because I want this article to be mostly
 linked by the rest of the (monthly) articles in this series (I'll update the
 links as I write them)&lt;/p&gt;
@@ -730,7 +728,7 @@ Google&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">AKA, how I got an internship in Google. In case you were wondering why the actual title is so obscure, it is because I want this article to be mostly linked by the rest of the (monthly) articles in this series (I'll update the links as I write them)</summary></entry><entry><title type="html">YourHonour: A k8s based distributed programming judge</title><link href="http://localhost:4000/2016/09/26/YourHonour-k8s-programming-judge/" rel="alternate" type="text/html" title="YourHonour: A k8s based distributed programming judge" /><published>2016-09-26T00:00:00-04:00</published><updated>2016-09-26T00:00:00-04:00</updated><id>http://localhost:4000/2016/09/26/YourHonour-k8s-programming-judge</id><content type="html" xml:base="http://localhost:4000/2016/09/26/YourHonour-k8s-programming-judge/">&lt;p&gt;So, this is something I have been working on recently for some time. The
+&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">AKA, how I got an internship in Google. In case you were wondering why the actual title is so obscure, it is because I want this article to be mostly linked by the rest of the (monthly) articles in this series (I'll update the links as I write them)</summary></entry><entry><title type="html">YourHonour: A k8s based distributed programming judge</title><link href="http://localhost:4000/2016/09/26/YourHonour-k8s-programming-judge/" rel="alternate" type="text/html" title="YourHonour: A k8s based distributed programming judge" /><published>2016-09-26T00:00:00+05:30</published><updated>2016-09-26T00:00:00+05:30</updated><id>http://localhost:4000/2016/09/26/YourHonour-k8s-programming-judge</id><content type="html" xml:base="http://localhost:4000/2016/09/26/YourHonour-k8s-programming-judge/">&lt;p&gt;So, this is something I have been working on recently for some time. The
 project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for
 organising programming competitions.&lt;/p&gt;
 
@@ -858,7 +856,7 @@ This seems to work well, and I haven't had much problem since.&lt;/p&gt;&lt;/li&
 &lt;/ol&gt;
 
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">So, this is something I have been working on recently for some time. The project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for organising programming competitions.</summary></entry><entry><title type="html">Preparation for Google Summer of Code</title><link href="http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code/" rel="alternate" type="text/html" title="Preparation for Google Summer of Code" /><published>2016-08-23T00:00:00-04:00</published><updated>2016-08-23T00:00:00-04:00</updated><id>http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code</id><content type="html" xml:base="http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code/">&lt;p&gt;&lt;strong&gt;Preface:&lt;/strong&gt; I have been selected for Google Summer of Code ’16 under Gentoo
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">So, this is something I have been working on recently for some time. The project's name is YourHonour, and is is a Kubernetes(k8s) based Online Judge for organising programming competitions.</summary></entry><entry><title type="html">Preparation for Google Summer of Code</title><link href="http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code/" rel="alternate" type="text/html" title="Preparation for Google Summer of Code" /><published>2016-08-23T00:00:00+05:30</published><updated>2016-08-23T00:00:00+05:30</updated><id>http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code</id><content type="html" xml:base="http://localhost:4000/2016/08/23/Preparing-for-Google-summer-of-code/">&lt;p&gt;&lt;strong&gt;Preface:&lt;/strong&gt; I have been selected for Google Summer of Code ’16 under Gentoo
 Organization.&lt;/p&gt;
 
 &lt;p&gt;Firstly, I would suggest that you start now. Since I do not know anything about
@@ -1047,7 +1045,7 @@ the &quot;About me&quot; page).&lt;/p&gt;
 &lt;p&gt;Pallav Agarwal (&lt;a href=&quot;https://github.com/pallavagarwal07&quot;&gt;https://github.com/pallavagarwal07&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note 4:&lt;/strong&gt; This article was originally written as a Quora answer, and can still
-be found on the website.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Preface: I have been selected for Google Summer of Code ’16 under Gentoo Organization.</summary></entry><entry><title type="html">Learning from mistakes: Bugzilla Landfills</title><link href="http://localhost:4000/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00-04:00</published><updated>2016-06-09T00:00:00-04:00</updated><id>http://localhost:4000/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://localhost:4000/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
+be found on the website.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Preface: I have been selected for Google Summer of Code ’16 under Gentoo Organization.</summary></entry><entry><title type="html">Learning from mistakes: Bugzilla Landfills</title><link href="http://localhost:4000/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00+05:30</published><updated>2016-06-09T00:00:00+05:30</updated><id>http://localhost:4000/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://localhost:4000/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
 my project in Google Summer of Code.&lt;/p&gt;
 
 &lt;p&gt;My day's task was to automate the filing of a bug in bugzilla if and when a
@@ -1067,7 +1065,7 @@ bug to numerous people.&lt;/p&gt;
 that you can use for testing out something on a Bugzilla.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">This post is regarding a recent incident that happened when I was working for my project in Google Summer of Code.</summary></entry><entry><title type="html">Determining legal USE Flag combinations using a CNF SAT Solver</title><link href="http://localhost:4000/2016/05/13/SAT-Solver/" rel="alternate" type="text/html" title="Determining legal USE Flag combinations using a CNF SAT Solver" /><published>2016-05-13T00:00:00-04:00</published><updated>2016-05-13T00:00:00-04:00</updated><id>http://localhost:4000/2016/05/13/SAT-Solver</id><content type="html" xml:base="http://localhost:4000/2016/05/13/SAT-Solver/">&lt;p&gt;I spent my time doing something rather interesting today.&lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">This post is regarding a recent incident that happened when I was working for my project in Google Summer of Code.</summary></entry><entry><title type="html">Determining legal USE Flag combinations using a CNF SAT Solver</title><link href="http://localhost:4000/2016/05/13/SAT-Solver/" rel="alternate" type="text/html" title="Determining legal USE Flag combinations using a CNF SAT Solver" /><published>2016-05-13T00:00:00+05:30</published><updated>2016-05-13T00:00:00+05:30</updated><id>http://localhost:4000/2016/05/13/SAT-Solver</id><content type="html" xml:base="http://localhost:4000/2016/05/13/SAT-Solver/">&lt;p&gt;I spent my time doing something rather interesting today.&lt;/p&gt;
 
 &lt;p&gt;In my proposal, I had
 mentioned that the USE flag combinations to be tested would be:&lt;/p&gt;
@@ -1132,7 +1130,7 @@ solutions as I want. Also the output is a bit easier on the eyes in the form of 
 &lt;p&gt;If you have any queries, post them below or open up an issue on github.&lt;/p&gt;
 
 &lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I spent my time doing something rather interesting today.</summary></entry><entry><title type="html">Reference Sheets and Useful Links</title><link href="http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links/" rel="alternate" type="text/html" title="Reference Sheets and Useful Links" /><published>2016-05-13T00:00:00-04:00</published><updated>2016-05-13T00:00:00-04:00</updated><id>http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links</id><content type="html" xml:base="http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links/">&lt;p&gt;This post was long due. I often find blog posts, reference sheets and useful links that
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I spent my time doing something rather interesting today.</summary></entry><entry><title type="html">Reference Sheets and Useful Links</title><link href="http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links/" rel="alternate" type="text/html" title="Reference Sheets and Useful Links" /><published>2016-05-13T00:00:00+05:30</published><updated>2016-05-13T00:00:00+05:30</updated><id>http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links</id><content type="html" xml:base="http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links/">&lt;p&gt;This post was long due. I often find blog posts, reference sheets and useful links that
 I feel I should bookmark. However, I often lose these bookmarks when I shift Operating
 Systems or browsers (which happens very often). I am hoping that this will be a better
 and a more reliable way to keep track of all these resources.&lt;/p&gt;
