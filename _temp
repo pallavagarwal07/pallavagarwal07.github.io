@@ -1,17 +1,14 @@
----
-title: "An intern's views - How far have I come?"
-layout: default
-tags: post
----
-
 AKA, what the hell about work? I have gone on and on about getting here. The
 things I found here. But I have still made no mention of what I do here. Well,
 here it is. So sit back, and read on.
 
-1. [An intern's views - How I got here](/2017/05/07/How-I-got-here/)
-2. [An intern's views - A month's end at Google](/2017/06/07/A-month-end-at-Google/)
-3. [An intern's views - How far have I come?](/2017/07/10/How-far-have-I-come-working-at-Google/)
-4. [An intern's views - End of diary](/2017/07/29/End-of-Diary/)
+
+An intern's views - How I got here
+An intern's views - A month's end at Google
+An intern's views - How far have I come?
+An intern's views - End of diary
+
+
 
 In case you haven't read the last article, you might want to.
 
@@ -25,19 +22,22 @@ the best position to help me deploy my code.
 
 Above them is our manager, and then more managers above him (in a nutshell).
 
-So what do I work on? ~~Hmmm.. I am not sure if I'm allowed to say yet?~~
-This blog article describes my project pretty well: [Introducing
-Sandboxfs](https://blog.bazel.build/2017/08/25/introducing-sandboxfs.html)
+So what do I work on? Hmmm.. I am not sure if I'm allowed to say yet?
+This blog article describes my project pretty well: Introducing
+Sandboxfs
 
 Anyway, I am in the Blaze team. Blaze is the internal name for Bazel
-(<https://bazel.build>). To understand what Blaze is, first let's jog your
+(https://bazel.build). To understand what Blaze is, first let's jog your
 memory. Which names do you recognize?
 
-* Make (Makefile)
-* Ant
-* Maven
-* CMake
-* Gradle
+
+Make (Makefile)
+Ant
+Maven
+CMake
+Gradle
+
+
 
 All the above mentioned are build tools, and they all work on a similar
 concept. You have a build configuration, and they try to build the project by
@@ -49,7 +49,7 @@ really huge), and code can take hours to build on parallel running machine
 clusters. These tools can neither handle such complexity, nor the functionality
 required for such a thing.
 
-This is where Bazel (Blaze) comes in. Blaze is *the* build tool used by every
+This is where Bazel (Blaze) comes in. Blaze is the build tool used by every
 project in Google. It is what builds tens of thousands of projects everyday.
 Now, Bazel is the open source version of Blaze, which other people can use in
 their projects, but is mostly used by other companies (like Dropbox), who have
@@ -92,9 +92,9 @@ fix problems (that you didn't even think were present) using alternatives you
 would've never come up with yourself. Frankly, the first time around, code
 reviews feel something like this:
 
-<img src="/img/review.png" width="100%" />
 
-For the record, I made that meme for memegen ***after*** I finally got my first
+
+For the record, I made that meme for memegen after I finally got my first
 pull request (or change list) accepted. It got 850+ upvotes, so I'm pretty sure
 I'm not the only one who felt this way.
 
@@ -125,10 +125,10 @@ Can't remember the name of that one spaceship from Star Trek? I'm pretty sure 1
 out of 5 people here know that too. I don't even need to Google my doubts that
 often because somebody can usually clear them up (yeah, I can see the irony).
 
-*I know most of you don't care about how my project is going, but I'm going to put
+I know most of you don't care about how my project is going, but I'm going to put
 it here anyway :P It's going well, and I had a fairly nice mid-term review. I'm
 currently pushing hard to get the project released as open source (lots of
-legal issues to solve in the way). Finger crossed :D*
+legal issues to solve in the way). Finger crossed :D
 
 So, any regrets? Yes, from back at college. I really wish somebody had told me
 about all this. Told me that the programming as I know it, isn't exactly how
@@ -140,8 +140,8 @@ Next steps? I like to help out others, so let's hope I can help a few people
 avoid this shock. For now, mandatory code reviews on Programming Club IITK
 repositories, adding test suites and continuous integration to important
 projects and planning lectures on just these topics.
-<br/> <br/>
+ 
 
-*Doubt? Question? Suggestion? I think the comment panel below works :)*
+Doubt? Question? Suggestion? I think the comment panel below works :)
 
-Next in series: [An intern's views - End of diary](/2017/07/29/End-of-Diary/)
+Next in series: An intern's views - End of diary
