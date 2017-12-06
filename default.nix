@@ -25,7 +25,7 @@ pkgs.stdenv.mkDerivation {
         bundle exec jekyll build
     '';
     installPhase = ''
-        rm -df $out
-        mv _site $out
+        mkdir -p $out
+        mv _site $out/public
     '';
 }

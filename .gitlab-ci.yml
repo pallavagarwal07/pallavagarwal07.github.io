@@ -5,8 +5,11 @@ pages:
   - apt-get install -y bash curl
   - bash <(curl https://raw.githubusercontent.com/pallavagarwal07/NixCI/master/travis-tests/install-root.sh)
   - su user -s /bin/bash -c 'set -e; cd $HOME; . $HOME/.nix-profile/etc/profile.d/nix.sh; nix-build -j20 . ;                          '
+  - mkdir public
+  - cp -r /home/user/result/public/* ./public
+  - chown -R root:root public/*
   artifacts:
     paths:
-    - /home/user/result/
+    - public
   only:
   - source
