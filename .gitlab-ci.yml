@@ -1,12 +1,12 @@
 pages:
   stage: deploy
   script:
-  - mkdir .public
-  - cp -r * .public
-  - cp -r .well-known .public
-  - mv .public public
+  - apt-get update
+  - apt-get install -y bash curl
+  - bash <(curl https://raw.githubusercontent.com/pallavagarwal07/NixCI/master/travis-tests/install-root.sh)
+  - su user -s /bin/bash -c 'set -e; cd $HOME; . $HOME/.nix-profile/etc/profile.d/nix.sh; nix-build -j20 . ;                          '
   artifacts:
     paths:
-    - public
+    - /home/user/result/
   only:
-  - master
+  - source

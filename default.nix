@@ -1,16 +1,15 @@
-let
-pkgs = import <nixpkgs> {};
-in
-{ stdenv ? pkgs.stdenv, python ? pkgs.python, pythonIRClib ? pkgs.pythonIRClib }:
+{pkgs? import <nixpkgs> {} }:
 
-stdenv.mkDerivation {
-    name = "python-nix";
+pkgs.stdenv.mkDerivation {
+    name = "varstack.com";
     version = "0.1.0.0";
     src = ./.;
     buildInputs = [
             pkgs.python2
             pkgs.ruby
             pkgs.zlib
+            pkgs.nodejs
+            pkgs.bundler
             pkgs.pythonIRClib
             pkgs.python2Packages.zope_interface
             pkgs.python2Packages.beautifulsoup4
@@ -18,5 +17,15 @@ stdenv.mkDerivation {
             pkgs.python2Packages.pygments
     ];
     preUnpack = "echo $PWD";
-    #shellHook = "bundle exec jekyll serve";
+    buildPhase = ''
+        mkdir tmp
+        export HOME="$PWD/tmp"
+        bundle config
+        bundle install
+        bundle exec jekyll build
+    '';
+    installPhase = ''
+        rm -df $out
+        mv _site $out
+    '';
 }
