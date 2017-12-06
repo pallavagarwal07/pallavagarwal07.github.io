@@ -1,9 +1,6 @@
-let
-pkgs = import <nixpkgs> {};
-in
-{ stdenv ? pkgs.stdenv, python ? pkgs.python, pythonIRClib ? pkgs.pythonIRClib }:
+{pkgs? import <nixpkgs> {} }:
 
-stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
     name = "python-nix";
     version = "0.1.0.0";
     src = ./.;
@@ -18,5 +15,5 @@ stdenv.mkDerivation {
             pkgs.python2Packages.pygments
     ];
     preUnpack = "echo $PWD";
-    #shellHook = "bundle exec jekyll serve";
+    shellHook = "bundle exec jekyll serve";
 }
