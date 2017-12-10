@@ -1,7 +1,7 @@
 ---
 title: "An intern's views - End of Diary"
 layout: default
-img: googlelogo.jpg
+img: hongkong.jpg
 img-alt: Pallav standing in front of Google wall
 tags: post
 ---
