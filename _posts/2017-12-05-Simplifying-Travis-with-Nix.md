@@ -19,7 +19,7 @@ same packages, along with deterministic and atomic builds and upgrades.
 ### Throwback
 Now, I started using Nix a long time ago (~Sep 2015), often switching between
 Arch and Nix depending on my usage. Mostly I had to switch to Arch every time I
-couldn't figure out how to configure something in Nix (the methodologies, ike
+couldn't figure out how to configure something in Nix (the methodologies, like
 the ideoligies are very different). About an year ago I switched to Nix
 full-time (i.e. no other operating system on dual boot). The reason being that
 I have learnt enough about the workings of Nix to make it do my day to day
@@ -73,13 +73,13 @@ that you installed to get the code working, or the libraries it links against
 that are under a different name on your OS as compared to the OS running on the
 CI. At some point, everybody finds themselves battling with the package manager
 on the CI, iteratively running the tests again and again and fixing the next
-error that is reported on completion (failure) of the build.
+error that is reported on failure of the build.
 
 I ran into this problem when I was trying to set up the CI for my blog's code.
 Yes, the website you are reading - that's what I am talking about. Since the
 final compiled product is a static website, I used to compile it on my PC and
-upload the compiled files for hosting. But on my PC, the dependency things were
-just fine - because - you guessed it - I had written a Nix config file for it.
+upload the compiled files for hosting. On my PC, the dependency management was
+just fine, because - you guessed it - I had written a Nix config file for it.
 Even so it was very hard to get it right on Travis, since it was running Ubuntu
 and my blog uses a rather lot of dependencies (jekyll, as well as python NLP
 libs for the search).
@@ -92,7 +92,7 @@ to install Nix on Ubuntu, I decided to see if it'd be able to use my existing
 config file to build my code using Nix instead.
 
 The result was a small bunch of scripts that you can just curl directly from
-any build that uses a `default.nix` (Nix config) file for its builds and the
+any build that uses a `default.nix` (Nix config file) for its builds and the
 Travis build would first install Nix and then complete the build using the
 Nix config file.
 
@@ -100,9 +100,10 @@ Nix config file.
 
 ### Example
 The above link would also be a good example of how to use the Nix CI from a
-project that uses Travis CI. Note that you can directly curl the installation
-and configuration script from the above repository directly into your CI job.
-The link below is a good example of how to do that.
+project that uses Travis CI. Hint: look into the `.travis.yml` file. Note that
+you can directly curl the installation and configuration script from the above
+repository directly into your CI job. The link below is a fine example of how
+to do that.
 
 To view an example of using this with GitLab CI:
 [Click Here](https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/blob/fa853cf54ec8c294e35f194feeb528d27295ae47/.gitlab-ci.yml)
@@ -112,5 +113,5 @@ but from GitLab CI, the script to run is `install-root.sh`. The latter is a
 wrapper around the former but assumes that the user running the script is root
 and the wrapper (`install-root.sh`) creates a non-root user with sudo
 priviledges and runs the `install-nix.sh` script as the newly created user.
-This is not required in Travis since the default user in Travis is non-root
-and has sudo priviledges.
+This is not required in Travis since the default user in Travis is already a
+non-root user with sudo priviledges.
