@@ -15,11 +15,17 @@ pkgs.stdenv.mkDerivation {
             pkgs.python2Packages.beautifulsoup4
             pkgs.python2Packages.markdown
             pkgs.python2Packages.pygments
+            pkgs.go
     ];
-    preUnpack = "echo $PWD";
     buildPhase = ''
         mkdir tmp
         export HOME="$PWD/tmp"
+
+        export GOPATH="$HOME/go"
+        mkdir -p "$GOPATH"
+        export PATH="$GOPATH/bin:$PATH"
+        go get -u github.com/gopherjs/gopherjs
+
         bundle config
         bundle install
         bundle exec jekyll build
@@ -27,5 +33,10 @@ pkgs.stdenv.mkDerivation {
     installPhase = ''
         mkdir -p $out
         mv _site $out/public
+    '';
+    shellHook = ''
+        read -p "Enter master password: " -s MASTER_KEY_VARSTACK;
+        export MASTER_KEY_VARSTACK;
+        bundle exec jekyll serve;
     '';
 }
