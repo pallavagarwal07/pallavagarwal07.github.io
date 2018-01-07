@@ -1,4 +1,4 @@
-<title>An intern's views - End of Diary - VARSTACK</title>
+<title>Encrypted posts on a Static Website - VARSTACK</title>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,8 +40,6 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
     <![endif]-->
 
     
-    <img src="/img/hongkong.jpg" id="bg-img" alt="Pallav standing in front of Google wall">
-    
     <div class="container">
         <div class="row" id="menu">
             <div class="col-sm-2 col-xs-2 menu" id="site_title">
@@ -66,68 +64,202 @@ loadCSS( "/css/style.css", document.getElementById("loadcss"));
             </div>
         </div>
         
-        <div class="row" id="image"> </div>
-        
         <div class="row" id="content">
             <div class="col-md-7 col-md-push-3">
                 <div class="row" id="data">
                     <div class="col-md-12">
                         <br />
-                        <h3>An intern's views - End of Diary</h3>
+                        <h3>Encrypted posts on a Static Website</h3>
                         <hr />
                         <div class="row text-justify" id="content-holder">
                             <div class="col-md-12">
-                                <p>The series:</p>
+                                <p>Happy New Year everyone!</p>
+
+<p>A couple of days ago, I decided to start writing a detailed guide to GSoC and
+open source contributions. However, I have seen many people read articles
+without actually doing anything, and that really upsets me. As a result, I
+decided to create an obstacle course along with the article series so that
+people would have to show some proof of work before they can proceed to the
+next blog post.</p>
+
+<p>My immediate problem however was much simpler. This is a statically generated
+blog. There is no configurable server side. This means that if I decide to
+password protect an article, the password verification would have to happen
+on the client side, and doing that securely is fairly non-trivial.</p>
+
+<p>Anyway, before we move to the implementation, try to visit the test page for
+the final encryption prototype. The password to access the page is <code>testpage</code> -
+<a href="/encrypted/testpage">Encrypted Page</a></p>
+
+<p>Pretty cool, right? If you are interested in computer security, please go ahead
+and try to find a way to retrieve the post content without using the password.
+Now, when undertaking such a project, there are a couple of things that have to
+be kept in mind.</p>
 
 <ol>
-<li><a href="/2017/05/07/How-I-got-here/">An intern's views - How I got here</a></li>
-<li><a href="/2017/06/07/A-month-end-at-Google/">An intern's views - A month's end at Google</a></li>
-<li><a href="/2017/07/10/How-far-have-I-come-working-at-Google/">An intern's views - How far have I come?</a></li>
-<li><a href="/2017/07/29/End-of-Diary/">An intern's views - End of diary</a></li>
+<li><dl>
+<dt>Ease of access</dt>
+<dd>The end user shouldn't have any difficulty accessing the content if they
+are aware of the password. This means that we need the decryption algorithm
+written in javascript (there is no server side, but the data needs to be
+decrypted on the client).</dd>
+</dl></li>
+<li><dl>
+<dt>Ease of setup</dt>
+<dd>I shouldn't have to manually encrypt decrypt the file(s) every time I need
+to edit them. That would be a pain in the ass, as well as leave a large room
+for errors on my part.</dd>
+</dl></li>
+<li><dl>
+<dt>Flexibility</dt>
+<dd>Each post on the blog should have a unique password, so that unlocking one
+post doesn't mean access to rest of the posts.</dd>
+</dl></li>
+<li><dl>
+<dt>Security</dt>
+<dd>Since the blog is open source, the posts (in form of <code>.md</code> files) are
+available on Gitlab. Thus, the source files themselves need to be encrypted
+too.</dd>
+</dl></li>
+<li><dl>
+<dt>Automation (CI)</dt>
+<dd>Since the blog needs to built by the Gitlab CI, CI needs access to:</dd>
+</dl>
+
+<ul>
+<li>Decrypted version of posts <strong>OR</strong></li>
+<li>Encrypted pre-built (markdown to HTML) files <strong>OR</strong></li>
+<li>Keys to decrypt the markdown, and then encrypt after building the HTML.</li>
+</ul>
+</li>
 </ol>
 
 
-<p>Before I start, I would like to point out that I'm writing this from Hong Kong,
-sitting in front of Disneyland, waiting for it to open. Life is good.</p>
+<p>Points 2, 3 and 5 seem rather incompatible with each other. Gitlab CI can be
+given secret password/env variables, but doing that for each post would be
+extremely inconvinient. Similarly, I may need to edit these posts at any time,
+and there is no way I can remember all the passwords of all the files. I can't
+risk keeping the passwords in any of my RC files either, since I version
+control them to GitHub as well
+(<a href="https://github.com/pallavagarwal07/ConfigManagement">https://github.com/pallavagarwal07/ConfigManagement</a>).</p>
 
-<p>I'm not really sure what to write about. I've mostly written about my
-experience as a Google Intern. I've written about the work I've done. I've
-written about how I got here. Last few weeks have been all about wrapping up.
-And since its pretty boring to write about wrap up, I've instead converted this
-post into an FAQ about the full experience. Some of these may be specific to
-IITK and my situation, so feel free to skip them.</p>
+<p>To resolve these conflicts, I decided to keep a single master password to
+encrypt the source markdown files. This password is the strongest one, and if
+it falls, all the posts would be decrypted.</p>
 
-<p><strong>Q. Google came to IITK. Why didn't you wait for it in campus placements?</strong></p>
+<p>The posts however on the blog are encrypted by the CI itself after it converts
+the markdown files into HTML. These are encrypted by the password mentioned
+inside the decrypted text itself. As you'd see, in the <a href="/encrypted/testpage">Test
+Page</a>, the password is mentioned in the content of the
+post itself. The password(s) used to encrypt the generated HTML file content
+is usually easier (e.g. <code>testpage</code>).</p>
 
-<p>This one goes first because I was asked this again and again by people, and not
-even with this tone. The tone was usually "You could've waited for Google, you
-would've definitely gotten it.".</p>
+<p>Regarding ease of setup, it is necessary to create a workflow that doesn't
+leave the decrypted version of the posts in my repository. Since my everyday
+editor is vim, the easiest method was to configure vim to:</p>
 
-<p>So basically, most people assumed that the reason I didn't wait for Google was
-because I was afraid that I wouldn't get Google, and I wouldn't have any
-intern. I didn't wait for Google because it was Google India, and Google India
-doesn't have any good teams working on systems. While Google India would still
-be preferable over LinkedIn (which I sat and got in campus internship
-placements), sitting for Google India would've made me ineligible to sit for
-Google U.S., which was my target. Also, as a side benefit, Google U.S. pays a
-lot more, which is always preferable ;)</p>
+<ol>
+<li>Detect the file being opened is encrypted.</li>
+<li>Ask user for password.</li>
+<li>Decrypt the file into memory.</li>
+<li>Turn off swap file management and persistent undo history.</li>
+<li>Write decrypted file to vim buffer.</li>
+</ol>
 
-<p><strong>Q. Everything considered, why do you think Google is the better place to intern?</strong></p>
 
-<p>It's culture. Finance companies will always pay more, even for tech jobs. And I
-understand that many people would prefer that. But for me, I don't want to wake
-up on time everyday to go to office. I don't want to stick to some dress code,
-I want to go to office in shorts, like I do in college. I don't want to be
-restricted to my own department when working. I want to learn what other people
-are doing, without the company firing me for talking to people on a project
-that isn't mine.</p>
+<p>Similarly, on saving the file, vim should:</p>
 
-<p>Google has an open codebase. In the sense that all code that drives Google and
-its' projects, is in a single repository, that everyone has access to. Which
-means that, even as an intern I had tremendous amount of knowledge one click
-away. While working, I often read other papers (design documents) of things
-Google was working on, and I was never disappointed. Google is fascinating from
-the inside.</p>
+<ol>
+<li>Encrypt the buffer contents (with the earlier asked password).</li>
+<li>Write the encrypted contents to buffer.</li>
+</ol>
+
+
+<p>This way, I open my file normally with vim (or neovim), and edit my file as
+usual. Vim takes care of all the heavy lifting for me.</p>
+
+<p><em>10 points to Ravenclaw!</em></p>
+
+<p>Thankfully, the configuration isn't too hard, and is inspired from how vim
+used to handle encryption using crypt (which is horribly broken).</p>
+
+<p>Credits: <a href="http://vim.wikia.com/wiki/Encryption">http://vim.wikia.com/wiki/Encryption</a></p>
+
+<pre><code>augroup CPT
+  au!
+  au BufReadPre *.cpt set bin
+  au BufReadPre *.cpt set viminfo=
+  au BufReadPre *.cpt set noswapfile
+  au BufReadPost *.cpt let $MASTER_KEY_VARSTACK = inputsecret("Password: ")
+  au BufReadPost *.cpt silent '[,']!go run ~/proj/varstack/_plugins/decrypt.go
+  au BufReadPost *.cpt set nobin
+  au BufWritePre *.cpt set bin
+  au BufWritePre *.cpt '[,']!go run ~/proj/varstack/_plugins/encrypt.go
+  au BufWritePost *.cpt u
+  au BufWritePost *.cpt set nobin
+augroup END
+</code></pre>
+
+<p>Keen observers would notice <code>encrypt.go</code> and <code>decrypt.go</code> in the midst of the
+vim configuration. This is where the magic happens 😉. As the name suggests,
+these files encrypt (and decrypt) the data read from <code>stdin</code> and write the
+output to <code>stdout</code>. The passphrase is read from the environment variable
+<code>MASTER_KEY_VARSTACK</code>.</p>
+
+<p>So, I wrote the encryption and decryption codes in Go. But in the beginning, I
+mentioned I would need the decryption protocol in javascript since the
+decryption would have to happen on the client side, on the user's browser.
+At first look, it seems as though it might've been better to use node to write
+the encryption/decryption methods, since the same could've been used for the
+browser.</p>
+
+<p>Yeah, but the truth is that unlike Javascript, Go has inbuilt libraries for AES
+and other encryption protocols. Writing encryption code in JS would have been
+a - not so pleasant experience - to put it mildly. So instead, I decided to use
+the Go code itself for the client side decryption.</p>
+
+<p><strong>Wait what?</strong></p>
+
+<blockquote><p>GopherJS compiles Go code (golang.org) to pure JavaScript code. Its main
+purpose is to give you the opportunity to write front-end code in Go which
+will still run in all browsers.</p></blockquote>
+
+<p>If you haven't ever checkout out
+<a href="https://github.com/gopherjs/gopherjs">GopherJS</a>, today is your lucky day.
+GopherJS compiles Go to Javascript, and is compatible with (almost) all Go
+features.  Don't believe me? See their <a href="https://github.com/gopherjs/gopherjs/blob/master/doc/packages.md">compatibility
+table</a>.</p>
+
+<p>So using GopherJS, I wrote a <a href="https://jekyllrb.com/docs/plugins/#converters">Jekyll
+converter</a>, so that any <code>.go</code>
+files in my blog's source would be compiled to <code>.js</code> in the website. After
+that, I wrote a small Go code that used the earlier writter <code>decrypt.go</code> to
+decrypt the encrypted content within the <code>body</code> tags of a webpage, and set my
+encrypted page to include the corresponding <code>.js</code> file.</p>
+
+<p>Finally, I had to write one last <a href="https://jekyllrb.com/docs/plugins/#converters">Jekyll
+converter</a> to read <code>.cpt</code> files
+(which were basically the markdown files encrypted with master password),
+decrypt them with the master password, figure out the output password from the
+decrypted text, convert markdown to HTML using existing converter, and finally
+encrypt the converted content using the new password. Simple, right? 😉</p>
+
+<p>Anyway, the interesting codes can be seen on the blog source:</p>
+
+<ol>
+<li><a href="https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/tree/source/_plugins">Plugins Dir</a>
+
+<ul>
+<li><a href="https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/blob/source/_plugins/gopherjs.rb">Go to JS</a></li>
+<li><a href="https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/blob/source/_plugins/hooks.rb">Decrypt and Encrypt again</a></li>
+</ul>
+</li>
+<li><a href="https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/tree/source/_lib/encrypt">Go files for encryption</a></li>
+</ol>
+
+
+<p>If you have any queries, or want to report a bug/vulnerability in this
+approach, I would be very thankful if you leave a comment below :)</p>
 
                             </div>
                         </div>

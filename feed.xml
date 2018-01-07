@@ -1,4 +1,515 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-12-06T16:37:30+00:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00+00:00</published><updated>2017-07-29T00:00:00+00:00</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-07T17:01:16+00:00</updated><id>http://localhost:4000/</id><title type="html">VARSTACK</title><subtitle></subtitle><entry><title type="html">Encrypted posts on a Static Website</title><link href="http://localhost:4000/2018/01/07/Encrypted-posts-on-a-static-website/" rel="alternate" type="text/html" title="Encrypted posts on a Static Website" /><published>2018-01-07T00:00:00+00:00</published><updated>2018-01-07T00:00:00+00:00</updated><id>http://localhost:4000/2018/01/07/Encrypted-posts-on-a-static-website</id><content type="html" xml:base="http://localhost:4000/2018/01/07/Encrypted-posts-on-a-static-website/">&lt;p&gt;Happy New Year everyone!&lt;/p&gt;
+
+&lt;p&gt;A couple of days ago, I decided to start writing a detailed guide to GSoC and
+open source contributions. However, I have seen many people read articles
+without actually doing anything, and that really upsets me. As a result, I
+decided to create an obstacle course along with the article series so that
+people would have to show some proof of work before they can proceed to the
+next blog post.&lt;/p&gt;
+
+&lt;p&gt;My immediate problem however was much simpler. This is a statically generated
+blog. There is no configurable server side. This means that if I decide to
+password protect an article, the password verification would have to happen
+on the client side, and doing that securely is fairly non-trivial.&lt;/p&gt;
+
+&lt;p&gt;Anyway, before we move to the implementation, try to visit the test page for
+the final encryption prototype. The password to access the page is &lt;code&gt;testpage&lt;/code&gt; -
+&lt;a href=&quot;/encrypted/testpage&quot;&gt;Encrypted Page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty cool, right? If you are interested in computer security, please go ahead
+and try to find a way to retrieve the post content without using the password.
+Now, when undertaking such a project, there are a couple of things that have to
+be kept in mind.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;dl&gt;
+&lt;dt&gt;Ease of access&lt;/dt&gt;
+&lt;dd&gt;The end user shouldn't have any difficulty accessing the content if they
+are aware of the password. This means that we need the decryption algorithm
+written in javascript (there is no server side, but the data needs to be
+decrypted on the client).&lt;/dd&gt;
+&lt;/dl&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl&gt;
+&lt;dt&gt;Ease of setup&lt;/dt&gt;
+&lt;dd&gt;I shouldn't have to manually encrypt decrypt the file(s) every time I need
+to edit them. That would be a pain in the ass, as well as leave a large room
+for errors on my part.&lt;/dd&gt;
+&lt;/dl&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl&gt;
+&lt;dt&gt;Flexibility&lt;/dt&gt;
+&lt;dd&gt;Each post on the blog should have a unique password, so that unlocking one
+post doesn't mean access to rest of the posts.&lt;/dd&gt;
+&lt;/dl&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl&gt;
+&lt;dt&gt;Security&lt;/dt&gt;
+&lt;dd&gt;Since the blog is open source, the posts (in form of &lt;code&gt;.md&lt;/code&gt; files) are
+available on Gitlab. Thus, the source files themselves need to be encrypted
+too.&lt;/dd&gt;
+&lt;/dl&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl&gt;
+&lt;dt&gt;Automation (CI)&lt;/dt&gt;
+&lt;dd&gt;Since the blog needs to built by the Gitlab CI, CI needs access to:&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Decrypted version of posts &lt;strong&gt;OR&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Encrypted pre-built (markdown to HTML) files &lt;strong&gt;OR&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Keys to decrypt the markdown, and then encrypt after building the HTML.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Points 2, 3 and 5 seem rather incompatible with each other. Gitlab CI can be
+given secret password/env variables, but doing that for each post would be
+extremely inconvinient. Similarly, I may need to edit these posts at any time,
+and there is no way I can remember all the passwords of all the files. I can't
+risk keeping the passwords in any of my RC files either, since I version
+control them to GitHub as well
+(&lt;a href=&quot;https://github.com/pallavagarwal07/ConfigManagement&quot;&gt;https://github.com/pallavagarwal07/ConfigManagement&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;To resolve these conflicts, I decided to keep a single master password to
+encrypt the source markdown files. This password is the strongest one, and if
+it falls, all the posts would be decrypted.&lt;/p&gt;
+
+&lt;p&gt;The posts however on the blog are encrypted by the CI itself after it converts
+the markdown files into HTML. These are encrypted by the password mentioned
+inside the decrypted text itself. As you'd see, in the &lt;a href=&quot;/encrypted/testpage&quot;&gt;Test
+Page&lt;/a&gt;, the password is mentioned in the content of the
+post itself. The password(s) used to encrypt the generated HTML file content
+is usually easier (e.g. &lt;code&gt;testpage&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Regarding ease of setup, it is necessary to create a workflow that doesn't
+leave the decrypted version of the posts in my repository. Since my everyday
+editor is vim, the easiest method was to configure vim to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Detect the file being opened is encrypted.&lt;/li&gt;
+&lt;li&gt;Ask user for password.&lt;/li&gt;
+&lt;li&gt;Decrypt the file into memory.&lt;/li&gt;
+&lt;li&gt;Turn off swap file management and persistent undo history.&lt;/li&gt;
+&lt;li&gt;Write decrypted file to vim buffer.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Similarly, on saving the file, vim should:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Encrypt the buffer contents (with the earlier asked password).&lt;/li&gt;
+&lt;li&gt;Write the encrypted contents to buffer.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;This way, I open my file normally with vim (or neovim), and edit my file as
+usual. Vim takes care of all the heavy lifting for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;10 points to Ravenclaw!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Thankfully, the configuration isn't too hard, and is inspired from how vim
+used to handle encryption using crypt (which is horribly broken).&lt;/p&gt;
+
+&lt;p&gt;Credits: &lt;a href=&quot;http://vim.wikia.com/wiki/Encryption&quot;&gt;http://vim.wikia.com/wiki/Encryption&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;augroup CPT
+  au!
+  au BufReadPre *.cpt set bin
+  au BufReadPre *.cpt set viminfo=
+  au BufReadPre *.cpt set noswapfile
+  au BufReadPost *.cpt let $MASTER_KEY_VARSTACK = inputsecret(&quot;Password: &quot;)
+  au BufReadPost *.cpt silent '[,']!go run ~/proj/varstack/_plugins/decrypt.go
+  au BufReadPost *.cpt set nobin
+  au BufWritePre *.cpt set bin
+  au BufWritePre *.cpt '[,']!go run ~/proj/varstack/_plugins/encrypt.go
+  au BufWritePost *.cpt u
+  au BufWritePost *.cpt set nobin
+augroup END
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Keen observers would notice &lt;code&gt;encrypt.go&lt;/code&gt; and &lt;code&gt;decrypt.go&lt;/code&gt; in the midst of the
+vim configuration. This is where the magic happens 😉. As the name suggests,
+these files encrypt (and decrypt) the data read from &lt;code&gt;stdin&lt;/code&gt; and write the
+output to &lt;code&gt;stdout&lt;/code&gt;. The passphrase is read from the environment variable
+&lt;code&gt;MASTER_KEY_VARSTACK&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, I wrote the encryption and decryption codes in Go. But in the beginning, I
+mentioned I would need the decryption protocol in javascript since the
+decryption would have to happen on the client side, on the user's browser.
+At first look, it seems as though it might've been better to use node to write
+the encryption/decryption methods, since the same could've been used for the
+browser.&lt;/p&gt;
+
+&lt;p&gt;Yeah, but the truth is that unlike Javascript, Go has inbuilt libraries for AES
+and other encryption protocols. Writing encryption code in JS would have been
+a - not so pleasant experience - to put it mildly. So instead, I decided to use
+the Go code itself for the client side decryption.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wait what?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;GopherJS compiles Go code (golang.org) to pure JavaScript code. Its main
+purpose is to give you the opportunity to write front-end code in Go which
+will still run in all browsers.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;If you haven't ever checkout out
+&lt;a href=&quot;https://github.com/gopherjs/gopherjs&quot;&gt;GopherJS&lt;/a&gt;, today is your lucky day.
+GopherJS compiles Go to Javascript, and is compatible with (almost) all Go
+features.  Don't believe me? See their &lt;a href=&quot;https://github.com/gopherjs/gopherjs/blob/master/doc/packages.md&quot;&gt;compatibility
+table&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So using GopherJS, I wrote a &lt;a href=&quot;https://jekyllrb.com/docs/plugins/#converters&quot;&gt;Jekyll
+converter&lt;/a&gt;, so that any &lt;code&gt;.go&lt;/code&gt;
+files in my blog's source would be compiled to &lt;code&gt;.js&lt;/code&gt; in the website. After
+that, I wrote a small Go code that used the earlier writter &lt;code&gt;decrypt.go&lt;/code&gt; to
+decrypt the encrypted content within the &lt;code&gt;body&lt;/code&gt; tags of a webpage, and set my
+encrypted page to include the corresponding &lt;code&gt;.js&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Finally, I had to write one last &lt;a href=&quot;https://jekyllrb.com/docs/plugins/#converters&quot;&gt;Jekyll
+converter&lt;/a&gt; to read &lt;code&gt;.cpt&lt;/code&gt; files
+(which were basically the markdown files encrypted with master password),
+decrypt them with the master password, figure out the output password from the
+decrypted text, convert markdown to HTML using existing converter, and finally
+encrypt the converted content using the new password. Simple, right? 😉&lt;/p&gt;
+
+&lt;p&gt;Anyway, the interesting codes can be seen on the blog source:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/tree/source/_plugins&quot;&gt;Plugins Dir&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/blob/source/_plugins/gopherjs.rb&quot;&gt;Go to JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/blob/source/_plugins/hooks.rb&quot;&gt;Decrypt and Encrypt again&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/tree/source/_lib/encrypt&quot;&gt;Go files for encryption&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;If you have any queries, or want to report a bug/vulnerability in this
+approach, I would be very thankful if you leave a comment below :)&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Happy New Year everyone!</summary></entry><entry><title type="html">Automating HTTPS certs using Namesilo and Letsencrypt</title><link href="http://localhost:4000/2017/12/08/Automating-HTTPS-certs/" rel="alternate" type="text/html" title="Automating HTTPS certs using Namesilo and Letsencrypt" /><published>2017-12-08T00:00:00+00:00</published><updated>2017-12-08T00:00:00+00:00</updated><id>http://localhost:4000/2017/12/08/Automating-HTTPS-certs</id><content type="html" xml:base="http://localhost:4000/2017/12/08/Automating-HTTPS-certs/">&lt;h3&gt;TL;DR&lt;/h3&gt;
+
+&lt;p&gt;I automated the procedure of obtaining and installing HTTPS certificates for
+all my domains and subdomains using the APIs provided by Namesilo (my registrar),
+GitLab (my host), and Certbot (certificate issuing package).&lt;/p&gt;
+
+&lt;h3&gt;Long version&lt;/h3&gt;
+
+&lt;p&gt;Not being on https is seriously bad for your website. Leaving out the actual
+security issues of not using https, the &lt;a href=&quot;https://searchengineland.com/google-emails-warnings-webmasters-chrome-will-mark-http-pages-forms-not-secure-280907&quot;&gt;policy changes in Google
+Chrome&lt;/a&gt;
+also make a non-https website look bad to an end user. I shifted this blog to
+https more than an year ago (May 2016) and since then I have been using
+certificates generated by Letsencrypt for this blog.&lt;/p&gt;
+
+&lt;p&gt;If you do not know about Letsencrypt, I suggest you go ahead and read about it
+&lt;a href=&quot;https://letsencrypt.org/about/&quot;&gt;here&lt;/a&gt;. In short, it provides free trusted SSL
+certificates for people to enable SSL on their websites. A certificate is valid
+for 3 months, after which the owner must renew the certificate by providing
+proof of domain ownership again.&lt;/p&gt;
+
+&lt;h3&gt;Proving domain ownership&lt;/h3&gt;
+
+&lt;p&gt;To prove that you have control over a domain name, you need to solve one of
+multiple challenges:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Posting a specified file in a specified location on a web site (the HTTP-01
+challenge)&lt;/li&gt;
+&lt;li&gt;Offering a specified temporary certificate on a web site (the TLS-SNI-01
+challenge)&lt;/li&gt;
+&lt;li&gt;Posting a specified DNS record in the domain name system (the DNS-01
+challenge)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Traditionally, I have always used either (1) or (3) manually to obtain my
+certificates. However, as the number of domains/sub-domains for which I need
+to generate these certificates increases, doing this manually for each one
+starts to suck. A couple of days ago, I decided to automate the whole process
+so that I don't have to think twice before using a sub-domain (no thinking - oh
+no, not another one) or getting a new domain.&lt;/p&gt;
+
+&lt;h3&gt;Choosing the correct challenge&lt;/h3&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;HTTP-01&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;HTTP-01 challenge would have been the easiest to automate. However, it
+restricts the locations for which I can generate the certificate. Specifically,
+since the HTTP-01 challenge requires showing a particular file at a specified
+URL on that domain, it needs to be a server that's hosting a website. But what
+if it isn't? For instance &lt;code&gt;alexa.pallav.xyz&lt;/code&gt; only hosts an instance of the
+&lt;a href=&quot;https://github.com/stevenleeg/geemusic&quot;&gt;GeeMusic&lt;/a&gt; server. Since there are no
+HTTP pages served, it can't participate in HTTP-01 challenge.&lt;/p&gt;
+
+&lt;p&gt;Also, I tend to change the way my website is generated and/or hosted. Any
+change would require corresponding changes to the automation script which is
+unacceptable.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;TLS-SNI-01&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;This one has the same problem as the former challenge. Every server has a
+different way of serving certificates. The script would need to be tuned for
+each server. &lt;strong&gt;Any domain/subdomain currently not in use would not be included
+for certificate generation.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h4&gt;&lt;strong&gt;DNS-01&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;DNS-01 was the clear winner. DNS changes don't require any interaction with the
+domain host, but rather with the registrar or the DNS provider. Since the
+probability of me changing registrars is quite low, the automation script would
+be able to generate certificates of all domains registered with Namesilo.&lt;/p&gt;
+
+&lt;p&gt;This automatically also takes care of any subdomains I create of the existing
+domain names, since they are also under the same registrar.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Automation!&lt;/h3&gt;
+
+&lt;p&gt;So here's the steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Call certbot for all domains. Indicate preference for DNS-01 challenge.&lt;/li&gt;
+&lt;li&gt;For each domain, use the Namesilo API to update the DNS record as indicated
+by certbot.&lt;/li&gt;
+&lt;li&gt;Stall the script for 15 minutes to let the DNS record update be published.&lt;/li&gt;
+&lt;li&gt;Let certbot run the verification.&lt;/li&gt;
+&lt;li&gt;Use the GitLab API to install the newly generated certificate into the pages
+hosted by GitLab.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Step 1: Calling certbot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have used certbot before, you'd know that by default it runs in an
+interactive mode. Clearly, if we want to run it inside a script, interactive
+mode would be &lt;em&gt;undesirable&lt;/em&gt;. Similarly, since the certificates need to be
+installed on GitLab and not on local server, we need the &lt;code&gt;--manual&lt;/code&gt; and
+&lt;code&gt;certonly&lt;/code&gt; modes. After some experimentation, I was able to come up with a
+launch command that runs the certbot non-interactively, and without any
+complications.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;certbot     --config-dir ${DIR}/gen/conf      \
+            --work-dir ${DIR}/gen/work        \
+            --logs-dir ${DIR}/gen/logs        \
+            --agree-tos                       \
+            -m pallavagarwal07@gmail.com      \
+            -d pallav.xyz                     \
+            -d www.pallav.xyz                 \
+            -d alexa.pallav.xyz               \
+            -d varstack.com                   \
+            -d www.varstack.com               \
+            --manual                          \
+            --manual-public-ip-logging-ok     \
+            --preferred-challenges dns        \
+            --noninteractive                  \
+            --manual-auth-hook ${DIR}/hook.sh \
+            certonly
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first 3 lines just indicate the preference of where I'd like the
+certificate and other artifcats to be generated. Most of the other flags are
+rather self explanatory. Flags like &lt;code&gt;--agree-tos&lt;/code&gt; and
+&lt;code&gt;--manual-public-ip-logging-ok&lt;/code&gt; just prevent the script from asking the user
+for permissions. The use of most flags can be understood by running&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;certbot --help
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The flag of interest is &lt;code&gt;--manual-auth-hook&lt;/code&gt;. This flag specifies the
+executable to be called for the completion of the challenge for each domain
+name (in this case, the challenge is &lt;code&gt;DNS-01&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;The challenge executable in my case can be found
+&lt;a href=&quot;https://github.com/pallavagarwal07/NamesiloCert/blob/master/hook.sh&quot;&gt;here&lt;/a&gt;.
+The executable gets in its environment, two important variables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CERTBOT_DOMAIN:
+domain for which challenge is running (eg. alexa.pallav.xyz)
+
+CERTBOT_VALIDATION:
+the value corresponding to the _acme-challenge TXT entry
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;TXT is a type of DNS entry. Thus, if I have the environmental variables set as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CERTBOT_DOMAIN=abc.pallav.xyz
+CERTBOT_VALIDATION=somerandomstring
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I need to add a TXT entry for &lt;code&gt;_acme-challenge.abc.pallav.xyz&lt;/code&gt; with the value
+&lt;code&gt;somerandomstring&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2: Calling Namesilo API&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.namesilo.com/api_reference.php&quot;&gt;Namesilo thankfully has a very complete RESTful
+API&lt;/a&gt;. It took me a short while to
+write a Go client that can interact with Namesilo via the API and add the
+required DNS entries.
+&lt;a href=&quot;https://github.com/pallavagarwal07/NamesiloCert/blob/master/action.go&quot;&gt;Here&lt;/a&gt;
+is the relevant code (along with helper files in that directory).&lt;/p&gt;
+
+&lt;p&gt;The executable called by Certbot is a wrapper around this client, and calls
+this with the required arguments.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3: Stall 15 minutes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a bit hacky. The wrapper script checks if it is being called for the
+last domain in the list. If so, it goes into a sleep for 15 minutes. This is
+required because Namesilo publishes DNS changes every 15 (or 5 maybe?) minutes.
+After 15 minutes, the script returns control to the certbot process.&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4: Let certbot run the verification.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Almost done!&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5: Installation using GitLab API&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point we have generated our certificates. The only thing needed to be
+done is the installation of those certificates into existing websites, in this
+case, the ones hosted by GitLab. Now, GitLab too has a very comprehensive set
+of RESTful APIs. I specifically use the &lt;a href=&quot;https://docs.gitlab.com/ee/api/pages_domains.html&quot;&gt;Pages Domains
+API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was rather straightforward, except for one bug on which I was stuck was
+quite some time before finally posting it on stackoverflow. Like always, I figured
+out a workaround before anybody could post a solution, but the question is still a
+good record of what the problem was, so I'll just link to it here in case anybody
+has a similar issue: &lt;a href=&quot;https://stackoverflow.com/questions/47677846/&quot;&gt;GitLab Pages API 404 error for certain
+projects&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The installation to GitLab code can be viewed
+&lt;a href=&quot;https://github.com/pallavagarwal07/NamesiloCert/blob/823fec691afe4929bb8079a73d348a244a553b93/gen_certs.sh#L38&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">TL;DR I automated the procedure of obtaining and installing HTTPS certificates for all my domains and subdomains using the APIs provided by Namesilo (my registrar), GitLab (my host), and Certbot (certificate issuing package).</summary></entry><entry><title type="html">Simplifying CI with Nix</title><link href="http://localhost:4000/2017/12/05/Simplifying-Travis-with-Nix/" rel="alternate" type="text/html" title="Simplifying CI with Nix" /><published>2017-12-05T00:00:00+00:00</published><updated>2017-12-05T00:00:00+00:00</updated><id>http://localhost:4000/2017/12/05/Simplifying-Travis-with-Nix</id><content type="html" xml:base="http://localhost:4000/2017/12/05/Simplifying-Travis-with-Nix/">&lt;p&gt;So, I know I haven't written anything in a while, and that's because the last
+semester was my heaviest yet. But now since that has passed, I no longer have
+excuses to not write more articles. So go ahead, read on.&lt;/p&gt;
+
+&lt;p&gt;Before starting this article, if you do not know about Nix/NixOS, first go and
+read up about it: &lt;a href=&quot;https://nixos.org/nixos/about.html&quot;&gt;NixOS&lt;/a&gt;. NixOS in my
+opinion is the single most promising operating system ever written. Instead
+of being FHS compliant, NixOS keeps all files under hashed directory names
+under &lt;code&gt;/nix/store&lt;/code&gt; so that files from different packages never have any
+collision. This allows the package manager to install multiple versions of the
+same packages, along with deterministic and atomic builds and upgrades.&lt;/p&gt;
+
+&lt;h3&gt;Throwback&lt;/h3&gt;
+
+&lt;p&gt;Now, I started using Nix a long time ago (~Sep 2015), often switching between
+Arch and Nix depending on my usage. Mostly I had to switch to Arch every time I
+couldn't figure out how to configure something in Nix (the methodologies, like
+the ideoligies are very different). About an year ago I switched to Nix
+full-time (i.e. no other operating system on dual boot). The reason being that
+I have learnt enough about the workings of Nix to make it do my day to day
+bidding without much effort.&lt;/p&gt;
+
+&lt;h3&gt;Precursor&lt;/h3&gt;
+
+&lt;p&gt;Every time I write a package for something, the installation procedure for
+Nix is quite different from other operating systems. While most operating
+systems would just ask you to compile and put the binary in &lt;code&gt;/usr/bin&lt;/code&gt;, in
+Nix you aren't allowed to change the global state of the OS. This means that
+every package has to be accompanied by a config file that precisely lists all
+dependencies and the build environment needed by the package. How the OS
+provides that environment is none of our concern. If our package has a
+dependency, I need to only write that in my package's config file, and even
+without globally installing the package, my package would be able to build
+against the dependencies as well as use them during runtime. It is like a
+&lt;code&gt;virtualenv&lt;/code&gt; except that it can be for any package, written in any language(s)
+and that has dependencies of any language(s). It's how &lt;code&gt;virtualenv&lt;/code&gt; would look
+if it was 1000x smarter and more useful.&lt;/p&gt;
+
+&lt;p&gt;Since it simplifies development so much, I write my project's config file
+before even starting the project. When new dependencies or requirements emerge,
+it is a simple matter to modify a couple of lines in the config file. The best
+thing about this approach is that my packages are always testable, even if I
+reinstall the whole OS, I know that to run that package, I only need to run a
+shell with that config file. No more iteratively installing dependencies based
+on error messages.&lt;/p&gt;
+
+&lt;h3&gt;Weren't we supposed to talk about CI?&lt;/h3&gt;
+
+&lt;p&gt;Yes! Sorry.. I was building up to it. One of the major advantages of Nix is
+that Nix is a package manager that can be installed on other operating systems
+as well. Thus an existing Arch or Ubuntu or ... OS can actually benefit from a
+lot of this NIXey goodness by installing the Nix package manager. And very
+recently, struggling with getting the dependencies &quot;just right&quot; on Travis, I
+decided to exactly this.&lt;/p&gt;
+
+&lt;h3&gt;Wait.. Travis?&lt;/h3&gt;
+
+&lt;p&gt;(Skip this if you know about Travis CI)&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Travis CI is a hosted, distributed continuous integration service used to
+build and test projects hosted at GitHub. Travis CI automatically detects
+when a commit has been made and pushed to a GitHub repository that is using
+Travis CI, and each time this happens, it will try to build the project and
+run tests. This includes commits to all branches, not just to the master
+branch.
+The point of this is that you can often discover very quickly if your commit
+broke something, and fix it before it becomes a problem.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;And the problem was?&lt;/h3&gt;
+
+&lt;p&gt;When writing a program, it is very easy to lose track of all its dependencies
+that you installed to get the code working, or the libraries it links against
+that are under a different name on your OS as compared to the OS running on the
+CI. At some point, everybody finds themselves battling with the package manager
+on the CI, iteratively running the tests again and again and fixing the next
+error that is reported on failure of the build.&lt;/p&gt;
+
+&lt;p&gt;I ran into this problem when I was trying to set up the CI for my blog's code.
+Yes, the website you are reading - that's what I am talking about. Since the
+final compiled product is a static website, I used to compile it on my PC and
+upload the compiled files for hosting. On my PC, the dependency management was
+just fine, because - you guessed it - I had written a Nix config file for it.
+Even so it was very hard to get it right on Travis, since it was running Ubuntu
+and my blog uses a rather lot of dependencies (jekyll, as well as python NLP
+libs for the search).&lt;/p&gt;
+
+&lt;h3&gt;Solution!&lt;/h3&gt;
+
+&lt;p&gt;Then I realised that I don't need to take this trouble. Nix always builds
+everything deterministically. Which means that if a build config file works
+fine on my laptop, it would work fine on Travis too. And since it is possible
+to install Nix on Ubuntu, I decided to see if it'd be able to use my existing
+config file to build my code using Nix instead.&lt;/p&gt;
+
+&lt;p&gt;The result was a small bunch of scripts that you can just curl directly from
+any build that uses a &lt;code&gt;default.nix&lt;/code&gt; (Nix config file) for its builds and the
+Travis build would first install Nix and then complete the build using the
+Nix config file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/pallavagarwal07/NixCI&quot;&gt;GitHub link for NixCI&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;The above link would also be a good example of how to use the Nix CI from a
+project that uses Travis CI. Hint: look into the &lt;code&gt;.travis.yml&lt;/code&gt; file. Note that
+you can directly curl the installation and configuration script from the above
+repository directly into your CI job. The link below is a fine example of how
+to do that.&lt;/p&gt;
+
+&lt;p&gt;To view an example of using this with GitLab CI:
+&lt;a href=&quot;https://gitlab.com/pallavagarwal07/pallavagarwal07.gitlab.io/blob/fa853cf54ec8c294e35f194feeb528d27295ae47/.gitlab-ci.yml&quot;&gt;Click Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that when sourcing from TravisCI, the script to run is &lt;code&gt;install-nix.sh&lt;/code&gt;
+but from GitLab CI, the script to run is &lt;code&gt;install-root.sh&lt;/code&gt;. The latter is a
+wrapper around the former but assumes that the user running the script is root
+and the wrapper (&lt;code&gt;install-root.sh&lt;/code&gt;) creates a non-root user with sudo
+priviledges and runs the &lt;code&gt;install-nix.sh&lt;/code&gt; script as the newly created user.
+This is not required in Travis since the default user in Travis is already a
+non-root user with sudo priviledges.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">So, I know I haven't written anything in a while, and that's because the last semester was my heaviest yet. But now since that has passed, I no longer have excuses to not write more articles. So go ahead, read on.</summary></entry><entry><title type="html">An intern’s views - End of Diary</title><link href="http://localhost:4000/2017/07/29/End-of-Diary/" rel="alternate" type="text/html" title="An intern's views - End of Diary" /><published>2017-07-29T00:00:00+00:00</published><updated>2017-07-29T00:00:00+00:00</updated><id>http://localhost:4000/2017/07/29/End-of-Diary</id><content type="html" xml:base="http://localhost:4000/2017/07/29/End-of-Diary/">&lt;p&gt;The series:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;/2017/05/07/How-I-got-here/&quot;&gt;An intern's views - How I got here&lt;/a&gt;&lt;/li&gt;
@@ -1045,109 +1556,4 @@ the &quot;About me&quot; page).&lt;/p&gt;
 &lt;p&gt;Pallav Agarwal (&lt;a href=&quot;https://github.com/pallavagarwal07&quot;&gt;https://github.com/pallavagarwal07&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note 4:&lt;/strong&gt; This article was originally written as a Quora answer, and can still
-be found on the website.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Preface: I have been selected for Google Summer of Code ’16 under Gentoo Organization.</summary></entry><entry><title type="html">Learning from mistakes: Bugzilla Landfills</title><link href="http://localhost:4000/2016/06/09/Bugzilla-Landfills/" rel="alternate" type="text/html" title="Learning from mistakes: Bugzilla Landfills" /><published>2016-06-09T00:00:00+00:00</published><updated>2016-06-09T00:00:00+00:00</updated><id>http://localhost:4000/2016/06/09/Bugzilla-Landfills</id><content type="html" xml:base="http://localhost:4000/2016/06/09/Bugzilla-Landfills/">&lt;p&gt;This post is regarding a recent incident that happened when I was working for
-my project in Google Summer of Code.&lt;/p&gt;
-
-&lt;p&gt;My day's task was to automate the filing of a bug in bugzilla if and when a
-build fails. Though, not too hard, it would obviously require testing, because
-I can't just assume that my code would work the way it is supposed to.&lt;/p&gt;
-
-&lt;p&gt;This didn't seem like much of a problem at that time. What I decided to do was,
-test on a single bug and delete it when I'm done. Simple Enough?&lt;/p&gt;
-
-&lt;p&gt;As it turns out, it wasn't so simple. And I would've known that, had I done a
-bit of a research. You see, once a bug is reported, it can be edited, yet
-closing, or deleting the bug is something only the administrators are capable
-of. So, by creating a bug in bugzilla I inadvertantly sent an email about a
-bug to numerous people.&lt;/p&gt;
-
-&lt;p&gt;Anyway, for future reference, there is something called a Bugzilla Landfill
-that you can use for testing out something on a Bugzilla.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">This post is regarding a recent incident that happened when I was working for my project in Google Summer of Code.</summary></entry><entry><title type="html">Determining legal USE Flag combinations using a CNF SAT Solver</title><link href="http://localhost:4000/2016/05/13/SAT-Solver/" rel="alternate" type="text/html" title="Determining legal USE Flag combinations using a CNF SAT Solver" /><published>2016-05-13T00:00:00+00:00</published><updated>2016-05-13T00:00:00+00:00</updated><id>http://localhost:4000/2016/05/13/SAT-Solver</id><content type="html" xml:base="http://localhost:4000/2016/05/13/SAT-Solver/">&lt;p&gt;I spent my time doing something rather interesting today.&lt;/p&gt;
-
-&lt;p&gt;In my proposal, I had
-mentioned that the USE flag combinations to be tested would be:&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;Without any USE flag turned on&lt;/p&gt;
-
-&lt;p&gt;With all USE flags turned on&lt;/p&gt;
-
-&lt;p&gt;Few random combinations based on default flags,
-or inverse of default flags or those generated by tatt.&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Yesterday, a guy, Harald Timeraider pointed out that some of the USE flag combinations
-given by the above rules may not be legal. For example, if an ebuild specifies
-&lt;code&gt;REQUIRED_USE=&quot;^^ (a b c)&quot;&lt;/code&gt; then EXACTLY one flag out of &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;, and &lt;code&gt;c&lt;/code&gt; should be
-enabled. This doesn't fall under &quot;without USE flags&quot; or &quot;with all USE flags&quot; category.&lt;/p&gt;
-
-&lt;p&gt;At first I was thinking that for combination os USE flags, I would use the portage API
-to verify if the USE flag combo was valid and is not, I would randomly generate another
-combination. But soon, as it always happens, I began to overthink the problem and
-decided to model the problem as a graph problem. More specifically, as a boolean
-satisfiability problem.&lt;/p&gt;
-
-&lt;p&gt;So, long story short, here's what I did at
-&lt;a href=&quot;https://github.com/pallavagarwal07/SummerOfCode16/blob/dd07d92004b60a00531881773ed6a0a1b41fbd35/Containers/scripts/FlagGenerator/solver.py&quot;&gt;SummerOfCode16&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;We have five main kinds of operators.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;|| (flag1 flag2 flag3..)&lt;/code&gt; operator means that the following bracket would need to have AT LEAST one flag
-enabled. This is a simple OR operator between the operands.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;flag1? (flag2 flag3 ...)&lt;/code&gt; operator means that the following bracket would have to be
-true as a whole if &lt;code&gt;flag1&lt;/code&gt; is enabled. This is equivalent to the implication operator.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;^^ (flag1 flag2 flag3..)&lt;/code&gt; operator means that the following bracket will have
-EXACTLY one flag enabled. The wiki describes it as an XOR operator, which I believe is
-inaccurate since XOR should allow odd number of operands to be true. For my case, I
-model it as a 1-from-n operation. For example, for three variables &lt;code&gt;a, b, c&lt;/code&gt;:&lt;br/&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;center&gt;&lt;code&gt;(a &amp; !b &amp; !c) | (!a &amp; b &amp; !c) | (!a &amp; !b &amp; c)&lt;/code&gt;&lt;/center&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;!flag1&lt;/code&gt; operator is basically a negation.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;flag1 flag2&lt;/code&gt; operator (whitespace) is basically an AND operation unless the parent
-bracket is preceded by &lt;code&gt;||&lt;/code&gt; or &lt;code&gt;^^&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;Also, because I was having fun and wasn't sure if Portage supported it, I added support
-for arbitrary amount of nesting, given that the above rules are all followed.&lt;/p&gt;
-
-&lt;p&gt;The code I wrote uses &lt;code&gt;satispy&lt;/code&gt; to convert constructed SAT formula into CNF form, and
-replaces variables by numbers to convert into a format that &lt;code&gt;pycosat&lt;/code&gt; can accept.&lt;/p&gt;
-
-&lt;p&gt;Even though &lt;code&gt;satispy&lt;/code&gt; also has support for solving the CNF formula, I went with &lt;code&gt;pycosat&lt;/code&gt;
-for actually solving the CNF formula because it provides an iterator to get as many
-solutions as I want. Also the output is a bit easier on the eyes in the form of numbers.&lt;/p&gt;
-
-&lt;p&gt;If you have any queries, post them below or open up an issue on github.&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;Thanks for reading&lt;/i&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">I spent my time doing something rather interesting today.</summary></entry><entry><title type="html">Reference Sheets and Useful Links</title><link href="http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links/" rel="alternate" type="text/html" title="Reference Sheets and Useful Links" /><published>2016-05-13T00:00:00+00:00</published><updated>2016-05-13T00:00:00+00:00</updated><id>http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links</id><content type="html" xml:base="http://localhost:4000/2016/05/13/Reference-Sheets-and-Useful-Links/">&lt;p&gt;This post was long due. I often find blog posts, reference sheets and useful links that
-I feel I should bookmark. However, I often lose these bookmarks when I shift Operating
-Systems or browsers (which happens very often). I am hoping that this will be a better
-and a more reliable way to keep track of all these resources.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://python-future.org/compatible_idioms.html&quot;&gt;Python Future&lt;/a&gt;: This is a brilliant
-cheat sheat to write cross compatible code for both PYTHON-2 and PYTHON-3&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/&quot;&gt;What Color is Your Function?&lt;/a&gt;:
-An absolutely amazing article about the design choices of a &lt;em&gt;modern language&lt;/em&gt;.
-I won't spoil the surprise by revealing which language and what choices.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.faqs.org/docs/artu/&quot;&gt;Art of Unix Programming&lt;/a&gt;: If you aren't into reading
-plain text articles, atleast go through the Appendix D. You'll find some hilarious
-Unix bedtime stories :)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array&quot;&gt;Sorted vs Unsorted Array&lt;/a&gt;:
-One of the most upvoted questions on stackoverflow. This may be obvious to me now,
-but I wish I knew this before I took the Architecture course in IITK. Must Read.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/927358/how-to-undo-last-commits-in-git&quot;&gt;Undo Last Git Commit&lt;/a&gt;:
-Another one stolen from StackOverflow highest voted category.
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="tagged" /><summary type="html">This post was long due. I often find blog posts, reference sheets and useful links that I feel I should bookmark. However, I often lose these bookmarks when I shift Operating Systems or browsers (which happens very often). I am hoping that this will be a better and a more reliable way to keep track of all these resources.</summary></entry></feed>
+be found on the website.&lt;/p&gt;</content><author><name></name></author><category term="post" /><summary type="html">Preface: I have been selected for Google Summer of Code ’16 under Gentoo Organization.</summary></entry></feed>
