@@ -18,17 +18,18 @@ pkgs.stdenv.mkDerivation {
             pkgs.go
     ];
     buildPhase = ''
-        mkdir tmp
-        export HOME="$PWD/tmp"
+        export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt
+        export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
+        export HOME=`mktemp -d -t`
         export GOPATH="$HOME/go"
         mkdir -p "$GOPATH"
         export PATH="$GOPATH/bin:$PATH"
         go get -u github.com/gopherjs/gopherjs
 
-        bundle config
+        bundle config --global jobs 4
         bundle install
-        bundle exec jekyll build
+        MASTER_KEY_VARSTACK=PUT_KEY_HERE bundle exec jekyll build
     '';
     installPhase = ''
         mkdir -p $out

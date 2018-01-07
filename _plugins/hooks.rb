@@ -5,7 +5,7 @@ def get_password(content)
 end
 
 module Jekyll
-  class UpcaseConverter < Converter
+  class CptConverter < Converter
     safe true
     priority :low
 

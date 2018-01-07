@@ -20,7 +20,7 @@ module Jekyll
           cmd = "gopherjs build -m -o #{tmpdir}/js/#{jsname} #{f.path}"
           `#{cmd}`
           if !$?.success?
-            throw "gopherjs build failed for #{f.name}"
+            throw "gopherjs build failed for #{f.path}"
           end
 
           `gzip < #{tmpdir}/js/#{jsname} > #{tmpdir}/js/#{jsname}.gz`
