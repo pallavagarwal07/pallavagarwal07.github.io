@@ -21,6 +21,8 @@
     url('/fonts/lato-v11-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
 }
 
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 /* lato-italic - latin */
 @font-face {
     font-family: 'Lato';
@@ -71,7 +73,7 @@
 }
 
 #data {
-    font-size: 15px;
+    font-size: 13pt;
     font-weight: 500;
     line-height: 1.4;
 }
@@ -79,6 +81,12 @@
 #site_title {
     font-family: 'Courgette', cursive;
     font-size: 25px;
+}
+
+#page_title {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: 20pt;
 }
 
 #recent {
