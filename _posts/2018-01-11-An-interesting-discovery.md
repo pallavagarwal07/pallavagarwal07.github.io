@@ -1,10 +1,10 @@
 ---
-title: "An interesting discovery"
+title: "Mistakes and discoveries"
 layout: default
 tags: post
 ---
 
-The story starts with a blunder. In fact, my first major blunder of the year.  A
+The story starts with a blunder. In fact, my first major blunder of the year. A
 couple of weeks ago, I was enthusiastically adding continuous integration and
 deployment to my projects. It the midst of it, I found out that GitLab CI can be
 used to build artifacts for deployment. For example, a project could be build,
@@ -45,8 +45,8 @@ right under the title.
 />
 
 This meant that anyone with that URL could clone, and make arbitrary changes to
-the PDF that so conviniently was updating every hour. That means, anybody
-could've changed my resume to say absolutely anything.  That's scary.
+the PDF that was so conviniently updating every hour. That means, anybody
+could've changed my resume to say absolutely anything. That's scary.
 
 Out of panic, I first made a new repository on GitLab which pulls the Overleaf
 repo as a part of the pipeline, and set the URL as a secret variable instead of
