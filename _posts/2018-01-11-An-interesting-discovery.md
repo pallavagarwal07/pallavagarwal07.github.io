@@ -103,6 +103,43 @@ work/research. 😞
 Well, for one thing, I'll be a lot more careful about what I put online. Hopefully
 this article will also encourage other people to follow suit.
 
+
+**UPDATE (JAN 14 2018)**
+
+I had reported this as a potential vulnerability to Overleaf, and got their
+response fairly quickly. For some reason, Google had marked the mail as spam,
+so I was a bit late in seeing the response.
+
+```
+Hi Pallav,
+
+Thanks for getting in touch.
+
+Yes, using git in this way does make it quite easy to leak the secret link to your project, unfortunately. We've written about this in our help articles (Important Privacy Considerations):
+- https://www.overleaf.com/help/230-how-do-i-push-a-new-project-to-overleaf-via-git
+- https://www.overleaf.com/help/233-how-do-i-connect-an-overleaf-project-with-a-repo-on-github
+
+We had not realized that there were so many people using the git links in this way, however. We're reviewing the list on GitHub and will continue to work on this over the weekend. Thanks for bringing it to our attention.
+
+Best,
+John
+```
+
+and a follow up mail:
+
+```
+Hi Pallav,
+
+To follow up on my previous email: we've now used the GitHub API (and searches on GitLab and Bitbucket) to identify the affected projects, and we have taken the precaution of making those projects 'protected', which means that only users who have been invited by email can access them. We've contacted all of the affected authors to let them know about this and added messages in Overleaf to make it clear why the projects were protected. We'll continue to run these scans periodically to identify new projects that may be added in future.
+
+In the medium term, and as part of our integration with ShareLaTeX, Overleaf will be changing the default access mode for new projects from unlisted (anyone with the secret link can access) to protected (only invited users can access), but will still allow users to turn on Link Sharing. This will be to match the behavior that we've recently implemented on ShareLaTeX: https://www.overleaf.com/blog/614-integration-update-link-sharing-on-sharelatex .
+
+Thanks again for bringing this problem to our attention. If you have found this response helpful, I would encourage you to add a note to your blog post about the actions we've taken so far to fix the problem. If you have any other questions or comments, please let us know by reply.
+
+Best,
+John
+```
+
 <br />
 
 Anyway, that's all for today. In case you liked the article, share it with your
