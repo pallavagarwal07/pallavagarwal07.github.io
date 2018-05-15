@@ -142,7 +142,7 @@ table](https://github.com/gopherjs/gopherjs/blob/master/doc/packages.md).
 So using GopherJS, I wrote a [Jekyll
 converter](https://jekyllrb.com/docs/plugins/#converters), so that any `.go`
 files in my blog's source would be compiled to `.js` in the website. After
-that, I wrote a small Go code that used the earlier writter `decrypt.go` to
+that, I wrote a small Go code that used the earlier written `decrypt.go` to
 decrypt the encrypted content within the `body` tags of a webpage, and set my
 encrypted page to include the corresponding `.js` file.
 

@@ -4,12 +4,11 @@ pkgs.stdenv.mkDerivation {
     name = "varstack.com";
     version = "0.1.0.0";
     src = ./.;
-    buildInputs = [
+    propagatedBuildInputs = [
             pkgs.python2
             pkgs.ruby
             pkgs.zlib
             pkgs.nodejs
-            pkgs.bundler
             pkgs.pythonIRClib
             pkgs.python2Packages.zope_interface
             pkgs.python2Packages.beautifulsoup4
