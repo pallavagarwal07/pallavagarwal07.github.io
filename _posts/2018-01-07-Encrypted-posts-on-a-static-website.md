@@ -4,8 +4,6 @@ layout: default
 tags: post
 ---
 
-Happy New Year everyone!
-
 A couple of days ago, I decided to start writing a detailed guide to GSoC and
 open source contributions. However, I have seen many people read articles
 without actually doing anything, and that really upsets me. As a result, I
