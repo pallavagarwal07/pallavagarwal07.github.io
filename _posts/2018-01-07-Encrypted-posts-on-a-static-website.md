@@ -161,3 +161,5 @@ Anyway, the interesting codes can be seen on the blog source:
 
 If you have any queries, or want to report a bug/vulnerability in this
 approach, I would be very thankful if you leave a comment below :)
+
+If you like my work, you can also follow me on [GitHub](https://github.com/pallavagarwal07).
