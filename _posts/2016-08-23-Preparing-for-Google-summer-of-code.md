@@ -1,11 +1,11 @@
 ---
-title: "Preparation for Google Summer of Code"
+title: "Preparation for Google Summer of Code (GSoC)"
 layout: default
 img: gsoc.png
-img-alt: Google Summer of Code banner
+img-alt: Google Summer of Code (GSoC) banner
 tags: post
 ---
-**Preface:** I have been selected for Google Summer of Code ’16 under Gentoo
+**Preface:** I have been selected for Google Summer of Code (GSoC ’16) under Gentoo
 Organization.
 
 Firstly, I would suggest that you start now. Since I do not know anything about
