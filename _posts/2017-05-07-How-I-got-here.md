@@ -42,8 +42,9 @@ Your Resume needs to be made differently for every company to apply to, and I
 would suggest that you keep only the most important points on your Resume if
 you apply to a Tech company like Google.
 
-For reference, [here](/res/resume.pdf) is a snapshot of the Resume I submitted
-to Google - Short, Sleek and to the point.
+For reference, <a href="/res/resumeOld.pdf" rel="nofollow">here</a> is a
+snapshot of the Resume I submitted to Google - Short, Sleek and to the point.
+You can compare it with a recent copy of my resume [here](/res/resume.pdf).
 
 ### Application Procedure
 With fear of stating the obvious, to get into Google, you need to apply to
