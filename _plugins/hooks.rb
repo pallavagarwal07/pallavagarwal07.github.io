@@ -1,7 +1,7 @@
 require 'open3'
 
 def get_password(content)
-  return content[/password:\s*([^\s*]+)/, 1]
+  return content[/password:\s*"([^"]+)"/, 1]
 end
 
 module Jekyll

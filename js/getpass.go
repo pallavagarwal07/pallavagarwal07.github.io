@@ -8,6 +8,7 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"fmt"
+	"html"
 	"io"
 	"regexp"
 	"strings"
@@ -26,7 +27,7 @@ func setBodyInside(body string) {
 }
 
 func extractPass(body string) string {
-	re := regexp.MustCompile(`password:\s*([^\s*<>]+)`)
+	re := regexp.MustCompile(`password:\s*"([^"]+)"`)
 	match := re.FindStringSubmatch(body)
 	if match == nil {
 		return ""
@@ -49,17 +50,17 @@ func askpass() {
 		if path[len(path)-1] == '/' {
 			path += "index.html"
 		}
-		html := js.Global.Get("document").Get("body").Get("innerHTML").String()
+		html_str := js.Global.Get("document").Get("body").Get("innerHTML").String()
 		re := regexp.MustCompile(
 			`-{5}BEGIN ENCRYPTED CONTENT-{5}([\s\S]*?)-{5}END ENCRYPTED CONTENT-{5}`)
-		match := re.FindStringSubmatch(html)
+		match := re.FindStringSubmatch(html_str)
 		if match == nil {
 			println(`Unable to load encrypted content. Network issues maybe?`)
-			println(html)
+			println(html_str)
 		}
 		encrp := strings.TrimSpace(match[1])
 		decrp := enc.Decrypt([]byte(pass), string(encrp))
-		if extracted := extractPass(decrp); extracted == pass {
+		if extracted := extractPass(decrp); html.UnescapeString(extracted) == pass {
 			setBodyInside(decrp)
 		} else {
 			js.Global.Call("alert", "Incorrect password")
