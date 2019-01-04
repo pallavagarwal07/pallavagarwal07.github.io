@@ -15,6 +15,7 @@ pkgs.stdenv.mkDerivation {
             pkgs.python2Packages.markdown
             pkgs.python2Packages.pygments
             pkgs.go
+            pkgs.git
     ];
     buildPhase = ''
         export GIT_SSL_CAINFO=/etc/ssl/certs/ca-certificates.crt

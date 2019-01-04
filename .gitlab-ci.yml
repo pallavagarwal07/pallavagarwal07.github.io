@@ -2,7 +2,7 @@ pages:
   stage: deploy
   script:
   - apt-get update
-  - apt-get install -y bash curl
+  - apt-get install -y bash curl git
   - sed -i "s/PUT_KEY_HERE/${MASTER_KEY_VARSTACK}/g" default.nix
   - bash <(curl https://raw.githubusercontent.com/pallavagarwal07/NixCI/master/travis-tests/install-root.sh)
   - su user -s /bin/bash -c 'set -e; cd $HOME; . $HOME/.nix-profile/etc/profile.d/nix.sh; nix-build -j20 . ;                          '
