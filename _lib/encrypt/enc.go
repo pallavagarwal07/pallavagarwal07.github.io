@@ -4,6 +4,7 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/rand"
+	"crypto/sha256"
 	"encoding/base64"
 	"fmt"
 	"io"
@@ -38,22 +39,14 @@ func ugly(content string) string {
 	return strings.Join(strings.Split(content, "\n"), "")
 }
 
-func pad(key []byte) []byte {
-	if len(key) == 0 || len(key) > 32 {
-		panic("Invalid key length: " + fmt.Sprint(len(key)))
-	}
-	for _, l := range []int{16, 24, 32} {
-		if len(key) < l {
-			key = append(key, make([]byte, l-len(key))...)
-			break
-		}
-	}
-	return key
+func hash_sha256(key []byte) []byte {
+	ans := sha256.Sum256(key)
+	return ans[:]
 }
 
 // encrypt string to base64 crypto using AES
 func Encrypt(key []byte, text string) string {
-	key = pad(key)
+	key = hash_sha256(key)
 	plaintext := []byte(text)
 
 	block, err := aes.NewCipher(key)
@@ -78,7 +71,7 @@ func Encrypt(key []byte, text string) string {
 
 // decrypt from base64 to decrypted string
 func Decrypt(key []byte, cryptoText string) string {
-	key = pad(key)
+	key = hash_sha256(key)
 	ciphertext, _ := base64.URLEncoding.DecodeString(ugly(cryptoText))
 
 	block, err := aes.NewCipher(key)
